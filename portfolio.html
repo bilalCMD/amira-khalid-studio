@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أعمالي | استوديو أميرة خالد</title>
+<meta name="description" content="معرض أعمال أميرة خالد — مكياج عرايس، سهرات، وتسريحات شعر في جدة.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div id="app" dir="rtl" lang="ar">
+<script>window.CURRENT_PAGE = 'portfolio';</script>
+<script src="assets/header.js"></script>
+
+<main>
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container">
+    <span class="eyebrow" data-reveal data-i18n="page.portfolio.eyebrow">معرض الأعمال</span>
+    <h1 class="page-hero-title" data-reveal data-i18n="page.portfolio.title">أعمالي</h1>
+    <p class="page-hero-sub" data-reveal data-i18n="page.portfolio.sub">مجموعة مختارة من إطلالات العرائس، السهرات، والتسريحات</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="filter-row" data-reveal>
+      <button class="filter-btn active" data-filter="all" data-i18n="portfolio.filterAll">الكل</button>
+      <button class="filter-btn" data-filter="bridal" data-i18n="portfolio.filterBridal">عرايس</button>
+      <button class="filter-btn" data-filter="evening" data-i18n="portfolio.filterEvening">سهرة</button>
+      <button class="filter-btn" data-filter="makeup" data-i18n="portfolio.filterMakeup">مكياج</button>
+      <button class="filter-btn" data-filter="hair" data-i18n="portfolio.filterHair">تسريحات</button>
+    </div>
+    <div class="portfolio-grid" id="portfolioGrid">
+      <div class="portfolio-item" data-category="bridal" data-service="bridal-package" data-reveal>
+        <img src="assets/images/portfolio/bridal-01.jpg" alt="إطلالة عروس بالطرحة" loading="lazy">
+        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item1.title">إطلالة عروس بالطرحة</strong><span data-i18n="portfolio.filterBridal">عرايس</span></div></div>
+      </div>
+      <div class="portfolio-item" data-category="bridal" data-service="bridal-package" data-reveal>
+        <img src="assets/images/portfolio/bridal-02.jpg" alt="مكياج عروس ناعم" loading="lazy">
+        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item2.title">مكياج عروس ناعم</strong><span data-i18n="portfolio.filterBridal">عرايس</span></div></div>
+      </div>
+      <div class="portfolio-item" data-category="evening" data-service="makeup-hair" data-reveal>
+        <img src="assets/images/portfolio/evening-01.jpg" alt="سهرة درامية بالمخمل" loading="lazy">
+        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item3.title">سهرة درامية بالمخمل</strong><span data-i18n="portfolio.filterEvening">سهرة</span></div></div>
+      </div>
+      <div class="portfolio-item" data-category="evening" data-service="makeup" data-reveal>
+        <img src="assets/images/portfolio/evening-02.jpg" alt="مكياج سهرة أنيق" loading="lazy">
+        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item4.title">مكياج سهرة أنيق</strong><span data-i18n="portfolio.filterEvening">سهرة</span></div></div>
+      </div>
+      <div class="portfolio-item" data-category="hair" data-service="makeup-hair" data-reveal>
+        <img src="assets/images/portfolio/hair-01.jpg" alt="تسريحة كيرلي فاخرة" loading="lazy">
+        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item5.title">تسريحة كيرلي فاخرة</strong><span data-i18n="portfolio.filterHair">تسريحات</span></div></div>
+      </div>
+      <div class="portfolio-item" data-category="makeup" data-service="makeup" data-reveal>
+        <img src="assets/images/portfolio/process-01.jpg" alt="مكياج نهاري طبيعي" loading="lazy">
+        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item6.title">مكياج نهاري طبيعي</strong><span data-i18n="portfolio.filterMakeup">مكياج</span></div></div>
+      </div>
+      <div class="portfolio-item" data-category="makeup" data-service="makeup" data-reveal>
+        <img src="assets/images/portfolio/makeup-02.jpg" alt="تحضير بشرة احترافي" loading="lazy">
+        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item7.title">تحضير بشرة احترافي</strong><span data-i18n="portfolio.filterMakeup">مكياج</span></div></div>
+      </div>
+      <div class="portfolio-item" data-category="bridal" data-service="bridal-package" data-reveal>
+        <img src="assets/images/portfolio/bridal-03.jpg" alt="لمسة روج نهائية" loading="lazy">
+        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item8.title">لمسة روج نهائية</strong><span data-i18n="portfolio.filterBridal">عرايس</span></div></div>
+      </div>
+      <div class="portfolio-item" data-category="bridal" data-service="bridal-package" data-reveal>
+        <img src="assets/images/portfolio/bridal-04.jpg" alt="لوك عروس بالتول" loading="lazy">
+        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item9.title">لوك عروس بالتول</strong><span data-i18n="portfolio.filterBridal">عرايس</span></div></div>
+      </div>
+      <div class="portfolio-item" data-category="bridal" data-service="private-full" data-reveal>
+        <img src="assets/images/portfolio/bridal-05.jpg" alt="تاج لؤلؤي للعروس" loading="lazy">
+        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item10.title">تاج لؤلؤي للعروس</strong><span data-i18n="portfolio.filterBridal">عرايس</span></div></div>
+      </div>
+      <div class="portfolio-item" data-category="evening" data-service="makeup" data-reveal>
+        <img src="assets/images/portfolio/evening-03.jpg" alt="سهرة بعيون دخانية" loading="lazy">
+        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item11.title">سهرة بعيون دخانية</strong><span data-i18n="portfolio.filterEvening">سهرة</span></div></div>
+      </div>
+      <div class="portfolio-item" data-category="makeup" data-service="makeup" data-reveal>
+        <img src="assets/images/portfolio/makeup-03.jpg" alt="لوك جانبي أنيق" loading="lazy">
+        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item12.title">لوك جانبي أنيق</strong><span data-i18n="portfolio.filterMakeup">مكياج</span></div></div>
+      </div>
+      <div class="portfolio-item" data-category="bridal" data-service="private-full" data-reveal>
+        <img src="assets/images/portfolio/hero-bridal.jpg" alt="عروس بباقة الورد" loading="lazy">
+        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item13.title">عروس بباقة الورد</strong><span data-i18n="portfolio.filterBridal">عرايس</span></div></div>
+      </div>
+    </div>
+    <p class="portfolio-note" data-i18n="portfolio.note">* صور حقيقية من أعمال أميرة — سيتم إضافة المزيد بعد إطلاق الحساب الرسمي للموقع</p>
+  </div>
+</section>
+
+<!-- ============ VIDEO REELS ============ -->
+<section class="section" style="background:var(--bg-alt)">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow" data-i18n="portfolio.videosEyebrow">لقطات من الاستوديو</span>
+      <h2 class="section-title" data-i18n="portfolio.videosTitle">شاهدي أعمالي مباشرة</h2>
+      <p class="section-sub" data-i18n="portfolio.videosSub">مقاطع حقيقية من جلسات المكياج ونصائح سريعة</p>
+    </div>
+    <div class="reel-grid">
+      <div class="reel-item" data-reveal>
+        <video src="assets/videos/reel-01.mp4" poster="assets/images/portfolio/reel-01-poster.jpg" playsinline preload="none"></video>
+        <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
+        <div class="reel-caption" data-i18n="reel1.caption">لوك يومي ناعم</div>
+      </div>
+      <div class="reel-item" data-reveal>
+        <video src="assets/videos/reel-02.mp4" poster="assets/images/portfolio/reel-02-poster.jpg" playsinline preload="none"></video>
+        <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
+        <div class="reel-caption" data-i18n="reel2.caption">أسهل طريقة لرفع الخد</div>
+      </div>
+      <div class="reel-item" data-reveal>
+        <video src="assets/videos/reel-03.mp4" poster="assets/images/portfolio/reel-03-poster.jpg" playsinline preload="none"></video>
+        <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
+        <div class="reel-caption" data-i18n="reel3.caption">لحظات من كواليس التصوير</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section" style="padding-block:var(--space-8)">
+  <div class="container">
+    <div class="dark-cta" data-reveal>
+      <div class="dark-cta-body">
+        <span class="dark-cta-badge"><span class="dot"></span><span data-i18n="cta.badge">احجزي الآن — تأكيد فوري عبر واتساب</span></span>
+        <h2 data-i18n="cta.title">لا تؤجلي إطلالتكِ المثالية</h2>
+        <p data-i18n="cta.body">احجزي موعدك اليوم واحصلي على تأكيد فوري عبر واتساب، بدون التزامات معقدة وبأسعار واضحة من البداية.</p>
+        <div class="dark-cta-checks">
+          <div><svg class="icon"><use href="#i-check"/></svg><span data-i18n="cta.check1">تأكيد سريع عبر واتساب</span></div>
+          <div><svg class="icon"><use href="#i-check"/></svg><span data-i18n="cta.check2">في الاستوديو أو لديكِ</span></div>
+          <div><svg class="icon"><use href="#i-check"/></svg><span data-i18n="cta.check3">منتجات عالمية أصلية</span></div>
+          <div><svg class="icon"><use href="#i-check"/></svg><span data-i18n="cta.check4">تعقيم 100% للأدوات</span></div>
+        </div>
+      </div>
+      <div class="dark-cta-panel">
+        <span class="dark-cta-panel-badge" data-i18n="cta.panelBadge">تأكيد فوري</span>
+        <h3 data-i18n="cta.panelTitle">جاهزة تحجزين؟</h3>
+        <p data-i18n="cta.panelBody">اختاري الخدمة والتاريخ المناسب، وسنؤكد كل التفاصيل معكِ مباشرة.</p>
+        <a href="contact.html" class="btn btn-primary btn-block" data-i18n="cta.panelBtn1">احجزي موعدك</a>
+        <a href="#" id="darkCtaWaBtn" target="_blank" rel="noopener" class="btn btn-ghost btn-block"><svg class="icon icon-solid"><use href="#i-whatsapp"/></svg><span data-i18n="cta.panelBtn2">تواصلي واتساب</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<script src="assets/footer.js"></script>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

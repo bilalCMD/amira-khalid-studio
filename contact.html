@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>احجزي موعدكِ | استوديو أميرة خالد</title>
+<meta name="description" content="احجزي موعدكِ في استوديو أميرة خالد بجدة — تأكيد فوري عبر واتساب.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div id="app" dir="rtl" lang="ar">
+<script>window.CURRENT_PAGE = 'contact';</script>
+<script src="assets/header.js"></script>
+
+<main>
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container">
+    <span class="eyebrow" data-reveal data-i18n="page.contact.eyebrow">احجزي الآن</span>
+    <h1 class="page-hero-title" data-reveal data-i18n="page.contact.title">احجزي موعدكِ</h1>
+    <p class="page-hero-sub" data-reveal data-i18n="page.contact.sub">عبّي البيانات وسنؤكد موعدكِ عبر واتساب مباشرة</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="contact-grid">
+      <form class="booking-card" id="bookingForm" data-reveal novalidate>
+        <div class="form-row two">
+          <div class="field">
+            <label for="fName" data-i18n="contact.formName">الاسم الكامل</label>
+            <input id="fName" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="fPhone" data-i18n="contact.formPhone">رقم الجوال</label>
+            <input id="fPhone" name="phone" type="tel" required autocomplete="tel" placeholder="+966 5xxxxxxxx">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="fService" data-i18n="contact.formService">الخدمة</label>
+            <select id="fService" name="service" required>
+              <optgroup label="في الاستوديو" id="ogStudio" data-i18n-label="contact.serviceOptGroupStudio">
+                <option value="makeup" data-i18n="svc.makeupOpt">مكياج احترافي — 350 ريال</option>
+                <option value="makeup-blowdry" data-i18n="svc.makeupBlowdryOpt">مكياج + سشوار وكيرلي — 550 ريال</option>
+                <option value="makeup-hair" data-i18n="svc.makeupHairOpt">مكياج + تسريحة شعر كاملة — 650 ريال</option>
+                <option value="bridal-package" data-i18n="svc.bridalOpt">باقة العروس — 2500 ريال</option>
+                <option value="hair-extensions" data-i18n="svc.hairExtOpt">وصلات شعر — 100 ريال</option>
+              </optgroup>
+              <optgroup label="خدمة خاصة" id="ogPrivate" data-i18n-label="contact.serviceOptGroupPrivate">
+                <option value="private-basic" data-i18n="svc.privateBasicOpt">مكياج + رموش + هايلايتر — 2100 ريال</option>
+                <option value="private-full" data-i18n="svc.privateFullOpt">مكياج + رموش + هايلايتر + تسريحة — 3000 ريال</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+        <div class="form-row two">
+          <div class="field">
+            <label for="fDate" data-i18n="contact.formDate">التاريخ</label>
+            <input id="fDate" name="date" type="date" required>
+          </div>
+          <div class="field">
+            <label for="fTime" data-i18n="contact.formTime">وقت الجاهزية</label>
+            <input id="fTime" name="time" type="time" required>
+          </div>
+        </div>
+        <div class="field" style="margin-block-end:var(--space-3)">
+          <label data-i18n="contact.formLocation">المكان</label>
+          <div class="loc-toggle">
+            <label><input type="radio" name="location" value="studio" checked><span data-i18n="contact.locStudio">في الاستوديو (جدة)</span></label>
+            <label><input type="radio" name="location" value="home"><span data-i18n="contact.locHome">في موقعي</span></label>
+          </div>
+          <div class="private-hint" id="privateHint" data-i18n="contact.privateHint">تنبيه: الخدمة في موقعكِ الخاص متاحة للعرائس فقط</div>
+        </div>
+        <div class="addr-field" id="addrField">
+          <div class="field">
+            <label for="fAddress" data-i18n="contact.formAddress">تفاصيل الموقع / العنوان</label>
+            <textarea id="fAddress" name="address" rows="2"></textarea>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="fNotes" data-i18n="contact.formNotes">ملاحظات إضافية (اختياري)</label>
+            <textarea id="fNotes" name="notes" rows="2"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          <svg class="icon icon-solid"><use href="#i-whatsapp"/></svg>
+          <span data-i18n="contact.submitBtn">تأكيد الحجز عبر واتساب</span>
+        </button>
+        <div class="result-panel" id="resultPanel">
+          <svg class="icon" style="color:var(--gold)"><use href="#i-check"/></svg>
+          <p data-i18n="contact.successMsg">تم تجهيز طلبكِ! اضغطي لإتمام الإرسال عبر واتساب</p>
+          <a href="#" id="waConfirmLink" target="_blank" rel="noopener" class="btn btn-gold btn-sm">
+            <svg class="icon icon-solid"><use href="#i-whatsapp"/></svg> WhatsApp
+          </a>
+        </div>
+      </form>
+      <div class="info-card" data-reveal>
+        <div class="trust-strip"><svg class="icon"><use href="#i-shield"/></svg><span data-i18n="contact.trustBadge">موثوقة — استوديو أميرة خالد</span></div>
+        <div class="info-tile">
+          <span class="chip-icon"><svg class="icon"><use href="#i-pin"/></svg></span>
+          <div><strong data-i18n="contact.infoLocationTitle">الموقع</strong><br>
+            <a href="https://www.google.com/maps/search/?api=1&query=Al+Rayyan+District+Jeddah+Saudi+Arabia" target="_blank" rel="noopener" data-i18n="contact.infoLocation">حي الريان، جدة — عرض على خرائط جوجل</a>
+          </div>
+        </div>
+        <div class="info-tile">
+          <span class="chip-icon"><svg class="icon"><use href="#i-clock"/></svg></span>
+          <div><strong data-i18n="contact.infoHoursTitle">ساعات العمل</strong><br><span data-i18n="contact.infoHours">يوميًا: 10 صباحًا – 10 مساءً *</span></div>
+        </div>
+        <div class="info-tile">
+          <span class="chip-icon"><svg class="icon"><use href="#i-instagram"/></svg></span>
+          <div><strong data-i18n="contact.infoInstagramTitle">إنستغرام</strong><br><a href="https://www.instagram.com/amira_khalid89" target="_blank" rel="noopener">@amira_khalid89</a></div>
+        </div>
+        <div class="info-tile">
+          <span class="chip-icon"><svg class="icon"><use href="#i-tiktok"/></svg></span>
+          <div><strong data-i18n="contact.infoTiktokTitle">تيك توك</strong><br><a href="https://www.tiktok.com/@amira_khalid89" target="_blank" rel="noopener">@amira_khalid89</a></div>
+        </div>
+        <div class="info-tile">
+          <span class="chip-icon"><svg class="icon"><use href="#i-mail"/></svg></span>
+          <div><strong data-i18n="contact.infoEmailTitle">البريد الإلكتروني</strong><br><a href="mailto:mrmr8955@outlook.sa">mrmr8955@outlook.sa</a></div>
+        </div>
+        <a class="wa-direct" href="#" id="waDirectBtn" target="_blank" rel="noopener">
+          <svg class="icon icon-solid"><use href="#i-whatsapp"/></svg>
+          <span data-i18n="contact.infoWhatsapp">تواصلي مباشرة عبر واتساب</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MAP ============ -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow" data-i18n="contact.mapEyebrow">موقعنا</span>
+      <h2 class="section-title" data-i18n="contact.mapTitle">موقعنا على الخريطة</h2>
+    </div>
+    <div class="map-embed" data-reveal>
+      <iframe src="https://www.google.com/maps?q=Al+Rayyan+District,+Jeddah,+Saudi+Arabia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Amira Khalid Studio location on Google Maps"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<script src="assets/footer.js"></script>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
