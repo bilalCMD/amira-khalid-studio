@@ -400,7 +400,7 @@
 
   /* ---------- PORTFOLIO / PRICING -> BOOKING (cross-page) ---------- */
   function goToBooking(serviceValue){
-    var url = 'contact.html' + (serviceValue ? ('?service=' + encodeURIComponent(serviceValue)) : '');
+    var url = 'contact' + (serviceValue ? ('?service=' + encodeURIComponent(serviceValue)) : '');
     window.location.href = url;
   }
   portfolioItems.forEach(function(item){

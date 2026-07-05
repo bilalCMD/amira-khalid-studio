@@ -511,9 +511,8 @@ body.cursor-enabled a, body.cursor-enabled button, body.cursor-enabled input, bo
 .dark-cta-panel .btn-block + .btn-block{margin-block-start:10px;}
 
 /* ===================== VIDEO REEL GALLERY ===================== */
-.reel-grid{display:grid; grid-template-columns:1fr; gap:var(--space-5); max-width:360px; margin-inline:auto;}
-@media (min-width:480px){.reel-grid{grid-template-columns:repeat(2,1fr); max-width:none;}}
-@media (min-width:700px){.reel-grid{grid-template-columns:repeat(3,1fr);}}
+.reel-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:var(--space-3);}
+@media (min-width:700px){.reel-grid{grid-template-columns:repeat(3,1fr); gap:var(--space-5);}}
 .reel-item{position:relative; border-radius:var(--radius-md); overflow:hidden; aspect-ratio:9/16; background:#000; box-shadow:var(--shadow-sm,0 4px 14px hsla(336,45%,20%,.1)); transition:transform var(--dur-m) var(--ease), box-shadow var(--dur-m) var(--ease);}
 .reel-item:hover{transform:translateY(-6px); box-shadow:var(--shadow-lg,0 24px 50px hsla(336,45%,20%,.28));}
 .reel-item video{width:100%; height:100%; object-fit:cover; display:block;}
@@ -522,6 +521,11 @@ body.cursor-enabled a, body.cursor-enabled button, body.cursor-enabled input, bo
 .reel-play .icon{position:relative; width:22px; height:22px; color:#fff; fill:#fff; margin-inline-start:3px;}
 .reel-item.playing .reel-play{opacity:0; pointer-events:none;}
 .reel-caption{position:absolute; bottom:0; inset-inline:0; padding:var(--space-3) var(--space-3) var(--space-2); background:linear-gradient(to top,rgba(0,0,0,.7),transparent); color:#fff; font-size:.78rem; font-weight:700; pointer-events:none;}
+@media (max-width:479px){
+  .reel-play::after{width:40px; height:40px;}
+  .reel-play .icon{width:16px; height:16px;}
+  .reel-caption{font-size:.68rem; padding:var(--space-2) var(--space-2) 6px;}
+}
 
 /* ===================== MAP ===================== */
 .map-embed{border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow-sm,0 4px 14px hsla(336,45%,20%,.1)); position:relative; aspect-ratio:16/10;}

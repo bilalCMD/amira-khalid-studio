@@ -26,11 +26,11 @@
     '</svg>';
 
   var navItems = [
-    {key:'home', href:'index.html', i18n:'nav.home', text:'الرئيسية'},
-    {key:'about', href:'about.html', i18n:'nav.about', text:'من أنا'},
-    {key:'portfolio', href:'portfolio.html', i18n:'nav.portfolio', text:'أعمالي'},
-    {key:'pricing', href:'pricing.html', i18n:'nav.pricing', text:'الأسعار'},
-    {key:'contact', href:'contact.html', i18n:'nav.contact', text:'تواصل'}
+    {key:'home', href:'index', i18n:'nav.home', text:'الرئيسية'},
+    {key:'about', href:'about', i18n:'nav.about', text:'من أنا'},
+    {key:'portfolio', href:'portfolio', i18n:'nav.portfolio', text:'أعمالي'},
+    {key:'pricing', href:'pricing', i18n:'nav.pricing', text:'الأسعار'},
+    {key:'contact', href:'contact', i18n:'nav.contact', text:'تواصل'}
   ];
 
   function navLinks(cls){
@@ -44,7 +44,7 @@
   var headerHtml =
     '<header class="site-header" id="siteHeader">' +
       '<div class="container">' +
-        '<a href="index.html" class="brand">' +
+        '<a href="index" class="brand">' +
           '<span class="brand-mark"><img src="assets/images/logo-mark-bw.png" alt="Amira Khalid"></span>' +
           '<span class="brand-text">' +
             '<span class="brand-name" data-i18n="brand.name">أميرة خالد</span>' +
@@ -57,7 +57,7 @@
             '<button type="button" data-lang="ar" id="langArBtn">AR</button>' +
             '<button type="button" data-lang="en" id="langEnBtn">EN</button>' +
           '</div>' +
-          '<a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav.bookNow">احجزي الآن</a>' +
+          '<a href="contact" class="btn btn-primary btn-sm" data-i18n="nav.bookNow">احجزي الآن</a>' +
           '<button class="hamburger" id="openMobileNav" aria-label="Menu"><svg class="icon"><use href="#i-menu"/></svg></button>' +
         '</div>' +
       '</div>' +
@@ -70,7 +70,7 @@
       '</div>' +
       '<ul>' + navLinks('mnav-link') + '</ul>' +
       '<div class="mobile-nav-bottom">' +
-        '<a href="contact.html" class="btn btn-primary btn-block mnav-link" data-i18n="nav.bookNow">احجزي الآن</a>' +
+        '<a href="contact" class="btn btn-primary btn-block mnav-link" data-i18n="nav.bookNow">احجزي الآن</a>' +
         '<div class="mobile-social">' +
           '<a class="icon-btn" href="https://www.instagram.com/amira_khalid89" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" style="width:18px;height:18px"><use href="#i-instagram"/></svg></a>' +
           '<a class="icon-btn" href="https://www.tiktok.com/@amira_khalid89" target="_blank" rel="noopener" aria-label="TikTok"><svg class="icon" style="width:18px;height:18px"><use href="#i-tiktok"/></svg></a>' +

@@ -21,11 +21,11 @@
           '<div class="footer-col">' +
             '<h4 data-i18n="footer.quickLinks">روابط سريعة</h4>' +
             '<ul>' +
-              '<li><a href="index.html" data-i18n="nav.home">الرئيسية</a></li>' +
-              '<li><a href="about.html" data-i18n="nav.about">من أنا</a></li>' +
-              '<li><a href="portfolio.html" data-i18n="nav.portfolio">أعمالي</a></li>' +
-              '<li><a href="pricing.html" data-i18n="nav.pricing">الأسعار</a></li>' +
-              '<li><a href="contact.html" data-i18n="nav.contact">تواصل</a></li>' +
+              '<li><a href="index" data-i18n="nav.home">الرئيسية</a></li>' +
+              '<li><a href="about" data-i18n="nav.about">من أنا</a></li>' +
+              '<li><a href="portfolio" data-i18n="nav.portfolio">أعمالي</a></li>' +
+              '<li><a href="pricing" data-i18n="nav.pricing">الأسعار</a></li>' +
+              '<li><a href="contact" data-i18n="nav.contact">تواصل</a></li>' +
             '</ul>' +
           '</div>' +
           '<div class="footer-col">' +
@@ -42,7 +42,7 @@
             '<ul>' +
               '<li><span data-i18n="contact.infoLocation2">جدة، المملكة العربية السعودية</span></li>' +
               '<li><span data-i18n="contact.infoHours">يوميًا: 10 صباحًا – 10 مساءً *</span></li>' +
-              '<li><a href="contact.html" data-i18n="nav.bookNow">احجزي الآن</a></li>' +
+              '<li><a href="contact" data-i18n="nav.bookNow">احجزي الآن</a></li>' +
             '</ul>' +
           '</div>' +
         '</div>' +
