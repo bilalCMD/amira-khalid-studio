@@ -351,6 +351,14 @@ nav.main-nav a.current{color:var(--primary);}
 .duration-item .icon{color:var(--gold);}
 .private-note{text-align:center; color:var(--text-muted); font-size:.85rem; margin-block-start:var(--space-4); font-style:italic;}
 .trust-row{display:flex; flex-wrap:wrap; gap:var(--space-3); justify-content:center; margin-block-start:var(--space-7);}
+.trust-cards{display:grid; grid-template-columns:1fr; gap:var(--space-5);}
+@media (min-width:700px){.trust-cards{grid-template-columns:repeat(3,1fr);}}
+.trust-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:var(--space-7) var(--space-6); text-align:center; transition:transform var(--dur-m) var(--ease), box-shadow var(--dur-m) var(--ease);}
+.trust-card:hover{transform:translateY(-6px); box-shadow:var(--shadow-lg,0 24px 50px hsla(336,45%,20%,.2));}
+.trust-card-icon{width:56px; height:56px; border-radius:50%; background:var(--gold-soft); color:var(--gold); display:flex; align-items:center; justify-content:center; margin-inline:auto; margin-block-end:var(--space-4);}
+.trust-card-icon .icon{width:26px; height:26px;}
+.trust-card h3{font-size:1.05rem; font-weight:800; font-family:var(--font-display); margin-block-end:var(--space-2);}
+.trust-card p{color:var(--text-muted); font-size:.88rem; line-height:1.7;}
 
 /* ===================== TESTIMONIALS ===================== */
 .testi-wrap{max-width:920px; margin-inline:auto; position:relative; display:flex; align-items:center; justify-content:center; gap:var(--space-5);}
