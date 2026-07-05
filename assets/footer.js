@@ -7,7 +7,7 @@
         '<div class="footer-grid">' +
           '<div class="footer-brand">' +
             '<div class="brand">' +
-              '<span class="brand-mark"><img src="assets/images/logo-mark.png" alt="Amira Khalid"></span>' +
+              '<span class="brand-mark"><img src="assets/images/logo-mark-bw.png" alt="Amira Khalid"></span>' +
               '<span class="brand-text"><span class="brand-name" data-i18n="brand.name">أميرة خالد</span><span class="brand-tag" data-i18n="brand.tag">Makeup Studio · Jeddah</span></span>' +
             '</div>' +
             '<p data-i18n="footer.tagline">إبراز جمالكِ الطبيعي بلمسة فنية احترافية، في كل مناسبة تستحق التميز.</p>' +
@@ -16,6 +16,7 @@
               '<a class="icon-btn" href="https://www.tiktok.com/@amira_khalid89" target="_blank" rel="noopener" aria-label="TikTok"><svg class="icon" style="width:18px;height:18px"><use href="#i-tiktok"/></svg></a>' +
               '<a class="icon-btn" href="#" id="footerWaBtn" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon icon-solid" style="width:18px;height:18px"><use href="#i-whatsapp"/></svg></a>' +
             '</div>' +
+            '<a class="maroof-badge" href="#" target="_blank" rel="noopener" id="maroofBadge"><svg class="icon" style="width:16px;height:16px"><use href="#i-badge-check"/></svg><span data-i18n="footer.maroof">موثّقة عبر معروف</span></a>' +
           '</div>' +
           '<div class="footer-col">' +
             '<h4 data-i18n="footer.quickLinks">روابط سريعة</h4>' +

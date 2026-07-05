@@ -20,6 +20,8 @@
     '<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-11" stroke-linecap="round" stroke-linejoin="round"/></symbol>' +
     '<symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4l14 8-14 8V4z" stroke-linejoin="round" stroke-linecap="round"/></symbol>' +
     '<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6" stroke-linecap="round" stroke-linejoin="round"/></symbol>' +
+    '<symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z" stroke-linejoin="round" stroke-linecap="round"/><circle cx="12" cy="14" r="3.5"/></symbol>' +
+    '<symbol id="i-badge-check" viewBox="0 0 24 24"><path d="M12 2l2.4 1.4 2.8-.3 1.1 2.6 2.6 1.1-.3 2.8L22 12l-1.4 2.4.3 2.8-2.6 1.1-1.1 2.6-2.8-.3L12 22l-2.4-1.4-2.8.3-1.1-2.6-2.6-1.1.3-2.8L2 12l1.4-2.4-.3-2.8 2.6-1.1 1.1-2.6 2.8.3L12 2z" stroke-linejoin="round"/><path d="M8.5 12.5l2.3 2.3 4.7-4.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>' +
     '<symbol id="i-monogram" viewBox="0 0 100 100"><text x="50" y="65" font-size="46" text-anchor="middle" font-family="Georgia, serif" fill="currentColor">أخ</text></symbol>' +
     '</svg>';
 
@@ -43,7 +45,7 @@
     '<header class="site-header" id="siteHeader">' +
       '<div class="container">' +
         '<a href="index.html" class="brand">' +
-          '<span class="brand-mark"><img src="assets/images/logo-mark.png" alt="Amira Khalid"></span>' +
+          '<span class="brand-mark"><img src="assets/images/logo-mark-bw.png" alt="Amira Khalid"></span>' +
           '<span class="brand-text">' +
             '<span class="brand-name" data-i18n="brand.name">أميرة خالد</span>' +
             '<span class="brand-tag" data-i18n="brand.tag">Makeup Studio · Jeddah</span>' +
@@ -63,7 +65,7 @@
     '<div class="scrim" id="scrim"></div>' +
     '<aside class="mobile-nav" id="mobileNav">' +
       '<div class="mobile-nav-top">' +
-        '<span class="brand-mark"><img src="assets/images/logo-mark.png" alt="Amira Khalid"></span>' +
+        '<span class="brand-mark"><img src="assets/images/logo-mark-bw.png" alt="Amira Khalid"></span>' +
         '<button class="icon-btn" id="closeMobileNav" aria-label="Close"><svg class="icon" style="width:18px;height:18px"><use href="#i-close"/></svg></button>' +
       '</div>' +
       '<ul>' + navLinks('mnav-link') + '</ul>' +

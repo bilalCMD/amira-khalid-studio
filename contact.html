@@ -47,10 +47,11 @@
             <select id="fService" name="service" required>
               <optgroup label="في الاستوديو" id="ogStudio" data-i18n-label="contact.serviceOptGroupStudio">
                 <option value="makeup" data-i18n="svc.makeupOpt">مكياج احترافي — 350 ريال</option>
-                <option value="makeup-blowdry" data-i18n="svc.makeupBlowdryOpt">مكياج + سشوار وكيرلي — 550 ريال</option>
                 <option value="makeup-hair" data-i18n="svc.makeupHairOpt">مكياج + تسريحة شعر كاملة — 650 ريال</option>
+                <option value="bridal-makeup" data-i18n="svc.bridalMakeupOpt">مكياج عروس — السعر عند التواصل</option>
                 <option value="bridal-package" data-i18n="svc.bridalOpt">باقة العروس — 2500 ريال</option>
                 <option value="hair-extensions" data-i18n="svc.hairExtOpt">وصلات شعر — 100 ريال</option>
+                <option value="nails" data-i18n="svc.nailsOpt">خدمة الأظافر — بطلب مسبق</option>
               </optgroup>
               <optgroup label="خدمة خاصة" id="ogPrivate" data-i18n-label="contact.serviceOptGroupPrivate">
                 <option value="private-basic" data-i18n="svc.privateBasicOpt">مكياج + رموش + هايلايتر — 2100 ريال</option>
@@ -63,6 +64,7 @@
           <div class="field">
             <label for="fDate" data-i18n="contact.formDate">التاريخ</label>
             <input id="fDate" name="date" type="date" required>
+            <div class="field-error" id="dateBlockedMsg" data-i18n="contact.dateBlocked">هذا التاريخ محجوز بالكامل، يرجى اختيار تاريخ آخر</div>
           </div>
           <div class="field">
             <label for="fTime" data-i18n="contact.formTime">وقت الجاهزية</label>
@@ -71,11 +73,12 @@
         </div>
         <div class="field" style="margin-block-end:var(--space-3)">
           <label data-i18n="contact.formLocation">المكان</label>
-          <div class="loc-toggle">
-            <label><input type="radio" name="location" value="studio" checked><span data-i18n="contact.locStudio">في الاستوديو (جدة)</span></label>
-            <label><input type="radio" name="location" value="home"><span data-i18n="contact.locHome">في موقعي</span></label>
+          <div class="loc-toggle" id="locToggle">
+            <label class="loc-option loc-option-studio"><input type="radio" name="location" value="studio" checked><span data-i18n="contact.locStudio">في الاستوديو (جدة)</span></label>
+            <label class="loc-option loc-option-home"><input type="radio" name="location" value="home"><span data-i18n="contact.locHome">في موقعي</span></label>
           </div>
           <div class="private-hint" id="privateHint" data-i18n="contact.privateHint">تنبيه: الخدمة في موقعكِ الخاص متاحة للعرائس فقط</div>
+          <div class="private-hint" id="lockedHint"></div>
         </div>
         <div class="addr-field" id="addrField">
           <div class="field">

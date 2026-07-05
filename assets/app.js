@@ -2,8 +2,9 @@
   "use strict";
 
   /* ---------- CONFIG ---------- */
-  // TODO(DevMenta): replace with Amira's real WhatsApp number (country code + number, no + or spaces)
   var WHATSAPP_NUMBER = "966530005384";
+  // Dates Amira is fully booked / unavailable — add more "YYYY-MM-DD" strings as needed.
+  var BLOCKED_DATES = [];
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -24,6 +25,8 @@
       "cta.panelBadge":"تأكيد فوري","cta.panelTitle":"جاهزة تحجزين؟","cta.panelBody":"اختاري الخدمة والتاريخ المناسب، وسنؤكد كل التفاصيل معكِ مباشرة.",
       "cta.panelBtn1":"احجزي موعدك","cta.panelBtn2":"تواصلي واتساب",
       "portfolio.videosEyebrow":"لقطات من الاستوديو","portfolio.videosTitle":"شاهدي أعمالي مباشرة","portfolio.videosSub":"مقاطع حقيقية من جلسات المكياج ونصائح سريعة",
+      "ba.eyebrow":"قبل وبعد","ba.title":"شاهدي الفرق","ba.sub":"تحوّلات حقيقية من جلسات مكياج فعلية","ba.before":"قبل","ba.after":"بعد","ba.comingSoon":"الصور قريبًا",
+      "portfolio.instaFollow":"تابعي أحدث الريلز على إنستغرام",
       "reel1.caption":"لوك يومي ناعم","reel2.caption":"أسهل طريقة لرفع الخد","reel3.caption":"لحظات من كواليس التصوير",
       "about.journeyEyebrow":"رحلتي","about.journeyTitle":"كيف بدأت القصة",
       "journey.step1Title":"البداية","journey.step1Desc":"بدأت أميرة شغفها بالمكياج من سن مبكر، وطورت مهاراتها عبر دورات احترافية معتمدة.",
@@ -36,6 +39,7 @@
       "faq.q3":"هل يمكن إلغاء أو تعديل الموعد؟","faq.a3":"يمكنكِ تعديل أو إلغاء الموعد قبل 48 ساعة على الأقل من الموعد المحدد بدون أي رسوم.",
       "faq.q4":"هل هناك رسوم إضافية للخدمة خارج الاستوديو؟","faq.a4":"الأسعار المعلنة للخدمة الخاصة تشمل التنقل داخل جدة. للمواقع خارج جدة قد تُضاف رسوم تنقل تُحدد عند التواصل.",
       "faq.q5":"ما هي طريقة الدفع؟","faq.a5":"الدفع نقدًا أو تحويل بنكي مباشر في يوم الموعد، ونؤكد كافة التفاصيل مسبقًا عبر واتساب.",
+      "faq.q6":"هل يلزم دفع عربون لتأكيد الحجز؟","faq.a6":"نؤكد الحجز عبر واتساب مباشرة. بالنسبة لباقة العروس، قد نطلب عربونًا لحجز التاريخ بشكل نهائي — سنوضح التفاصيل عند التواصل معكِ.",
       "contact.mapEyebrow":"موقعنا","contact.mapTitle":"موقعنا على الخريطة",
       "marquee.m1":"مكياج عرايس","marquee.m2":"تسريحات شعر راقية","marquee.m3":"خدمة في جدة","marquee.m4":"حجز عبر واتساب","marquee.m5":"منتجات عالمية احترافية",
       "page.about.eyebrow":"من نحن","page.about.title":"تعرّفي على أميرة","page.about.sub":"القصة، الخبرة، والالتزام خلف كل إطلالة",
@@ -59,19 +63,23 @@
       "testi.a1":"س","testi.a2":"ن","testi.a3":"ل",
       "pricing.groupStudio":"في الاستوديو","pricing.groupPrivate":"خدمة خاصة — للعروس في موقعها","pricing.featured":"الأكثر طلبًا","pricing.bookBtn":"احجزي الآن",
       "pricing.privateNote":"* الخدمة الخاصة متاحة للعرائس فقط، في الموقع الذي تحددنه العميلة",
+      "pricing.onRequest":"السعر عند التواصل","pricing.nailsNote":"* خدمة الأظافر متاحة بطلب مسبق فقط — يُرجى التواصل قبل الموعد بوقت كافٍ",
       "pricing.durationRegular":"<strong>35–45</strong> دقيقة — حسب نوع البشرة","pricing.durationBride":"<strong>60–75</strong> دقيقة — جلسة العروس",
       "trust.brands":"منتجات عالمية احترافية","trust.sterile":"تعقيم كامل للأدوات","trust.single":"أدوات فردية لكل عميلة",
       "svc.makeup":"مكياج احترافي","svc.makeup.desc":"تحضير بشرة ومكياج أنيق يدوم طوال اليوم","svc.makeupOpt":"مكياج احترافي — 350 ريال",
-      "svc.makeupBlowdry":"مكياج + سشوار وكيرلي","svc.makeupBlowdry.desc":"إطلالة كاملة مع تصفيف يدوم لسهرتكِ","svc.makeupBlowdryOpt":"مكياج + سشوار وكيرلي — 550 ريال",
       "svc.makeupHair":"مكياج + تسريحة شعر كاملة","svc.makeupHair.desc":"مكياج مع تسريحة مصممة حسب إطلالتكِ","svc.makeupHairOpt":"مكياج + تسريحة شعر كاملة — 650 ريال",
+      "svc.bridalMakeup":"مكياج عروس","svc.bridalMakeup.desc":"مكياج العروس فقط، في الاستوديو أو في موقعكِ حسب توفر الموعد","svc.bridalMakeupOpt":"مكياج عروس — السعر عند التواصل",
       "svc.bridal":"باقة العروس","svc.bridal.desc":"مكياج + رموش + هايلايتر للجسم + تسريحة شعر","svc.bridalOpt":"باقة العروس — 2500 ريال",
       "svc.hairExt":"وصلات شعر","svc.hairExt.desc":"إضافة كثافة وطول لإطلالة أكثر فخامة","svc.hairExtOpt":"وصلات شعر — 100 ريال",
+      "svc.nails":"خدمة الأظافر","svc.nails.desc":"عناية وتجميل أظافر، بطلب مسبق فقط","svc.nailsOpt":"خدمة الأظافر — بطلب مسبق",
       "svc.privateBasic":"مكياج + رموش + هايلايتر","svc.privateBasic.desc":"خدمة خاصة في مكان راحتكِ يوم الزفاف","svc.privateBasicOpt":"مكياج + رموش + هايلايتر — 2100 ريال",
       "svc.privateFull":"مكياج + رموش + هايلايتر + تسريحة شعر","svc.privateFull.desc":"الباقة الكاملة، في موقعكِ الخاص","svc.privateFullOpt":"مكياج + رموش + هايلايتر + تسريحة — 3000 ريال",
       "common.sar":"ريال",
       "contact.formName":"الاسم الكامل","contact.formPhone":"رقم الجوال","contact.formService":"الخدمة","contact.formDate":"التاريخ","contact.formTime":"وقت الجاهزية",
       "contact.formLocation":"المكان","contact.locStudio":"في الاستوديو (جدة)","contact.locHome":"في موقعي","contact.formAddress":"تفاصيل الموقع / العنوان",
       "contact.formNotes":"ملاحظات إضافية (اختياري)","contact.submitBtn":"تأكيد الحجز عبر واتساب","contact.privateHint":"تنبيه: الخدمة في موقعكِ الخاص متاحة للعرائس فقط",
+      "contact.lockedHintStudio":"هذه الخدمة متاحة في الاستوديو فقط","contact.lockedHintHome":"هذه الخدمة متاحة في موقعكِ فقط",
+      "contact.dateBlocked":"هذا التاريخ محجوز بالكامل، يرجى اختيار تاريخ آخر",
       "contact.serviceOptGroupStudio":"في الاستوديو","contact.serviceOptGroupPrivate":"خدمة خاصة",
       "contact.successMsg":"تم تجهيز طلبكِ! اضغطي لإتمام الإرسال عبر واتساب",
       "contact.trustBadge":"موثوقة — استوديو أميرة خالد","contact.infoLocationTitle":"الموقع","contact.infoLocation":"حي الريان، جدة — عرض على خرائط جوجل",
@@ -80,6 +88,7 @@
       "contact.infoEmailTitle":"البريد الإلكتروني",
       "contact.infoWhatsapp":"تواصلي مباشرة عبر واتساب",
       "footer.tagline":"إبراز جمالكِ الطبيعي بلمسة فنية احترافية، في كل مناسبة تستحق التميز.","footer.quickLinks":"روابط سريعة","footer.services":"الخدمات","footer.getInTouch":"تواصلي معنا",
+      "footer.maroof":"موثّقة عبر معروف",
       "footer.rights":"© <span id=\"yearNow\">2026</span> استوديو أميرة خالد. جميع الحقوق محفوظة.","footer.credit":"صُمم بواسطة DevMenta"
     },
     en: {
@@ -97,6 +106,8 @@
       "cta.panelBadge":"Instant Confirm","cta.panelTitle":"Ready to Book?","cta.panelBody":"Choose your service and preferred date, and we'll confirm every detail with you directly.",
       "cta.panelBtn1":"Book Your Appointment","cta.panelBtn2":"Message on WhatsApp",
       "portfolio.videosEyebrow":"From the Studio","portfolio.videosTitle":"Watch My Work Live","portfolio.videosSub":"Real clips from makeup sessions and quick tips",
+      "ba.eyebrow":"Before & After","ba.title":"See the Difference","ba.sub":"Real transformations from actual makeup sessions","ba.before":"Before","ba.after":"After","ba.comingSoon":"Photos coming soon",
+      "portfolio.instaFollow":"Follow the latest reels on Instagram",
       "reel1.caption":"Soft Everyday Look","reel2.caption":"Easiest Way to Lift the Cheek","reel3.caption":"Behind the Scenes",
       "about.journeyEyebrow":"My Journey","about.journeyTitle":"How the Story Began",
       "journey.step1Title":"The Beginning","journey.step1Desc":"Amira's passion for makeup began early, developing her skills through certified professional courses.",
@@ -109,6 +120,7 @@
       "faq.q3":"Can I cancel or reschedule my appointment?","faq.a3":"You can reschedule or cancel free of charge up to 48 hours before your appointment.",
       "faq.q4":"Is there an extra fee for service outside the studio?","faq.a4":"Listed private-service prices include travel within Jeddah. Locations outside Jeddah may involve an additional travel fee, confirmed when you reach out.",
       "faq.q5":"What payment methods do you accept?","faq.a5":"Cash or direct bank transfer on the day of the appointment — we confirm all details in advance via WhatsApp.",
+      "faq.q6":"Do you require a deposit to confirm booking?","faq.a6":"Bookings are confirmed directly via WhatsApp. For the Bridal Package, a deposit may be requested to lock in your date — we'll share the details when you reach out.",
       "contact.mapEyebrow":"Our Location","contact.mapTitle":"Find Us on the Map",
       "marquee.m1":"Bridal Makeup","marquee.m2":"Elegant Hairstyling","marquee.m3":"Serving Jeddah","marquee.m4":"Book via WhatsApp","marquee.m5":"International Brands",
       "page.about.eyebrow":"About","page.about.title":"Meet Amira","page.about.sub":"The story, expertise, and care behind every look",
@@ -132,19 +144,23 @@
       "testi.a1":"S","testi.a2":"N","testi.a3":"L",
       "pricing.groupStudio":"At the Studio","pricing.groupPrivate":"Private Service — Bride's Location","pricing.featured":"Most Popular","pricing.bookBtn":"Book Now",
       "pricing.privateNote":"* Private service is for brides only, at the location of the client's choice",
+      "pricing.onRequest":"Price on request","pricing.nailsNote":"* Nail service is available by advance request only — please reach out well ahead of your appointment",
       "pricing.durationRegular":"<strong>35–45</strong> min — depending on skin type","pricing.durationBride":"<strong>60–75</strong> min — bride session",
       "trust.brands":"Professional international brands","trust.sterile":"Full tool sterilization","trust.single":"Single-use tools per client",
       "svc.makeup":"Professional Makeup","svc.makeup.desc":"Skin prep & elegant makeup that lasts all day","svc.makeupOpt":"Professional Makeup — SAR 350",
-      "svc.makeupBlowdry":"Makeup + Blow-dry & Curls","svc.makeupBlowdry.desc":"A complete look with styling that lasts your evening","svc.makeupBlowdryOpt":"Makeup + Blow-dry & Curls — SAR 550",
       "svc.makeupHair":"Makeup + Complete Hairstyle","svc.makeupHair.desc":"Makeup with a hairstyle designed for your look","svc.makeupHairOpt":"Makeup + Complete Hairstyle — SAR 650",
+      "svc.bridalMakeup":"Bridal Makeup","svc.bridalMakeup.desc":"Makeup only for the bride, at the studio or your location depending on availability","svc.bridalMakeupOpt":"Bridal Makeup — price on request",
       "svc.bridal":"Bridal Package","svc.bridal.desc":"Makeup + Lashes + Body Highlighter + Hair Styling","svc.bridalOpt":"Bridal Package — SAR 2500",
       "svc.hairExt":"Hair Extensions","svc.hairExt.desc":"Add volume and length for a more glamorous look","svc.hairExtOpt":"Hair Extensions — SAR 100",
+      "svc.nails":"Nail Service","svc.nails.desc":"Nail care & polish, by advance request only","svc.nailsOpt":"Nail Service — by advance request",
       "svc.privateBasic":"Makeup + Lashes + Highlighter","svc.privateBasic.desc":"Private service at your location on your wedding day","svc.privateBasicOpt":"Makeup + Lashes + Highlighter — SAR 2100",
       "svc.privateFull":"Makeup + Lashes + Highlighter + Hairstyle","svc.privateFull.desc":"The complete package, at your own location","svc.privateFullOpt":"Makeup + Lashes + Highlighter + Hairstyle — SAR 3000",
       "common.sar":"SAR",
       "contact.formName":"Full Name","contact.formPhone":"Phone Number","contact.formService":"Service","contact.formDate":"Date","contact.formTime":"Ready-by Time",
       "contact.formLocation":"Location","contact.locStudio":"At the Studio (Jeddah)","contact.locHome":"At My Location","contact.formAddress":"Location Details / Address",
       "contact.formNotes":"Additional Notes (optional)","contact.submitBtn":"Confirm Booking via WhatsApp","contact.privateHint":"Note: private location service is for brides only",
+      "contact.lockedHintStudio":"This service is available at the studio only","contact.lockedHintHome":"This service is available at your location only",
+      "contact.dateBlocked":"This date is fully booked — please choose another date",
       "contact.serviceOptGroupStudio":"At the Studio","contact.serviceOptGroupPrivate":"Private Service",
       "contact.successMsg":"Your request is ready! Click to complete sending via WhatsApp",
       "contact.trustBadge":"Trusted — Amira Khalid Studio","contact.infoLocationTitle":"Location","contact.infoLocation":"Al Rayyan District, Jeddah — View on Google Maps",
@@ -153,6 +169,7 @@
       "contact.infoEmailTitle":"Email",
       "contact.infoWhatsapp":"Chat with us on WhatsApp",
       "footer.tagline":"Enhancing your natural beauty with a professional artistic touch, for every occasion that deserves the best.","footer.quickLinks":"Quick Links","footer.services":"Services","footer.getInTouch":"Get in Touch",
+      "footer.maroof":"Verified via Maroof",
       "footer.rights":"© <span id=\"yearNow\">2026</span> Amira Khalid Studio. All rights reserved.","footer.credit":"Crafted by DevMenta"
     }
   };
@@ -452,9 +469,55 @@
     var serviceSelect = document.getElementById('fService');
 
     var serviceLabelKey = {
-      'makeup':'svc.makeup','makeup-blowdry':'svc.makeupBlowdry','makeup-hair':'svc.makeupHair',
-      'bridal-package':'svc.bridal','hair-extensions':'svc.hairExt','private-basic':'svc.privateBasic','private-full':'svc.privateFull'
+      'makeup':'svc.makeup','makeup-hair':'svc.makeupHair','bridal-makeup':'svc.bridalMakeup',
+      'bridal-package':'svc.bridal','hair-extensions':'svc.hairExt','nails':'svc.nails',
+      'private-basic':'svc.privateBasic','private-full':'svc.privateFull'
     };
+
+    /* ---------- STUDIO-ONLY / HOME-ONLY / FLEXIBLE LOCATION RULES ---------- */
+    var studioOnlyServices = ['makeup','makeup-hair','hair-extensions','nails'];
+    var homeOnlyServices = ['private-basic','private-full'];
+    var locToggle = document.getElementById('locToggle');
+    var lockedHint = document.getElementById('lockedHint');
+    var studioRadio = document.querySelector('input[name="location"][value="studio"]');
+    var homeRadio = document.querySelector('input[name="location"][value="home"]');
+    function updateLocationOptions(){
+      if(!serviceSelect || !locToggle) return;
+      var service = serviceSelect.value;
+      var dict = translations[currentLang()];
+      var studioLabel = locToggle.querySelector('.loc-option-studio');
+      var homeLabel = locToggle.querySelector('.loc-option-home');
+      if(studioOnlyServices.indexOf(service) !== -1){
+        homeLabel.style.display = 'none';
+        studioLabel.style.display = '';
+        studioRadio.checked = true;
+        lockedHint.textContent = dict['contact.lockedHintStudio'];
+        lockedHint.classList.add('show');
+        privateHint.classList.remove('show');
+        addrField.classList.remove('show');
+        addrTextarea.required = false;
+      } else if(homeOnlyServices.indexOf(service) !== -1){
+        studioLabel.style.display = 'none';
+        homeLabel.style.display = '';
+        homeRadio.checked = true;
+        lockedHint.textContent = dict['contact.lockedHintHome'];
+        lockedHint.classList.add('show');
+        addrField.classList.add('show');
+        addrTextarea.required = true;
+        privateHint.classList.remove('show');
+      } else {
+        studioLabel.style.display = '';
+        homeLabel.style.display = '';
+        lockedHint.classList.remove('show');
+        var checkedRadio = document.querySelector('input[name="location"]:checked');
+        if(checkedRadio && checkedRadio.value === 'home'){
+          addrField.classList.add('show');
+          addrTextarea.required = true;
+          privateHint.classList.add('show');
+        }
+      }
+    }
+    if(serviceSelect){ serviceSelect.addEventListener('change', updateLocationOptions); }
 
     /* preselect service from ?service= query param (arriving from portfolio/pricing pages) */
     try{
@@ -468,6 +531,7 @@
         }
       }
     }catch(e){}
+    updateLocationOptions();
 
     form.addEventListener('submit', function(e){
       e.preventDefault();
@@ -519,6 +583,19 @@
       var iso = today.getFullYear() + '-' + String(today.getMonth()+1).padStart(2,'0') + '-' + String(today.getDate()).padStart(2,'0');
       dateInput.min = iso;
     }catch(e){}
+
+    /* blocked / fully-booked dates */
+    var dateBlockedMsg = document.getElementById('dateBlockedMsg');
+    var submitBtn = form.querySelector('button[type="submit"]');
+    function checkBlockedDate(){
+      var blocked = dateInput.value && BLOCKED_DATES.indexOf(dateInput.value) !== -1;
+      dateInput.classList.toggle('invalid-date', blocked);
+      if(dateBlockedMsg) dateBlockedMsg.classList.toggle('show', blocked);
+      dateInput.setCustomValidity(blocked ? 'blocked' : '');
+      if(submitBtn) submitBtn.disabled = blocked;
+      return blocked;
+    }
+    if(dateInput) dateInput.addEventListener('change', checkBlockedDate);
   }
 
   /* ---------- SCROLL TO TOP ---------- */
