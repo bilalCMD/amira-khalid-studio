@@ -74,10 +74,26 @@
           </div>
         </div>
         <div class="form-row two">
-          <div class="field">
-            <label for="fDate" data-i18n="contact.formDate">التاريخ</label>
-            <input id="fDate" name="date" type="date" required>
-            <div class="field-error" id="dateBlockedMsg" data-i18n="contact.dateBlocked">هذا التاريخ محجوز بالكامل، يرجى اختيار تاريخ آخر</div>
+          <div class="field date-field">
+            <label for="dateTrigger" data-i18n="contact.formDate">التاريخ</label>
+            <button type="button" class="date-trigger" id="dateTrigger">
+              <svg class="icon" style="width:18px;height:18px"><use href="#i-clock"/></svg>
+              <span id="dateDisplayText" data-i18n="contact.selectDate">اختاري التاريخ</span>
+            </button>
+            <input type="hidden" id="fDate" name="date" required>
+            <div class="calendar-popup" id="calendarPopup">
+              <div class="calendar-head">
+                <button type="button" class="cal-nav" id="calPrev" aria-label="Previous month"><svg class="icon" style="width:16px;height:16px;transform:scaleX(-1)"><use href="#i-chevron"/></svg></button>
+                <span class="calendar-month-label" id="calMonthLabel"></span>
+                <button type="button" class="cal-nav" id="calNext" aria-label="Next month"><svg class="icon" style="width:16px;height:16px"><use href="#i-chevron"/></svg></button>
+              </div>
+              <div class="calendar-weekdays" id="calWeekdays"></div>
+              <div class="calendar-grid" id="calGrid"></div>
+              <div class="calendar-legend">
+                <span><i class="cal-dot available"></i><span data-i18n="calendar.available">متاح</span></span>
+                <span><i class="cal-dot blocked"></i><span data-i18n="calendar.fullyBooked">محجوز بالكامل</span></span>
+              </div>
+            </div>
           </div>
           <div class="field">
             <label for="fTime" data-i18n="contact.formTime">وقت الجاهزية</label>

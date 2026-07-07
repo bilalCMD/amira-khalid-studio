@@ -88,6 +88,8 @@
       "contact.formNotes":"ملاحظات إضافية (اختياري)","contact.submitBtn":"تأكيد الحجز عبر واتساب","contact.privateHint":"تنبيه: الخدمة في موقعكِ الخاص متاحة للعرائس فقط",
       "contact.lockedHintStudio":"هذه الخدمة متاحة في الاستوديو فقط","contact.lockedHintHome":"هذه الخدمة متاحة في موقعكِ فقط",
       "contact.dateBlocked":"هذا التاريخ محجوز بالكامل، يرجى اختيار تاريخ آخر",
+      "contact.selectDate":"اختاري التاريخ",
+      "calendar.available":"متاح","calendar.fullyBooked":"محجوز بالكامل",
       "contact.serviceOptGroupStudio":"في الاستوديو","contact.serviceOptGroupPrivate":"خدمة خاصة",
       "contact.successMsg":"تم تجهيز طلبكِ! اضغطي لإتمام الإرسال عبر واتساب",
       "contact.trustBadge":"موثوقة — استوديو أميرة خالد","contact.infoLocationTitle":"الموقع","contact.infoLocation":"حي الريان، جدة — عرض على خرائط جوجل",
@@ -177,6 +179,8 @@
       "contact.formNotes":"Additional Notes (optional)","contact.submitBtn":"Confirm Booking via WhatsApp","contact.privateHint":"Note: private location service is for brides only",
       "contact.lockedHintStudio":"This service is available at the studio only","contact.lockedHintHome":"This service is available at your location only",
       "contact.dateBlocked":"This date is fully booked — please choose another date",
+      "contact.selectDate":"Select a date",
+      "calendar.available":"Available","calendar.fullyBooked":"Fully Booked",
       "contact.serviceOptGroupStudio":"At the Studio","contact.serviceOptGroupPrivate":"Private Service",
       "contact.successMsg":"Your request is ready! Click to complete sending via WhatsApp",
       "contact.trustBadge":"Trusted — Amira Khalid Studio","contact.infoLocationTitle":"Location","contact.infoLocation":"Al Rayyan District, Jeddah — View on Google Maps",
@@ -336,13 +340,13 @@
   /* ---------- PARTICLES (home hero only) ---------- */
   var particleWrap = document.getElementById('particles');
   if(particleWrap){
-    for(var i=0;i<14;i++){
+    for(var i=0;i<7;i++){
       var p = document.createElement('span');
       p.className = 'particle';
       p.style.top = (Math.floor((i*37)%100)) + '%';
       p.style.left = (Math.floor((i*53)%100)) + '%';
       p.style.animationDelay = (-(i*0.7)) + 's';
-      p.style.opacity = String(0.25 + (i%5)*0.08);
+      p.style.opacity = String(0.16 + (i%5)*0.05);
       particleWrap.appendChild(p);
     }
   }
@@ -551,6 +555,16 @@
 
     form.addEventListener('submit', function(e){
       e.preventDefault();
+      var dateFieldInput = document.getElementById('fDate');
+      var dateTriggerBtn = document.getElementById('dateTrigger');
+      if(dateFieldInput && !dateFieldInput.value){
+        if(dateTriggerBtn){
+          dateTriggerBtn.classList.add('invalid-date');
+          dateTriggerBtn.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block:'center'});
+        }
+        return;
+      }
+      if(dateTriggerBtn) dateTriggerBtn.classList.remove('invalid-date');
       if(!form.reportValidity()) return;
 
       var lang = currentLang();
@@ -592,26 +606,105 @@
       try{ window.open(href, '_blank', 'noopener'); }catch(err){}
     });
 
-    /* min date = today */
-    try{
-      var dateInput = document.getElementById('fDate');
-      var today = new Date();
-      var iso = today.getFullYear() + '-' + String(today.getMonth()+1).padStart(2,'0') + '-' + String(today.getDate()).padStart(2,'0');
-      dateInput.min = iso;
-    }catch(e){}
+    /* ---------- CALENDAR DATE PICKER ---------- */
+    var dateInput = document.getElementById('fDate');
+    var dateTrigger = document.getElementById('dateTrigger');
+    var dateDisplayText = document.getElementById('dateDisplayText');
+    var calendarPopup = document.getElementById('calendarPopup');
+    if(dateInput && dateTrigger && calendarPopup){
+      var calMonthLabel = document.getElementById('calMonthLabel');
+      var calWeekdays = document.getElementById('calWeekdays');
+      var calGrid = document.getElementById('calGrid');
+      var calPrev = document.getElementById('calPrev');
+      var calNext = document.getElementById('calNext');
 
-    /* blocked / fully-booked dates */
-    var dateBlockedMsg = document.getElementById('dateBlockedMsg');
-    var submitBtn = form.querySelector('button[type="submit"]');
-    function checkBlockedDate(){
-      var blocked = dateInput.value && BLOCKED_DATES.indexOf(dateInput.value) !== -1;
-      dateInput.classList.toggle('invalid-date', blocked);
-      if(dateBlockedMsg) dateBlockedMsg.classList.toggle('show', blocked);
-      dateInput.setCustomValidity(blocked ? 'blocked' : '');
-      if(submitBtn) submitBtn.disabled = blocked;
-      return blocked;
+      var today = new Date();
+      today.setHours(0,0,0,0);
+      var view = new Date(today.getFullYear(), today.getMonth(), 1);
+      var selectedDate = null;
+
+      function isoOf(d){
+        return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+      }
+      function locale(){ return currentLang() === 'ar' ? 'ar-SA-u-nu-latn' : 'en-US'; }
+
+      function renderWeekdays(){
+        calWeekdays.innerHTML = '';
+        var base = new Date(2024,0,7); /* a Sunday */
+        for(var i=0;i<7;i++){
+          var d = new Date(base); d.setDate(base.getDate()+i);
+          var span = document.createElement('span');
+          span.textContent = d.toLocaleDateString(locale(), {weekday:'narrow'});
+          calWeekdays.appendChild(span);
+        }
+      }
+
+      function renderCalendar(){
+        calMonthLabel.textContent = view.toLocaleDateString(locale(), {month:'long', year:'numeric'});
+        renderWeekdays();
+        calGrid.innerHTML = '';
+        var firstDay = new Date(view.getFullYear(), view.getMonth(), 1);
+        var startOffset = firstDay.getDay();
+        var daysInMonth = new Date(view.getFullYear(), view.getMonth()+1, 0).getDate();
+
+        for(var i=0;i<startOffset;i++){
+          var empty = document.createElement('span');
+          empty.className = 'cal-day cal-empty';
+          calGrid.appendChild(empty);
+        }
+        for(var day=1; day<=daysInMonth; day++){
+          var d = new Date(view.getFullYear(), view.getMonth(), day);
+          var iso = isoOf(d);
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'cal-day';
+          btn.textContent = String(day);
+          var isPast = d < today;
+          var isBlocked = BLOCKED_DATES.indexOf(iso) !== -1;
+          if(isPast){ btn.disabled = true; }
+          else if(isBlocked){ btn.disabled = true; btn.classList.add('cal-blocked'); }
+          else{
+            btn.addEventListener('click', (function(iso, d){
+              return function(){
+                selectedDate = iso;
+                dateInput.value = iso;
+                dateDisplayText.textContent = d.toLocaleDateString(locale(), {day:'numeric', month:'long', year:'numeric'});
+                dateTrigger.classList.add('has-value');
+                dateTrigger.classList.remove('invalid-date');
+                calendarPopup.classList.remove('open');
+                dateTrigger.classList.remove('open');
+              };
+            })(iso, d));
+          }
+          if(selectedDate === iso) btn.classList.add('selected');
+          calGrid.appendChild(btn);
+        }
+        calPrev.disabled = (view.getFullYear() === today.getFullYear() && view.getMonth() === today.getMonth());
+      }
+
+      dateTrigger.addEventListener('click', function(e){
+        e.stopPropagation();
+        var willOpen = !calendarPopup.classList.contains('open');
+        calendarPopup.classList.toggle('open', willOpen);
+        dateTrigger.classList.toggle('open', willOpen);
+        if(willOpen) renderCalendar();
+      });
+      calPrev.addEventListener('click', function(){
+        view.setMonth(view.getMonth()-1);
+        renderCalendar();
+      });
+      calNext.addEventListener('click', function(){
+        view.setMonth(view.getMonth()+1);
+        renderCalendar();
+      });
+      document.addEventListener('click', function(e){
+        if(!calendarPopup.contains(e.target) && e.target !== dateTrigger && !dateTrigger.contains(e.target)){
+          calendarPopup.classList.remove('open');
+          dateTrigger.classList.remove('open');
+        }
+      });
+      renderCalendar();
     }
-    if(dateInput) dateInput.addEventListener('change', checkBlockedDate);
   }
 
   /* ---------- SCROLL TO TOP ---------- */
