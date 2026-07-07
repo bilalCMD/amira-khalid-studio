@@ -90,6 +90,13 @@
       "contact.dateBlocked":"هذا التاريخ محجوز بالكامل، يرجى اختيار تاريخ آخر",
       "contact.selectDate":"اختاري التاريخ",
       "calendar.available":"متاح","calendar.fullyBooked":"محجوز بالكامل",
+      "bookingPreview.eyebrow":"معاينة قبل الإطلاق","bookingPreview.title":"نظام الحجز الجديد بالتقويم",
+      "bookingPreview.sub":"جرّبي الحجز في الأسفل بنفسكِ — هذه الصفحة للمعاينة فقط ولن تُنشر للزوار",
+      "bookingPreview.howTitle":"كيف يعمل نظام الحجز؟",
+      "bookingPreview.step1":"<strong style=\"color:var(--text)\">١. اختيار الخدمة —</strong> عند اختيار \"مكياج\" أو \"مكياج + تسريحة\"، يظهر خيار الاستوديو فقط تلقائيًا. عند اختيار \"باقة العروس\" أو \"مكياج عروس\"، يظهر خيار الاستوديو أو موقع العميلة معًا.",
+      "bookingPreview.step2":"<strong style=\"color:var(--text)\">٢. اختيار التاريخ من التقويم —</strong> بدل كتابة التاريخ يدويًا، تفتح العميلة تقويمًا حقيقيًا يشبه Google Calendar، وتضغط على اليوم المناسب مباشرة.",
+      "bookingPreview.step3":"<strong style=\"color:var(--text)\">٣. الأيام المحجوزة بالكامل تظهر باللون الأحمر ولا يمكن الضغط عليها —</strong> عندما تخبريننا بيوم معيّن أنكِ لا تستقبلين حجوزات فيه (إجازة، مناسبة خاصة، يوم ممتلئ)، نضيفه من ملف الموقع خلال دقيقة، ويظهر فورًا \"محجوز بالكامل\" لكل الزوار.",
+      "bookingPreview.step4":"<strong style=\"color:var(--text)\">٤. تأكيد فوري عبر واتساب —</strong> بعد تعبئة النموذج، تُرسل كل التفاصيل (الاسم، الخدمة، التاريخ، المكان) إليكِ مباشرة عبر واتساب لتأكيدي الحجز يدويًا كما هو معتاد — لا حاجة لأي نظام دفع أو حساب إضافي حاليًا.",
       "contact.serviceOptGroupStudio":"في الاستوديو","contact.serviceOptGroupPrivate":"خدمة خاصة",
       "contact.successMsg":"تم تجهيز طلبكِ! اضغطي لإتمام الإرسال عبر واتساب",
       "contact.trustBadge":"موثوقة — استوديو أميرة خالد","contact.infoLocationTitle":"الموقع","contact.infoLocation":"حي الريان، جدة — عرض على خرائط جوجل",
@@ -181,6 +188,13 @@
       "contact.dateBlocked":"This date is fully booked — please choose another date",
       "contact.selectDate":"Select a date",
       "calendar.available":"Available","calendar.fullyBooked":"Fully Booked",
+      "bookingPreview.eyebrow":"Pre-Launch Preview","bookingPreview.title":"New Calendar Booking System",
+      "bookingPreview.sub":"Try booking yourself below — this page is for preview only and will not be published to visitors",
+      "bookingPreview.howTitle":"How does the booking system work?",
+      "bookingPreview.step1":"<strong style=\"color:var(--text)\">1. Service Selection —</strong> When selecting \"Makeup\" or \"Makeup + Hairstyle,\" only the studio option appears automatically. When selecting \"Bridal Package\" or \"Bridal Makeup,\" both the studio and client location options appear.",
+      "bookingPreview.step2":"<strong style=\"color:var(--text)\">2. Selecting the date from the calendar —</strong> Instead of manually typing the date, the client opens a real calendar similar to Google Calendar and clicks directly on the right day.",
+      "bookingPreview.step3":"<strong style=\"color:var(--text)\">3. Fully booked days appear in red and can't be clicked —</strong> When you tell us you're not accepting bookings on a specific day (holiday, special occasion, full day), we add it to the site file within a minute, and it instantly shows \"Fully Booked\" to every visitor.",
+      "bookingPreview.step4":"<strong style=\"color:var(--text)\">4. Instant confirmation via WhatsApp —</strong> After filling out the form, all details (name, service, date, location) are sent to you directly via WhatsApp so you can confirm the booking manually as usual — no payment system or extra account needed right now.",
       "contact.serviceOptGroupStudio":"At the Studio","contact.serviceOptGroupPrivate":"Private Service",
       "contact.successMsg":"Your request is ready! Click to complete sending via WhatsApp",
       "contact.trustBadge":"Trusted — Amira Khalid Studio","contact.infoLocationTitle":"Location","contact.infoLocation":"Al Rayyan District, Jeddah — View on Google Maps",
@@ -194,7 +208,7 @@
     }
   };
 
-  var htmlKeys = {"pricing.durationRegular":1,"pricing.durationBride":1,"footer.rights":1};
+  var htmlKeys = {"pricing.durationRegular":1,"pricing.durationBride":1,"footer.rights":1,"bookingPreview.step1":1,"bookingPreview.step2":1,"bookingPreview.step3":1,"bookingPreview.step4":1};
 
   var heroTitle = null; // assigned lazily below, since header/content order varies by page
 
@@ -258,8 +272,12 @@
   }
   var langArBtnInit = document.getElementById('langArBtn');
   var langEnBtnInit = document.getElementById('langEnBtn');
-  if(langArBtnInit) langArBtnInit.addEventListener('click', function(){ applyLanguage('ar'); });
-  if(langEnBtnInit) langEnBtnInit.addEventListener('click', function(){ applyLanguage('en'); });
+  function refreshLocationHintLanguage(){
+    var svc = document.getElementById('fService');
+    if(svc) svc.dispatchEvent(new Event('change'));
+  }
+  if(langArBtnInit) langArBtnInit.addEventListener('click', function(){ applyLanguage('ar'); refreshLocationHintLanguage(); });
+  if(langEnBtnInit) langEnBtnInit.addEventListener('click', function(){ applyLanguage('en'); refreshLocationHintLanguage(); });
 
   /* ---------- HEADER SCROLL + PROGRESS + PARALLAX ---------- */
   var header = document.getElementById('siteHeader');
