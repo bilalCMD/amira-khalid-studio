@@ -117,20 +117,41 @@
       <button type="button" class="btn btn-primary btn-block" id="wizardConfirmBtn" data-i18n="bookingV2.confirmBtn">تأكيد ومتابعة</button>
     </div>
 
-    <!-- Step 4: Payment or WhatsApp quote -->
+    <!-- Step 4: choose how to confirm -->
     <div class="wizard-step" data-step="4" style="display:none">
-      <div id="wizardPaymentBlock">
+      <div id="wizardChoiceBlock">
+        <h3 data-i18n="bookingV2.choiceTitle">كيف تودّين إتمام الحجز؟</h3>
+        <div class="wizard-choice-grid">
+          <button type="button" class="wizard-choice-card" id="choosePayBtn">
+            <span class="wizard-choice-icon">💳</span>
+            <strong data-i18n="bookingV2.choosePay">الدفع أونلاين</strong>
+            <span data-i18n="bookingV2.choosePaySub">بطاقة أو Apple Pay</span>
+          </button>
+          <button type="button" class="wizard-choice-card" id="chooseWaBtn">
+            <span class="wizard-choice-icon">💬</span>
+            <strong data-i18n="bookingV2.chooseWa">تأكيد عبر واتساب</strong>
+            <span data-i18n="bookingV2.chooseWaSub">إرسال التفاصيل مباشرة</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="wizardPaymentBlock" style="display:none">
+        <button type="button" class="btn btn-ghost" id="backToChoiceFromPay" style="margin-block-end:var(--space-3)" data-i18n="bookingV2.prev">السابق</button>
         <h3 data-i18n="bookingV2.paymentTitle">الدفع</h3>
         <p class="wizard-note" data-i18n="bookingV2.paymentNote">هذا رابط دفع تجريبي للمعاينة — لن يتم خصم أي مبلغ حقيقي إلا بعد ربط حساب Moyasar الفعلي.</p>
         <div id="moyasarForm" class="mysr-form"></div>
       </div>
+
       <div id="wizardQuoteBlock" style="display:none">
-        <h3 data-i18n="bookingV2.quoteTitle">طلب عرض سعر</h3>
-        <p class="wizard-note" data-i18n="bookingV2.quoteNote">هذه الخدمة سعرها يُحدد عند التواصل. اضغطي الزر بالأسفل لإرسال طلبكِ مباشرة عبر واتساب.</p>
+        <button type="button" class="btn btn-ghost" id="backToChoiceFromWa" style="margin-block-end:var(--space-3)" data-i18n="bookingV2.prev">السابق</button>
+        <h3 data-i18n="bookingV2.quoteTitle">تأكيد عبر واتساب</h3>
+        <p class="wizard-note" data-i18n="bookingV2.quoteNote">سيتم إرسال كل تفاصيل حجزكِ مباشرة إلى أميرة عبر واتساب لتأكيد الموعد.</p>
+        <div class="wizard-wa-preview" id="wizardWaPreview"></div>
         <button type="button" class="btn btn-primary btn-block" id="wizardWaBtn">
           <svg class="icon icon-solid"><use href="#i-whatsapp"/></svg> <span data-i18n="bookingV2.sendWhatsapp">إرسال عبر واتساب</span>
         </button>
       </div>
+
       <div class="wizard-success" id="wizardSuccess" style="display:none">
         <svg class="icon" style="width:40px;height:40px;color:var(--gold)"><use href="#i-check"/></svg>
         <h3 data-i18n="bookingV2.successTitle">تم استلام حجزكِ!</h3>

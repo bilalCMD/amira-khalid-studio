@@ -108,10 +108,12 @@
       "bookingV2.next":"التالي","bookingV2.prev":"السابق","bookingV2.nextPrice":"التالي: السعر",
       "bookingV2.serviceQuestion":"ما هي الخدمة المطلوبة؟","bookingV2.reviewTitle":"مراجعة الحجز","bookingV2.confirmBtn":"تأكيد ومتابعة",
       "bookingV2.paymentTitle":"الدفع","bookingV2.paymentNote":"هذا رابط دفع تجريبي للمعاينة — لن يتم خصم أي مبلغ حقيقي إلا بعد ربط حساب Moyasar الفعلي.",
-      "bookingV2.quoteTitle":"طلب عرض سعر","bookingV2.quoteNote":"هذه الخدمة سعرها يُحدد عند التواصل. اضغطي الزر بالأسفل لإرسال طلبكِ مباشرة عبر واتساب.",
+      "bookingV2.quoteTitle":"تأكيد عبر واتساب","bookingV2.quoteNote":"سيتم إرسال كل تفاصيل حجزكِ مباشرة إلى أميرة عبر واتساب لتأكيد الموعد.",
       "bookingV2.sendWhatsapp":"إرسال عبر واتساب","bookingV2.successTitle":"تم استلام حجزكِ!","bookingV2.successBody":"سنتواصل معكِ قريبًا لتأكيد كل التفاصيل.",
       "bookingV2.labelName":"الاسم","bookingV2.labelPhone":"الجوال","bookingV2.labelService":"الخدمة","bookingV2.labelLocation":"المكان",
       "bookingV2.labelDate":"التاريخ","bookingV2.labelTime":"الوقت","bookingV2.labelPrice":"السعر","bookingV2.priceOnRequest":"السعر عند التواصل",
+      "bookingV2.choiceTitle":"كيف تودّين إتمام الحجز؟","bookingV2.choosePay":"الدفع أونلاين","bookingV2.choosePaySub":"بطاقة أو Apple Pay",
+      "bookingV2.chooseWa":"تأكيد عبر واتساب","bookingV2.chooseWaSub":"إرسال التفاصيل مباشرة",
       "contact.serviceOptGroupStudio":"في الاستوديو","contact.serviceOptGroupPrivate":"خدمة خاصة",
       "contact.successMsg":"تم تجهيز طلبكِ! اضغطي لإتمام الإرسال عبر واتساب",
       "contact.trustBadge":"موثوقة — استوديو أميرة خالد","contact.infoLocationTitle":"الموقع","contact.infoLocation":"حي الريان، جدة — عرض على خرائط جوجل",
@@ -215,9 +217,11 @@
       "bookingV2.next":"Next","bookingV2.prev":"Back","bookingV2.nextPrice":"Next: Price",
       "bookingV2.serviceQuestion":"What service do you need?","bookingV2.reviewTitle":"Review Your Booking","bookingV2.confirmBtn":"Confirm & Continue",
       "bookingV2.paymentTitle":"Payment","bookingV2.paymentNote":"This is a test payment link for preview only — no real charge will happen until a real Moyasar account is connected.",
-      "bookingV2.quoteTitle":"Request a Quote","bookingV2.quoteNote":"This service's price is set upon contact. Tap the button below to send your request directly via WhatsApp.",
+      "bookingV2.quoteTitle":"Confirm via WhatsApp","bookingV2.quoteNote":"All your booking details will be sent directly to Amira via WhatsApp to confirm your appointment.",
       "bookingV2.sendWhatsapp":"Send via WhatsApp","bookingV2.successTitle":"Your booking has been received!","bookingV2.successBody":"We'll be in touch soon to confirm every detail.",
       "bookingV2.labelName":"Name","bookingV2.labelPhone":"Phone","bookingV2.labelService":"Service","bookingV2.labelLocation":"Location",
+      "bookingV2.choiceTitle":"How would you like to confirm?","bookingV2.choosePay":"Pay Online","bookingV2.choosePaySub":"Card or Apple Pay",
+      "bookingV2.chooseWa":"Confirm via WhatsApp","bookingV2.chooseWaSub":"Send details directly",
       "bookingV2.labelDate":"Date","bookingV2.labelTime":"Time","bookingV2.labelPrice":"Price","bookingV2.priceOnRequest":"Price on request",
       "contact.serviceOptGroupStudio":"At the Studio","contact.serviceOptGroupPrivate":"Private Service",
       "contact.successMsg":"Your request is ready! Click to complete sending via WhatsApp",
@@ -977,11 +981,18 @@
       wizardDots.forEach(function(d){ d.classList.toggle('active', d.getAttribute('data-step') === n); });
       if(n === '3') renderWizardSummary();
     }
+    function showChoiceBlock(){
+      var service = document.getElementById('advService').value;
+      var choosePayBtn = document.getElementById('choosePayBtn');
+      if(choosePayBtn) choosePayBtn.style.display = (SERVICE_PRICES[service] != null) ? '' : 'none';
+      document.getElementById('wizardChoiceBlock').style.display = '';
+      document.getElementById('wizardPaymentBlock').style.display = 'none';
+      document.getElementById('wizardQuoteBlock').style.display = 'none';
+      document.getElementById('wizardSuccess').style.display = 'none';
+    }
     function openWizard(){
       showWizardStep(1);
-      document.getElementById('wizardSuccess').style.display = 'none';
-      document.getElementById('wizardPaymentBlock').style.display = '';
-      document.getElementById('wizardQuoteBlock').style.display = 'none';
+      showChoiceBlock();
       wizardOverlay.classList.add('open');
     }
     function closeWizard(){ wizardOverlay.classList.remove('open'); }
@@ -1007,9 +1018,10 @@
       }catch(e){}
     }
 
-    function handleBookingComplete(paymentStatus){
+    function collectBookingData(){
       var service = document.getElementById('advService').value;
-      var data = {
+      var price = SERVICE_PRICES[service];
+      return {
         name: document.getElementById('advName').value,
         phone: document.getElementById('advPhone').value,
         service: serviceLabel(service),
@@ -1017,25 +1029,46 @@
         time: document.getElementById('advTime').value,
         location: locationLabel(document.querySelector('input[name="advLocation"]:checked').value),
         address: document.getElementById('advAddress').value,
-        notes: '',
-        paymentStatus: paymentStatus
+        priceText: price != null ? (price + ' ' + dict()['common.sar']) : dict()['bookingV2.priceOnRequest'],
+        notes: ''
       };
+    }
+    function buildWaLines(data, paymentStatus, bold){
+      var b = bold ? function(s){ return '*' + s + '*'; } : function(s){ return s; };
+      return [
+        'مرحبًا أميرة، لدي حجز جديد ✨',
+        '',
+        b(dict()['bookingV2.labelName'] + ':') + ' ' + data.name,
+        b(dict()['bookingV2.labelPhone'] + ':') + ' ' + data.phone,
+        b(dict()['bookingV2.labelService'] + ':') + ' ' + data.service,
+        b(dict()['bookingV2.labelDate'] + ':') + ' ' + data.date,
+        b(dict()['bookingV2.labelTime'] + ':') + ' ' + (data.time || '—'),
+        b(dict()['bookingV2.labelLocation'] + ':') + ' ' + data.location,
+        data.address ? (b(dict()['contact.formAddress'] + ':') + ' ' + data.address) : null,
+        b(dict()['bookingV2.labelPrice'] + ':') + ' ' + data.priceText,
+        '',
+        paymentStatus === 'paid' ? '✅ ' + b('تم الدفع أونلاين') : '💬 ' + b('بانتظار التأكيد')
+      ].filter(function(l){ return l !== null; }).join('\n');
+    }
+    function renderWaPreview(){
+      var data = collectBookingData();
+      document.getElementById('wizardWaPreview').innerHTML = buildWaLines(data, 'quote-requested', false)
+        .split('\n').map(function(line){
+          if(!line) return '<br>';
+          var parts = line.split(':');
+          return parts.length > 1 ? ('<div><b>' + escHtml(parts[0]) + ':</b>' + escHtml(parts.slice(1).join(':')) + '</div>') : ('<div>' + escHtml(line) + '</div>');
+        }).join('');
+    }
+    function handleBookingComplete(paymentStatus){
+      var data = collectBookingData();
+      data.paymentStatus = paymentStatus;
       submitBookingToSheet(data);
+      document.getElementById('wizardChoiceBlock').style.display = 'none';
       document.getElementById('wizardPaymentBlock').style.display = 'none';
       document.getElementById('wizardQuoteBlock').style.display = 'none';
       document.getElementById('wizardSuccess').style.display = '';
-      var lines = [
-        'مرحبًا أميرة، لدي حجز جديد ✨',
-        'الاسم: ' + data.name,
-        'الجوال: ' + data.phone,
-        'الخدمة: ' + data.service,
-        'التاريخ: ' + data.date,
-        'الوقت: ' + data.time,
-        'المكان: ' + data.location,
-        data.address ? ('العنوان: ' + data.address) : null,
-        paymentStatus === 'paid' ? 'الحالة: تم الدفع ✅' : 'الحالة: بانتظار عرض السعر'
-      ].filter(Boolean).join('\n');
-      var href = waLink(WHATSAPP_NUMBER, lines);
+      var message = buildWaLines(data, paymentStatus, true);
+      var href = waLink(WHATSAPP_NUMBER, message);
       setTimeout(function(){ try{ window.open(href, '_blank', 'noopener'); }catch(e){} }, 800);
     }
 
@@ -1065,18 +1098,27 @@
 
     var wizardConfirmBtn = document.getElementById('wizardConfirmBtn');
     if(wizardConfirmBtn) wizardConfirmBtn.addEventListener('click', function(){
+      showWizardStep(4);
+      showChoiceBlock();
+    });
+    var choosePayBtn = document.getElementById('choosePayBtn');
+    if(choosePayBtn) choosePayBtn.addEventListener('click', function(){
       var service = document.getElementById('advService').value;
       var price = SERVICE_PRICES[service];
-      showWizardStep(4);
-      if(price != null){
-        document.getElementById('wizardPaymentBlock').style.display = '';
-        document.getElementById('wizardQuoteBlock').style.display = 'none';
-        initMoyasarForm(price);
-      } else {
-        document.getElementById('wizardPaymentBlock').style.display = 'none';
-        document.getElementById('wizardQuoteBlock').style.display = '';
-      }
+      document.getElementById('wizardChoiceBlock').style.display = 'none';
+      document.getElementById('wizardPaymentBlock').style.display = '';
+      initMoyasarForm(price);
     });
+    var chooseWaBtn = document.getElementById('chooseWaBtn');
+    if(chooseWaBtn) chooseWaBtn.addEventListener('click', function(){
+      document.getElementById('wizardChoiceBlock').style.display = 'none';
+      document.getElementById('wizardQuoteBlock').style.display = '';
+      renderWaPreview();
+    });
+    var backToChoiceFromPay = document.getElementById('backToChoiceFromPay');
+    if(backToChoiceFromPay) backToChoiceFromPay.addEventListener('click', showChoiceBlock);
+    var backToChoiceFromWa = document.getElementById('backToChoiceFromWa');
+    if(backToChoiceFromWa) backToChoiceFromWa.addEventListener('click', showChoiceBlock);
     var wizardWaBtn = document.getElementById('wizardWaBtn');
     if(wizardWaBtn) wizardWaBtn.addEventListener('click', function(){ handleBookingComplete('quote-requested'); });
   }
