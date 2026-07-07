@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=20260708-1">
+<link rel="stylesheet" href="assets/styles.css?v=20260708-2">
 
 <!-- Google Search Console: uncomment and add the verification code Google gives you
 <meta name="google-site-verification" content="REPLACE_WITH_VERIFICATION_CODE">
@@ -31,7 +31,7 @@
 <body>
 <div id="app" dir="rtl" lang="ar">
 <script>window.CURRENT_PAGE = 'contact';</script>
-<script src="assets/header.js?v=20260708-1"></script>
+<script src="assets/header.js?v=20260708-2"></script>
 
 <main>
 <section class="page-hero">
@@ -61,17 +61,11 @@
           <div class="field">
             <label for="fService" data-i18n="contact.formService">الخدمة</label>
             <select id="fService" name="service" required>
-              <optgroup label="في الاستوديو" id="ogStudio" data-i18n-label="contact.serviceOptGroupStudio">
-                <option value="makeup" data-i18n="svc.makeupOpt">مكياج احترافي — 350 ريال</option>
-                <option value="makeup-blowdry" data-i18n="svc.makeupBlowdryOpt">مكياج + سشوار وكيرلي ناعم — 550 ريال</option>
-                <option value="makeup-hair" data-i18n="svc.makeupHairOpt">مكياج + تسريحة شعر كاملة — 650 ريال</option>
-                <option value="bridal-package" data-i18n="svc.bridalOpt">باقة العروس — 2500 ريال</option>
-                <option value="hair-extensions" data-i18n="svc.hairExtOpt">تركيب وصلات شعر — 100 ريال</option>
-              </optgroup>
-              <optgroup label="الخدمة الخارجية للعروس" id="ogPrivate" data-i18n-label="contact.serviceOptGroupPrivate">
-                <option value="private-basic" data-i18n="svc.privateBasicOpt">مكياج عروس (خارجي) — 2100 ريال</option>
-                <option value="private-full" data-i18n="svc.privateFullOpt">الباقة الكاملة للعروس (خارجي) — 3000 ريال</option>
-              </optgroup>
+              <option value="makeup" data-i18n="svc.makeupOpt">مكياج احترافي — 350 ريال</option>
+              <option value="makeup-blowdry" data-i18n="svc.makeupBlowdryOpt">مكياج + سشوار وكيرلي ناعم — 550 ريال</option>
+              <option value="makeup-hair" data-i18n="svc.makeupHairOpt">مكياج + تسريحة شعر كاملة — 650 ريال</option>
+              <option value="bridal-package" data-i18n="svc.bridalOpt">باقة العروس — 2500 ريال</option>
+              <option value="private-training" data-i18n="svc.trainingOpt">تدريب مكياج خاص 1:1 — السعر عند التواصل</option>
             </select>
           </div>
         </div>
@@ -112,21 +106,6 @@
           <div class="field">
             <label for="fTime" data-i18n="contact.formTime">وقت الجاهزية</label>
             <input id="fTime" name="time" type="time" required>
-          </div>
-        </div>
-        <div class="field" style="margin-block-end:var(--space-3)">
-          <label data-i18n="contact.formLocation">المكان</label>
-          <div class="loc-toggle" id="locToggle">
-            <label class="loc-option loc-option-studio"><input type="radio" name="location" value="studio" checked><span data-i18n="contact.locStudio">في الاستوديو (جدة)</span></label>
-            <label class="loc-option loc-option-home"><input type="radio" name="location" value="home"><span data-i18n="contact.locHome">في موقعي</span></label>
-          </div>
-          <div class="private-hint" id="privateHint" data-i18n="contact.privateHint">تنبيه: الخدمة في موقعكِ الخاص متاحة للعرائس فقط</div>
-          <div class="private-hint" id="lockedHint"></div>
-        </div>
-        <div class="addr-field" id="addrField">
-          <div class="field">
-            <label for="fAddress" data-i18n="contact.formAddress">تفاصيل الموقع / العنوان</label>
-            <textarea id="fAddress" name="address" rows="2"></textarea>
           </div>
         </div>
         <div class="form-row">
@@ -195,9 +174,9 @@
 </section>
 </main>
 
-<script src="assets/footer.js?v=20260708-1"></script>
+<script src="assets/footer.js?v=20260708-2"></script>
 </div>
 
-<script src="assets/app.js?v=20260708-1"></script>
+<script src="assets/app.js?v=20260708-2"></script>
 </body>
 </html>

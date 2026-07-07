@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=20260708-1">
+<link rel="stylesheet" href="assets/styles.css?v=20260708-2">
 
 <!-- Google Search Console: uncomment and add the verification code Google gives you
 <meta name="google-site-verification" content="REPLACE_WITH_VERIFICATION_CODE">
@@ -31,7 +31,7 @@
 <body>
 <div id="app" dir="rtl" lang="ar">
 <script>window.CURRENT_PAGE = 'pricing';</script>
-<script src="assets/header.js?v=20260708-1"></script>
+<script src="assets/header.js?v=20260708-2"></script>
 
 <main>
 <section class="page-hero">
@@ -45,7 +45,7 @@
 
 <section class="section" style="padding-top:0">
   <div class="container">
-    <h2 class="pricing-group-title"><svg class="icon" style="width:20px;height:20px"><use href="#i-pin"/></svg><span data-i18n="pricing.groupStudio">في الاستوديو</span></h2>
+    <h2 class="pricing-group-title"><svg class="icon" style="width:20px;height:20px"><use href="#i-sparkle"/></svg><span data-i18n="pricing.groupEvening">مكياج سهرة</span></h2>
     <div class="pricing-grid">
       <div class="price-card" data-reveal>
         <h3 class="price-card-title" data-i18n="svc.makeup">مكياج احترافي</h3>
@@ -65,6 +65,10 @@
         <div class="price-amount">650 <small data-i18n="common.sar">ريال</small></div>
         <button class="btn btn-ghost btn-block book-btn" data-service="makeup-hair" data-i18n="pricing.bookBtn">احجزي الآن</button>
       </div>
+    </div>
+
+    <h2 class="pricing-group-title"><svg class="icon" style="width:20px;height:20px"><use href="#i-crown"/></svg><span data-i18n="pricing.groupBridal">مكياج عروس</span></h2>
+    <div class="pricing-grid">
       <div class="price-card featured" data-reveal>
         <span class="featured-badge" data-i18n="pricing.featured">الأكثر طلبًا</span>
         <h3 class="price-card-title" data-i18n="svc.bridal">باقة العروس</h3>
@@ -72,30 +76,18 @@
         <div class="price-amount">2500 <small data-i18n="common.sar">ريال</small></div>
         <button class="btn btn-primary btn-block book-btn" data-service="bridal-package" data-i18n="pricing.bookBtn">احجزي الآن</button>
       </div>
-      <div class="price-card" data-reveal>
-        <h3 class="price-card-title" data-i18n="svc.hairExt">تركيب وصلات شعر</h3>
-        <p class="price-card-desc" data-i18n="svc.hairExt.desc">إضافة كثافة وطول لإطلالة أكثر فخامة</p>
-        <div class="price-amount">100 <small data-i18n="common.sar">ريال</small></div>
-        <button class="btn btn-ghost btn-block book-btn" data-service="hair-extensions" data-i18n="pricing.bookBtn">احجزي الآن</button>
-      </div>
     </div>
 
-    <h2 class="pricing-group-title"><svg class="icon" style="width:20px;height:20px"><use href="#i-heart"/></svg><span data-i18n="pricing.groupPrivate">الخدمة الخارجية للعروس</span></h2>
+    <h2 class="pricing-group-title"><svg class="icon" style="width:20px;height:20px"><use href="#i-badge-check"/></svg><span data-i18n="pricing.groupTraining">تدريب مكياج خاص 1:1</span></h2>
     <div class="pricing-grid">
       <div class="price-card" data-reveal>
-        <h3 class="price-card-title" data-i18n="svc.privateBasic">مكياج عروس (خارجي)</h3>
-        <p class="price-card-desc" data-i18n="svc.privateBasic.desc">مكياج احترافي + رموش فاخرة + هايلايتر للجسم، في موقعكِ الخاص</p>
-        <div class="price-amount">2100 <small data-i18n="common.sar">ريال</small></div>
-        <button class="btn btn-ghost btn-block book-btn" data-service="private-basic" data-i18n="pricing.bookBtn">احجزي الآن</button>
-      </div>
-      <div class="price-card" data-reveal>
-        <h3 class="price-card-title" data-i18n="svc.privateFull">الباقة الكاملة للعروس (خارجي)</h3>
-        <p class="price-card-desc" data-i18n="svc.privateFull.desc">مكياج احترافي + رموش فاخرة + هايلايتر للجسم + تسريحة شعر كاملة، في موقعكِ الخاص</p>
-        <div class="price-amount">3000 <small data-i18n="common.sar">ريال</small></div>
-        <button class="btn btn-ghost btn-block book-btn" data-service="private-full" data-i18n="pricing.bookBtn">احجزي الآن</button>
+        <h3 class="price-card-title" data-i18n="svc.training">جلسة تدريب فردية</h3>
+        <p class="price-card-desc" data-i18n="svc.training.desc">جلسة خاصة فردية لتعلّمي أساسيات المكياج أو تطوير مهاراتكِ خطوة بخطوة</p>
+        <div class="price-amount price-amount-onrequest" data-i18n="pricing.priceOnRequest">السعر عند التواصل</div>
+        <button class="btn btn-ghost btn-block book-btn" data-service="private-training" data-i18n="pricing.bookBtn">احجزي الآن</button>
       </div>
     </div>
-    <p class="private-note" data-i18n="pricing.privateNote">* الخدمة الخارجية متاحة للعرائس فقط، في الموقع الذي تحددنه العميلة</p>
+    <p class="private-note" data-i18n="pricing.homeStudioNote">* جميع الخدمات تُقدَّم حصريًا بموعد مسبق في استوديو أميرة الخاص بجدة</p>
 
     <div class="duration-box" data-reveal>
       <div class="duration-item"><svg class="icon"><use href="#i-clock"/></svg><span data-i18n="pricing.durationRegular"><strong>35–45</strong> دقيقة — حسب نوع البشرة</span></div>
@@ -110,7 +102,7 @@
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="section" style="background:var(--bg-alt)">
+<section class="section" id="faq" style="background:var(--bg-alt)">
   <div class="container">
     <div class="section-head" data-reveal>
       <span class="eyebrow" data-i18n="pricing.faqEyebrow">الأسئلة الشائعة</span>
@@ -180,9 +172,9 @@
 </section>
 </main>
 
-<script src="assets/footer.js?v=20260708-1"></script>
+<script src="assets/footer.js?v=20260708-2"></script>
 </div>
 
-<script src="assets/app.js?v=20260708-1"></script>
+<script src="assets/app.js?v=20260708-2"></script>
 </body>
 </html>

@@ -16,7 +16,10 @@
               '<a class="icon-btn" href="https://www.tiktok.com/@amira_khalid89" target="_blank" rel="noopener" aria-label="TikTok"><svg class="icon" style="width:18px;height:18px"><use href="#i-tiktok"/></svg></a>' +
               '<a class="icon-btn" href="#" id="footerWaBtn" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon icon-solid" style="width:18px;height:18px"><use href="#i-whatsapp"/></svg></a>' +
             '</div>' +
-            '<a class="maroof-badge" href="#" target="_blank" rel="noopener" id="maroofBadge"><svg class="icon" style="width:16px;height:16px"><use href="#i-badge-check"/></svg><span data-i18n="footer.maroof">موثّقة عبر معروف</span></a>' +
+            '<div style="display:flex; flex-wrap:wrap; gap:8px; margin-block-start:var(--space-4)">' +
+              '<a class="maroof-badge" style="margin-block-start:0" href="https://maroof.sa" target="_blank" rel="noopener" id="maroofBadge"><svg class="icon" style="width:16px;height:16px"><use href="#i-badge-check"/></svg><span data-i18n="footer.maroof">موثّقة عبر معروف — 522836</span></a>' +
+              '<a class="maroof-badge" style="margin-block-start:0" href="https://freelance.sa" target="_blank" rel="noopener" id="freelanceBadge"><svg class="icon" style="width:16px;height:16px"><use href="#i-badge-check"/></svg><span data-i18n="footer.freelance">شهادة العمل الحر</span></a>' +
+            '</div>' +
           '</div>' +
           '<div class="footer-col">' +
             '<h4 data-i18n="footer.quickLinks">روابط سريعة</h4>' +
@@ -36,7 +39,7 @@
               '<li><span data-i18n="svc.makeup">مكياج احترافي</span></li>' +
               '<li><span data-i18n="svc.makeupHair">مكياج + تسريحة شعر</span></li>' +
               '<li><span data-i18n="svc.bridal">باقة العروس</span></li>' +
-              '<li><span data-i18n="svc.privateFull">خدمة خاصة للعروس</span></li>' +
+              '<li><span data-i18n="svc.training">جلسة تدريب فردية</span></li>' +
             '</ul>' +
           '</div>' +
           '<div class="footer-col">' +

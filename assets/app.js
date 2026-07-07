@@ -34,11 +34,11 @@
       "ba.eyebrow":"قبل وبعد","ba.title":"شاهدي الفرق","ba.sub":"تحوّلات حقيقية من جلسات مكياج فعلية","ba.before":"قبل","ba.after":"بعد","ba.comingSoon":"الصور قريبًا",
       "home.reelsEyebrow":"فيديوهات","home.reelsTitle":"لقطات حية من الاستوديو","home.reelsSub":"شاهدي جلسات مكياج حقيقية ونصائح سريعة","home.reelsMore":"شاهدي المزيد من الريلز",
       "portfolio.instaFollow":"تابعي أحدث الريلز على إنستغرام",
-      "reel1.caption":"لوك يومي ناعم","reel2.caption":"أسهل طريقة لرفع الخد","reel3.caption":"لحظات من كواليس التصوير",
-      "reel4.caption":"لوك مكياج متكامل","reel5.caption":"أجمل اللقطات تكون عفوية","reel6.caption":"سر رفع الخدود بالبلاشر",
-      "reel7.caption":"مكياج ناعم وأنيق","reel8.caption":"لمسات مكياج احترافية","reel9.caption":"تفاصيل تصنع الفرق",
+      "reel1.caption":"لوك يومي ناعم","reel3.caption":"لحظات من كواليس التصوير",
+      "reel8.caption":"لمسات مكياج احترافية","reel9.caption":"تفاصيل تصنع الفرق",
       "reel10.caption":"بدون فلاتر... النتيجة الحقيقية","reel11.caption":"خبيرة تجميل في جدة","reel12.caption":"لوك سهرة فاخر",
       "reel13.caption":"دقة في كل لمسة","reel14.caption":"جمال العروس بأدق تفاصيله","reel15.caption":"إطلالة سهرة ساحرة","reel16.caption":"بريق وثقة بلا حدود",
+      "reel17.caption":"لمسة غموض وأناقة","reel18.caption":"عروس بتاج اللؤلؤ","reel19.caption":"تفاصيل عروس لا تُنسى",
       "about.journeyEyebrow":"رحلتي","about.journeyTitle":"كيف بدأت القصة",
       "journey.step1Title":"البداية","journey.step1Desc":"بدأت أميرة شغفها بالمكياج من سن مبكر، وطورت مهاراتها عبر دورات احترافية معتمدة.",
       "journey.step2Title":"الاحتراف","journey.step2Desc":"أكثر من 10 سنوات من الخبرة في مكياج العرائس والمناسبات الخاصة داخل جدة وخارجها، منذ عام 2016.",
@@ -69,13 +69,13 @@
       "pf.item1.title":"إطلالة عروس بالطرحة","pf.item2.title":"مكياج عروس ناعم","pf.item3.title":"سهرة درامية بالمخمل","pf.item4.title":"مكياج سهرة أنيق",
       "pf.item5.title":"تسريحة كيرلي فاخرة","pf.item6.title":"مكياج نهاري طبيعي","pf.item7.title":"تحضير بشرة احترافي",
       "pf.item8.title":"لمسة روج نهائية","pf.item9.title":"لوك عروس بالتول","pf.item10.title":"تاج لؤلؤي للعروس","pf.item11.title":"سهرة بعيون دخانية","pf.item12.title":"لوك جانبي أنيق","pf.item13.title":"عروس بباقة الورد",
-      "testi.eyebrow":"آراء العميلات","testi.title":"ماذا قالت عميلاتنا",
+      "testi.eyebrow":"آراء العميلات على جوجل","testi.title":"ماذا قالت عميلاتنا","testi.googleLink":"4.9 — شاهدي كل التقييمات على خرائط جوجل",
       "testi.q1":"“مكياجي يوم زفافي كان أحلى من الحلم، أميرة فهمت اللوك اللي أبيه بالضبط من أول جلسة”","testi.n1":"سارة","testi.r1":"عروس",
       "testi.q2":"“سشوار وكيرلي ثابت طول السهرة، والاحترافية من أول لحظة. أنصح فيها بشدة”","testi.n2":"نورة","testi.r2":"عميلة سهرة",
       "testi.q3":"“خدمة راقية ونظافة تامة في الأدوات، حسيت بالراحة والاهتمام من أول دقيقة”","testi.n3":"لمى","testi.r3":"عروس",
       "testi.a1":"س","testi.a2":"ن","testi.a3":"ل",
-      "pricing.groupStudio":"في الاستوديو","pricing.groupPrivate":"الخدمة الخارجية للعروس","pricing.featured":"الأكثر طلبًا","pricing.bookBtn":"احجزي الآن",
-      "pricing.privateNote":"* الخدمة الخارجية متاحة للعرائس فقط، في الموقع الذي تحددنه العميلة",
+      "pricing.groupEvening":"مكياج سهرة","pricing.groupBridal":"مكياج عروس","pricing.groupTraining":"تدريب مكياج خاص 1:1","pricing.featured":"الأكثر طلبًا","pricing.bookBtn":"احجزي الآن",
+      "pricing.homeStudioNote":"* جميع الخدمات تُقدَّم حصريًا بموعد مسبق في استوديو أميرة الخاص بجدة","pricing.priceOnRequest":"السعر عند التواصل",
       "pricing.onRequest":"السعر عند التواصل",
       "pricing.durationRegular":"<strong>35–45</strong> دقيقة — حسب نوع البشرة","pricing.durationBride":"<strong>60–75</strong> دقيقة — جلسة العروس",
       "trust.brands":"منتجات عالمية احترافية","trust.sterile":"تعقيم كامل للأدوات","trust.single":"أدوات فردية لكل عميلة",
@@ -91,9 +91,7 @@
       "svc.makeupBlowdry":"مكياج + سشوار وكيرلي ناعم","svc.makeupBlowdry.desc":"مكياج احترافي مع سشوار وتموجات ناعمة لإطلالة سهرة أنيقة","svc.makeupBlowdryOpt":"مكياج + سشوار وكيرلي ناعم — 550 ريال",
       "svc.makeupHair":"مكياج + تسريحة شعر كاملة","svc.makeupHair.desc":"مكياج مع تسريحة مصممة حسب إطلالتكِ","svc.makeupHairOpt":"مكياج + تسريحة شعر كاملة — 650 ريال",
       "svc.bridal":"باقة العروس","svc.bridal.desc":"مكياج احترافي + رموش فاخرة + تسريحة شعر كاملة + هايلايتر للجسم","svc.bridalOpt":"باقة العروس — 2500 ريال",
-      "svc.hairExt":"تركيب وصلات شعر","svc.hairExt.desc":"إضافة كثافة وطول لإطلالة أكثر فخامة","svc.hairExtOpt":"تركيب وصلات شعر — 100 ريال",
-      "svc.privateBasic":"مكياج عروس (خارجي)","svc.privateBasic.desc":"مكياج احترافي + رموش فاخرة + هايلايتر للجسم، في موقعكِ الخاص","svc.privateBasicOpt":"مكياج عروس (خارجي) — 2100 ريال",
-      "svc.privateFull":"الباقة الكاملة للعروس (خارجي)","svc.privateFull.desc":"مكياج احترافي + رموش فاخرة + هايلايتر للجسم + تسريحة شعر كاملة، في موقعكِ الخاص","svc.privateFullOpt":"الباقة الكاملة للعروس (خارجي) — 3000 ريال",
+      "svc.training":"جلسة تدريب فردية","svc.training.desc":"جلسة خاصة فردية لتعلّمي أساسيات المكياج أو تطوير مهاراتكِ خطوة بخطوة","svc.trainingOpt":"تدريب مكياج خاص 1:1 — السعر عند التواصل",
       "common.sar":"ريال",
       "contact.formName":"الاسم الكامل","contact.formPhone":"رقم الجوال","contact.formService":"الخدمة","contact.formEventType":"نوع المناسبة","contact.formDate":"التاريخ","contact.formTime":"وقت الجاهزية",
       "event.wedding":"حفل زفاف","event.engagement":"خطوبة","event.party":"حفلة / سهرة","event.graduation":"تخرج","event.other":"أخرى",
@@ -106,10 +104,10 @@
       "bookingPreview.eyebrow":"معاينة قبل الإطلاق","bookingPreview.title":"نظام الحجز الجديد بالتقويم",
       "bookingPreview.sub":"جرّبي الحجز في الأسفل بنفسكِ — هذه الصفحة للمعاينة فقط ولن تُنشر للزوار",
       "bookingPreview.howTitle":"كيف يعمل نظام الحجز؟",
-      "bookingPreview.step1":"<strong style=\"color:var(--text)\">١. اختيار الخدمة —</strong> عند اختيار \"مكياج\" أو \"مكياج + تسريحة\"، يظهر خيار الاستوديو فقط تلقائيًا. عند اختيار \"باقة العروس\" أو \"مكياج عروس\"، يظهر خيار الاستوديو أو موقع العميلة معًا.",
+      "bookingPreview.step1":"<strong style=\"color:var(--text)\">١. اختيار الخدمة ونوع المناسبة —</strong> تختار العميلة الخدمة المناسبة من القائمة (مكياج سهرة، مكياج عروس، أو تدريب خاص)، ثم تحدد نوع المناسبة.",
       "bookingPreview.step2":"<strong style=\"color:var(--text)\">٢. اختيار التاريخ من التقويم —</strong> بدل كتابة التاريخ يدويًا، تفتح العميلة تقويمًا حقيقيًا يشبه Google Calendar، وتضغط على اليوم المناسب مباشرة.",
       "bookingPreview.step3":"<strong style=\"color:var(--text)\">٣. الأيام المحجوزة بالكامل تظهر باللون الأحمر ولا يمكن الضغط عليها —</strong> عندما تخبريننا بيوم معيّن أنكِ لا تستقبلين حجوزات فيه (إجازة، مناسبة خاصة، يوم ممتلئ)، نضيفه من ملف الموقع خلال دقيقة، ويظهر فورًا \"محجوز بالكامل\" لكل الزوار.",
-      "bookingPreview.step4":"<strong style=\"color:var(--text)\">٤. تأكيد فوري عبر واتساب —</strong> بعد تعبئة النموذج، تُرسل كل التفاصيل (الاسم، الخدمة، التاريخ، المكان) إليكِ مباشرة عبر واتساب لتأكيدي الحجز يدويًا كما هو معتاد — لا حاجة لأي نظام دفع أو حساب إضافي حاليًا.",
+      "bookingPreview.step4":"<strong style=\"color:var(--text)\">٤. تأكيد فوري عبر واتساب —</strong> بعد تعبئة النموذج، تُرسل كل التفاصيل (الاسم، الخدمة، التاريخ) إليكِ مباشرة عبر واتساب لتأكيدي الحجز يدويًا كما هو معتاد — لا حاجة لأي نظام دفع أو حساب إضافي حاليًا.",
       "bookingV2.title":"الحجز والدفع بالكامل","bookingV2.sub":"اختاري يومًا من التقويم بالأسفل لتجربة الخطوات كاملة — هذه الصفحة للمعاينة فقط",
       "bookingV2.pickDate":"اختاري تاريخ الحجز","bookingV2.whereQuestion":"أين تودّين الخدمة؟",
       "bookingV2.next":"التالي","bookingV2.prev":"السابق","bookingV2.nextPrice":"التالي: السعر",
@@ -131,13 +129,19 @@
       "footer.tagline":"إبراز جمالكِ الطبيعي بلمسة فنية احترافية، في كل مناسبة تستحق التميز.","footer.quickLinks":"روابط سريعة","footer.services":"الخدمات","footer.getInTouch":"تواصلي معنا",
       "nav.bookingPolicy":"سياسة الحجز",
       "contact.policyNote":"بتأكيد الحجز، أنتِ توافقين على <a href=\"booking-policy\">سياسة الحجز</a>",
-      "policy.eyebrow":"قبل الحجز","policy.title":"سياسة الحجز","policy.sub":"كل ما تحتاجين معرفته قبل تأكيد موعدكِ مع أميرة",
-      "policy.depositTitle":"سياسة العربون","policy.depositDesc":"يتطلب تأكيد أي حجز دفع عربون بنسبة 20% من قيمة الخدمة لضمان حجز موعدكِ. العربون غير قابل للاسترداد في حال الإلغاء، لكنه قابل للتحويل عند التأجيل ضمن الشروط الموضحة أدناه.",
-      "policy.cancelTitle":"سياسة الإلغاء","policy.cancelDesc":"يمكن إلغاء الحجز قبل 7 أيام على الأقل من الموعد دون أي رسوم إضافية (بخلاف العربون). الإلغاء خلال أقل من 7 أيام من الموعد يفقد العميلة حق استرداد العربون.",
-      "policy.rescheduleTitle":"سياسة تأجيل الموعد","policy.rescheduleDesc":"يمكن تأجيل الموعد مرة واحدة مجانًا بشرط إخطارنا قبل 48 ساعة على الأقل من الموعد الأصلي. التأجيل المتكرر أو المتأخر عن هذه المدة قد يستوجب عربونًا إضافيًا.",
+      "policy.eyebrow":"قبل الحجز","policy.title":"قبل الحجز","policy.sub":"كل ما تحتاجين معرفته قبل حجز موعدكِ مع أميرة",
+      "policy.groupBooking":"سياسة الحجز","policy.groupPrep":"تحضيرات الموعد","policy.groupInfo":"معلومات مهمة",
+      "policy.waTitle":"الحجز عبر واتساب","policy.waDesc":"تتم جميع الحجوزات عبر واتساب مباشرة، حيث نؤكد معكِ الخدمة والتاريخ والوقت.",
+      "policy.depositTitle":"سياسة العربون","policy.depositDesc":"يتطلب تأكيد كل حجز دفع عربون. في حال عدم استلام العربون خلال 24 ساعة من وقت الحجز، يُلغى الحجز تلقائيًا. العربون غير قابل للاسترداد في حال الإلغاء.",
+      "policy.rescheduleTitle":"تأجيل الموعد","policy.rescheduleDesc":"إذا احتجتِ لتأجيل موعدكِ، تواصلي معنا عبر واتساب بأقرب وقت ممكن وسنعمل معكِ لإيجاد موعد بديل مناسب.",
+      "policy.homeStudioTitle":"استوديو خاص بموعد مسبق","policy.homeStudioDesc":"تُقدَّم جميع الخدمات حصريًا بموعد مسبق في استوديو أميرة الخاص المجهز بالكامل في جدة.",
       "policy.arrivalTitle":"وقت الحضور","policy.arrivalDesc":"يُرجى الحضور في الموعد المحدد تمامًا. التأخير لأكثر من 15 دقيقة دون إشعار مسبق قد يؤدي لتقليص وقت الجلسة أو إلغائها للحفاظ على مواعيد بقية العميلات.",
       "policy.prepTitle":"تجهيزات الشعر قبل الجلسة","policy.prepDesc":"يُفضّل الحضور بشعر نظيف وجاف تمامًا (مغسول في اليوم السابق للجلسة وليس في نفس اليوم)، بدون كريمات أو زيوت على فروة الرأس، لضمان أفضل نتيجة للتسريحة.",
-      "policy.termsTitle":"الشروط العامة للحجز","policy.termsDesc":"الأسعار المعلنة قابلة للتغيير حسب تعقيد الطلب أو المسافة (للخدمة الخارجية). قد يُطلب دفع كامل المبلغ مقدمًا في بعض الحالات الخاصة (مثل مواسم الأعياد أو الحجوزات في مدن بعيدة). باقة العروس تشمل جلسة تجربة اختيارية بسعر منفصل عند الطلب.",
+      "policy.skinTitle":"تجهيز البشرة قبل المكياج",
+      "policy.skinDesc":"رطّبي بشرتكِ جيدًا في الأيام التي تسبق الجلسة، وتجنبي التقشير القوي أو أي منتج جديد قبل يوم أو يومين من الموعد. <a href=\"journal-skin-prep\">اقرئي دليلنا الكامل لتجهيز البشرة →</a>",
+      "policy.termsTitle":"الشروط العامة للحجز","policy.termsDesc":"الأسعار المعلنة قابلة للتغيير حسب تعقيد الطلب. قد يُطلب دفع كامل المبلغ مقدمًا في بعض الحالات الخاصة (مثل مواسم الأعياد). باقة العروس تشمل جلسة تجربة اختيارية بسعر منفصل عند الطلب.",
+      "policy.faqTitle":"لديكِ سؤال؟",
+      "policy.faqDesc":"راجعي <a href=\"pricing#faq\">الأسئلة الشائعة</a> حول الحجز، الأسعار، والخدمات، أو تواصلي معنا مباشرة عبر واتساب.",
       "policy.footnote":"* لأي استفسار حول هذه السياسات، لا تترددي في التواصل معنا مباشرة عبر واتساب قبل تأكيد حجزكِ.",
       "nav.journal":"مدونة الجمال",
       "journal.eyebrow":"مدونة الجمال","journal.title":"مدونة الجمال","journal.sub":"نصائح وخبرات حقيقية من أميرة لمساعدتكِ على إطلالة مثالية في كل مناسبة",
@@ -157,8 +161,17 @@
       "journal.art4.body":"<p>المناسبات الطويلة، من حفلات الزفاف إلى السهرات الممتدة، تحتاج إلى مكياج مصمم خصيصًا ليصمد أمام الحرارة والرطوبة والحركة المستمرة. إليكِ أهم الأسرار الاحترافية لثبات يدوم.</p><h2>التحضير الجيد للبشرة هو نصف الطريق</h2><p>البشرة المرطبة والمُجهّزة جيدًا تحتفظ بالمكياج لوقت أطول من البشرة الجافة أو غير المُعتنى بها. لا تتجاهلي خطوات العناية بالبشرة في الأيام التي تسبق المناسبة.</p><h2>طبقات خفيفة أفضل من طبقة واحدة سميكة</h2><p>المكياج المصنوع من طبقات خفيفة ومتتالية يثبت بشكل أفضل ويبدو طبيعيًا أكثر من طبقة واحدة سميكة، والتي غالبًا ما \"تنسدل\" أسرع مع الحرارة.</p><h2>البودرة الشفافة صديقتكِ الحقيقية</h2><p>تثبيت الكونسيلر وأماكن التلألؤ الطبيعي (مثل جانبي الأنف والجبهة) ببودرة شفافة ناعمة يمنع ظهور اللمعان غير المرغوب فيه خلال الساعات الطويلة.</p><h2>بخاخ التثبيت خطوة لا يجب تخطيها</h2><p>بخاخ التثبيت عالي الجودة هو اللمسة الأخيرة التي \"تُقفل\" المكياج وتحميه من التأثر بالحرارة والتعرق والدموع خلال المناسبة.</p><h2>احملي معكِ أدوات تجديد سريعة</h2><p>ورق امتصاص الزيوت (blotting paper) وأحمر شفاه بلون مناسب في حقيبتكِ يساعدانكِ على تجديد الإطلالة بسرعة في أي وقت خلال السهرة دون الحاجة لإعادة المكياج بالكامل.</p><p>ثبات المكياج ليس صدفة، بل نتيجة تحضير جيد واختيارات صحيحة من البداية. اتباع هذه الخطوات يمنحكِ إطلالة واثقة تدوم من أول لحظة حتى آخر صورة تذكارية.</p>",
       "journal.art5.tag":"تجنبي هذا","journal.art5.title":"5 أخطاء شائعة في مكياج العروس يجب تجنبها",
       "journal.art5.excerpt":"من التجربة المتأخرة إلى اختيار الألوان الخاطئة — تعرّفي على الأخطاء الأكثر شيوعًا وكيف تتجنبينها في يوم زفافكِ.",
+      "journal.art6.tag":"فلسفتي","journal.art6.title":"فلسفتي في المكياج وأسلوبي المميز",
+      "journal.art6.excerpt":"كل خبيرة مكياج لها بصمة خاصة. إليكِ نظرتي الشخصية للمكياج وما يميز أسلوبي في كل جلسة.",
+      "journal.art6.body":"<p>بالنسبة لي، المكياج ليس مجرد تغطية للبشرة أو إضافة ألوان، بل هو وسيلة لإبراز جمال كل امرأة بطريقتها الخاصة.</p><h2>أؤمن بالجمال الطبيعي المعزز، لا المخفي</h2><p>أسلوبي يعتمد على إبراز ملامحكِ الحقيقية بلمسة أكثر إشراقًا وثقة، وليس إخفاءها خلف طبقات كثيفة من المكياج. الهدف دائمًا أن تنظري في المرآة وترَي نفسكِ في أجمل حالاتها، لا شخصًا آخر.</p><h2>كل بشرة ووجه لهما احتياجات مختلفة</h2><p>لا يوجد \"لوك واحد يناسب الجميع\". أستمع لكِ في بداية كل جلسة، وأدرس ملامح وجهكِ ولون بشرتكِ واحتياجاتها، قبل أن أختار المنتجات والتقنيات المناسبة لكِ تحديدًا.</p><h2>التفاصيل الصغيرة تصنع الفرق الكبير</h2><p>من اختيار درجة الكونتور المناسبة لشكل وجهكِ، إلى تحديد الطبقات الصحيحة لضمان ثبات يدوم، أهتم بكل تفصيلة مهما بدت صغيرة، لأن مجموع هذه التفاصيل هو ما يصنع إطلالة استثنائية.</p><h2>الراحة والثقة جزء من التجربة</h2><p>جلسة المكياج يجب أن تكون تجربة ممتعة ومريحة، لا مصدر توتر. أحرص دائمًا على أجواء هادئة ومرحّبة، لتخرجي من الجلسة وأنتِ تشعرين بالجمال والثقة معًا.</p><p>هذه هي فلسفتي التي أحملها في كل جلسة: مكياج يعزز جمالكِ الحقيقي، بلمسة احترافية تليق بكِ في كل مناسبة.</p>",
+      "journal.art7.tag":"قبل الحجز","journal.art7.title":"لماذا أنصح دائمًا بمراجعة معرض أعمالي قبل الحجز",
+      "journal.art7.excerpt":"قبل أن تحجزي موعدكِ، خذي بضع دقائق لتصفح أعمالي السابقة. إليكِ لماذا هذه الخطوة البسيطة توفر عليكِ الكثير.",
+      "journal.art7.body":"<p>من أكثر النصائح التي أكررها لعميلاتي الجديدات: لا تحجزي قبل أن تشاهدي معرض أعمالي بالكامل. وإليكِ الأسباب الحقيقية وراء هذه النصيحة.</p><h2>الصور تُظهر أسلوبي الفعلي، لا الوصف فقط</h2><p>كلمات مثل \"مكياج طبيعي\" أو \"لوك فخم\" قد تعني أشياء مختلفة لأشخاص مختلفين. مشاهدة أعمال حقيقية تمنحكِ فكرة دقيقة وواضحة عن أسلوبي تحديدًا، بعيدًا عن أي لبس في التوقعات.</p><h2>يساعدكِ على معرفة إن كان أسلوبي يناسب رؤيتكِ</h2><p>كل عميلة لديها تصوّر مختلف لإطلالتها المثالية. تصفح أعمالي يساعدكِ على التأكد من أن أسلوبي في الألوان والتقنيات يتماشى مع الذوق الذي تبحثين عنه، قبل الالتزام بالحجز.</p><h2>يقلل من أي مفاجآت أو سوء تفاهم يوم المناسبة</h2><p>عندما تأتين للجلسة وأنتِ تعرفين بالضبط نوعية النتيجة المتوقعة، تكون التجربة أكثر سلاسة وراحة للطرفين، ونتجنب معًا أي فجوة بين التوقع والواقع.</p><h2>يفتح بابًا للنقاش قبل يوم الجلسة</h2><p>إذا أعجبكِ لوك معيّن من أعمالي، يمكنكِ إخباري به مسبقًا لنناقش كيف يمكن تطويعه ليناسب ملامحكِ ومناسبتكِ الخاصة — بدلًا من محاولة الشرح بالكلمات فقط.</p><p>مراجعة معرض الأعمال ليست مجرد خطوة إضافية، بل استثمار بسيط في راحة بالكِ ووضوح توقعاتكِ، لضمان تجربة مكياج تليق بيومكِ المميز.</p>",
+      "journal.art8.tag":"دليل الاختيار","journal.art8.title":"كيف تعرفين أن أسلوبي في المكياج يناسبكِ",
+      "journal.art8.excerpt":"اختيار خبيرة المكياج المناسبة يعتمد على مدى توافق أسلوبها مع ذوقكِ. إليكِ علامات تساعدكِ على معرفة أن أسلوبي هو ما تبحثين عنه.",
+      "journal.art8.body":"<p>كثيرًا ما تسألني العميلات: \"كيف أعرف أن أسلوبكِ يناسبني؟\" إليكِ بعض العلامات التي تساعدكِ على الإجابة عن هذا السؤال بنفسكِ.</p><h2>تفضّلين المكياج الذي يبرز ملامحكِ لا يغيّرها</h2><p>إذا كنتِ تبحثين عن إطلالة تجعلكِ تبدين كأجمل نسخة من نفسكِ، وليس شخصًا مختلفًا تمامًا، فأسلوبي في إبراز الجمال الطبيعي بلمسة أكثر إشراقًا سيناسبكِ تمامًا.</p><h2>تقدّرين الاهتمام بالتفاصيل الدقيقة</h2><p>إذا كانت التفاصيل الصغيرة — مثل تناسق درجات الكونتور، أو دقة رسمة العين — تهمكِ بقدر النتيجة الإجمالية، فستلاحظين هذا الاهتمام بوضوح في أسلوب عملي.</p><h2>تبحثين عن مكياج يدوم دون الحاجة لتعديل مستمر</h2><p>سواء كان يوم زفافكِ أو سهرة طويلة، إذا كانت أولويتكِ إطلالة تصمد لساعات دون الحاجة لتصليحات متكررة، فهذا بالضبط ما أركّز عليه في كل جلسة.</p><h2>تفضّلين تجربة هادئة ومريحة قبل أي شيء</h2><p>إذا كنتِ تقدّرين الشعور بالراحة والاستماع لاحتياجاتكِ خلال الجلسة بقدر ما تقدّرين النتيجة النهائية، فستجدين في أسلوبي التوازن الذي تبحثين عنه بين الاحترافية والدفء الإنساني.</p><p>أفضل طريقة للتأكد بنفسكِ هي دائمًا: تصفحي معرض أعمالي، واسأليني عن أي شيء يخطر ببالكِ قبل الحجز. سأكون سعيدة بمساعدتكِ على اتخاذ القرار الصحيح لكِ.</p>",
       "journal.art5.body":"<p>مع كل التفاصيل التي تحتاج العروس للتفكير فيها، من السهل الوقوع في بعض الأخطاء الشائعة التي تؤثر على الإطلالة النهائية. إليكِ أبرزها وكيف تتجنبينها.</p><h2>1. تأجيل جلسة التجربة لوقت متأخر جدًا</h2><p>حجز التجربة قبل أسبوع واحد فقط من الزفاف لا يترك وقتًا كافيًا لتعديل أي تفصيلة. احجزيها قبل شهر على الأقل لضمان راحة البال.</p><h2>2. اختيار لوك مختلف تمامًا عن شكلكِ المعتاد</h2><p>الرغبة في \"الظهور بشكل مختلف تمامًا\" في يوم الزفاف قد تؤدي لمكياج لا يشبهكِ فعلًا في الصور. أفضل مكياج عروس هو الذي يعزز جمالكِ الطبيعي بثقة أكبر.</p><h2>3. إهمال تجهيز البشرة قبل الجلسة</h2><p>الوصول للجلسة ببشرة جافة أو غير مُعتنى بها يصعّب مهمة خبيرة المكياج ويؤثر على النتيجة النهائية، مهما كانت مهارتها. ابدئي روتين العناية ببشرتكِ قبل أسابيع من الموعد.</p><h2>4. عدم إخبار خبيرة المكياج بحساسية البشرة أو أي مشاكل جلدية</h2><p>إذا كانت بشرتكِ حساسة أو لديكِ أي حالة جلدية، أخبري خبيرة المكياج مسبقًا حتى تختار المنتجات المناسبة، بدلًا من اكتشاف المشكلة في يوم الزفاف نفسه.</p><h2>5. عدم الاهتمام بتثبيت المكياج لساعات طويلة</h2><p>يوم الزفاف يمتد لساعات طويلة من التصوير إلى الحفل. تأكدي أن خبيرة المكياج تستخدم منتجات تثبيت مناسبة، واسأليها عن خطوات تجديد الإطلالة إذا لزم الأمر خلال اليوم.</p><p>تجنّب هذه الأخطاء البسيطة يبدأ من التخطيط المبكر والتواصل الواضح مع خبيرة المكياج. النتيجة: إطلالة واثقة وطبيعية تدوم من الصباح وحتى آخر لحظة في حفلكِ.</p>",
-      "footer.maroof":"موثّقة عبر معروف",
+      "footer.maroof":"موثّقة عبر معروف — 522836","footer.freelance":"شهادة العمل الحر",
       "footer.rights":"© <span id=\"yearNow\">2026</span> استوديو أميرة خالد. جميع الحقوق محفوظة.","footer.credit":"صُمم بواسطة DevMenta"
     },
     en: {
@@ -179,10 +192,10 @@
       "ba.eyebrow":"Before & After","ba.title":"See the Difference","ba.sub":"Real transformations from actual makeup sessions","ba.before":"Before","ba.after":"After","ba.comingSoon":"Photos coming soon",
       "home.reelsEyebrow":"Videos","home.reelsTitle":"Live Clips From the Studio","home.reelsSub":"Watch real makeup sessions and quick tips","home.reelsMore":"Watch More Reels",
       "portfolio.instaFollow":"Follow the latest reels on Instagram",
-      "reel1.caption":"Soft Everyday Look","reel2.caption":"Easiest Way to Lift the Cheek","reel3.caption":"Behind the Scenes",
-      "reel4.caption":"Complete Makeup Look","reel5.caption":"The Best Shots Are Candid","reel6.caption":"The Secret to Lifted Cheeks",
-      "reel7.caption":"Soft & Elegant Makeup","reel8.caption":"Professional Makeup Touches","reel9.caption":"Details That Make the Difference",
+      "reel1.caption":"Soft Everyday Look","reel3.caption":"Behind the Scenes",
+      "reel8.caption":"Professional Makeup Touches","reel9.caption":"Details That Make the Difference",
       "reel10.caption":"No Filters — the Real Result","reel11.caption":"Beauty Expert in Jeddah","reel12.caption":"Glamorous Evening Look",
+      "reel17.caption":"A Touch of Mystery and Elegance","reel18.caption":"Bride in a Pearl Crown","reel19.caption":"Unforgettable Bridal Details",
       "reel13.caption":"Precision in Every Touch","reel14.caption":"Bridal Beauty in Every Detail","reel15.caption":"Captivating Evening Glam","reel16.caption":"Glow With Confidence",
       "about.journeyEyebrow":"My Journey","about.journeyTitle":"How the Story Began",
       "journey.step1Title":"The Beginning","journey.step1Desc":"Amira's passion for makeup began early, developing her skills through certified professional courses.",
@@ -214,13 +227,13 @@
       "pf.item1.title":"Veiled Bridal Look","pf.item2.title":"Soft Bridal Makeup","pf.item3.title":"Dramatic Velvet Evening","pf.item4.title":"Elegant Evening Makeup",
       "pf.item5.title":"Luxe Curls Hairstyle","pf.item6.title":"Natural Day Makeup","pf.item7.title":"Professional Skin Prep",
       "pf.item8.title":"Finishing Lip Touch","pf.item9.title":"Tulle Bridal Look","pf.item10.title":"Pearl Bridal Crown","pf.item11.title":"Smoky Eye Evening","pf.item12.title":"Elegant Profile Look","pf.item13.title":"Bride with Bouquet",
-      "testi.eyebrow":"Testimonials","testi.title":"What Our Clients Say",
+      "testi.eyebrow":"Google Reviews","testi.title":"What Our Clients Say","testi.googleLink":"4.9 — See All Reviews on Google Maps",
       "testi.q1":"“My wedding day makeup was better than I dreamed — Amira understood exactly the look I wanted from the very first session.”","testi.n1":"Sarah","testi.r1":"Bride",
       "testi.q2":"“Blow-dry and curls stayed perfect all night, and so professional from the first minute. Highly recommend.”","testi.n2":"Noura","testi.r2":"Evening Client",
       "testi.q3":"“Elegant service and spotless tools — I felt cared for from the very first minute.”","testi.n3":"Lama","testi.r3":"Bride",
       "testi.a1":"S","testi.a2":"N","testi.a3":"L",
-      "pricing.groupStudio":"At the Studio","pricing.groupPrivate":"Outdoor Bridal Service","pricing.featured":"Most Popular","pricing.bookBtn":"Book Now",
-      "pricing.privateNote":"* Outdoor service is for brides only, at the location of the client's choice",
+      "pricing.groupEvening":"Evening Makeup","pricing.groupBridal":"Bridal Makeup","pricing.groupTraining":"Private 1:1 Makeup Training","pricing.featured":"Most Popular","pricing.bookBtn":"Book Now",
+      "pricing.homeStudioNote":"* All services are provided exclusively by appointment at Amira's private studio in Jeddah","pricing.priceOnRequest":"Price on request",
       "pricing.onRequest":"Price on request",
       "pricing.durationRegular":"<strong>35–45</strong> min — depending on skin type","pricing.durationBride":"<strong>60–75</strong> min — bride session",
       "trust.brands":"Professional international brands","trust.sterile":"Full tool sterilization","trust.single":"Single-use tools per client",
@@ -236,9 +249,7 @@
       "svc.makeupBlowdry":"Makeup + Blow Dry & Soft Waves","svc.makeupBlowdry.desc":"Professional makeup with a blow dry and soft waves for an elegant evening look","svc.makeupBlowdryOpt":"Makeup + Blow Dry & Soft Waves — SAR 550",
       "svc.makeupHair":"Makeup + Full Hairstyling","svc.makeupHair.desc":"Makeup with a hairstyle designed for your look","svc.makeupHairOpt":"Makeup + Full Hairstyling — SAR 650",
       "svc.bridal":"Bridal Package","svc.bridal.desc":"Professional Makeup + Premium Lashes + Full Hairstyling + Body Glow","svc.bridalOpt":"Bridal Package — SAR 2500",
-      "svc.hairExt":"Hair Extension Installation","svc.hairExt.desc":"Add volume and length for a more glamorous look","svc.hairExtOpt":"Hair Extension Installation — SAR 100",
-      "svc.privateBasic":"Bridal Makeup (Outdoor)","svc.privateBasic.desc":"Professional Makeup + Premium Lashes + Body Glow, at your own location","svc.privateBasicOpt":"Bridal Makeup (Outdoor) — SAR 2100",
-      "svc.privateFull":"Complete Bridal Package (Outdoor)","svc.privateFull.desc":"Professional Makeup + Premium Lashes + Body Glow + Full Hairstyling, at your own location","svc.privateFullOpt":"Complete Bridal Package (Outdoor) — SAR 3000",
+      "svc.training":"Private 1:1 Session","svc.training.desc":"A private one-on-one session to learn makeup basics or refine your skills step by step","svc.trainingOpt":"Private 1:1 Makeup Training — Price on request",
       "common.sar":"SAR",
       "contact.formName":"Full Name","contact.formPhone":"Phone Number","contact.formService":"Service","contact.formEventType":"Event Type","contact.formDate":"Date","contact.formTime":"Ready-by Time",
       "event.wedding":"Wedding","event.engagement":"Engagement","event.party":"Party / Evening","event.graduation":"Graduation","event.other":"Other",
@@ -251,10 +262,10 @@
       "bookingPreview.eyebrow":"Pre-Launch Preview","bookingPreview.title":"New Calendar Booking System",
       "bookingPreview.sub":"Try booking yourself below — this page is for preview only and will not be published to visitors",
       "bookingPreview.howTitle":"How does the booking system work?",
-      "bookingPreview.step1":"<strong style=\"color:var(--text)\">1. Service Selection —</strong> When selecting \"Makeup\" or \"Makeup + Hairstyle,\" only the studio option appears automatically. When selecting \"Bridal Package\" or \"Bridal Makeup,\" both the studio and client location options appear.",
+      "bookingPreview.step1":"<strong style=\"color:var(--text)\">1. Service Selection & Event Type —</strong> The client picks the right service from the list (Evening Makeup, Bridal Makeup, or Private Training), then selects the event type.",
       "bookingPreview.step2":"<strong style=\"color:var(--text)\">2. Selecting the date from the calendar —</strong> Instead of manually typing the date, the client opens a real calendar similar to Google Calendar and clicks directly on the right day.",
       "bookingPreview.step3":"<strong style=\"color:var(--text)\">3. Fully booked days appear in red and can't be clicked —</strong> When you tell us you're not accepting bookings on a specific day (holiday, special occasion, full day), we add it to the site file within a minute, and it instantly shows \"Fully Booked\" to every visitor.",
-      "bookingPreview.step4":"<strong style=\"color:var(--text)\">4. Instant confirmation via WhatsApp —</strong> After filling out the form, all details (name, service, date, location) are sent to you directly via WhatsApp so you can confirm the booking manually as usual — no payment system or extra account needed right now.",
+      "bookingPreview.step4":"<strong style=\"color:var(--text)\">4. Instant confirmation via WhatsApp —</strong> After filling out the form, all details (name, service, date) are sent to you directly via WhatsApp so you can confirm the booking manually as usual — no payment system or extra account needed right now.",
       "bookingV2.title":"Full Booking & Payment Flow","bookingV2.sub":"Pick a day from the calendar below to try the whole flow — this page is for preview only",
       "bookingV2.pickDate":"Choose a booking date","bookingV2.whereQuestion":"Where would you like the service?",
       "bookingV2.next":"Next","bookingV2.prev":"Back","bookingV2.nextPrice":"Next: Price",
@@ -276,13 +287,19 @@
       "footer.tagline":"Enhancing your natural beauty with a professional artistic touch, for every occasion that deserves the best.","footer.quickLinks":"Quick Links","footer.services":"Services","footer.getInTouch":"Get in Touch",
       "nav.bookingPolicy":"Booking Policy",
       "contact.policyNote":"By confirming your booking, you agree to our <a href=\"booking-policy\">Booking Policy</a>",
-      "policy.eyebrow":"Before You Book","policy.title":"Booking Policy","policy.sub":"Everything you need to know before confirming your appointment with Amira",
-      "policy.depositTitle":"Deposit Policy","policy.depositDesc":"Confirming any booking requires a 20% deposit of the service value to secure your appointment. The deposit is non-refundable in case of cancellation, but transferable when rescheduling within the terms below.",
-      "policy.cancelTitle":"Cancellation Policy","policy.cancelDesc":"Bookings may be cancelled at least 7 days before the appointment with no additional fees (aside from the deposit). Cancelling within less than 7 days of the appointment forfeits the deposit.",
-      "policy.rescheduleTitle":"Rescheduling Policy","policy.rescheduleDesc":"Appointments can be rescheduled once free of charge, provided we're notified at least 48 hours before the original appointment. Repeated or late rescheduling may require an additional deposit.",
+      "policy.eyebrow":"Before You Book","policy.title":"Before Booking","policy.sub":"Everything you need to know before booking your appointment with Amira",
+      "policy.groupBooking":"Booking Policy","policy.groupPrep":"Appointment Preparation","policy.groupInfo":"Important Information",
+      "policy.waTitle":"Booking via WhatsApp","policy.waDesc":"All bookings are made directly via WhatsApp, where we confirm the service, date, and time with you.",
+      "policy.depositTitle":"Deposit Policy","policy.depositDesc":"Confirming any booking requires a deposit. If the deposit isn't received within 24 hours of booking, the appointment is automatically cancelled. Deposits are non-refundable in case of cancellation.",
+      "policy.rescheduleTitle":"Rescheduling","policy.rescheduleDesc":"If you need to reschedule your appointment, reach out via WhatsApp as soon as possible and we'll work with you to find a suitable alternative time.",
+      "policy.homeStudioTitle":"Private Studio, By Appointment","policy.homeStudioDesc":"All services are provided exclusively by appointment at Amira's fully equipped private studio in Jeddah.",
       "policy.arrivalTitle":"Arrival Time","policy.arrivalDesc":"Please arrive exactly at your scheduled time. Arriving more than 15 minutes late without prior notice may shorten your session or result in cancellation, to protect other clients' appointments.",
       "policy.prepTitle":"Hair Prep Before Your Session","policy.prepDesc":"Please arrive with clean, fully dry hair (washed the day before your session, not the same day), free of creams or oils on the scalp, to ensure the best hairstyling result.",
-      "policy.termsTitle":"General Appointment Terms","policy.termsDesc":"Listed prices may vary depending on request complexity or distance (for outdoor service). Full advance payment may be required in special cases (such as holiday seasons or bookings in distant cities). The bridal package includes an optional trial session at a separate price upon request.",
+      "policy.skinTitle":"Skin Prep Before Makeup",
+      "policy.skinDesc":"Moisturize your skin well in the days before your session, and avoid strong exfoliation or any new product a day or two before your appointment. <a href=\"journal-skin-prep\">Read our full skin prep guide →</a>",
+      "policy.termsTitle":"General Appointment Terms","policy.termsDesc":"Listed prices may vary depending on request complexity. Full advance payment may be required in special cases (such as holiday seasons). The bridal package includes an optional trial session at a separate price upon request.",
+      "policy.faqTitle":"Have a Question?",
+      "policy.faqDesc":"Check our <a href=\"pricing#faq\">Frequently Asked Questions</a> about booking, pricing, and services, or reach out to us directly via WhatsApp.",
       "policy.footnote":"* For any questions about these policies, feel free to reach out via WhatsApp before confirming your booking.",
       "nav.journal":"Beauty Journal",
       "journal.eyebrow":"Beauty Journal","journal.title":"Beauty Journal","journal.sub":"Real tips and expertise from Amira to help you achieve the perfect look for every occasion",
@@ -302,14 +319,25 @@
       "journal.art4.body":"<p>Long celebrations — from weddings to extended evening events — call for makeup designed to hold up against heat, humidity, and constant movement. Here are the top professional secrets for makeup that truly lasts.</p><h2>Good Skin Prep Is Half the Battle</h2><p>Well-moisturized, properly prepped skin holds makeup far longer than dry or neglected skin. Don't skip your skincare routine in the days leading up to the event.</p><h2>Light Layers Beat One Thick Layer</h2><p>Makeup built from light, successive layers sets better and looks more natural than one thick layer — which tends to break down faster in the heat.</p><h2>Translucent Powder Is Your Best Friend</h2><p>Setting your concealer and natural shine-prone areas (like the sides of your nose and forehead) with a soft translucent powder prevents unwanted shine over long hours.</p><h2>Never Skip the Setting Spray</h2><p>A high-quality setting spray is the final touch that locks everything in place, protecting your makeup against heat, sweat, and tears throughout the event.</p><h2>Carry Quick Touch-Up Essentials</h2><p>Blotting paper and a matching lipstick in your bag let you refresh your look in seconds at any point during the evening, without needing a full makeup redo.</p><p>Long-lasting makeup isn't luck — it's the result of good prep and the right choices from the very start. Following these steps gives you a confident look that lasts from the very first moment to the last photo of the night.</p>",
       "journal.art5.tag":"Avoid This","journal.art5.title":"5 Common Bridal Makeup Mistakes to Avoid",
       "journal.art5.excerpt":"From late trial sessions to choosing the wrong shades — learn the most common mistakes and how to avoid them on your wedding day.",
+      "journal.art6.tag":"My Philosophy","journal.art6.title":"My Makeup Philosophy and Signature Style",
+      "journal.art6.excerpt":"Every makeup artist has her own signature. Here's my personal philosophy and what makes my approach different in every session.",
+      "journal.art6.body":"<p>For me, makeup isn't just about covering the skin or adding color — it's a way to bring out each woman's beauty in her own unique way.</p><h2>I Believe in Enhanced Natural Beauty, Not Hidden Beauty</h2><p>My approach focuses on highlighting your true features with a more radiant, confident touch — not hiding them under heavy layers of makeup. The goal is always for you to look in the mirror and see yourself at your most beautiful, not someone else.</p><h2>Every Face and Skin Has Different Needs</h2><p>There's no such thing as \"one look fits all.\" I listen to you at the start of every session and study your features, skin tone, and needs before choosing the right products and techniques specifically for you.</p><h2>Small Details Make the Biggest Difference</h2><p>From choosing the right contour shade for your face shape to layering products correctly for lasting wear, I pay attention to every detail, no matter how small — because it's the sum of these details that creates an exceptional look.</p><h2>Comfort and Confidence Are Part of the Experience</h2><p>A makeup session should be an enjoyable, relaxed experience, not a source of stress. I always make sure the atmosphere is calm and welcoming, so you leave feeling both beautiful and confident.</p><p>This is the philosophy I bring to every session: makeup that enhances your true beauty, with a professional touch fit for every occasion.</p>",
+      "journal.art7.tag":"Before Booking","journal.art7.title":"Why I Always Recommend Reviewing My Portfolio Before Booking",
+      "journal.art7.excerpt":"Before you book your appointment, take a few minutes to browse my past work. Here's why this simple step saves you so much down the line.",
+      "journal.art7.body":"<p>One of the pieces of advice I repeat most to new clients: don't book before you've browsed through my full portfolio. Here are the real reasons behind that advice.</p><h2>Photos Show My Actual Style, Not Just a Description</h2><p>Words like \"natural makeup\" or \"glam look\" can mean different things to different people. Seeing real work gives you a clear, accurate sense of my specific style, without any mismatch in expectations.</p><h2>It Helps You Know If My Style Matches Your Vision</h2><p>Every client has a different vision for her perfect look. Browsing my portfolio helps you confirm that my approach to color and technique aligns with the aesthetic you're after, before committing to a booking.</p><h2>It Reduces Surprises or Misunderstandings on the Day</h2><p>When you come to your session already knowing exactly what kind of result to expect, the experience is smoother and more comfortable for both of us, and we avoid any gap between expectation and reality.</p><h2>It Opens the Door for Discussion Before Your Session</h2><p>If you love a particular look from my portfolio, you can tell me about it in advance so we can discuss how to adapt it to your features and your specific occasion — instead of trying to explain it in words alone.</p><p>Reviewing the portfolio isn't just an extra step — it's a simple investment in your peace of mind and clarity of expectations, to make sure your makeup experience does justice to your special day.</p>",
+      "journal.art8.tag":"Choosing Right","journal.art8.title":"How to Know If My Makeup Style Is the Right Fit for You",
+      "journal.art8.excerpt":"Choosing the right makeup artist comes down to how well her style matches your taste. Here are signs that tell you my approach is exactly what you're looking for.",
+      "journal.art8.body":"<p>Clients often ask me: \"How do I know if your style is right for me?\" Here are a few signs to help you answer that question for yourself.</p><h2>You Prefer Makeup That Enhances Your Features, Not Changes Them</h2><p>If you're looking for a look that makes you feel like the most beautiful version of yourself — not a completely different person — my approach to enhancing natural beauty with a more radiant touch will suit you perfectly.</p><h2>You Appreciate Attention to Fine Detail</h2><p>If small details — like well-blended contour shades or precise eye definition — matter to you as much as the overall result, you'll notice that same care clearly reflected in my work.</p><h2>You Want Makeup That Lasts Without Constant Touch-Ups</h2><p>Whether it's your wedding day or a long evening event, if your priority is a look that holds up for hours without repeated fixing, that's exactly what I focus on in every session.</p><h2>You Prefer a Calm, Comfortable Experience Above All</h2><p>If you value feeling comfortable and having your needs heard during the session as much as you value the final result, you'll find that balance between professionalism and warmth in my approach.</p><p>The best way to find out for yourself is always this: browse my portfolio, and ask me anything on your mind before booking. I'm always happy to help you make the right decision for you.</p>",
       "journal.art5.body":"<p>With so many details to think about, it's easy for brides to fall into a few common traps that affect the final look. Here are the most frequent ones — and how to avoid them.</p><h2>1. Booking the Trial Session Too Late</h2><p>Booking your trial just one week before the wedding doesn't leave enough time to adjust any detail. Book it at least a month ahead for real peace of mind.</p><h2>2. Choosing a Look That's Completely Different From Your Usual Self</h2><p>Wanting to look \"completely different\" on your wedding day can result in makeup that doesn't actually look like you in photos. The best bridal makeup enhances your natural beauty with extra confidence.</p><h2>3. Neglecting Skin Prep Before the Session</h2><p>Arriving with dry or neglected skin makes the artist's job harder and affects the final result, no matter how skilled she is. Start your skincare routine weeks before the appointment.</p><h2>4. Not Mentioning Skin Sensitivities or Conditions</h2><p>If you have sensitive skin or any skin condition, tell your makeup artist in advance so she can choose suitable products — rather than discovering the issue on the wedding day itself.</p><h2>5. Not Planning for Long-Lasting Wear</h2><p>Wedding days stretch across many hours, from photos to the reception. Make sure your artist uses proper setting products, and ask about touch-up steps in case you need them later in the day.</p><p>Avoiding these simple mistakes starts with early planning and clear communication with your makeup artist. The result: a confident, natural look that lasts from morning until the very last moment of your celebration.</p>",
-      "footer.maroof":"Verified via Maroof",
+      "footer.maroof":"Verified via Maroof — 522836","footer.freelance":"Freelance Work Certificate",
       "footer.rights":"© <span id=\"yearNow\">2026</span> Amira Khalid Studio. All rights reserved.","footer.credit":"Crafted by DevMenta"
     }
   };
 
   var htmlKeys = {"pricing.durationRegular":1,"pricing.durationBride":1,"footer.rights":1,"bookingPreview.step1":1,"bookingPreview.step2":1,"bookingPreview.step3":1,"bookingPreview.step4":1,"contact.policyNote":1,
-    "journal.art1.body":1,"journal.art2.body":1,"journal.art3.body":1,"journal.art4.body":1,"journal.art5.body":1};
+    "journal.art1.body":1,"journal.art2.body":1,"journal.art3.body":1,"journal.art4.body":1,"journal.art5.body":1,
+    "journal.art6.body":1,"journal.art7.body":1,"journal.art8.body":1,
+    "policy.skinDesc":1,"policy.faqDesc":1};
 
   var heroTitle = null; // assigned lazily below, since header/content order varies by page
 
@@ -558,6 +586,23 @@
     });
   });
 
+  /* ---------- BEFORE/AFTER SLIDER ---------- */
+  document.querySelectorAll('.ba-slider').forEach(function(slider){
+    var range = slider.querySelector('.ba-slider-range');
+    var before = slider.querySelector('.ba-img-before');
+    var line = slider.querySelector('.ba-slider-line');
+    var grip = slider.querySelector('.ba-slider-grip');
+    if(!range || !before) return;
+    function update(){
+      var val = Number(range.value);
+      before.style.clipPath = 'inset(0 ' + (100 - val) + '% 0 0)';
+      if(line) line.style.left = val + '%';
+      if(grip) grip.style.left = val + '%';
+    }
+    range.addEventListener('input', update);
+    update();
+  });
+
   /* ---------- PORTFOLIO / PRICING -> BOOKING (cross-page) ---------- */
   function goToBooking(serviceValue){
     var url = 'contact' + (serviceValue ? ('?service=' + encodeURIComponent(serviceValue)) : '');
@@ -596,20 +641,6 @@
     if(!reduceMotion) startAuto();
   }
 
-  /* ---------- LOCATION TOGGLE (contact only) ---------- */
-  var addrField = document.getElementById('addrField');
-  var addrTextarea = document.getElementById('fAddress');
-  var privateHint = document.getElementById('privateHint');
-  document.querySelectorAll('input[name="location"]').forEach(function(radio){
-    radio.addEventListener('change', function(){
-      if(radio.checked && addrField && addrTextarea && privateHint){
-        addrField.classList.toggle('show', radio.value === 'home');
-        addrTextarea.required = radio.value === 'home';
-        privateHint.classList.toggle('show', radio.value === 'home');
-      }
-    });
-  });
-
   /* ---------- WHATSAPP LINKS ---------- */
   function waLink(number, text){
     return 'https://wa.me/' + number + (text ? ('?text=' + encodeURIComponent(text)) : '');
@@ -638,58 +669,12 @@
 
     var serviceLabelKey = {
       'makeup':'svc.makeup','makeup-blowdry':'svc.makeupBlowdry','makeup-hair':'svc.makeupHair',
-      'bridal-package':'svc.bridal','hair-extensions':'svc.hairExt',
-      'private-basic':'svc.privateBasic','private-full':'svc.privateFull'
+      'bridal-package':'svc.bridal','private-training':'svc.training'
     };
     var eventTypeLabelKey = {
       wedding:'event.wedding', engagement:'event.engagement', party:'event.party',
       graduation:'event.graduation', other:'event.other'
     };
-
-    /* ---------- STUDIO-ONLY / HOME-ONLY / FLEXIBLE LOCATION RULES ---------- */
-    var studioOnlyServices = ['makeup','makeup-blowdry','makeup-hair','hair-extensions','bridal-package'];
-    var homeOnlyServices = ['private-basic','private-full'];
-    var locToggle = document.getElementById('locToggle');
-    var lockedHint = document.getElementById('lockedHint');
-    var studioRadio = document.querySelector('input[name="location"][value="studio"]');
-    var homeRadio = document.querySelector('input[name="location"][value="home"]');
-    function updateLocationOptions(){
-      if(!serviceSelect || !locToggle) return;
-      var service = serviceSelect.value;
-      var dict = translations[currentLang()];
-      var studioLabel = locToggle.querySelector('.loc-option-studio');
-      var homeLabel = locToggle.querySelector('.loc-option-home');
-      if(studioOnlyServices.indexOf(service) !== -1){
-        homeLabel.style.display = 'none';
-        studioLabel.style.display = '';
-        studioRadio.checked = true;
-        lockedHint.textContent = dict['contact.lockedHintStudio'];
-        lockedHint.classList.add('show');
-        privateHint.classList.remove('show');
-        addrField.classList.remove('show');
-        addrTextarea.required = false;
-      } else if(homeOnlyServices.indexOf(service) !== -1){
-        studioLabel.style.display = 'none';
-        homeLabel.style.display = '';
-        homeRadio.checked = true;
-        lockedHint.textContent = dict['contact.lockedHintHome'];
-        lockedHint.classList.add('show');
-        addrField.classList.add('show');
-        addrTextarea.required = true;
-        privateHint.classList.remove('show');
-      } else {
-        studioLabel.style.display = '';
-        homeLabel.style.display = '';
-        lockedHint.classList.remove('show');
-        var checkedRadio = document.querySelector('input[name="location"]:checked');
-        if(checkedRadio && checkedRadio.value === 'home'){
-          addrField.classList.add('show');
-          addrTextarea.required = true;
-          privateHint.classList.add('show');
-        }
-      }
-    }
-    if(serviceSelect){ serviceSelect.addEventListener('change', updateLocationOptions); }
 
     /* preselect service from ?service= query param (arriving from portfolio/pricing pages) */
     try{
@@ -703,7 +688,6 @@
         }
       }
     }catch(e){}
-    updateLocationOptions();
 
     form.addEventListener('submit', function(e){
       e.preventDefault();
@@ -723,9 +707,7 @@
       var dict = translations[lang];
       var data = new FormData(form);
       var service = data.get('service');
-      var location = data.get('location');
       var serviceText = dict[serviceLabelKey[service]] || service;
-      var locationText = location === 'home' ? dict['contact.locHome'] : dict['contact.locStudio'];
       var eventType = data.get('eventType');
       var eventTypeText = dict[eventTypeLabelKey[eventType]] || eventType;
 
@@ -737,8 +719,6 @@
         eventType ? ('نوع المناسبة: ' + eventTypeText) : null,
         'التاريخ: ' + data.get('date'),
         'وقت الجاهزية: ' + data.get('time'),
-        'المكان: ' + locationText,
-        data.get('address') ? ('العنوان: ' + data.get('address')) : null,
         data.get('notes') ? ('ملاحظات: ' + data.get('notes')) : null
       ] : [
         "Hello Amira, I'd like to book an appointment ✨",
@@ -748,8 +728,6 @@
         eventType ? ('Event Type: ' + eventTypeText) : null,
         'Date: ' + data.get('date'),
         'Ready-by time: ' + data.get('time'),
-        'Location: ' + locationText,
-        data.get('address') ? ('Address: ' + data.get('address')) : null,
         data.get('notes') ? ('Notes: ' + data.get('notes')) : null
       ];
       var message = lines.filter(Boolean).join('\n');
@@ -1027,22 +1005,18 @@
     onLangChange(advRenderCalendar);
 
     var SERVICE_PRICES = {
-      'makeup':350,'makeup-blowdry':550,'makeup-hair':650,'bridal-package':2500,'hair-extensions':100,
-      'private-basic':2100,'private-full':3000
+      'makeup':350,'makeup-blowdry':550,'makeup-hair':650,'bridal-package':2500,'private-training':null
     };
     var SERVICE_LABEL_KEYS = {
       'makeup':'svc.makeup','makeup-blowdry':'svc.makeupBlowdry','makeup-hair':'svc.makeupHair',
-      'bridal-package':'svc.bridal','hair-extensions':'svc.hairExt',
-      'private-basic':'svc.privateBasic','private-full':'svc.privateFull'
+      'bridal-package':'svc.bridal','private-training':'svc.training'
     };
-    var LOCATION_LABEL_KEYS = {studio:'contact.locStudio', home:'contact.locHome'};
     var EVENT_TYPE_LABEL_KEYS = {
       wedding:'event.wedding', engagement:'event.engagement', party:'event.party',
       graduation:'event.graduation', other:'event.other'
     };
     function dict(){ return translations[currentLang()]; }
     function serviceLabel(service){ return dict()[SERVICE_LABEL_KEYS[service]] || service; }
-    function locationLabel(location){ return dict()[LOCATION_LABEL_KEYS[location]] || location; }
     function eventTypeLabel(eventType){ return dict()[EVENT_TYPE_LABEL_KEYS[eventType]] || eventType; }
 
     var wizardSteps = document.querySelectorAll('.wizard-step');
@@ -1050,7 +1024,6 @@
 
     function renderWizardSummary(){
       var service = document.getElementById('advService').value;
-      var location = document.querySelector('input[name="advLocation"]:checked').value;
       var price = SERVICE_PRICES[service];
       var priceText = price != null ? (price + ' ' + dict()['common.sar']) : dict()['bookingV2.priceOnRequest'];
       var name = document.getElementById('advName').value || '—';
@@ -1062,7 +1035,6 @@
         '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelPhone'] + '</span><strong>' + escHtml(phone) + '</strong></div>' +
         '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelService'] + '</span><strong>' + escHtml(serviceLabel(service)) + '</strong></div>' +
         '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelEventType'] + '</span><strong>' + escHtml(eventTypeLabel(eventType)) + '</strong></div>' +
-        '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelLocation'] + '</span><strong>' + escHtml(locationLabel(location)) + '</strong></div>' +
         '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelDate'] + '</span><strong>' + escHtml(advSelectedDate||'—') + '</strong></div>' +
         '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelTime'] + '</span><strong>' + escHtml(time) + '</strong></div>' +
         '<div class="wizard-summary-row wizard-summary-price"><span>' + dict()['bookingV2.labelPrice'] + '</span><strong>' + priceText + '</strong></div>';
@@ -1072,7 +1044,7 @@
       n = String(n);
       wizardSteps.forEach(function(s){ s.style.display = (s.getAttribute('data-step') === n) ? '' : 'none'; });
       wizardDots.forEach(function(d){ d.classList.toggle('active', d.getAttribute('data-step') === n); });
-      if(n === '3') renderWizardSummary();
+      if(n === '2') renderWizardSummary();
     }
     function showChoiceBlock(){
       var service = document.getElementById('advService').value;
@@ -1094,12 +1066,6 @@
     document.querySelectorAll('[data-goto]').forEach(function(btn){
       btn.addEventListener('click', function(){ showWizardStep(btn.getAttribute('data-goto')); });
     });
-    document.querySelectorAll('input[name="advLocation"]').forEach(function(radio){
-      radio.addEventListener('change', function(){
-        document.getElementById('advAddrField').classList.toggle('show', radio.value === 'home');
-      });
-    });
-
     function submitBookingToSheet(data){
       if(!GOOGLE_SHEET_WEBAPP_URL || GOOGLE_SHEET_WEBAPP_URL.indexOf('REPLACE_WITH') === 0) return;
       try{
@@ -1121,8 +1087,6 @@
         eventType: eventTypeLabel(document.getElementById('advEventType').value),
         date: advSelectedDate,
         time: document.getElementById('advTime').value,
-        location: locationLabel(document.querySelector('input[name="advLocation"]:checked').value),
-        address: document.getElementById('advAddress').value,
         priceText: price != null ? (price + ' ' + dict()['common.sar']) : dict()['bookingV2.priceOnRequest'],
         notes: ''
       };
@@ -1138,8 +1102,6 @@
         b(dict()['bookingV2.labelEventType'] + ':') + ' ' + data.eventType,
         b(dict()['bookingV2.labelDate'] + ':') + ' ' + data.date,
         b(dict()['bookingV2.labelTime'] + ':') + ' ' + (data.time || '—'),
-        b(dict()['bookingV2.labelLocation'] + ':') + ' ' + data.location,
-        data.address ? (b(dict()['contact.formAddress'] + ':') + ' ' + data.address) : null,
         b(dict()['bookingV2.labelPrice'] + ':') + ' ' + data.priceText,
         '',
         paymentStatus === 'paid' ? '✅ ' + b('تم الدفع أونلاين') : '💬 ' + b('بانتظار التأكيد')
@@ -1193,7 +1155,7 @@
 
     var wizardConfirmBtn = document.getElementById('wizardConfirmBtn');
     if(wizardConfirmBtn) wizardConfirmBtn.addEventListener('click', function(){
-      showWizardStep(4);
+      showWizardStep(3);
       showChoiceBlock();
     });
     var choosePayBtn = document.getElementById('choosePayBtn');

@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=20260708-1">
+<link rel="stylesheet" href="assets/styles.css?v=20260708-2">
 
 <!-- Google Search Console: uncomment and add the verification code Google gives you
 <meta name="google-site-verification" content="REPLACE_WITH_VERIFICATION_CODE">
@@ -31,7 +31,7 @@
 <body>
 <div id="app" dir="rtl" lang="ar">
 <script>window.CURRENT_PAGE = 'portfolio';</script>
-<script src="assets/header.js?v=20260708-1"></script>
+<script src="assets/header.js?v=20260708-2"></script>
 
 <main>
 <section class="page-hero">
@@ -119,17 +119,29 @@
       <p class="section-sub" data-i18n="ba.sub">تحوّلات حقيقية من جلسات مكياج فعلية</p>
     </div>
     <div class="ba-grid">
-      <div class="ba-card" data-reveal>
-        <div class="ba-half"><img src="assets/images/portfolio/ba-01-before.jpg" alt="قبل"><span class="ba-tag" data-i18n="ba.before">قبل</span></div>
-        <div class="ba-half"><img src="assets/images/portfolio/ba-01-after.jpg" alt="بعد"><span class="ba-tag ba-tag-after" data-i18n="ba.after">بعد</span></div>
+      <div class="ba-slider" data-reveal>
+        <img class="ba-img ba-img-after" src="assets/images/portfolio/ba-01-after.jpg" alt="بعد">
+        <img class="ba-img ba-img-before" src="assets/images/portfolio/ba-01-before.jpg" alt="قبل">
+        <div class="ba-slider-line"></div>
+        <div class="ba-slider-grip">
+          <svg class="icon" style="transform:scaleX(-1)"><use href="#i-chevron"/></svg>
+          <svg class="icon"><use href="#i-chevron"/></svg>
+        </div>
+        <input type="range" class="ba-slider-range" min="0" max="100" value="50" aria-label="Before / after comparison slider">
+        <span class="ba-tag ba-tag-before" data-i18n="ba.before">قبل</span>
+        <span class="ba-tag ba-tag-after" data-i18n="ba.after">بعد</span>
       </div>
-      <div class="ba-card" data-reveal>
-        <div class="ba-half"><img src="assets/images/portfolio/ba-02-before.jpg" alt="قبل"><span class="ba-tag" data-i18n="ba.before">قبل</span></div>
-        <div class="ba-half"><img src="assets/images/portfolio/ba-02-after.jpg" alt="بعد"><span class="ba-tag ba-tag-after" data-i18n="ba.after">بعد</span></div>
+      <div class="ba-card-placeholder" data-reveal>
+        <div class="ba-placeholder">
+          <svg class="icon" style="width:28px;height:28px"><use href="#i-camera"/></svg>
+          <span data-i18n="ba.comingSoon">الصور قريبًا</span>
+        </div>
       </div>
-      <div class="ba-card" data-reveal>
-        <div class="ba-half"><img src="assets/images/portfolio/ba-03-before.jpg" alt="قبل"><span class="ba-tag" data-i18n="ba.before">قبل</span></div>
-        <div class="ba-half"><img src="assets/images/portfolio/ba-03-after.jpg" alt="بعد"><span class="ba-tag ba-tag-after" data-i18n="ba.after">بعد</span></div>
+      <div class="ba-card-placeholder" data-reveal>
+        <div class="ba-placeholder">
+          <svg class="icon" style="width:28px;height:28px"><use href="#i-camera"/></svg>
+          <span data-i18n="ba.comingSoon">الصور قريبًا</span>
+        </div>
       </div>
     </div>
   </div>
@@ -150,29 +162,29 @@
         <div class="reel-caption" data-i18n="reel1.caption">لوك يومي ناعم</div>
       </div>
       <div class="reel-item" data-reveal>
-        <video src="assets/videos/reel-02.mp4" poster="assets/images/portfolio/reel-02-poster.jpg" playsinline preload="none"></video>
-        <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
-        <div class="reel-caption" data-i18n="reel2.caption">أسهل طريقة لرفع الخد</div>
-      </div>
-      <div class="reel-item" data-reveal>
         <video src="assets/videos/reel-03.mp4" poster="assets/images/portfolio/reel-03-poster.jpg" playsinline preload="none"></video>
         <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
         <div class="reel-caption" data-i18n="reel3.caption">لحظات من كواليس التصوير</div>
       </div>
       <div class="reel-item" data-reveal>
-        <video src="assets/videos/reel-05.mp4" poster="assets/images/portfolio/reel-05-poster.jpg" playsinline preload="none"></video>
-        <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
-        <div class="reel-caption" data-i18n="reel5.caption">أجمل اللقطات تكون عفوية</div>
-      </div>
-      <div class="reel-item" data-reveal>
-        <video src="assets/videos/reel-06.mp4" poster="assets/images/portfolio/reel-06-poster.jpg" playsinline preload="none"></video>
-        <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
-        <div class="reel-caption" data-i18n="reel6.caption">سر رفع الخدود بالبلاشر</div>
-      </div>
-      <div class="reel-item" data-reveal>
         <video src="assets/videos/reel-08.mp4" poster="assets/images/portfolio/reel-08-poster.jpg" playsinline preload="none"></video>
         <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
         <div class="reel-caption" data-i18n="reel8.caption">لمسات مكياج احترافية</div>
+      </div>
+      <div class="reel-item" data-reveal>
+        <video src="assets/videos/reel-17.mp4" poster="assets/images/portfolio/reel-17-poster.jpg" playsinline preload="none"></video>
+        <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
+        <div class="reel-caption" data-i18n="reel17.caption">لمسة غموض وأناقة</div>
+      </div>
+      <div class="reel-item" data-reveal>
+        <video src="assets/videos/reel-18.mp4" poster="assets/images/portfolio/reel-18-poster.jpg" playsinline preload="none"></video>
+        <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
+        <div class="reel-caption" data-i18n="reel18.caption">عروس بتاج اللؤلؤ</div>
+      </div>
+      <div class="reel-item" data-reveal>
+        <video src="assets/videos/reel-19.mp4" poster="assets/images/portfolio/reel-19-poster.jpg" playsinline preload="none"></video>
+        <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
+        <div class="reel-caption" data-i18n="reel19.caption">تفاصيل عروس لا تُنسى</div>
       </div>
       <div class="reel-item" data-reveal>
         <video src="assets/videos/reel-09.mp4" poster="assets/images/portfolio/reel-09-poster.jpg" playsinline preload="none"></video>
@@ -251,9 +263,9 @@
 </section>
 </main>
 
-<script src="assets/footer.js?v=20260708-1"></script>
+<script src="assets/footer.js?v=20260708-2"></script>
 </div>
 
-<script src="assets/app.js?v=20260708-1"></script>
+<script src="assets/app.js?v=20260708-2"></script>
 </body>
 </html>
