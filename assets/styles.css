@@ -461,6 +461,28 @@ nav.main-nav a.current{color:var(--primary);}
 .result-panel.show{display:flex; animation:fadeIn .5s var(--ease);}
 .result-panel p{font-weight:700; flex:1; min-width:200px;}
 
+/* ===================== INLINE CALENDAR (always visible) ===================== */
+.calendar-inline{margin-block-start:10px; background:var(--surface-2); border:1px solid var(--border); border-radius:var(--radius-md); padding:var(--space-4);}
+
+/* ===================== BOOKING WIZARD MODAL ===================== */
+.wizard-overlay{display:none; position:fixed; inset:0; z-index:200; background:rgba(20,8,12,.55); align-items:center; justify-content:center; padding:var(--space-5);}
+.wizard-overlay.open{display:flex;}
+.wizard-modal{position:relative; width:100%; max-width:440px; max-height:88vh; overflow-y:auto; background:var(--surface); border-radius:var(--radius-lg); padding:var(--space-6); box-shadow:0 40px 90px -20px rgba(0,0,0,.5);}
+.wizard-modal h3{font-size:1.15rem; margin-block-end:var(--space-4);}
+.wizard-close{position:absolute; top:14px; inset-inline-end:14px; width:32px; height:32px; border-radius:50%; border:1px solid var(--border); background:var(--surface-2); color:var(--text); font-size:1.2rem; line-height:1; display:flex; align-items:center; justify-content:center;}
+.wizard-progress{display:flex; justify-content:center; gap:8px; margin-block-end:var(--space-5);}
+.wizard-step-dot{width:8px; height:8px; border-radius:50%; background:var(--border);}
+.wizard-step-dot.active{background:var(--primary); width:20px; border-radius:5px; transition:all var(--dur-f) var(--ease);}
+.wizard-summary-row{display:flex; justify-content:space-between; gap:var(--space-3); padding:10px 0; border-bottom:1px solid var(--border); font-size:.9rem;}
+.wizard-summary-row span{color:var(--text-muted);}
+.wizard-summary-price{border-bottom:none; font-size:1.05rem;}
+.wizard-summary-price strong{color:var(--primary); font-family:var(--font-display);}
+.wizard-summary{margin-block-end:var(--space-5);}
+.wizard-note{font-size:.82rem; color:var(--text-muted); margin-block-end:var(--space-4); line-height:1.7;}
+.wizard-success{text-align:center; padding-block:var(--space-5);}
+.wizard-success h3{margin-block:var(--space-3) var(--space-2);}
+.wizard-success p{color:var(--text-muted);}
+
 .info-card{flex:1; display:flex; flex-direction:column; gap:var(--space-4);}
 .info-tile{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md); padding:var(--space-5); display:flex; gap:14px; align-items:flex-start;}
 .info-tile .chip-icon{background:var(--gold-soft); color:var(--gold);}

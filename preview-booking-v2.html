@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>معاينة: الحجز والدفع الكامل | استوديو أميرة خالد</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="https://cdn.moyasar.com/mpf/1.15.0/moyasar.css">
+</head>
+<body>
+<div id="app" dir="rtl" lang="ar">
+<script>window.CURRENT_PAGE = 'contact';</script>
+<script src="assets/header.js"></script>
+
+<main>
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container">
+    <span class="eyebrow" data-reveal>معاينة قبل الإطلاق</span>
+    <h1 class="page-hero-title" data-reveal>الحجز والدفع بالكامل</h1>
+    <p class="page-hero-sub" data-reveal>اختاري يومًا من التقويم بالأسفل لتجربة الخطوات كاملة — هذه الصفحة للمعاينة فقط</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container" style="max-width:760px">
+    <div class="booking-card" data-reveal>
+      <div class="form-row two">
+        <div class="field">
+          <label>الاسم الكامل</label>
+          <input id="advName" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label>رقم الجوال</label>
+          <input id="advPhone" type="tel" required autocomplete="tel" placeholder="+966 5xxxxxxxx">
+        </div>
+      </div>
+
+      <div class="field" style="margin-block-end:0">
+        <label>اختاري تاريخ الحجز</label>
+        <div class="calendar-inline" id="advCalendarInline">
+          <div class="calendar-head">
+            <button type="button" class="cal-nav" id="advCalPrev" aria-label="Previous month"><svg class="icon" style="width:16px;height:16px;transform:scaleX(-1)"><use href="#i-chevron"/></svg></button>
+            <span class="calendar-month-label" id="advCalMonthLabel"></span>
+            <button type="button" class="cal-nav" id="advCalNext" aria-label="Next month"><svg class="icon" style="width:16px;height:16px"><use href="#i-chevron"/></svg></button>
+          </div>
+          <div class="calendar-weekdays" id="advCalWeekdays"></div>
+          <div class="calendar-grid" id="advCalGrid"></div>
+          <div class="calendar-legend">
+            <span><i class="cal-dot available"></i><span>متاح</span></span>
+            <span><i class="cal-dot blocked"></i><span>محجوز بالكامل</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ BOOKING WIZARD MODAL ============ -->
+<div class="wizard-overlay" id="wizardOverlay">
+  <div class="wizard-modal">
+    <button type="button" class="wizard-close" id="wizardClose" aria-label="Close">&times;</button>
+    <div class="wizard-progress">
+      <span class="wizard-step-dot active" data-step="1"></span>
+      <span class="wizard-step-dot" data-step="2"></span>
+      <span class="wizard-step-dot" data-step="3"></span>
+      <span class="wizard-step-dot" data-step="4"></span>
+    </div>
+
+    <!-- Step 1: Location -->
+    <div class="wizard-step" data-step="1">
+      <h3>أين تودّين الخدمة؟</h3>
+      <div class="loc-toggle" id="advLocToggle">
+        <label class="loc-option"><input type="radio" name="advLocation" value="studio" checked><span>في الاستوديو (جدة)</span></label>
+        <label class="loc-option"><input type="radio" name="advLocation" value="home"><span>في موقعي</span></label>
+      </div>
+      <div class="addr-field show" id="advAddrField" style="margin-block-start:var(--space-4)">
+        <div class="field">
+          <label>تفاصيل الموقع / العنوان</label>
+          <textarea id="advAddress" rows="2"></textarea>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary btn-block wizard-next" data-goto="2">التالي</button>
+    </div>
+
+    <!-- Step 2: Service -->
+    <div class="wizard-step" data-step="2" style="display:none">
+      <h3>ما هي الخدمة المطلوبة؟</h3>
+      <div class="field">
+        <select id="advService">
+          <option value="makeup">مكياج احترافي — 350 ريال</option>
+          <option value="makeup-hair">مكياج + تسريحة شعر كاملة — 650 ريال</option>
+          <option value="bridal-makeup">مكياج عروس — السعر عند التواصل</option>
+          <option value="bridal-package">باقة العروس — 2500 ريال</option>
+          <option value="hair-extensions">وصلات شعر — 100 ريال</option>
+          <option value="nails">خدمة الأظافر — بطلب مسبق</option>
+          <option value="private-basic">مكياج + رموش + هايلايتر (خاص) — 2100 ريال</option>
+          <option value="private-full">مكياج + رموش + هايلايتر + تسريحة (خاص) — 3000 ريال</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>وقت الجاهزية</label>
+        <input id="advTime" type="time">
+      </div>
+      <button type="button" class="btn btn-ghost" data-goto="1" style="margin-block-end:var(--space-3)">السابق</button>
+      <button type="button" class="btn btn-primary btn-block wizard-next" data-goto="3">التالي: السعر</button>
+    </div>
+
+    <!-- Step 3: Price review -->
+    <div class="wizard-step" data-step="3" style="display:none">
+      <h3>مراجعة الحجز</h3>
+      <div class="wizard-summary" id="wizardSummary"></div>
+      <button type="button" class="btn btn-ghost" data-goto="2" style="margin-block-end:var(--space-3)">السابق</button>
+      <button type="button" class="btn btn-primary btn-block" id="wizardConfirmBtn">تأكيد ومتابعة</button>
+    </div>
+
+    <!-- Step 4: Payment or WhatsApp quote -->
+    <div class="wizard-step" data-step="4" style="display:none">
+      <div id="wizardPaymentBlock">
+        <h3>الدفع</h3>
+        <p class="wizard-note">هذا رابط دفع تجريبي للمعاينة — لن يتم خصم أي مبلغ حقيقي إلا بعد ربط حساب Moyasar الفعلي.</p>
+        <div id="moyasarForm" class="mysr-form"></div>
+      </div>
+      <div id="wizardQuoteBlock" style="display:none">
+        <h3>طلب عرض سعر</h3>
+        <p class="wizard-note">هذه الخدمة سعرها يُحدد عند التواصل. اضغطي الزر بالأسفل لإرسال طلبكِ مباشرة عبر واتساب.</p>
+        <button type="button" class="btn btn-primary btn-block" id="wizardWaBtn">
+          <svg class="icon icon-solid"><use href="#i-whatsapp"/></svg> إرسال عبر واتساب
+        </button>
+      </div>
+      <div class="wizard-success" id="wizardSuccess" style="display:none">
+        <svg class="icon" style="width:40px;height:40px;color:var(--gold)"><use href="#i-check"/></svg>
+        <h3>تم استلام حجزكِ!</h3>
+        <p>سنتواصل معكِ قريبًا لتأكيد كل التفاصيل.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/footer.js"></script>
+</div>
+
+<script src="https://cdn.moyasar.com/mpf/1.15.0/moyasar.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة الحجوزات | استوديو أميرة خالد</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .admin-wrap{max-width:1100px; margin-inline:auto; padding:var(--space-8) var(--space-5);}
+  .admin-gate{max-width:380px; margin:80px auto; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:var(--space-7); text-align:center; box-shadow:0 24px 60px -24px hsla(var(--shadow-color),.3);}
+  .admin-gate input{width:100%; padding:13px 16px; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--surface-2); font:inherit; margin-block:var(--space-4);}
+  .admin-table-wrap{overflow-x:auto; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); box-shadow:0 4px 14px hsla(var(--shadow-color),.1);}
+  table.admin-table{width:100%; border-collapse:collapse; font-size:.88rem; white-space:nowrap;}
+  table.admin-table th{background:var(--bg-alt); color:var(--text); font-weight:800; padding:12px 14px; text-align:start; position:sticky; top:0;}
+  table.admin-table td{padding:12px 14px; border-top:1px solid var(--border); color:var(--text);}
+  table.admin-table tr:hover td{background:var(--gold-soft);}
+  .admin-empty{text-align:center; padding:var(--space-8); color:var(--text-muted);}
+  .admin-toolbar{display:flex; gap:var(--space-3); align-items:center; margin-block-end:var(--space-5); flex-wrap:wrap;}
+  .admin-toolbar input{flex:1; min-width:200px; padding:11px 14px; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--surface); font:inherit;}
+  .pill-paid{display:inline-block; padding:3px 10px; border-radius:var(--radius-full); font-size:.75rem; font-weight:700; background:#DFF5E3; color:#1E7A34;}
+  .pill-quote{display:inline-block; padding:3px 10px; border-radius:var(--radius-full); font-size:.75rem; font-weight:700; background:var(--gold-soft); color:var(--gold);}
+</style>
+</head>
+<body>
+<div id="app" dir="rtl" lang="ar">
+<script>window.CURRENT_PAGE = 'contact';</script>
+<script src="assets/header.js"></script>
+
+<main>
+<div class="admin-wrap">
+  <div class="admin-gate" id="adminGate">
+    <h2 class="section-title" style="font-size:1.3rem">دخول لوحة الحجوزات</h2>
+    <p style="color:var(--text-muted); font-size:.9rem">أدخلي كلمة المرور الخاصة بلوحة الحجوزات</p>
+    <input type="password" id="adminSecretInput" placeholder="كلمة المرور">
+    <button class="btn btn-primary btn-block" id="adminUnlockBtn">دخول</button>
+    <p id="adminGateError" style="color:#c0392b; font-size:.85rem; display:none; margin-block-start:var(--space-3)">كلمة المرور غير صحيحة أو حدث خطأ في الاتصال</p>
+  </div>
+
+  <div id="adminContent" style="display:none">
+    <div class="section-head" style="text-align:start; margin-inline:0">
+      <span class="eyebrow">لوحة التحكم</span>
+      <h1 class="section-title" style="font-size:1.8rem">كل الحجوزات المستلمة</h1>
+    </div>
+    <div class="admin-toolbar">
+      <input type="text" id="adminSearch" placeholder="ابحثي بالاسم أو رقم الجوال...">
+      <button class="btn btn-ghost btn-sm" id="adminRefreshBtn">تحديث</button>
+    </div>
+    <div class="admin-table-wrap">
+      <table class="admin-table" id="adminTable">
+        <thead>
+          <tr>
+            <th>التاريخ والوقت</th>
+            <th>الاسم</th>
+            <th>الجوال</th>
+            <th>الخدمة</th>
+            <th>تاريخ الحجز</th>
+            <th>الوقت</th>
+            <th>المكان</th>
+            <th>العنوان</th>
+            <th>الحالة</th>
+          </tr>
+        </thead>
+        <tbody id="adminTableBody"></tbody>
+      </table>
+      <div class="admin-empty" id="adminEmpty" style="display:none">لا توجد حجوزات بعد</div>
+    </div>
+  </div>
+</div>
+</main>
+
+<script src="assets/footer.js"></script>
+</div>
+
+<script src="assets/app.js"></script>
+<script>
+(function(){
+  "use strict";
+  var GOOGLE_SHEET_WEBAPP_URL_ADMIN = "REPLACE_WITH_YOUR_APPS_SCRIPT_WEB_APP_URL";
+
+  var gate = document.getElementById('adminGate');
+  var content = document.getElementById('adminContent');
+  var unlockBtn = document.getElementById('adminUnlockBtn');
+  var secretInput = document.getElementById('adminSecretInput');
+  var gateError = document.getElementById('adminGateError');
+  var tableBody = document.getElementById('adminTableBody');
+  var emptyMsg = document.getElementById('adminEmpty');
+  var searchInput = document.getElementById('adminSearch');
+  var allRows = [];
+  var currentSecret = '';
+
+  function renderRows(rows){
+    tableBody.innerHTML = '';
+    if(!rows.length){ emptyMsg.style.display = 'block'; return; }
+    emptyMsg.style.display = 'none';
+    rows.forEach(function(r){
+      var tr = document.createElement('tr');
+      var statusHtml = r.paymentStatus === 'paid'
+        ? '<span class="pill-paid">مدفوع</span>'
+        : '<span class="pill-quote">' + (r.paymentStatus || 'طلب عرض سعر') + '</span>';
+      var ts = r.timestamp ? new Date(r.timestamp).toLocaleString('ar-SA') : '—';
+      tr.innerHTML =
+        '<td>' + ts + '</td>' +
+        '<td>' + (r.name || '—') + '</td>' +
+        '<td>' + (r.phone || '—') + '</td>' +
+        '<td>' + (r.service || '—') + '</td>' +
+        '<td>' + (r.date || '—') + '</td>' +
+        '<td>' + (r.time || '—') + '</td>' +
+        '<td>' + (r.location || '—') + '</td>' +
+        '<td>' + (r.address || '—') + '</td>' +
+        '<td>' + statusHtml + '</td>';
+      tableBody.appendChild(tr);
+    });
+  }
+
+  function loadSubmissions(secret){
+    if(GOOGLE_SHEET_WEBAPP_URL_ADMIN.indexOf('REPLACE_WITH') === 0){
+      gateError.textContent = 'لم يتم ربط Google Sheet بعد — أضيفي رابط Apps Script في هذا الملف.';
+      gateError.style.display = 'block';
+      return;
+    }
+    fetch(GOOGLE_SHEET_WEBAPP_URL_ADMIN + '?secret=' + encodeURIComponent(secret))
+      .then(function(res){ return res.json(); })
+      .then(function(json){
+        if(!json.ok){ throw new Error('unauthorized'); }
+        gate.style.display = 'none';
+        content.style.display = 'block';
+        allRows = json.rows || [];
+        renderRows(allRows);
+        try{ sessionStorage.setItem('akl_admin_secret', secret); }catch(e){}
+      })
+      .catch(function(){
+        gateError.textContent = 'كلمة المرور غير صحيحة أو حدث خطأ في الاتصال';
+        gateError.style.display = 'block';
+      });
+  }
+
+  unlockBtn.addEventListener('click', function(){
+    currentSecret = secretInput.value.trim();
+    if(!currentSecret) return;
+    loadSubmissions(currentSecret);
+  });
+  secretInput.addEventListener('keydown', function(e){ if(e.key === 'Enter') unlockBtn.click(); });
+
+  document.getElementById('adminRefreshBtn').addEventListener('click', function(){
+    if(currentSecret) loadSubmissions(currentSecret);
+  });
+
+  searchInput.addEventListener('input', function(){
+    var q = searchInput.value.trim().toLowerCase();
+    if(!q){ renderRows(allRows); return; }
+    renderRows(allRows.filter(function(r){
+      return (String(r.name||'').toLowerCase().indexOf(q) !== -1) ||
+             (String(r.phone||'').toLowerCase().indexOf(q) !== -1);
+    }));
+  });
+
+  // auto-unlock if a secret was already used this session
+  try{
+    var saved = sessionStorage.getItem('akl_admin_secret');
+    if(saved){ secretInput.value = saved; currentSecret = saved; loadSubmissions(saved); }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

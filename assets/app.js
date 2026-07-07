@@ -5,6 +5,10 @@
   var WHATSAPP_NUMBER = "966530005384";
   // Dates Amira is fully booked / unavailable — add more "YYYY-MM-DD" strings as needed.
   var BLOCKED_DATES = [];
+  // Google Apps Script Web App URL (see google-apps-script.gs for setup steps).
+  var GOOGLE_SHEET_WEBAPP_URL = "REPLACE_WITH_YOUR_APPS_SCRIPT_WEB_APP_URL";
+  // Moyasar publishable key (safe to expose client-side) — from your Moyasar dashboard.
+  var MOYASAR_PUBLISHABLE_KEY = "REPLACE_WITH_MOYASAR_PUBLISHABLE_KEY";
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -840,6 +844,216 @@
       if(!wasOpen) item.classList.add('open');
     });
   });
+
+  /* ---------- ADVANCED BOOKING WIZARD (preview-booking-v2 only) ---------- */
+  var advCalGrid = document.getElementById('advCalGrid');
+  if(advCalGrid){
+    var advToday = new Date(); advToday.setHours(0,0,0,0);
+    var advView = new Date(advToday.getFullYear(), advToday.getMonth(), 1);
+    var advSelectedDate = null;
+    var advCalMonthLabel = document.getElementById('advCalMonthLabel');
+    var advCalWeekdays = document.getElementById('advCalWeekdays');
+    var advCalPrev = document.getElementById('advCalPrev');
+    var advCalNext = document.getElementById('advCalNext');
+    var wizardOverlay = document.getElementById('wizardOverlay');
+
+    function escHtml(s){
+      return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; });
+    }
+    function advIsoOf(d){
+      return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+    }
+    function advLocale(){ return currentLang() === 'ar' ? 'ar-SA-u-nu-latn' : 'en-US'; }
+
+    function advRenderWeekdays(){
+      advCalWeekdays.innerHTML = '';
+      var base = new Date(2024,0,7);
+      for(var i=0;i<7;i++){
+        var d = new Date(base); d.setDate(base.getDate()+i);
+        var span = document.createElement('span');
+        span.textContent = d.toLocaleDateString(advLocale(), {weekday:'narrow'});
+        advCalWeekdays.appendChild(span);
+      }
+    }
+
+    function advRenderCalendar(){
+      advCalMonthLabel.textContent = advView.toLocaleDateString(advLocale(), {month:'long', year:'numeric'});
+      advRenderWeekdays();
+      advCalGrid.innerHTML = '';
+      var firstDay = new Date(advView.getFullYear(), advView.getMonth(), 1);
+      var startOffset = firstDay.getDay();
+      var daysInMonth = new Date(advView.getFullYear(), advView.getMonth()+1, 0).getDate();
+      for(var i=0;i<startOffset;i++){
+        var empty = document.createElement('span');
+        empty.className = 'cal-day cal-empty';
+        advCalGrid.appendChild(empty);
+      }
+      for(var day=1; day<=daysInMonth; day++){
+        var d = new Date(advView.getFullYear(), advView.getMonth(), day);
+        var iso = advIsoOf(d);
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'cal-day';
+        btn.textContent = String(day);
+        var isPast = d < advToday;
+        var isBlocked = BLOCKED_DATES.indexOf(iso) !== -1;
+        if(isPast){ btn.disabled = true; }
+        else if(isBlocked){ btn.disabled = true; btn.classList.add('cal-blocked'); }
+        else{
+          btn.addEventListener('click', (function(iso){
+            return function(){ advSelectedDate = iso; openWizard(); };
+          })(iso));
+        }
+        if(advSelectedDate === iso) btn.classList.add('selected');
+        advCalGrid.appendChild(btn);
+      }
+      advCalPrev.disabled = (advView.getFullYear() === advToday.getFullYear() && advView.getMonth() === advToday.getMonth());
+    }
+    advCalPrev.addEventListener('click', function(){ advView.setMonth(advView.getMonth()-1); advRenderCalendar(); });
+    advCalNext.addEventListener('click', function(){ advView.setMonth(advView.getMonth()+1); advRenderCalendar(); });
+    advRenderCalendar();
+
+    var SERVICE_PRICES = {
+      'makeup':350,'makeup-hair':650,'bridal-package':2500,'hair-extensions':100,
+      'private-basic':2100,'private-full':3000,'bridal-makeup':null,'nails':null
+    };
+    var SERVICE_LABELS_AR = {
+      'makeup':'مكياج احترافي','makeup-hair':'مكياج + تسريحة شعر كاملة','bridal-makeup':'مكياج عروس',
+      'bridal-package':'باقة العروس','hair-extensions':'وصلات شعر','nails':'خدمة الأظافر',
+      'private-basic':'مكياج + رموش + هايلايتر (خاص)','private-full':'مكياج + رموش + هايلايتر + تسريحة (خاص)'
+    };
+    var LOCATION_LABELS_AR = {studio:'في الاستوديو (جدة)', home:'في موقعي'};
+
+    var wizardSteps = document.querySelectorAll('.wizard-step');
+    var wizardDots = document.querySelectorAll('.wizard-step-dot');
+
+    function renderWizardSummary(){
+      var service = document.getElementById('advService').value;
+      var location = document.querySelector('input[name="advLocation"]:checked').value;
+      var price = SERVICE_PRICES[service];
+      var priceText = price != null ? (price + ' ريال') : 'السعر عند التواصل';
+      var name = document.getElementById('advName').value || '—';
+      var phone = document.getElementById('advPhone').value || '—';
+      var time = document.getElementById('advTime').value || '—';
+      document.getElementById('wizardSummary').innerHTML =
+        '<div class="wizard-summary-row"><span>الاسم</span><strong>' + escHtml(name) + '</strong></div>' +
+        '<div class="wizard-summary-row"><span>الجوال</span><strong>' + escHtml(phone) + '</strong></div>' +
+        '<div class="wizard-summary-row"><span>الخدمة</span><strong>' + escHtml(SERVICE_LABELS_AR[service]||service) + '</strong></div>' +
+        '<div class="wizard-summary-row"><span>المكان</span><strong>' + escHtml(LOCATION_LABELS_AR[location]) + '</strong></div>' +
+        '<div class="wizard-summary-row"><span>التاريخ</span><strong>' + escHtml(advSelectedDate||'—') + '</strong></div>' +
+        '<div class="wizard-summary-row"><span>الوقت</span><strong>' + escHtml(time) + '</strong></div>' +
+        '<div class="wizard-summary-row wizard-summary-price"><span>السعر</span><strong>' + priceText + '</strong></div>';
+    }
+
+    function showWizardStep(n){
+      n = String(n);
+      wizardSteps.forEach(function(s){ s.style.display = (s.getAttribute('data-step') === n) ? '' : 'none'; });
+      wizardDots.forEach(function(d){ d.classList.toggle('active', d.getAttribute('data-step') === n); });
+      if(n === '3') renderWizardSummary();
+    }
+    function openWizard(){
+      showWizardStep(1);
+      document.getElementById('wizardSuccess').style.display = 'none';
+      document.getElementById('wizardPaymentBlock').style.display = '';
+      document.getElementById('wizardQuoteBlock').style.display = 'none';
+      wizardOverlay.classList.add('open');
+    }
+    function closeWizard(){ wizardOverlay.classList.remove('open'); }
+    document.getElementById('wizardClose').addEventListener('click', closeWizard);
+    wizardOverlay.addEventListener('click', function(e){ if(e.target === wizardOverlay) closeWizard(); });
+    document.querySelectorAll('[data-goto]').forEach(function(btn){
+      btn.addEventListener('click', function(){ showWizardStep(btn.getAttribute('data-goto')); });
+    });
+    document.querySelectorAll('input[name="advLocation"]').forEach(function(radio){
+      radio.addEventListener('change', function(){
+        document.getElementById('advAddrField').classList.toggle('show', radio.value === 'home');
+      });
+    });
+
+    function submitBookingToSheet(data){
+      if(!GOOGLE_SHEET_WEBAPP_URL || GOOGLE_SHEET_WEBAPP_URL.indexOf('REPLACE_WITH') === 0) return;
+      try{
+        fetch(GOOGLE_SHEET_WEBAPP_URL, {
+          method: 'POST', mode: 'no-cors',
+          headers: {'Content-Type': 'text/plain;charset=utf-8'},
+          body: JSON.stringify(data)
+        });
+      }catch(e){}
+    }
+
+    function handleBookingComplete(paymentStatus){
+      var service = document.getElementById('advService').value;
+      var data = {
+        name: document.getElementById('advName').value,
+        phone: document.getElementById('advPhone').value,
+        service: SERVICE_LABELS_AR[service] || service,
+        date: advSelectedDate,
+        time: document.getElementById('advTime').value,
+        location: LOCATION_LABELS_AR[document.querySelector('input[name="advLocation"]:checked').value],
+        address: document.getElementById('advAddress').value,
+        notes: '',
+        paymentStatus: paymentStatus
+      };
+      submitBookingToSheet(data);
+      document.getElementById('wizardPaymentBlock').style.display = 'none';
+      document.getElementById('wizardQuoteBlock').style.display = 'none';
+      document.getElementById('wizardSuccess').style.display = '';
+      var lines = [
+        'مرحبًا أميرة، لدي حجز جديد ✨',
+        'الاسم: ' + data.name,
+        'الجوال: ' + data.phone,
+        'الخدمة: ' + data.service,
+        'التاريخ: ' + data.date,
+        'الوقت: ' + data.time,
+        'المكان: ' + data.location,
+        data.address ? ('العنوان: ' + data.address) : null,
+        paymentStatus === 'paid' ? 'الحالة: تم الدفع ✅' : 'الحالة: بانتظار عرض السعر'
+      ].filter(Boolean).join('\n');
+      var href = waLink(WHATSAPP_NUMBER, lines);
+      setTimeout(function(){ try{ window.open(href, '_blank', 'noopener'); }catch(e){} }, 800);
+    }
+
+    function initMoyasarForm(priceSar){
+      var container = document.getElementById('moyasarForm');
+      container.innerHTML = '';
+      if(typeof Moyasar === 'undefined'){
+        container.innerHTML = '<p class="wizard-note">تعذر تحميل نموذج الدفع (Moyasar). تأكدي من الاتصال بالإنترنت، أو أن مفتاح Moyasar لم يُضَف بعد.</p>';
+        return;
+      }
+      Moyasar.init({
+        element: '.mysr-form',
+        amount: Math.round(priceSar * 100),
+        currency: 'SAR',
+        description: 'حجز - استوديو أميرة خالد',
+        publishable_api_key: MOYASAR_PUBLISHABLE_KEY,
+        callback_url: window.location.href,
+        methods: ['creditcard', 'applepay'],
+        apple_pay: {
+          country: 'SA',
+          label: 'Amira Khalid Studio',
+          validate_merchant_url: 'https://api.moyasar.com/v1/applepay/initiate'
+        },
+        on_completed: function(){ handleBookingComplete('paid'); }
+      });
+    }
+
+    var wizardConfirmBtn = document.getElementById('wizardConfirmBtn');
+    if(wizardConfirmBtn) wizardConfirmBtn.addEventListener('click', function(){
+      var service = document.getElementById('advService').value;
+      var price = SERVICE_PRICES[service];
+      showWizardStep(4);
+      if(price != null){
+        document.getElementById('wizardPaymentBlock').style.display = '';
+        document.getElementById('wizardQuoteBlock').style.display = 'none';
+        initMoyasarForm(price);
+      } else {
+        document.getElementById('wizardPaymentBlock').style.display = 'none';
+        document.getElementById('wizardQuoteBlock').style.display = '';
+      }
+    });
+    var wizardWaBtn = document.getElementById('wizardWaBtn');
+    if(wizardWaBtn) wizardWaBtn.addEventListener('click', function(){ handleBookingComplete('quote-requested'); });
+  }
 
   /* ---------- INIT ---------- */
   heroTitle = document.getElementById('heroTitle');
