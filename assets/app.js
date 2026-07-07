@@ -9,6 +9,8 @@
   var GOOGLE_SHEET_WEBAPP_URL = "REPLACE_WITH_YOUR_APPS_SCRIPT_WEB_APP_URL";
   // Moyasar publishable key (safe to expose client-side) — from your Moyasar dashboard.
   var MOYASAR_PUBLISHABLE_KEY = "REPLACE_WITH_MOYASAR_PUBLISHABLE_KEY";
+  var langChangeListeners = [];
+  function onLangChange(fn){ langChangeListeners.push(fn); }
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -101,6 +103,15 @@
       "bookingPreview.step2":"<strong style=\"color:var(--text)\">٢. اختيار التاريخ من التقويم —</strong> بدل كتابة التاريخ يدويًا، تفتح العميلة تقويمًا حقيقيًا يشبه Google Calendar، وتضغط على اليوم المناسب مباشرة.",
       "bookingPreview.step3":"<strong style=\"color:var(--text)\">٣. الأيام المحجوزة بالكامل تظهر باللون الأحمر ولا يمكن الضغط عليها —</strong> عندما تخبريننا بيوم معيّن أنكِ لا تستقبلين حجوزات فيه (إجازة، مناسبة خاصة، يوم ممتلئ)، نضيفه من ملف الموقع خلال دقيقة، ويظهر فورًا \"محجوز بالكامل\" لكل الزوار.",
       "bookingPreview.step4":"<strong style=\"color:var(--text)\">٤. تأكيد فوري عبر واتساب —</strong> بعد تعبئة النموذج، تُرسل كل التفاصيل (الاسم، الخدمة، التاريخ، المكان) إليكِ مباشرة عبر واتساب لتأكيدي الحجز يدويًا كما هو معتاد — لا حاجة لأي نظام دفع أو حساب إضافي حاليًا.",
+      "bookingV2.title":"الحجز والدفع بالكامل","bookingV2.sub":"اختاري يومًا من التقويم بالأسفل لتجربة الخطوات كاملة — هذه الصفحة للمعاينة فقط",
+      "bookingV2.pickDate":"اختاري تاريخ الحجز","bookingV2.whereQuestion":"أين تودّين الخدمة؟",
+      "bookingV2.next":"التالي","bookingV2.prev":"السابق","bookingV2.nextPrice":"التالي: السعر",
+      "bookingV2.serviceQuestion":"ما هي الخدمة المطلوبة؟","bookingV2.reviewTitle":"مراجعة الحجز","bookingV2.confirmBtn":"تأكيد ومتابعة",
+      "bookingV2.paymentTitle":"الدفع","bookingV2.paymentNote":"هذا رابط دفع تجريبي للمعاينة — لن يتم خصم أي مبلغ حقيقي إلا بعد ربط حساب Moyasar الفعلي.",
+      "bookingV2.quoteTitle":"طلب عرض سعر","bookingV2.quoteNote":"هذه الخدمة سعرها يُحدد عند التواصل. اضغطي الزر بالأسفل لإرسال طلبكِ مباشرة عبر واتساب.",
+      "bookingV2.sendWhatsapp":"إرسال عبر واتساب","bookingV2.successTitle":"تم استلام حجزكِ!","bookingV2.successBody":"سنتواصل معكِ قريبًا لتأكيد كل التفاصيل.",
+      "bookingV2.labelName":"الاسم","bookingV2.labelPhone":"الجوال","bookingV2.labelService":"الخدمة","bookingV2.labelLocation":"المكان",
+      "bookingV2.labelDate":"التاريخ","bookingV2.labelTime":"الوقت","bookingV2.labelPrice":"السعر","bookingV2.priceOnRequest":"السعر عند التواصل",
       "contact.serviceOptGroupStudio":"في الاستوديو","contact.serviceOptGroupPrivate":"خدمة خاصة",
       "contact.successMsg":"تم تجهيز طلبكِ! اضغطي لإتمام الإرسال عبر واتساب",
       "contact.trustBadge":"موثوقة — استوديو أميرة خالد","contact.infoLocationTitle":"الموقع","contact.infoLocation":"حي الريان، جدة — عرض على خرائط جوجل",
@@ -199,6 +210,15 @@
       "bookingPreview.step2":"<strong style=\"color:var(--text)\">2. Selecting the date from the calendar —</strong> Instead of manually typing the date, the client opens a real calendar similar to Google Calendar and clicks directly on the right day.",
       "bookingPreview.step3":"<strong style=\"color:var(--text)\">3. Fully booked days appear in red and can't be clicked —</strong> When you tell us you're not accepting bookings on a specific day (holiday, special occasion, full day), we add it to the site file within a minute, and it instantly shows \"Fully Booked\" to every visitor.",
       "bookingPreview.step4":"<strong style=\"color:var(--text)\">4. Instant confirmation via WhatsApp —</strong> After filling out the form, all details (name, service, date, location) are sent to you directly via WhatsApp so you can confirm the booking manually as usual — no payment system or extra account needed right now.",
+      "bookingV2.title":"Full Booking & Payment Flow","bookingV2.sub":"Pick a day from the calendar below to try the whole flow — this page is for preview only",
+      "bookingV2.pickDate":"Choose a booking date","bookingV2.whereQuestion":"Where would you like the service?",
+      "bookingV2.next":"Next","bookingV2.prev":"Back","bookingV2.nextPrice":"Next: Price",
+      "bookingV2.serviceQuestion":"What service do you need?","bookingV2.reviewTitle":"Review Your Booking","bookingV2.confirmBtn":"Confirm & Continue",
+      "bookingV2.paymentTitle":"Payment","bookingV2.paymentNote":"This is a test payment link for preview only — no real charge will happen until a real Moyasar account is connected.",
+      "bookingV2.quoteTitle":"Request a Quote","bookingV2.quoteNote":"This service's price is set upon contact. Tap the button below to send your request directly via WhatsApp.",
+      "bookingV2.sendWhatsapp":"Send via WhatsApp","bookingV2.successTitle":"Your booking has been received!","bookingV2.successBody":"We'll be in touch soon to confirm every detail.",
+      "bookingV2.labelName":"Name","bookingV2.labelPhone":"Phone","bookingV2.labelService":"Service","bookingV2.labelLocation":"Location",
+      "bookingV2.labelDate":"Date","bookingV2.labelTime":"Time","bookingV2.labelPrice":"Price","bookingV2.priceOnRequest":"Price on request",
       "contact.serviceOptGroupStudio":"At the Studio","contact.serviceOptGroupPrivate":"Private Service",
       "contact.successMsg":"Your request is ready! Click to complete sending via WhatsApp",
       "contact.trustBadge":"Trusted — Amira Khalid Studio","contact.infoLocationTitle":"Location","contact.infoLocation":"Al Rayyan District, Jeddah — View on Google Maps",
@@ -280,8 +300,9 @@
     var svc = document.getElementById('fService');
     if(svc) svc.dispatchEvent(new Event('change'));
   }
-  if(langArBtnInit) langArBtnInit.addEventListener('click', function(){ applyLanguage('ar'); refreshLocationHintLanguage(); });
-  if(langEnBtnInit) langEnBtnInit.addEventListener('click', function(){ applyLanguage('en'); refreshLocationHintLanguage(); });
+  function runLangChangeListeners(){ langChangeListeners.forEach(function(fn){ fn(); }); }
+  if(langArBtnInit) langArBtnInit.addEventListener('click', function(){ applyLanguage('ar'); refreshLocationHintLanguage(); runLangChangeListeners(); });
+  if(langEnBtnInit) langEnBtnInit.addEventListener('click', function(){ applyLanguage('en'); refreshLocationHintLanguage(); runLangChangeListeners(); });
 
   /* ---------- DARK / LIGHT THEME TOGGLE ---------- */
   function systemPrefersDark(){
@@ -912,17 +933,21 @@
     advCalPrev.addEventListener('click', function(){ advView.setMonth(advView.getMonth()-1); advRenderCalendar(); });
     advCalNext.addEventListener('click', function(){ advView.setMonth(advView.getMonth()+1); advRenderCalendar(); });
     advRenderCalendar();
+    onLangChange(advRenderCalendar);
 
     var SERVICE_PRICES = {
       'makeup':350,'makeup-hair':650,'bridal-package':2500,'hair-extensions':100,
       'private-basic':2100,'private-full':3000,'bridal-makeup':null,'nails':null
     };
-    var SERVICE_LABELS_AR = {
-      'makeup':'مكياج احترافي','makeup-hair':'مكياج + تسريحة شعر كاملة','bridal-makeup':'مكياج عروس',
-      'bridal-package':'باقة العروس','hair-extensions':'وصلات شعر','nails':'خدمة الأظافر',
-      'private-basic':'مكياج + رموش + هايلايتر (خاص)','private-full':'مكياج + رموش + هايلايتر + تسريحة (خاص)'
+    var SERVICE_LABEL_KEYS = {
+      'makeup':'svc.makeup','makeup-hair':'svc.makeupHair','bridal-makeup':'svc.bridalMakeup',
+      'bridal-package':'svc.bridal','hair-extensions':'svc.hairExt','nails':'svc.nails',
+      'private-basic':'svc.privateBasic','private-full':'svc.privateFull'
     };
-    var LOCATION_LABELS_AR = {studio:'في الاستوديو (جدة)', home:'في موقعي'};
+    var LOCATION_LABEL_KEYS = {studio:'contact.locStudio', home:'contact.locHome'};
+    function dict(){ return translations[currentLang()]; }
+    function serviceLabel(service){ return dict()[SERVICE_LABEL_KEYS[service]] || service; }
+    function locationLabel(location){ return dict()[LOCATION_LABEL_KEYS[location]] || location; }
 
     var wizardSteps = document.querySelectorAll('.wizard-step');
     var wizardDots = document.querySelectorAll('.wizard-step-dot');
@@ -931,18 +956,18 @@
       var service = document.getElementById('advService').value;
       var location = document.querySelector('input[name="advLocation"]:checked').value;
       var price = SERVICE_PRICES[service];
-      var priceText = price != null ? (price + ' ريال') : 'السعر عند التواصل';
+      var priceText = price != null ? (price + ' ' + dict()['common.sar']) : dict()['bookingV2.priceOnRequest'];
       var name = document.getElementById('advName').value || '—';
       var phone = document.getElementById('advPhone').value || '—';
       var time = document.getElementById('advTime').value || '—';
       document.getElementById('wizardSummary').innerHTML =
-        '<div class="wizard-summary-row"><span>الاسم</span><strong>' + escHtml(name) + '</strong></div>' +
-        '<div class="wizard-summary-row"><span>الجوال</span><strong>' + escHtml(phone) + '</strong></div>' +
-        '<div class="wizard-summary-row"><span>الخدمة</span><strong>' + escHtml(SERVICE_LABELS_AR[service]||service) + '</strong></div>' +
-        '<div class="wizard-summary-row"><span>المكان</span><strong>' + escHtml(LOCATION_LABELS_AR[location]) + '</strong></div>' +
-        '<div class="wizard-summary-row"><span>التاريخ</span><strong>' + escHtml(advSelectedDate||'—') + '</strong></div>' +
-        '<div class="wizard-summary-row"><span>الوقت</span><strong>' + escHtml(time) + '</strong></div>' +
-        '<div class="wizard-summary-row wizard-summary-price"><span>السعر</span><strong>' + priceText + '</strong></div>';
+        '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelName'] + '</span><strong>' + escHtml(name) + '</strong></div>' +
+        '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelPhone'] + '</span><strong>' + escHtml(phone) + '</strong></div>' +
+        '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelService'] + '</span><strong>' + escHtml(serviceLabel(service)) + '</strong></div>' +
+        '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelLocation'] + '</span><strong>' + escHtml(locationLabel(location)) + '</strong></div>' +
+        '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelDate'] + '</span><strong>' + escHtml(advSelectedDate||'—') + '</strong></div>' +
+        '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelTime'] + '</span><strong>' + escHtml(time) + '</strong></div>' +
+        '<div class="wizard-summary-row wizard-summary-price"><span>' + dict()['bookingV2.labelPrice'] + '</span><strong>' + priceText + '</strong></div>';
     }
 
     function showWizardStep(n){
@@ -986,10 +1011,10 @@
       var data = {
         name: document.getElementById('advName').value,
         phone: document.getElementById('advPhone').value,
-        service: SERVICE_LABELS_AR[service] || service,
+        service: serviceLabel(service),
         date: advSelectedDate,
         time: document.getElementById('advTime').value,
-        location: LOCATION_LABELS_AR[document.querySelector('input[name="advLocation"]:checked').value],
+        location: locationLabel(document.querySelector('input[name="advLocation"]:checked').value),
         address: document.getElementById('advAddress').value,
         notes: '',
         paymentStatus: paymentStatus
