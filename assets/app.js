@@ -293,6 +293,7 @@
     var saved = 'ar';
     try{ saved = localStorage.getItem('akl_lang') || 'ar'; }catch(e){}
     applyLanguage(saved);
+    runLangChangeListeners();
   }
   var langArBtnInit = document.getElementById('langArBtn');
   var langEnBtnInit = document.getElementById('langEnBtn');
