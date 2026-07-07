@@ -504,6 +504,11 @@ footer.site-footer{background:var(--bg-alt); border-top:1px solid var(--border);
 .fab-wa .icon{width:28px; height:28px; position:relative;}
 .fab-top{width:46px; height:46px; border-radius:50%; background:var(--surface); border:1px solid var(--border); color:var(--text); display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transform:translateY(10px); transition:all var(--dur-f) var(--ease);}
 .fab-top.show{opacity:1; pointer-events:auto; transform:translateY(0);}
+.fab-theme{position:fixed; inset-inline-start:22px; bottom:22px; z-index:80; width:44px; height:44px; border-radius:50%; background:var(--surface); border:1px solid var(--border); color:var(--gold); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 20px -8px hsla(var(--shadow-color),.3); transition:transform var(--dur-f) var(--ease);}
+.fab-theme:hover{transform:scale(1.08);}
+.fab-theme .icon-moon{display:none;}
+:root[data-theme="dark"] .fab-theme .icon-sun{display:none;}
+:root[data-theme="dark"] .fab-theme .icon-moon{display:block;}
 
 /* divider flourish */
 .flourish{display:flex; align-items:center; justify-content:center; gap:14px; color:var(--gold); margin-block:var(--space-7); opacity:.7;}

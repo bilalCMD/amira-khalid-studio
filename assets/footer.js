@@ -55,7 +55,11 @@
     '<div class="fab">' +
       '<button class="fab-top" id="fabTop" aria-label="Scroll to top"><svg class="icon" style="width:18px;height:18px"><use href="#i-arrow-up"/></svg></button>' +
       '<a class="fab-wa" href="#" id="fabWaBtn" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon icon-solid"><use href="#i-whatsapp"/></svg></a>' +
-    '</div>';
+    '</div>' +
+    '<button class="fab-theme" id="themeToggle" aria-label="Toggle dark/light mode">' +
+      '<svg class="icon icon-sun" style="width:18px;height:18px"><use href="#i-sun"/></svg>' +
+      '<svg class="icon icon-moon" style="width:18px;height:18px"><use href="#i-moon"/></svg>' +
+    '</button>';
 
   document.write(footerHtml);
 })();

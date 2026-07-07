@@ -22,6 +22,8 @@
     '<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6" stroke-linecap="round" stroke-linejoin="round"/></symbol>' +
     '<symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z" stroke-linejoin="round" stroke-linecap="round"/><circle cx="12" cy="14" r="3.5"/></symbol>' +
     '<symbol id="i-badge-check" viewBox="0 0 24 24"><path d="M12 2l2.4 1.4 2.8-.3 1.1 2.6 2.6 1.1-.3 2.8L22 12l-1.4 2.4.3 2.8-2.6 1.1-1.1 2.6-2.8-.3L12 22l-2.4-1.4-2.8.3-1.1-2.6-2.6-1.1.3-2.8L2 12l1.4-2.4-.3-2.8 2.6-1.1 1.1-2.6 2.8.3L12 2z" stroke-linejoin="round"/><path d="M8.5 12.5l2.3 2.3 4.7-4.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>' +
+    '<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.5M12 19v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12H5M19 12h2.5M4.2 19.8L6 18M18 6l1.8-1.8" stroke-linecap="round"/></symbol>' +
+    '<symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 019.5 4a8.5 8.5 0 1010.5 10.5z" stroke-linejoin="round"/></symbol>' +
     '<symbol id="i-monogram" viewBox="0 0 100 100"><text x="50" y="65" font-size="46" text-anchor="middle" font-family="Georgia, serif" fill="currentColor">أخ</text></symbol>' +
     '</svg>';
 
