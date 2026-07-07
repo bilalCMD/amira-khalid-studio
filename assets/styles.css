@@ -70,7 +70,7 @@ img,svg{display:block; max-width:100%;}
 a{color:inherit; text-decoration:none;}
 button{font:inherit; cursor:pointer;}
 ul{list-style:none; margin:0; padding:0;}
-h1,h2,h3,h4{margin:0; font-weight:700; font-family:var(--font-display); letter-spacing:.005em;}
+h1,h2,h3,h4{margin:0; font-weight:700; font-family:var(--font-display); letter-spacing:.005em; line-height:1.2;}
 [dir="ltr"] h1,[dir="ltr"] h2,[dir="ltr"] h3,[dir="ltr"] h4{letter-spacing:.02em;}
 p{margin:0;}
 .icon{width:1.4em; height:1.4em; stroke:currentColor; fill:none; stroke-width:1.6; flex-shrink:0;}
@@ -152,8 +152,8 @@ nav.main-nav a.current{color:var(--primary);}
 @media (min-width:960px){nav.main-nav{display:block;}}
 
 .header-actions{display:flex; align-items:center; gap:var(--space-3);}
-.lang-toggle{display:flex; border:1px solid var(--border); border-radius:var(--radius-full); padding:3px; background:var(--surface);}
-.lang-toggle button{padding:6px 14px; border-radius:var(--radius-full); border:none; background:transparent; font-weight:700; font-size:.78rem; color:var(--text-muted); transition:all var(--dur-f) var(--ease);}
+.lang-toggle{display:flex; border:1px solid var(--border); border-radius:var(--radius-md); padding:3px; background:var(--surface);}
+.lang-toggle button{padding:6px 14px; border-radius:var(--radius-sm); border:none; background:transparent; font-weight:700; font-size:.78rem; color:var(--text-muted); transition:all var(--dur-f) var(--ease);}
 .lang-toggle button.active{background:var(--primary); color:#fff;}
 .hamburger{display:flex; width:44px; height:44px; align-items:center; justify-content:center; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--surface);}
 @media (min-width:960px){.hamburger{display:none;}}
