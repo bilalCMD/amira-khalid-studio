@@ -241,6 +241,11 @@ nav.main-nav a.current{color:var(--primary);}
 }
 @media (max-width:479px){
   .hero-frame,.hero-frame-outline{width:min(48vw,200px);}
+  .floating-chip{padding:7px 10px; gap:6px;}
+  .floating-chip strong{font-size:.86rem;}
+  .floating-chip span{font-size:.62rem;}
+  .chip-icon{width:24px; height:24px;}
+  .chip-icon .icon{width:14px; height:14px;}
 }
 @media (max-width:959px) and (max-height:740px){
   #home{padding-block-start:64px;}
@@ -254,6 +259,10 @@ nav.main-nav a.current{color:var(--primary);}
 }
 .chip-1{top:6%; inset-inline-start:-8%; animation-delay:0s;}
 .chip-2{bottom:8%; inset-inline-end:-10%; animation-delay:-3.5s;}
+@media (max-width:959px){
+  .chip-1{top:2%; inset-inline-start:2%;}
+  .chip-2{bottom:4%; inset-inline-end:2%;}
+}
 @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
 .chip-icon{width:30px; height:30px; border-radius:var(--radius-sm); background:var(--gold-soft); display:flex; align-items:center; justify-content:center; color:var(--gold); flex-shrink:0;}
 .chip-icon .icon{width:18px; height:18px;}
