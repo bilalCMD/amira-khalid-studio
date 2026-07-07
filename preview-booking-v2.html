@@ -9,13 +9,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=20260707-3">
+<link rel="stylesheet" href="assets/styles.css?v=20260708-1">
 <link rel="stylesheet" href="https://cdn.moyasar.com/mpf/1.15.0/moyasar.css">
 </head>
 <body>
 <div id="app" dir="rtl" lang="ar">
 <script>window.CURRENT_PAGE = 'contact';</script>
-<script src="assets/header.js?v=20260707-3"></script>
+<script src="assets/header.js?v=20260708-1"></script>
 
 <main>
 <section class="page-hero">
@@ -95,13 +95,22 @@
       <div class="field">
         <select id="advService">
           <option value="makeup" data-i18n="svc.makeupOpt">مكياج احترافي — 350 ريال</option>
+          <option value="makeup-blowdry" data-i18n="svc.makeupBlowdryOpt">مكياج + سشوار وكيرلي ناعم — 550 ريال</option>
           <option value="makeup-hair" data-i18n="svc.makeupHairOpt">مكياج + تسريحة شعر كاملة — 650 ريال</option>
-          <option value="bridal-makeup" data-i18n="svc.bridalMakeupOpt">مكياج عروس — السعر عند التواصل</option>
           <option value="bridal-package" data-i18n="svc.bridalOpt">باقة العروس — 2500 ريال</option>
-          <option value="hair-extensions" data-i18n="svc.hairExtOpt">وصلات شعر — 100 ريال</option>
-          <option value="nails" data-i18n="svc.nailsOpt">خدمة الأظافر — بطلب مسبق</option>
-          <option value="private-basic" data-i18n="svc.privateBasicOpt">مكياج + رموش + هايلايتر — 2100 ريال</option>
-          <option value="private-full" data-i18n="svc.privateFullOpt">مكياج + رموش + هايلايتر + تسريحة — 3000 ريال</option>
+          <option value="hair-extensions" data-i18n="svc.hairExtOpt">تركيب وصلات شعر — 100 ريال</option>
+          <option value="private-basic" data-i18n="svc.privateBasicOpt">مكياج عروس (خارجي) — 2100 ريال</option>
+          <option value="private-full" data-i18n="svc.privateFullOpt">الباقة الكاملة للعروس (خارجي) — 3000 ريال</option>
+        </select>
+      </div>
+      <div class="field">
+        <label data-i18n="contact.formEventType">نوع المناسبة</label>
+        <select id="advEventType">
+          <option value="wedding" data-i18n="event.wedding">حفل زفاف</option>
+          <option value="engagement" data-i18n="event.engagement">خطوبة</option>
+          <option value="party" data-i18n="event.party">حفلة / سهرة</option>
+          <option value="graduation" data-i18n="event.graduation">تخرج</option>
+          <option value="other" data-i18n="event.other">أخرى</option>
         </select>
       </div>
       <div class="field">
@@ -164,10 +173,10 @@
   </div>
 </div>
 
-<script src="assets/footer.js?v=20260707-3"></script>
+<script src="assets/footer.js?v=20260708-1"></script>
 </div>
 
 <script src="https://cdn.moyasar.com/mpf/1.15.0/moyasar.js"></script>
-<script src="assets/app.js?v=20260707-3"></script>
+<script src="assets/app.js?v=20260708-1"></script>
 </body>
 </html>

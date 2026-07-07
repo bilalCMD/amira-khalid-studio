@@ -26,6 +26,8 @@
               '<li><a href="portfolio" data-i18n="nav.portfolio">أعمالي</a></li>' +
               '<li><a href="pricing" data-i18n="nav.pricing">الأسعار</a></li>' +
               '<li><a href="contact" data-i18n="nav.contact">تواصل</a></li>' +
+              '<li><a href="journal" data-i18n="nav.journal">مدونة الجمال</a></li>' +
+              '<li><a href="booking-policy" data-i18n="nav.bookingPolicy">سياسة الحجز</a></li>' +
             '</ul>' +
           '</div>' +
           '<div class="footer-col">' +

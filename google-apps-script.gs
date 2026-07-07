@@ -26,7 +26,7 @@
 
 var ADMIN_SECRET = "REPLACE_WITH_YOUR_OWN_SECRET";
 
-var headers = ["timestamp", "name", "phone", "service", "date", "time", "location", "address", "notes", "paymentStatus"];
+var headers = ["timestamp", "name", "phone", "service", "eventType", "date", "time", "location", "address", "notes", "paymentStatus"];
 
 function doPost(e) {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();

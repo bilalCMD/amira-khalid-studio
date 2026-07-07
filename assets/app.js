@@ -38,9 +38,10 @@
       "reel4.caption":"لوك مكياج متكامل","reel5.caption":"أجمل اللقطات تكون عفوية","reel6.caption":"سر رفع الخدود بالبلاشر",
       "reel7.caption":"مكياج ناعم وأنيق","reel8.caption":"لمسات مكياج احترافية","reel9.caption":"تفاصيل تصنع الفرق",
       "reel10.caption":"بدون فلاتر... النتيجة الحقيقية","reel11.caption":"خبيرة تجميل في جدة","reel12.caption":"لوك سهرة فاخر",
+      "reel13.caption":"دقة في كل لمسة","reel14.caption":"جمال العروس بأدق تفاصيله","reel15.caption":"إطلالة سهرة ساحرة","reel16.caption":"بريق وثقة بلا حدود",
       "about.journeyEyebrow":"رحلتي","about.journeyTitle":"كيف بدأت القصة",
       "journey.step1Title":"البداية","journey.step1Desc":"بدأت أميرة شغفها بالمكياج من سن مبكر، وطورت مهاراتها عبر دورات احترافية معتمدة.",
-      "journey.step2Title":"الاحتراف","journey.step2Desc":"أكثر من 5 سنوات من الخبرة في مكياج العرائس والمناسبات الخاصة داخل جدة وخارجها.",
+      "journey.step2Title":"الاحتراف","journey.step2Desc":"أكثر من 10 سنوات من الخبرة في مكياج العرائس والمناسبات الخاصة داخل جدة وخارجها، منذ عام 2016.",
       "journey.step3Title":"الثقة","journey.step3Desc":"أكثر من 500 عروس وعميلة وثقن بأميرة لإبراز جمالهن في أهم لحظاتهن.",
       "journey.step4Title":"اليوم","journey.step4Desc":"استوديو أميرة خالد اليوم وجهة موثوقة لكل عروس تبحث عن إطلالة استثنائية في جدة.",
       "pricing.faqEyebrow":"الأسئلة الشائعة","pricing.faqTitle":"عندكِ سؤال؟",
@@ -49,6 +50,8 @@
       "faq.q3":"هل يمكن إلغاء أو تعديل الموعد؟","faq.a3":"يمكنكِ تعديل أو إلغاء الموعد قبل 48 ساعة على الأقل من الموعد المحدد بدون أي رسوم.",
       "faq.q4":"هل هناك رسوم إضافية للخدمة خارج الاستوديو؟","faq.a4":"الأسعار المعلنة للخدمة الخاصة تشمل التنقل داخل جدة. للمواقع خارج جدة قد تُضاف رسوم تنقل تُحدد عند التواصل.",
       "faq.q5":"ما هي طريقة الدفع؟","faq.a5":"الدفع نقدًا أو تحويل بنكي مباشر في يوم الموعد، ونؤكد كافة التفاصيل مسبقًا عبر واتساب.",
+      "faq.q7":"هل تشمل خدمة المكياج تسريحة الشعر أيضًا؟","faq.a7":"المكياج الاحترافي وحده لا يشمل التسريحة. إذا رغبتِ في تسريحة شعر أيضًا، اختاري باقة \"مكياج + تسريحة شعر كاملة\" أو \"مكياج + سشوار وكيرلي ناعم\" من قائمة الخدمات.",
+      "faq.q8":"ماذا تتضمن باقة العروس بالتحديد؟","faq.a8":"باقة العروس تشمل: مكياج احترافي، رموش بريميوم، تسريحة شعر كاملة، وجلسة تألق للجسم (Body Glow). للخدمة الخارجية للعروس تتوفر باقات مماثلة بتفاصيل مختلفة — راجعي قسم الأسعار أعلاه لكل التفاصيل.",
       "faq.q6":"هل يلزم دفع عربون لتأكيد الحجز؟","faq.a6":"نؤكد الحجز عبر واتساب مباشرة. بالنسبة لباقة العروس، قد نطلب عربونًا لحجز التاريخ بشكل نهائي — سنوضح التفاصيل عند التواصل معكِ.",
       "contact.mapEyebrow":"موقعنا","contact.mapTitle":"موقعنا على الخريطة",
       "marquee.m1":"مكياج عرايس","marquee.m2":"تسريحات شعر راقية","marquee.m3":"خدمة في جدة","marquee.m4":"حجز عبر واتساب","marquee.m5":"منتجات عالمية احترافية",
@@ -60,8 +63,8 @@
       "about.body":"أميرة خالد خبيرة مكياج محترفة في جدة، شغوفة بإبراز جمالكِ الطبيعي بلمسة فنية أنيقة تليق بمناسباتكِ الخاصة — من يوم زفافك إلى أجمل سهراتكِ. تعتمد أميرة على منتجات عالمية احترافية، وتلتزم بأعلى معايير التعقيم مع أدوات مخصصة لكل عميلة.",
       "about.feat1":"منتجات عالمية احترافية","about.feat2":"تعقيم كامل وأدوات فردية لكل عميلة","about.feat3":"خدمة في الاستوديو أو لدى العميلة","about.feat4":"تجربة راقية من الحجز إلى التنفيذ",
       "about.floatYears":"سنوات خبرة","about.floatRating":"تقييم العميلات",
-      "about.stat1":"سنوات خبرة","about.stat2":"عروس وعميلة","about.stat3":"% تعقيم الأدوات","about.stat4":"تقييم العميلات ★",
-      "portfolio.filterAll":"الكل","portfolio.filterBridal":"عرايس","portfolio.filterEvening":"سهرة","portfolio.filterMakeup":"مكياج","portfolio.filterHair":"تسريحات",
+      "about.stat1":"سنوات خبرة","about.stat2":"عروس وعميلة","about.stat3":"التأسيس","about.stat4":"تقييم العميلات ★",
+      "portfolio.filterAll":"الكل","portfolio.filterBridal":"مكياج عرايس","portfolio.filterEvening":"مكياج سهرة","portfolio.filterHair":"تسريحات الشعر","portfolio.filterBA":"قبل وبعد",
       "portfolio.note":"* صور حقيقية من أعمال أميرة — سيتم إضافة المزيد بعد إطلاق الحساب الرسمي للموقع",
       "pf.item1.title":"إطلالة عروس بالطرحة","pf.item2.title":"مكياج عروس ناعم","pf.item3.title":"سهرة درامية بالمخمل","pf.item4.title":"مكياج سهرة أنيق",
       "pf.item5.title":"تسريحة كيرلي فاخرة","pf.item6.title":"مكياج نهاري طبيعي","pf.item7.title":"تحضير بشرة احترافي",
@@ -71,25 +74,29 @@
       "testi.q2":"“سشوار وكيرلي ثابت طول السهرة، والاحترافية من أول لحظة. أنصح فيها بشدة”","testi.n2":"نورة","testi.r2":"عميلة سهرة",
       "testi.q3":"“خدمة راقية ونظافة تامة في الأدوات، حسيت بالراحة والاهتمام من أول دقيقة”","testi.n3":"لمى","testi.r3":"عروس",
       "testi.a1":"س","testi.a2":"ن","testi.a3":"ل",
-      "pricing.groupStudio":"في الاستوديو","pricing.groupPrivate":"خدمة خاصة — للعروس في موقعها","pricing.featured":"الأكثر طلبًا","pricing.bookBtn":"احجزي الآن",
-      "pricing.privateNote":"* الخدمة الخاصة متاحة للعرائس فقط، في الموقع الذي تحددنه العميلة",
-      "pricing.onRequest":"السعر عند التواصل","pricing.nailsNote":"* خدمة الأظافر متاحة بطلب مسبق فقط — يُرجى التواصل قبل الموعد بوقت كافٍ",
+      "pricing.groupStudio":"في الاستوديو","pricing.groupPrivate":"الخدمة الخارجية للعروس","pricing.featured":"الأكثر طلبًا","pricing.bookBtn":"احجزي الآن",
+      "pricing.privateNote":"* الخدمة الخارجية متاحة للعرائس فقط، في الموقع الذي تحددنه العميلة",
+      "pricing.onRequest":"السعر عند التواصل",
       "pricing.durationRegular":"<strong>35–45</strong> دقيقة — حسب نوع البشرة","pricing.durationBride":"<strong>60–75</strong> دقيقة — جلسة العروس",
       "trust.brands":"منتجات عالمية احترافية","trust.sterile":"تعقيم كامل للأدوات","trust.single":"أدوات فردية لكل عميلة",
       "trust.brandsDesc":"نستخدم فقط ماركات مكياج عالمية معتمدة تدوم طويلًا وتناسب جميع أنواع البشرة",
       "trust.sterileDesc":"جميع الأدوات تُعقّم بالكامل قبل كل جلسة وفق أعلى معايير النظافة",
       "trust.singleDesc":"فرش وأدوات مخصصة لكل عميلة وحدها، لراحتكِ وأمانكِ الكامل",
+      "trust.since2016":"خبيرة مكياج محترفة منذ 2016","trust.detail":"دقة في كل التفاصيل","trust.personalized":"مكياج مخصص لكل وجه",
+      "trust.since2016Desc":"أكثر من 10 سنوات من الخبرة الاحترافية في مكياج العرائس والمناسبات الخاصة",
+      "trust.detailDesc":"نهتم بأدق التفاصيل في كل جلسة لضمان إطلالة متكاملة ومثالية من كل زاوية",
+      "trust.personalizedDesc":"كل بشرة وملامح مختلفة، لذلك تصمم أميرة مكياجًا يبرز جمالكِ الفريد وحدكِ",
       "about.trustEyebrow":"لماذا تثقين بأميرة","about.trustTitle":"معايير لا نتنازل عنها",
       "svc.makeup":"مكياج احترافي","svc.makeup.desc":"تحضير بشرة ومكياج أنيق يدوم طوال اليوم","svc.makeupOpt":"مكياج احترافي — 350 ريال",
+      "svc.makeupBlowdry":"مكياج + سشوار وكيرلي ناعم","svc.makeupBlowdry.desc":"مكياج احترافي مع سشوار وتموجات ناعمة لإطلالة سهرة أنيقة","svc.makeupBlowdryOpt":"مكياج + سشوار وكيرلي ناعم — 550 ريال",
       "svc.makeupHair":"مكياج + تسريحة شعر كاملة","svc.makeupHair.desc":"مكياج مع تسريحة مصممة حسب إطلالتكِ","svc.makeupHairOpt":"مكياج + تسريحة شعر كاملة — 650 ريال",
-      "svc.bridalMakeup":"مكياج عروس","svc.bridalMakeup.desc":"مكياج العروس فقط، في الاستوديو أو في موقعكِ حسب توفر الموعد","svc.bridalMakeupOpt":"مكياج عروس — السعر عند التواصل",
-      "svc.bridal":"باقة العروس","svc.bridal.desc":"مكياج + رموش + هايلايتر للجسم + تسريحة شعر","svc.bridalOpt":"باقة العروس — 2500 ريال",
-      "svc.hairExt":"وصلات شعر","svc.hairExt.desc":"إضافة كثافة وطول لإطلالة أكثر فخامة","svc.hairExtOpt":"وصلات شعر — 100 ريال",
-      "svc.nails":"خدمة الأظافر","svc.nails.desc":"عناية وتجميل أظافر، بطلب مسبق فقط","svc.nailsOpt":"خدمة الأظافر — بطلب مسبق",
-      "svc.privateBasic":"مكياج + رموش + هايلايتر","svc.privateBasic.desc":"خدمة خاصة في مكان راحتكِ يوم الزفاف","svc.privateBasicOpt":"مكياج + رموش + هايلايتر — 2100 ريال",
-      "svc.privateFull":"مكياج + رموش + هايلايتر + تسريحة شعر","svc.privateFull.desc":"الباقة الكاملة، في موقعكِ الخاص","svc.privateFullOpt":"مكياج + رموش + هايلايتر + تسريحة — 3000 ريال",
+      "svc.bridal":"باقة العروس","svc.bridal.desc":"مكياج احترافي + رموش فاخرة + تسريحة شعر كاملة + هايلايتر للجسم","svc.bridalOpt":"باقة العروس — 2500 ريال",
+      "svc.hairExt":"تركيب وصلات شعر","svc.hairExt.desc":"إضافة كثافة وطول لإطلالة أكثر فخامة","svc.hairExtOpt":"تركيب وصلات شعر — 100 ريال",
+      "svc.privateBasic":"مكياج عروس (خارجي)","svc.privateBasic.desc":"مكياج احترافي + رموش فاخرة + هايلايتر للجسم، في موقعكِ الخاص","svc.privateBasicOpt":"مكياج عروس (خارجي) — 2100 ريال",
+      "svc.privateFull":"الباقة الكاملة للعروس (خارجي)","svc.privateFull.desc":"مكياج احترافي + رموش فاخرة + هايلايتر للجسم + تسريحة شعر كاملة، في موقعكِ الخاص","svc.privateFullOpt":"الباقة الكاملة للعروس (خارجي) — 3000 ريال",
       "common.sar":"ريال",
-      "contact.formName":"الاسم الكامل","contact.formPhone":"رقم الجوال","contact.formService":"الخدمة","contact.formDate":"التاريخ","contact.formTime":"وقت الجاهزية",
+      "contact.formName":"الاسم الكامل","contact.formPhone":"رقم الجوال","contact.formService":"الخدمة","contact.formEventType":"نوع المناسبة","contact.formDate":"التاريخ","contact.formTime":"وقت الجاهزية",
+      "event.wedding":"حفل زفاف","event.engagement":"خطوبة","event.party":"حفلة / سهرة","event.graduation":"تخرج","event.other":"أخرى",
       "contact.formLocation":"المكان","contact.locStudio":"في الاستوديو (جدة)","contact.locHome":"في موقعي","contact.formAddress":"تفاصيل الموقع / العنوان",
       "contact.formNotes":"ملاحظات إضافية (اختياري)","contact.submitBtn":"تأكيد الحجز عبر واتساب","contact.privateHint":"تنبيه: الخدمة في موقعكِ الخاص متاحة للعرائس فقط",
       "contact.lockedHintStudio":"هذه الخدمة متاحة في الاستوديو فقط","contact.lockedHintHome":"هذه الخدمة متاحة في موقعكِ فقط",
@@ -110,11 +117,11 @@
       "bookingV2.paymentTitle":"الدفع","bookingV2.paymentNote":"هذا رابط دفع تجريبي للمعاينة — لن يتم خصم أي مبلغ حقيقي إلا بعد ربط حساب Moyasar الفعلي.",
       "bookingV2.quoteTitle":"تأكيد عبر واتساب","bookingV2.quoteNote":"سيتم إرسال كل تفاصيل حجزكِ مباشرة إلى أميرة عبر واتساب لتأكيد الموعد.",
       "bookingV2.sendWhatsapp":"إرسال عبر واتساب","bookingV2.successTitle":"تم استلام حجزكِ!","bookingV2.successBody":"سنتواصل معكِ قريبًا لتأكيد كل التفاصيل.",
-      "bookingV2.labelName":"الاسم","bookingV2.labelPhone":"الجوال","bookingV2.labelService":"الخدمة","bookingV2.labelLocation":"المكان",
+      "bookingV2.labelName":"الاسم","bookingV2.labelPhone":"الجوال","bookingV2.labelService":"الخدمة","bookingV2.labelLocation":"المكان","bookingV2.labelEventType":"نوع المناسبة",
       "bookingV2.labelDate":"التاريخ","bookingV2.labelTime":"الوقت","bookingV2.labelPrice":"السعر","bookingV2.priceOnRequest":"السعر عند التواصل",
       "bookingV2.choiceTitle":"كيف تودّين إتمام الحجز؟","bookingV2.choosePay":"الدفع أونلاين","bookingV2.choosePaySub":"بطاقة أو Apple Pay",
       "bookingV2.chooseWa":"تأكيد عبر واتساب","bookingV2.chooseWaSub":"إرسال التفاصيل مباشرة",
-      "contact.serviceOptGroupStudio":"في الاستوديو","contact.serviceOptGroupPrivate":"خدمة خاصة",
+      "contact.serviceOptGroupStudio":"في الاستوديو","contact.serviceOptGroupPrivate":"الخدمة الخارجية للعروس",
       "contact.successMsg":"تم تجهيز طلبكِ! اضغطي لإتمام الإرسال عبر واتساب",
       "contact.trustBadge":"موثوقة — استوديو أميرة خالد","contact.infoLocationTitle":"الموقع","contact.infoLocation":"حي الريان، جدة — عرض على خرائط جوجل",
       "contact.infoLocation2":"حي الريان، جدة، المملكة العربية السعودية",
@@ -122,6 +129,35 @@
       "contact.infoEmailTitle":"البريد الإلكتروني",
       "contact.infoWhatsapp":"تواصلي مباشرة عبر واتساب",
       "footer.tagline":"إبراز جمالكِ الطبيعي بلمسة فنية احترافية، في كل مناسبة تستحق التميز.","footer.quickLinks":"روابط سريعة","footer.services":"الخدمات","footer.getInTouch":"تواصلي معنا",
+      "nav.bookingPolicy":"سياسة الحجز",
+      "contact.policyNote":"بتأكيد الحجز، أنتِ توافقين على <a href=\"booking-policy\">سياسة الحجز</a>",
+      "policy.eyebrow":"قبل الحجز","policy.title":"سياسة الحجز","policy.sub":"كل ما تحتاجين معرفته قبل تأكيد موعدكِ مع أميرة",
+      "policy.depositTitle":"سياسة العربون","policy.depositDesc":"يتطلب تأكيد أي حجز دفع عربون بنسبة 20% من قيمة الخدمة لضمان حجز موعدكِ. العربون غير قابل للاسترداد في حال الإلغاء، لكنه قابل للتحويل عند التأجيل ضمن الشروط الموضحة أدناه.",
+      "policy.cancelTitle":"سياسة الإلغاء","policy.cancelDesc":"يمكن إلغاء الحجز قبل 7 أيام على الأقل من الموعد دون أي رسوم إضافية (بخلاف العربون). الإلغاء خلال أقل من 7 أيام من الموعد يفقد العميلة حق استرداد العربون.",
+      "policy.rescheduleTitle":"سياسة تأجيل الموعد","policy.rescheduleDesc":"يمكن تأجيل الموعد مرة واحدة مجانًا بشرط إخطارنا قبل 48 ساعة على الأقل من الموعد الأصلي. التأجيل المتكرر أو المتأخر عن هذه المدة قد يستوجب عربونًا إضافيًا.",
+      "policy.arrivalTitle":"وقت الحضور","policy.arrivalDesc":"يُرجى الحضور في الموعد المحدد تمامًا. التأخير لأكثر من 15 دقيقة دون إشعار مسبق قد يؤدي لتقليص وقت الجلسة أو إلغائها للحفاظ على مواعيد بقية العميلات.",
+      "policy.prepTitle":"تجهيزات الشعر قبل الجلسة","policy.prepDesc":"يُفضّل الحضور بشعر نظيف وجاف تمامًا (مغسول في اليوم السابق للجلسة وليس في نفس اليوم)، بدون كريمات أو زيوت على فروة الرأس، لضمان أفضل نتيجة للتسريحة.",
+      "policy.termsTitle":"الشروط العامة للحجز","policy.termsDesc":"الأسعار المعلنة قابلة للتغيير حسب تعقيد الطلب أو المسافة (للخدمة الخارجية). قد يُطلب دفع كامل المبلغ مقدمًا في بعض الحالات الخاصة (مثل مواسم الأعياد أو الحجوزات في مدن بعيدة). باقة العروس تشمل جلسة تجربة اختيارية بسعر منفصل عند الطلب.",
+      "policy.footnote":"* لأي استفسار حول هذه السياسات، لا تترددي في التواصل معنا مباشرة عبر واتساب قبل تأكيد حجزكِ.",
+      "nav.journal":"مدونة الجمال",
+      "journal.eyebrow":"مدونة الجمال","journal.title":"مدونة الجمال","journal.sub":"نصائح وخبرات حقيقية من أميرة لمساعدتكِ على إطلالة مثالية في كل مناسبة",
+      "journal.readMore":"اقرئي المزيد ←","journal.readTime":"قراءة 3 دقائق","journal.moreArticles":"مقالات أخرى قد تهمكِ","journal.viewAll":"تصفّحي كل المقالات",
+      "journal.ctaTitle":"جاهزة لحجز موعدكِ؟","journal.ctaBody":"تواصلي معنا اليوم واحجزي موعدكِ بسهولة عبر واتساب.",
+      "journal.art1.tag":"دليل العروس","journal.art1.title":"كيف تختارين خبيرة المكياج المناسبة ليومكِ المميز",
+      "journal.art1.excerpt":"من الخبرة إلى نظافة الأدوات — إليكِ أهم النقاط التي تساعدكِ على اختيار خبيرة المكياج المناسبة لعرسكِ أو مناسبتكِ الخاصة.",
+      "journal.art1.body":"<p>اختيار خبيرة المكياج المناسبة ليس قرارًا بسيطًا، خاصة عندما يتعلق الأمر بيوم لا يتكرر مثل يوم زفافكِ. إليكِ أهم النقاط التي تساعدكِ على اتخاذ القرار الصحيح.</p><h2>انظري إلى الأعمال الحقيقية، لا الصور المنسقة فقط</h2><p>لا تكتفي بمشاهدة الصور النهائية المثالية على إنستغرام. اطلبي رؤية فيديوهات حقيقية من الجلسات، وصور \"قبل وبعد\" لعميلات سابقات، لتتكوّن لديكِ صورة واقعية عن مستوى الخبيرة ونتائجها الفعلية على أنواع بشرة مختلفة.</p><h2>اسألي عن سنوات الخبرة ونوع المناسبات</h2><p>خبيرة المكياج التي تعمل منذ سنوات في مكياج العرائس تحديدًا تفهم تفاصيل دقيقة لا يدركها من يعمل في المكياج العام فقط — مثل اختيار تركيبة تدوم لساعات التصوير الطويلة، ومقاومة الدموع والعناق خلال حفل الزفاف.</p><h2>لا تتنازلي عن معايير النظافة</h2><p>تأكدي أن الأدوات والفرش تُعقّم بالكامل بين كل عميلة وأخرى، وأن هناك أدوات مخصصة لكِ وحدكِ (خاصة أدوات العين والشفاه). هذا ليس تفصيلًا ثانويًا، بل معيار أساسي لصحة بشرتكِ.</p><h2>اسألي عن المنتجات المستخدمة</h2><p>المنتجات العالمية المعتمدة تدوم لساعات أطول وتناسب أنواع بشرة متعددة، بعكس المنتجات الرخيصة التي قد تسبب حساسية أو تنسدل خلال اليوم. لا تترددي في السؤال عن الماركات المستخدمة قبل الحجز.</p><h2>لا تستغني عن جلسة التجربة</h2><p>جلسة التجربة قبل يوم الزفاف بفترة كافية تمنحكِ فرصة لرؤية اللوك النهائي، وتعديل أي تفصيلة قبل اليوم الفعلي — بدلًا من اكتشاف أن اللوك لا يعجبكِ في صباح الزفاف نفسه.</p><p>اختيار خبيرة المكياج المناسبة هو استثمار في راحة بالكِ يوم الزفاف بقدر ما هو استثمار في إطلالتكِ. خذي وقتكِ في البحث، واسألي بلا تردد — فالخبيرة الواثقة من عملها لن تمانع الإجابة عن كل أسئلتكِ.</p>",
+      "journal.art2.tag":"مكياج العروس","journal.art2.title":"أهم نصائح مكياج العروس لإطلالة زفاف مثالية",
+      "journal.art2.excerpt":"من جلسة التجربة إلى اللمسات الأخيرة — نصائح عملية تضمن لكِ إطلالة عروس تدوم من التصوير حتى آخر رقصة.",
+      "journal.art2.body":"<p>يوم الزفاف طويل وحافل بالمشاعر والحركة، لذا يحتاج مكياج العروس إلى تخطيط أدق من أي مكياج آخر. إليكِ أهم النصائح لإطلالة تدوم من التحضيرات وحتى آخر لحظة في الحفل.</p><h2>احجزي جلسة تجربة قبل الموعد بوقت كافٍ</h2><p>لا تتركي التجربة لآخر أسبوع. احجزيها قبل شهر على الأقل من الزفاف، لتتمكني من تعديل أي تفصيلة بهدوء دون ضغط الوقت.</p><h2>اختاري لوكًا يشبهكِ لا يشبه صورة رأيتها فقط</h2><p>أجمل مكياج عروس هو الذي يبرز ملامحكِ الطبيعية بلمسة أكثر إشراقًا، وليس مكياجًا مختلفًا تمامًا عن شكلكِ المعتاد. ناقشي مع خبيرة المكياج ملامح وجهكِ وما يناسبها تحديدًا.</p><h2>فكّري في التصوير قبل اختيار درجة الألوان</h2><p>الإضاءة والفلاش يظهران بعض الألوان بشكل مختلف عن الواقع. خبيرة مكياج متمرسة في تصوير الأعراس تعرف كيف تختار درجات تبدو طبيعية وجذابة في الصور كما في الواقع تمامًا.</p><h2>لا تهملي تثبيت المكياج</h2><p>اطلبي استخدام بخاخ تثبيت (setting spray) عالي الجودة، خاصة إذا كان حفل زفافكِ في الخارج أو في أجواء حارة. هذه الخطوة الصغيرة تصنع فرقًا كبيرًا بحلول ساعات المساء.</p><h2>احجزي وقتًا كافيًا لجلسة يوم الزفاف نفسه</h2><p>لا تحاولي ضغط موعد المكياج والتسريحة في وقت قصير بين المواعيد الأخرى. امنحي نفسكِ وقتًا كافيًا لجلسة هادئة بلا توتر، فهذا ينعكس على النتيجة النهائية وعلى مزاجكِ طوال اليوم.</p><p>مكياج العروس المثالي لا يعتمد فقط على مهارة الخبيرة، بل على التخطيط الجيد والتواصل الواضح معها. كلما بدأتِ التحضير مبكرًا، كانت النتيجة أقرب لما تحلمين به.</p>",
+      "journal.art3.tag":"العناية بالبشرة","journal.art3.title":"كيف تجهزين بشرتكِ قبل جلسة المكياج",
+      "journal.art3.excerpt":"نتيجة المكياج تبدأ من قبل الجلسة بأيام. إليكِ خطوات بسيطة لتحضير بشرتكِ لأفضل نتيجة ممكنة.",
+      "journal.art3.body":"<p>نتيجة المكياج النهائية لا تعتمد فقط على مهارة الخبيرة، بل تبدأ من حالة بشرتكِ قبل الجلسة بأيام. إليكِ خطوات بسيطة تصنع فرقًا حقيقيًا في ثبات المكياج ومظهره.</p><h2>رطّبي بشرتكِ يوميًا في الأسبوع الذي يسبق الجلسة</h2><p>البشرة الجافة تجعل المكياج يظهر متكسرًا وغير متساوٍ. التزمي بروتين ترطيب يومي بسيط بمرطب يناسب نوع بشرتكِ، صباحًا ومساءً.</p><h2>تجنبي التقشير القوي أو أي علاج جديد قبل المناسبة مباشرة</h2><p>لا تجربي منتجًا جديدًا أو جلسة تقشير قوية قبل يوم أو يومين من المناسبة. أي احمرار أو تهيج غير متوقع سيصعّب مهمة المكياج ويؤثر على النتيجة.</p><h2>اشربي كمية كافية من الماء</h2><p>الترطيب من الداخل لا يقل أهمية عن الترطيب الخارجي. حاولي زيادة كمية الماء التي تشربينها في الأيام التي تسبق المناسبة، فهذا ينعكس مباشرة على إشراقة بشرتكِ.</p><h2>نامي جيدًا قبل يوم المناسبة</h2><p>قلة النوم تظهر على البشرة بانتفاخ وشحوب يصعب إخفاؤهما بالكونسيلر وحده. حاولي الحصول على نوم كافٍ في الليالي التي تسبق المناسبة، خاصة الليلة الأخيرة.</p><h2>احضري بوجه نظيف تمامًا يوم الجلسة</h2><p>تجنبي وضع أي كريمات ثقيلة أو زيوت قبل الجلسة مباشرة، فهذا قد يمنع المكياج من الثبات جيدًا. اغسلي وجهكِ جيدًا واحضري ببشرة نظيفة، وستتولى خبيرة المكياج الباقي.</p><p>بشرة صحية ومرطبة هي الأساس الحقيقي لأي مكياج ناجح. اهتمامكِ بهذه الخطوات البسيطة قبل الجلسة سينعكس مباشرة على جمال النتيجة النهائية وثباتها طوال اليوم.</p>",
+      "journal.art4.tag":"نصائح احترافية","journal.art4.title":"كيف تجعلين مكياجكِ يدوم طوال اليوم والسهرة",
+      "journal.art4.excerpt":"من التحضير إلى منتجات التثبيت — أسرار احترافية لإطلالة تصمد أمام الحرارة والرطوبة وساعات الاحتفال الطويلة.",
+      "journal.art4.body":"<p>المناسبات الطويلة، من حفلات الزفاف إلى السهرات الممتدة، تحتاج إلى مكياج مصمم خصيصًا ليصمد أمام الحرارة والرطوبة والحركة المستمرة. إليكِ أهم الأسرار الاحترافية لثبات يدوم.</p><h2>التحضير الجيد للبشرة هو نصف الطريق</h2><p>البشرة المرطبة والمُجهّزة جيدًا تحتفظ بالمكياج لوقت أطول من البشرة الجافة أو غير المُعتنى بها. لا تتجاهلي خطوات العناية بالبشرة في الأيام التي تسبق المناسبة.</p><h2>طبقات خفيفة أفضل من طبقة واحدة سميكة</h2><p>المكياج المصنوع من طبقات خفيفة ومتتالية يثبت بشكل أفضل ويبدو طبيعيًا أكثر من طبقة واحدة سميكة، والتي غالبًا ما \"تنسدل\" أسرع مع الحرارة.</p><h2>البودرة الشفافة صديقتكِ الحقيقية</h2><p>تثبيت الكونسيلر وأماكن التلألؤ الطبيعي (مثل جانبي الأنف والجبهة) ببودرة شفافة ناعمة يمنع ظهور اللمعان غير المرغوب فيه خلال الساعات الطويلة.</p><h2>بخاخ التثبيت خطوة لا يجب تخطيها</h2><p>بخاخ التثبيت عالي الجودة هو اللمسة الأخيرة التي \"تُقفل\" المكياج وتحميه من التأثر بالحرارة والتعرق والدموع خلال المناسبة.</p><h2>احملي معكِ أدوات تجديد سريعة</h2><p>ورق امتصاص الزيوت (blotting paper) وأحمر شفاه بلون مناسب في حقيبتكِ يساعدانكِ على تجديد الإطلالة بسرعة في أي وقت خلال السهرة دون الحاجة لإعادة المكياج بالكامل.</p><p>ثبات المكياج ليس صدفة، بل نتيجة تحضير جيد واختيارات صحيحة من البداية. اتباع هذه الخطوات يمنحكِ إطلالة واثقة تدوم من أول لحظة حتى آخر صورة تذكارية.</p>",
+      "journal.art5.tag":"تجنبي هذا","journal.art5.title":"5 أخطاء شائعة في مكياج العروس يجب تجنبها",
+      "journal.art5.excerpt":"من التجربة المتأخرة إلى اختيار الألوان الخاطئة — تعرّفي على الأخطاء الأكثر شيوعًا وكيف تتجنبينها في يوم زفافكِ.",
+      "journal.art5.body":"<p>مع كل التفاصيل التي تحتاج العروس للتفكير فيها، من السهل الوقوع في بعض الأخطاء الشائعة التي تؤثر على الإطلالة النهائية. إليكِ أبرزها وكيف تتجنبينها.</p><h2>1. تأجيل جلسة التجربة لوقت متأخر جدًا</h2><p>حجز التجربة قبل أسبوع واحد فقط من الزفاف لا يترك وقتًا كافيًا لتعديل أي تفصيلة. احجزيها قبل شهر على الأقل لضمان راحة البال.</p><h2>2. اختيار لوك مختلف تمامًا عن شكلكِ المعتاد</h2><p>الرغبة في \"الظهور بشكل مختلف تمامًا\" في يوم الزفاف قد تؤدي لمكياج لا يشبهكِ فعلًا في الصور. أفضل مكياج عروس هو الذي يعزز جمالكِ الطبيعي بثقة أكبر.</p><h2>3. إهمال تجهيز البشرة قبل الجلسة</h2><p>الوصول للجلسة ببشرة جافة أو غير مُعتنى بها يصعّب مهمة خبيرة المكياج ويؤثر على النتيجة النهائية، مهما كانت مهارتها. ابدئي روتين العناية ببشرتكِ قبل أسابيع من الموعد.</p><h2>4. عدم إخبار خبيرة المكياج بحساسية البشرة أو أي مشاكل جلدية</h2><p>إذا كانت بشرتكِ حساسة أو لديكِ أي حالة جلدية، أخبري خبيرة المكياج مسبقًا حتى تختار المنتجات المناسبة، بدلًا من اكتشاف المشكلة في يوم الزفاف نفسه.</p><h2>5. عدم الاهتمام بتثبيت المكياج لساعات طويلة</h2><p>يوم الزفاف يمتد لساعات طويلة من التصوير إلى الحفل. تأكدي أن خبيرة المكياج تستخدم منتجات تثبيت مناسبة، واسأليها عن خطوات تجديد الإطلالة إذا لزم الأمر خلال اليوم.</p><p>تجنّب هذه الأخطاء البسيطة يبدأ من التخطيط المبكر والتواصل الواضح مع خبيرة المكياج. النتيجة: إطلالة واثقة وطبيعية تدوم من الصباح وحتى آخر لحظة في حفلكِ.</p>",
       "footer.maroof":"موثّقة عبر معروف",
       "footer.rights":"© <span id=\"yearNow\">2026</span> استوديو أميرة خالد. جميع الحقوق محفوظة.","footer.credit":"صُمم بواسطة DevMenta"
     },
@@ -147,9 +183,10 @@
       "reel4.caption":"Complete Makeup Look","reel5.caption":"The Best Shots Are Candid","reel6.caption":"The Secret to Lifted Cheeks",
       "reel7.caption":"Soft & Elegant Makeup","reel8.caption":"Professional Makeup Touches","reel9.caption":"Details That Make the Difference",
       "reel10.caption":"No Filters — the Real Result","reel11.caption":"Beauty Expert in Jeddah","reel12.caption":"Glamorous Evening Look",
+      "reel13.caption":"Precision in Every Touch","reel14.caption":"Bridal Beauty in Every Detail","reel15.caption":"Captivating Evening Glam","reel16.caption":"Glow With Confidence",
       "about.journeyEyebrow":"My Journey","about.journeyTitle":"How the Story Began",
       "journey.step1Title":"The Beginning","journey.step1Desc":"Amira's passion for makeup began early, developing her skills through certified professional courses.",
-      "journey.step2Title":"Going Professional","journey.step2Desc":"5+ years of experience in bridal and special-occasion makeup across Jeddah and beyond.",
+      "journey.step2Title":"Going Professional","journey.step2Desc":"10+ years of experience in bridal and special-occasion makeup across Jeddah and beyond, since 2016.",
       "journey.step3Title":"Earning Trust","journey.step3Desc":"500+ brides and clients have trusted Amira to bring out their beauty on their most important days.",
       "journey.step4Title":"Today","journey.step4Desc":"Amira Khalid Studio is now a trusted destination for every bride seeking an exceptional look in Jeddah.",
       "pricing.faqEyebrow":"FAQ","pricing.faqTitle":"Got a Question?",
@@ -158,6 +195,8 @@
       "faq.q3":"Can I cancel or reschedule my appointment?","faq.a3":"You can reschedule or cancel free of charge up to 48 hours before your appointment.",
       "faq.q4":"Is there an extra fee for service outside the studio?","faq.a4":"Listed private-service prices include travel within Jeddah. Locations outside Jeddah may involve an additional travel fee, confirmed when you reach out.",
       "faq.q5":"What payment methods do you accept?","faq.a5":"Cash or direct bank transfer on the day of the appointment — we confirm all details in advance via WhatsApp.",
+      "faq.q7":"Does the makeup service include hairstyling too?","faq.a7":"Professional Makeup alone doesn't include hairstyling. If you'd like hairstyling as well, choose the \"Makeup + Full Hairstyling\" or \"Makeup + Blow Dry & Soft Waves\" package from the services list.",
+      "faq.q8":"What exactly is included in the Bridal Package?","faq.a8":"The Bridal Package includes: professional makeup, premium lashes, full hairstyling, and a body glow session. Similar outdoor bridal packages are available with different inclusions — see the pricing section above for full details.",
       "faq.q6":"Do you require a deposit to confirm booking?","faq.a6":"Bookings are confirmed directly via WhatsApp. For the Bridal Package, a deposit may be requested to lock in your date — we'll share the details when you reach out.",
       "contact.mapEyebrow":"Our Location","contact.mapTitle":"Find Us on the Map",
       "marquee.m1":"Bridal Makeup","marquee.m2":"Elegant Hairstyling","marquee.m3":"Serving Jeddah","marquee.m4":"Book via WhatsApp","marquee.m5":"International Brands",
@@ -169,8 +208,8 @@
       "about.body":"Amira Khalid is a professional makeup artist based in Jeddah, passionate about enhancing your natural beauty with an elegant artistic touch fit for your special occasions — from your wedding day to your finest evenings out. Amira uses professional international brands and follows the highest hygiene standards with dedicated tools for every client.",
       "about.feat1":"Professional international brands","about.feat2":"Full sterilization & single-use tools per client","about.feat3":"Service at the studio or at your location","about.feat4":"A refined experience from booking to execution",
       "about.floatYears":"Years of Experience","about.floatRating":"Client Rating",
-      "about.stat1":"Years of Experience","about.stat2":"Brides & Clients","about.stat3":"% Tool Sterilization","about.stat4":"Client Rating ★",
-      "portfolio.filterAll":"All","portfolio.filterBridal":"Bridal","portfolio.filterEvening":"Evening","portfolio.filterMakeup":"Makeup","portfolio.filterHair":"Hairstyling",
+      "about.stat1":"Years of Experience","about.stat2":"Bridal & Evening Clients","about.stat3":"Founded","about.stat4":"Client Rating ★",
+      "portfolio.filterAll":"All","portfolio.filterBridal":"Bridal Makeup","portfolio.filterEvening":"Evening Makeup","portfolio.filterHair":"Hairstyles","portfolio.filterBA":"Before & After",
       "portfolio.note":"* Real photos from Amira's work — more will be added once the site's official account is live",
       "pf.item1.title":"Veiled Bridal Look","pf.item2.title":"Soft Bridal Makeup","pf.item3.title":"Dramatic Velvet Evening","pf.item4.title":"Elegant Evening Makeup",
       "pf.item5.title":"Luxe Curls Hairstyle","pf.item6.title":"Natural Day Makeup","pf.item7.title":"Professional Skin Prep",
@@ -180,25 +219,29 @@
       "testi.q2":"“Blow-dry and curls stayed perfect all night, and so professional from the first minute. Highly recommend.”","testi.n2":"Noura","testi.r2":"Evening Client",
       "testi.q3":"“Elegant service and spotless tools — I felt cared for from the very first minute.”","testi.n3":"Lama","testi.r3":"Bride",
       "testi.a1":"S","testi.a2":"N","testi.a3":"L",
-      "pricing.groupStudio":"At the Studio","pricing.groupPrivate":"Private Service — Bride's Location","pricing.featured":"Most Popular","pricing.bookBtn":"Book Now",
-      "pricing.privateNote":"* Private service is for brides only, at the location of the client's choice",
-      "pricing.onRequest":"Price on request","pricing.nailsNote":"* Nail service is available by advance request only — please reach out well ahead of your appointment",
+      "pricing.groupStudio":"At the Studio","pricing.groupPrivate":"Outdoor Bridal Service","pricing.featured":"Most Popular","pricing.bookBtn":"Book Now",
+      "pricing.privateNote":"* Outdoor service is for brides only, at the location of the client's choice",
+      "pricing.onRequest":"Price on request",
       "pricing.durationRegular":"<strong>35–45</strong> min — depending on skin type","pricing.durationBride":"<strong>60–75</strong> min — bride session",
       "trust.brands":"Professional international brands","trust.sterile":"Full tool sterilization","trust.single":"Single-use tools per client",
       "trust.brandsDesc":"We use only trusted international makeup brands that last all day and suit every skin type",
       "trust.sterileDesc":"Every tool is fully sterilized before each session, following the highest hygiene standards",
       "trust.singleDesc":"Brushes and tools dedicated to you alone, for your complete comfort and safety",
+      "trust.since2016":"Professional Makeup Artist Since 2016","trust.detail":"Attention to Every Detail","trust.personalized":"Personalized for Every Face",
+      "trust.since2016Desc":"Over 10 years of professional experience in bridal and special-occasion makeup",
+      "trust.detailDesc":"Every session is finished with meticulous care, ensuring a flawless look from every angle",
+      "trust.personalizedDesc":"Every face is unique — Amira tailors each look to highlight your individual beauty",
       "about.trustEyebrow":"Why Trust Amira","about.trustTitle":"Standards We Never Compromise On",
       "svc.makeup":"Professional Makeup","svc.makeup.desc":"Skin prep & elegant makeup that lasts all day","svc.makeupOpt":"Professional Makeup — SAR 350",
-      "svc.makeupHair":"Makeup + Complete Hairstyle","svc.makeupHair.desc":"Makeup with a hairstyle designed for your look","svc.makeupHairOpt":"Makeup + Complete Hairstyle — SAR 650",
-      "svc.bridalMakeup":"Bridal Makeup","svc.bridalMakeup.desc":"Makeup only for the bride, at the studio or your location depending on availability","svc.bridalMakeupOpt":"Bridal Makeup — price on request",
-      "svc.bridal":"Bridal Package","svc.bridal.desc":"Makeup + Lashes + Body Highlighter + Hair Styling","svc.bridalOpt":"Bridal Package — SAR 2500",
-      "svc.hairExt":"Hair Extensions","svc.hairExt.desc":"Add volume and length for a more glamorous look","svc.hairExtOpt":"Hair Extensions — SAR 100",
-      "svc.nails":"Nail Service","svc.nails.desc":"Nail care & polish, by advance request only","svc.nailsOpt":"Nail Service — by advance request",
-      "svc.privateBasic":"Makeup + Lashes + Highlighter","svc.privateBasic.desc":"Private service at your location on your wedding day","svc.privateBasicOpt":"Makeup + Lashes + Highlighter — SAR 2100",
-      "svc.privateFull":"Makeup + Lashes + Highlighter + Hairstyle","svc.privateFull.desc":"The complete package, at your own location","svc.privateFullOpt":"Makeup + Lashes + Highlighter + Hairstyle — SAR 3000",
+      "svc.makeupBlowdry":"Makeup + Blow Dry & Soft Waves","svc.makeupBlowdry.desc":"Professional makeup with a blow dry and soft waves for an elegant evening look","svc.makeupBlowdryOpt":"Makeup + Blow Dry & Soft Waves — SAR 550",
+      "svc.makeupHair":"Makeup + Full Hairstyling","svc.makeupHair.desc":"Makeup with a hairstyle designed for your look","svc.makeupHairOpt":"Makeup + Full Hairstyling — SAR 650",
+      "svc.bridal":"Bridal Package","svc.bridal.desc":"Professional Makeup + Premium Lashes + Full Hairstyling + Body Glow","svc.bridalOpt":"Bridal Package — SAR 2500",
+      "svc.hairExt":"Hair Extension Installation","svc.hairExt.desc":"Add volume and length for a more glamorous look","svc.hairExtOpt":"Hair Extension Installation — SAR 100",
+      "svc.privateBasic":"Bridal Makeup (Outdoor)","svc.privateBasic.desc":"Professional Makeup + Premium Lashes + Body Glow, at your own location","svc.privateBasicOpt":"Bridal Makeup (Outdoor) — SAR 2100",
+      "svc.privateFull":"Complete Bridal Package (Outdoor)","svc.privateFull.desc":"Professional Makeup + Premium Lashes + Body Glow + Full Hairstyling, at your own location","svc.privateFullOpt":"Complete Bridal Package (Outdoor) — SAR 3000",
       "common.sar":"SAR",
-      "contact.formName":"Full Name","contact.formPhone":"Phone Number","contact.formService":"Service","contact.formDate":"Date","contact.formTime":"Ready-by Time",
+      "contact.formName":"Full Name","contact.formPhone":"Phone Number","contact.formService":"Service","contact.formEventType":"Event Type","contact.formDate":"Date","contact.formTime":"Ready-by Time",
+      "event.wedding":"Wedding","event.engagement":"Engagement","event.party":"Party / Evening","event.graduation":"Graduation","event.other":"Other",
       "contact.formLocation":"Location","contact.locStudio":"At the Studio (Jeddah)","contact.locHome":"At My Location","contact.formAddress":"Location Details / Address",
       "contact.formNotes":"Additional Notes (optional)","contact.submitBtn":"Confirm Booking via WhatsApp","contact.privateHint":"Note: private location service is for brides only",
       "contact.lockedHintStudio":"This service is available at the studio only","contact.lockedHintHome":"This service is available at your location only",
@@ -219,11 +262,11 @@
       "bookingV2.paymentTitle":"Payment","bookingV2.paymentNote":"This is a test payment link for preview only — no real charge will happen until a real Moyasar account is connected.",
       "bookingV2.quoteTitle":"Confirm via WhatsApp","bookingV2.quoteNote":"All your booking details will be sent directly to Amira via WhatsApp to confirm your appointment.",
       "bookingV2.sendWhatsapp":"Send via WhatsApp","bookingV2.successTitle":"Your booking has been received!","bookingV2.successBody":"We'll be in touch soon to confirm every detail.",
-      "bookingV2.labelName":"Name","bookingV2.labelPhone":"Phone","bookingV2.labelService":"Service","bookingV2.labelLocation":"Location",
+      "bookingV2.labelName":"Name","bookingV2.labelPhone":"Phone","bookingV2.labelService":"Service","bookingV2.labelLocation":"Location","bookingV2.labelEventType":"Event Type",
       "bookingV2.choiceTitle":"How would you like to confirm?","bookingV2.choosePay":"Pay Online","bookingV2.choosePaySub":"Card or Apple Pay",
       "bookingV2.chooseWa":"Confirm via WhatsApp","bookingV2.chooseWaSub":"Send details directly",
       "bookingV2.labelDate":"Date","bookingV2.labelTime":"Time","bookingV2.labelPrice":"Price","bookingV2.priceOnRequest":"Price on request",
-      "contact.serviceOptGroupStudio":"At the Studio","contact.serviceOptGroupPrivate":"Private Service",
+      "contact.serviceOptGroupStudio":"At the Studio","contact.serviceOptGroupPrivate":"Outdoor Bridal Service",
       "contact.successMsg":"Your request is ready! Click to complete sending via WhatsApp",
       "contact.trustBadge":"Trusted — Amira Khalid Studio","contact.infoLocationTitle":"Location","contact.infoLocation":"Al Rayyan District, Jeddah — View on Google Maps",
       "contact.infoLocation2":"Al Rayyan District, Jeddah, Saudi Arabia",
@@ -231,12 +274,42 @@
       "contact.infoEmailTitle":"Email",
       "contact.infoWhatsapp":"Chat with us on WhatsApp",
       "footer.tagline":"Enhancing your natural beauty with a professional artistic touch, for every occasion that deserves the best.","footer.quickLinks":"Quick Links","footer.services":"Services","footer.getInTouch":"Get in Touch",
+      "nav.bookingPolicy":"Booking Policy",
+      "contact.policyNote":"By confirming your booking, you agree to our <a href=\"booking-policy\">Booking Policy</a>",
+      "policy.eyebrow":"Before You Book","policy.title":"Booking Policy","policy.sub":"Everything you need to know before confirming your appointment with Amira",
+      "policy.depositTitle":"Deposit Policy","policy.depositDesc":"Confirming any booking requires a 20% deposit of the service value to secure your appointment. The deposit is non-refundable in case of cancellation, but transferable when rescheduling within the terms below.",
+      "policy.cancelTitle":"Cancellation Policy","policy.cancelDesc":"Bookings may be cancelled at least 7 days before the appointment with no additional fees (aside from the deposit). Cancelling within less than 7 days of the appointment forfeits the deposit.",
+      "policy.rescheduleTitle":"Rescheduling Policy","policy.rescheduleDesc":"Appointments can be rescheduled once free of charge, provided we're notified at least 48 hours before the original appointment. Repeated or late rescheduling may require an additional deposit.",
+      "policy.arrivalTitle":"Arrival Time","policy.arrivalDesc":"Please arrive exactly at your scheduled time. Arriving more than 15 minutes late without prior notice may shorten your session or result in cancellation, to protect other clients' appointments.",
+      "policy.prepTitle":"Hair Prep Before Your Session","policy.prepDesc":"Please arrive with clean, fully dry hair (washed the day before your session, not the same day), free of creams or oils on the scalp, to ensure the best hairstyling result.",
+      "policy.termsTitle":"General Appointment Terms","policy.termsDesc":"Listed prices may vary depending on request complexity or distance (for outdoor service). Full advance payment may be required in special cases (such as holiday seasons or bookings in distant cities). The bridal package includes an optional trial session at a separate price upon request.",
+      "policy.footnote":"* For any questions about these policies, feel free to reach out via WhatsApp before confirming your booking.",
+      "nav.journal":"Beauty Journal",
+      "journal.eyebrow":"Beauty Journal","journal.title":"Beauty Journal","journal.sub":"Real tips and expertise from Amira to help you achieve the perfect look for every occasion",
+      "journal.readMore":"Read More →","journal.readTime":"3 min read","journal.moreArticles":"More Articles You'll Like","journal.viewAll":"Browse All Articles",
+      "journal.ctaTitle":"Ready to Book Your Appointment?","journal.ctaBody":"Reach out today and book your appointment easily via WhatsApp.",
+      "journal.art1.tag":"Bridal Guide","journal.art1.title":"How to Choose the Right Makeup Artist for Your Big Day",
+      "journal.art1.excerpt":"From experience to hygiene standards — here's what really matters when choosing the makeup artist for your wedding or special occasion.",
+      "journal.art1.body":"<p>Choosing the right makeup artist is never a small decision — especially for a day as unique as your wedding. Here are the key things to look for before you book.</p><h2>Look at Real Work, Not Just Polished Photos</h2><p>Don't rely only on perfectly curated Instagram photos. Ask to see real session videos and genuine before-and-after shots from past clients, so you get an honest sense of the artist's skill and results across different skin types.</p><h2>Ask About Experience With Bridal Work Specifically</h2><p>A makeup artist who has spent years specializing in bridal makeup understands details that a general makeup artist might miss — like choosing a formula that lasts through hours of photography, and holds up against tears and hugs on the wedding day.</p><h2>Never Compromise on Hygiene Standards</h2><p>Make sure tools and brushes are fully sterilized between clients, and that dedicated tools are used just for you (especially for eyes and lips). This isn't a minor detail — it's essential for your skin's health.</p><h2>Ask What Products They Use</h2><p>Trusted international brands last longer and suit a wider range of skin types, unlike cheaper products that can trigger sensitivity or fade throughout the day. Don't hesitate to ask which brands are used before booking.</p><h2>Don't Skip the Trial Session</h2><p>A trial session held with enough time before the wedding gives you the chance to see the final look and adjust any detail beforehand — instead of discovering you don't love the look on the morning of the wedding itself.</p><p>Choosing the right makeup artist is an investment in your peace of mind on the big day, just as much as it is in your look. Take your time researching, and don't hesitate to ask questions — an artist confident in her craft will always be happy to answer them.</p>",
+      "journal.art2.tag":"Bridal Makeup","journal.art2.title":"Top Bridal Makeup Tips for a Flawless Wedding Look",
+      "journal.art2.excerpt":"From the trial session to the final touches — practical tips to ensure your bridal look lasts from the first photo to the last dance.",
+      "journal.art2.body":"<p>Wedding days are long, emotional, and full of movement — which is why bridal makeup needs more careful planning than any other look. Here are the key tips for a look that lasts from getting-ready shots to the very last dance.</p><h2>Book Your Trial With Plenty of Time to Spare</h2><p>Don't leave your trial until the last week. Book it at least a month before the wedding, so you have room to adjust any detail calmly, without time pressure.</p><h2>Choose a Look That Feels Like You</h2><p>The most beautiful bridal makeup enhances your natural features with a more radiant touch — not a completely different look from your everyday self. Talk with your makeup artist about your features and what genuinely suits them.</p><h2>Think About Photography Before Choosing Shades</h2><p>Lighting and camera flash can render certain colors differently than they appear in person. An artist experienced with wedding photography knows how to choose shades that look natural and beautiful both on camera and in real life.</p><h2>Don't Skip Setting Products</h2><p>Ask for a high-quality setting spray, especially for an outdoor wedding or a warm climate. This small step makes a real difference by the time evening festivities roll around.</p><h2>Give Yourself Enough Time on the Day Itself</h2><p>Don't try to squeeze your makeup and hairstyling into a rushed window between other appointments. Give yourself a calm, unhurried session — it shows in the final result and in your mood for the rest of the day.</p><p>The perfect bridal look isn't just about the artist's skill — it's about good planning and clear communication with her. The earlier you start preparing, the closer the result will be to what you've been dreaming of.</p>",
+      "journal.art3.tag":"Skincare","journal.art3.title":"How to Prep Your Skin Before Makeup Application",
+      "journal.art3.excerpt":"The final result starts days before your session. Here are simple steps to prep your skin for the best possible outcome.",
+      "journal.art3.body":"<p>The final makeup result doesn't depend on the artist's skill alone — it starts with the condition of your skin days before the session. Here are simple steps that make a real difference in how your makeup looks and lasts.</p><h2>Moisturize Daily in the Week Before Your Session</h2><p>Dry skin makes makeup look patchy and uneven. Stick to a simple daily moisturizing routine suited to your skin type, morning and night.</p><h2>Avoid Strong Exfoliation or New Treatments Right Before the Event</h2><p>Don't try a new product or an intense exfoliating treatment a day or two before your event. Any unexpected redness or irritation makes makeup application harder and affects the final result.</p><h2>Drink Enough Water</h2><p>Hydrating from within matters just as much as external skincare. Try to increase your water intake in the days leading up to your event — it shows directly in your skin's glow.</p><h2>Get Good Sleep Before the Big Day</h2><p>Lack of sleep shows up as puffiness and dullness that concealer alone can't fully hide. Aim for enough rest in the nights beforehand, especially the night before.</p><h2>Arrive With a Completely Clean Face on the Day</h2><p>Avoid heavy creams or oils right before your session, as they can prevent makeup from setting properly. Wash your face well and arrive with clean skin — your makeup artist will take care of the rest.</p><p>Healthy, hydrated skin is the true foundation of any successful makeup look. Taking care of these simple steps beforehand will show directly in how beautiful — and how long-lasting — your final result is.</p>",
+      "journal.art4.tag":"Pro Tips","journal.art4.title":"How to Make Your Makeup Last All Day and Night",
+      "journal.art4.excerpt":"From prep to setting products — professional secrets for a look that holds up against heat, humidity, and long hours of celebration.",
+      "journal.art4.body":"<p>Long celebrations — from weddings to extended evening events — call for makeup designed to hold up against heat, humidity, and constant movement. Here are the top professional secrets for makeup that truly lasts.</p><h2>Good Skin Prep Is Half the Battle</h2><p>Well-moisturized, properly prepped skin holds makeup far longer than dry or neglected skin. Don't skip your skincare routine in the days leading up to the event.</p><h2>Light Layers Beat One Thick Layer</h2><p>Makeup built from light, successive layers sets better and looks more natural than one thick layer — which tends to break down faster in the heat.</p><h2>Translucent Powder Is Your Best Friend</h2><p>Setting your concealer and natural shine-prone areas (like the sides of your nose and forehead) with a soft translucent powder prevents unwanted shine over long hours.</p><h2>Never Skip the Setting Spray</h2><p>A high-quality setting spray is the final touch that locks everything in place, protecting your makeup against heat, sweat, and tears throughout the event.</p><h2>Carry Quick Touch-Up Essentials</h2><p>Blotting paper and a matching lipstick in your bag let you refresh your look in seconds at any point during the evening, without needing a full makeup redo.</p><p>Long-lasting makeup isn't luck — it's the result of good prep and the right choices from the very start. Following these steps gives you a confident look that lasts from the very first moment to the last photo of the night.</p>",
+      "journal.art5.tag":"Avoid This","journal.art5.title":"5 Common Bridal Makeup Mistakes to Avoid",
+      "journal.art5.excerpt":"From late trial sessions to choosing the wrong shades — learn the most common mistakes and how to avoid them on your wedding day.",
+      "journal.art5.body":"<p>With so many details to think about, it's easy for brides to fall into a few common traps that affect the final look. Here are the most frequent ones — and how to avoid them.</p><h2>1. Booking the Trial Session Too Late</h2><p>Booking your trial just one week before the wedding doesn't leave enough time to adjust any detail. Book it at least a month ahead for real peace of mind.</p><h2>2. Choosing a Look That's Completely Different From Your Usual Self</h2><p>Wanting to look \"completely different\" on your wedding day can result in makeup that doesn't actually look like you in photos. The best bridal makeup enhances your natural beauty with extra confidence.</p><h2>3. Neglecting Skin Prep Before the Session</h2><p>Arriving with dry or neglected skin makes the artist's job harder and affects the final result, no matter how skilled she is. Start your skincare routine weeks before the appointment.</p><h2>4. Not Mentioning Skin Sensitivities or Conditions</h2><p>If you have sensitive skin or any skin condition, tell your makeup artist in advance so she can choose suitable products — rather than discovering the issue on the wedding day itself.</p><h2>5. Not Planning for Long-Lasting Wear</h2><p>Wedding days stretch across many hours, from photos to the reception. Make sure your artist uses proper setting products, and ask about touch-up steps in case you need them later in the day.</p><p>Avoiding these simple mistakes starts with early planning and clear communication with your makeup artist. The result: a confident, natural look that lasts from morning until the very last moment of your celebration.</p>",
       "footer.maroof":"Verified via Maroof",
       "footer.rights":"© <span id=\"yearNow\">2026</span> Amira Khalid Studio. All rights reserved.","footer.credit":"Crafted by DevMenta"
     }
   };
 
-  var htmlKeys = {"pricing.durationRegular":1,"pricing.durationBride":1,"footer.rights":1,"bookingPreview.step1":1,"bookingPreview.step2":1,"bookingPreview.step3":1,"bookingPreview.step4":1};
+  var htmlKeys = {"pricing.durationRegular":1,"pricing.durationBride":1,"footer.rights":1,"bookingPreview.step1":1,"bookingPreview.step2":1,"bookingPreview.step3":1,"bookingPreview.step4":1,"contact.policyNote":1,
+    "journal.art1.body":1,"journal.art2.body":1,"journal.art3.body":1,"journal.art4.body":1,"journal.art5.body":1};
 
   var heroTitle = null; // assigned lazily below, since header/content order varies by page
 
@@ -470,9 +543,14 @@
   var portfolioItems = document.querySelectorAll('.portfolio-item');
   filterBtns.forEach(function(btn){
     btn.addEventListener('click', function(){
+      var filter = btn.getAttribute('data-filter');
+      if(filter === 'ba'){
+        var baSection = document.getElementById('beforeAfterSection');
+        if(baSection) baSection.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block:'start'});
+        return;
+      }
       filterBtns.forEach(function(b){ b.classList.remove('active'); });
       btn.classList.add('active');
-      var filter = btn.getAttribute('data-filter');
       portfolioItems.forEach(function(item){
         var match = filter === 'all' || item.getAttribute('data-category') === filter;
         item.classList.toggle('hide', !match);
@@ -559,13 +637,17 @@
     var serviceSelect = document.getElementById('fService');
 
     var serviceLabelKey = {
-      'makeup':'svc.makeup','makeup-hair':'svc.makeupHair','bridal-makeup':'svc.bridalMakeup',
-      'bridal-package':'svc.bridal','hair-extensions':'svc.hairExt','nails':'svc.nails',
+      'makeup':'svc.makeup','makeup-blowdry':'svc.makeupBlowdry','makeup-hair':'svc.makeupHair',
+      'bridal-package':'svc.bridal','hair-extensions':'svc.hairExt',
       'private-basic':'svc.privateBasic','private-full':'svc.privateFull'
+    };
+    var eventTypeLabelKey = {
+      wedding:'event.wedding', engagement:'event.engagement', party:'event.party',
+      graduation:'event.graduation', other:'event.other'
     };
 
     /* ---------- STUDIO-ONLY / HOME-ONLY / FLEXIBLE LOCATION RULES ---------- */
-    var studioOnlyServices = ['makeup','makeup-hair','hair-extensions','nails'];
+    var studioOnlyServices = ['makeup','makeup-blowdry','makeup-hair','hair-extensions','bridal-package'];
     var homeOnlyServices = ['private-basic','private-full'];
     var locToggle = document.getElementById('locToggle');
     var lockedHint = document.getElementById('lockedHint');
@@ -644,12 +726,15 @@
       var location = data.get('location');
       var serviceText = dict[serviceLabelKey[service]] || service;
       var locationText = location === 'home' ? dict['contact.locHome'] : dict['contact.locStudio'];
+      var eventType = data.get('eventType');
+      var eventTypeText = dict[eventTypeLabelKey[eventType]] || eventType;
 
       var lines = lang === 'ar' ? [
         'مرحبًا أميرة، أرغب في حجز موعد ✨',
         'الاسم: ' + data.get('name'),
         'الجوال: ' + data.get('phone'),
         'الخدمة: ' + serviceText,
+        eventType ? ('نوع المناسبة: ' + eventTypeText) : null,
         'التاريخ: ' + data.get('date'),
         'وقت الجاهزية: ' + data.get('time'),
         'المكان: ' + locationText,
@@ -660,6 +745,7 @@
         'Name: ' + data.get('name'),
         'Phone: ' + data.get('phone'),
         'Service: ' + serviceText,
+        eventType ? ('Event Type: ' + eventTypeText) : null,
         'Date: ' + data.get('date'),
         'Ready-by time: ' + data.get('time'),
         'Location: ' + locationText,
@@ -941,18 +1027,23 @@
     onLangChange(advRenderCalendar);
 
     var SERVICE_PRICES = {
-      'makeup':350,'makeup-hair':650,'bridal-package':2500,'hair-extensions':100,
-      'private-basic':2100,'private-full':3000,'bridal-makeup':null,'nails':null
+      'makeup':350,'makeup-blowdry':550,'makeup-hair':650,'bridal-package':2500,'hair-extensions':100,
+      'private-basic':2100,'private-full':3000
     };
     var SERVICE_LABEL_KEYS = {
-      'makeup':'svc.makeup','makeup-hair':'svc.makeupHair','bridal-makeup':'svc.bridalMakeup',
-      'bridal-package':'svc.bridal','hair-extensions':'svc.hairExt','nails':'svc.nails',
+      'makeup':'svc.makeup','makeup-blowdry':'svc.makeupBlowdry','makeup-hair':'svc.makeupHair',
+      'bridal-package':'svc.bridal','hair-extensions':'svc.hairExt',
       'private-basic':'svc.privateBasic','private-full':'svc.privateFull'
     };
     var LOCATION_LABEL_KEYS = {studio:'contact.locStudio', home:'contact.locHome'};
+    var EVENT_TYPE_LABEL_KEYS = {
+      wedding:'event.wedding', engagement:'event.engagement', party:'event.party',
+      graduation:'event.graduation', other:'event.other'
+    };
     function dict(){ return translations[currentLang()]; }
     function serviceLabel(service){ return dict()[SERVICE_LABEL_KEYS[service]] || service; }
     function locationLabel(location){ return dict()[LOCATION_LABEL_KEYS[location]] || location; }
+    function eventTypeLabel(eventType){ return dict()[EVENT_TYPE_LABEL_KEYS[eventType]] || eventType; }
 
     var wizardSteps = document.querySelectorAll('.wizard-step');
     var wizardDots = document.querySelectorAll('.wizard-step-dot');
@@ -965,10 +1056,12 @@
       var name = document.getElementById('advName').value || '—';
       var phone = document.getElementById('advPhone').value || '—';
       var time = document.getElementById('advTime').value || '—';
+      var eventType = document.getElementById('advEventType').value;
       document.getElementById('wizardSummary').innerHTML =
         '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelName'] + '</span><strong>' + escHtml(name) + '</strong></div>' +
         '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelPhone'] + '</span><strong>' + escHtml(phone) + '</strong></div>' +
         '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelService'] + '</span><strong>' + escHtml(serviceLabel(service)) + '</strong></div>' +
+        '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelEventType'] + '</span><strong>' + escHtml(eventTypeLabel(eventType)) + '</strong></div>' +
         '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelLocation'] + '</span><strong>' + escHtml(locationLabel(location)) + '</strong></div>' +
         '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelDate'] + '</span><strong>' + escHtml(advSelectedDate||'—') + '</strong></div>' +
         '<div class="wizard-summary-row"><span>' + dict()['bookingV2.labelTime'] + '</span><strong>' + escHtml(time) + '</strong></div>' +
@@ -1025,6 +1118,7 @@
         name: document.getElementById('advName').value,
         phone: document.getElementById('advPhone').value,
         service: serviceLabel(service),
+        eventType: eventTypeLabel(document.getElementById('advEventType').value),
         date: advSelectedDate,
         time: document.getElementById('advTime').value,
         location: locationLabel(document.querySelector('input[name="advLocation"]:checked').value),
@@ -1041,6 +1135,7 @@
         b(dict()['bookingV2.labelName'] + ':') + ' ' + data.name,
         b(dict()['bookingV2.labelPhone'] + ':') + ' ' + data.phone,
         b(dict()['bookingV2.labelService'] + ':') + ' ' + data.service,
+        b(dict()['bookingV2.labelEventType'] + ':') + ' ' + data.eventType,
         b(dict()['bookingV2.labelDate'] + ':') + ' ' + data.date,
         b(dict()['bookingV2.labelTime'] + ':') + ' ' + (data.time || '—'),
         b(dict()['bookingV2.labelLocation'] + ':') + ' ' + data.location,

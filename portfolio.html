@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=20260707-3">
+<link rel="stylesheet" href="assets/styles.css?v=20260708-1">
 
 <!-- Google Search Console: uncomment and add the verification code Google gives you
 <meta name="google-site-verification" content="REPLACE_WITH_VERIFICATION_CODE">
@@ -31,7 +31,7 @@
 <body>
 <div id="app" dir="rtl" lang="ar">
 <script>window.CURRENT_PAGE = 'portfolio';</script>
-<script src="assets/header.js?v=20260707-3"></script>
+<script src="assets/header.js?v=20260708-1"></script>
 
 <main>
 <section class="page-hero">
@@ -47,10 +47,10 @@
   <div class="container">
     <div class="filter-row" data-reveal>
       <button class="filter-btn active" data-filter="all" data-i18n="portfolio.filterAll">الكل</button>
-      <button class="filter-btn" data-filter="bridal" data-i18n="portfolio.filterBridal">عرايس</button>
-      <button class="filter-btn" data-filter="evening" data-i18n="portfolio.filterEvening">سهرة</button>
-      <button class="filter-btn" data-filter="makeup" data-i18n="portfolio.filterMakeup">مكياج</button>
-      <button class="filter-btn" data-filter="hair" data-i18n="portfolio.filterHair">تسريحات</button>
+      <button class="filter-btn" data-filter="bridal" data-i18n="portfolio.filterBridal">مكياج عرايس</button>
+      <button class="filter-btn" data-filter="evening" data-i18n="portfolio.filterEvening">مكياج سهرة</button>
+      <button class="filter-btn" data-filter="hair" data-i18n="portfolio.filterHair">تسريحات الشعر</button>
+      <button class="filter-btn" data-filter="ba" data-i18n="portfolio.filterBA">قبل وبعد</button>
     </div>
     <div class="portfolio-grid" id="portfolioGrid">
       <div class="portfolio-item" data-category="bridal" data-service="bridal-package" data-reveal>
@@ -73,13 +73,13 @@
         <img src="assets/images/portfolio/hair-01.jpg" alt="تسريحة كيرلي فاخرة" loading="lazy">
         <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item5.title">تسريحة كيرلي فاخرة</strong><span data-i18n="portfolio.filterHair">تسريحات</span></div></div>
       </div>
-      <div class="portfolio-item" data-category="makeup" data-service="makeup" data-reveal>
+      <div class="portfolio-item" data-category="evening" data-service="makeup" data-reveal>
         <img src="assets/images/portfolio/process-01.jpg" alt="مكياج نهاري طبيعي" loading="lazy">
-        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item6.title">مكياج نهاري طبيعي</strong><span data-i18n="portfolio.filterMakeup">مكياج</span></div></div>
+        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item6.title">مكياج نهاري طبيعي</strong><span data-i18n="portfolio.filterEvening">مكياج سهرة</span></div></div>
       </div>
-      <div class="portfolio-item" data-category="makeup" data-service="makeup" data-reveal>
+      <div class="portfolio-item" data-category="evening" data-service="makeup" data-reveal>
         <img src="assets/images/portfolio/makeup-02.jpg" alt="تحضير بشرة احترافي" loading="lazy">
-        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item7.title">تحضير بشرة احترافي</strong><span data-i18n="portfolio.filterMakeup">مكياج</span></div></div>
+        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item7.title">تحضير بشرة احترافي</strong><span data-i18n="portfolio.filterEvening">مكياج سهرة</span></div></div>
       </div>
       <div class="portfolio-item" data-category="bridal" data-service="bridal-package" data-reveal>
         <img src="assets/images/portfolio/bridal-03.jpg" alt="لمسة روج نهائية" loading="lazy">
@@ -97,9 +97,9 @@
         <img src="assets/images/portfolio/evening-03.jpg" alt="سهرة بعيون دخانية" loading="lazy">
         <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item11.title">سهرة بعيون دخانية</strong><span data-i18n="portfolio.filterEvening">سهرة</span></div></div>
       </div>
-      <div class="portfolio-item" data-category="makeup" data-service="makeup" data-reveal>
+      <div class="portfolio-item" data-category="evening" data-service="makeup" data-reveal>
         <img src="assets/images/portfolio/makeup-03.jpg" alt="لوك جانبي أنيق" loading="lazy">
-        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item12.title">لوك جانبي أنيق</strong><span data-i18n="portfolio.filterMakeup">مكياج</span></div></div>
+        <div class="tile-overlay"><div class="tile-caption"><strong data-i18n="pf.item12.title">لوك جانبي أنيق</strong><span data-i18n="portfolio.filterEvening">مكياج سهرة</span></div></div>
       </div>
       <div class="portfolio-item" data-category="bridal" data-service="private-full" data-reveal>
         <img src="assets/images/portfolio/hero-bridal.jpg" alt="عروس بباقة الورد" loading="lazy">
@@ -111,7 +111,7 @@
 </section>
 
 <!-- ============ BEFORE & AFTER ============ -->
-<section class="section" style="background:var(--bg-alt)">
+<section class="section" id="beforeAfterSection" style="background:var(--bg-alt)">
   <div class="container">
     <div class="section-head" data-reveal>
       <span class="eyebrow" data-i18n="ba.eyebrow">قبل وبعد</span>
@@ -194,6 +194,26 @@
         <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
         <div class="reel-caption" data-i18n="reel12.caption">لوك سهرة فاخر</div>
       </div>
+      <div class="reel-item" data-reveal>
+        <video src="assets/videos/reel-13.mp4" poster="assets/images/portfolio/reel-13-poster.jpg" playsinline preload="none"></video>
+        <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
+        <div class="reel-caption" data-i18n="reel13.caption">دقة في كل لمسة</div>
+      </div>
+      <div class="reel-item" data-reveal>
+        <video src="assets/videos/reel-14.mp4" poster="assets/images/portfolio/reel-14-poster.jpg" playsinline preload="none"></video>
+        <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
+        <div class="reel-caption" data-i18n="reel14.caption">جمال العروس بأدق تفاصيله</div>
+      </div>
+      <div class="reel-item" data-reveal>
+        <video src="assets/videos/reel-15.mp4" poster="assets/images/portfolio/reel-15-poster.jpg" playsinline preload="none"></video>
+        <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
+        <div class="reel-caption" data-i18n="reel15.caption">إطلالة سهرة ساحرة</div>
+      </div>
+      <div class="reel-item" data-reveal>
+        <video src="assets/videos/reel-16.mp4" poster="assets/images/portfolio/reel-16-poster.jpg" playsinline preload="none"></video>
+        <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
+        <div class="reel-caption" data-i18n="reel16.caption">بريق وثقة بلا حدود</div>
+      </div>
     </div>
     <div style="text-align:center; margin-top:var(--space-6)">
       <a href="https://www.instagram.com/amira_khalid89" target="_blank" rel="noopener" class="btn btn-ghost">
@@ -231,9 +251,9 @@
 </section>
 </main>
 
-<script src="assets/footer.js?v=20260707-3"></script>
+<script src="assets/footer.js?v=20260708-1"></script>
 </div>
 
-<script src="assets/app.js?v=20260707-3"></script>
+<script src="assets/app.js?v=20260708-1"></script>
 </body>
 </html>

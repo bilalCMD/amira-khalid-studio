@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=20260707-3">
+<link rel="stylesheet" href="assets/styles.css?v=20260708-1">
 
 <!-- Google Search Console: uncomment and add the verification code Google gives you
 <meta name="google-site-verification" content="REPLACE_WITH_VERIFICATION_CODE">
@@ -31,7 +31,7 @@
 <body>
 <div id="app" dir="rtl" lang="ar">
 <script>window.CURRENT_PAGE = 'home';</script>
-<script src="assets/header.js?v=20260707-3"></script>
+<script src="assets/header.js?v=20260708-1"></script>
 
 <main>
 <!-- ============ HERO ============ -->
@@ -85,7 +85,7 @@
         <div class="about-frame">
           <img src="assets/images/portfolio/bridal-05.jpg" alt="أميرة خالد أثناء العمل">
         </div>
-        <div class="about-stat-float stat-float-1"><b>+5</b><span data-i18n="about.floatYears">سنوات خبرة</span></div>
+        <div class="about-stat-float stat-float-1"><b>+10</b><span data-i18n="about.floatYears">سنوات خبرة</span></div>
         <div class="about-stat-float stat-float-2"><b>4.9★</b><span data-i18n="about.floatRating">تقييم العميلات</span></div>
       </div>
       <div class="about-copy">
@@ -180,9 +180,59 @@
         <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
         <div class="reel-caption" data-i18n="reel12.caption">لوك سهرة فاخر</div>
       </div>
+      <div class="reel-item" data-reveal>
+        <video src="assets/videos/reel-14.mp4" poster="assets/images/portfolio/reel-14-poster.jpg" playsinline preload="none"></video>
+        <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
+        <div class="reel-caption" data-i18n="reel14.caption">جمال العروس بأدق تفاصيله</div>
+      </div>
+      <div class="reel-item" data-reveal>
+        <video src="assets/videos/reel-13.mp4" poster="assets/images/portfolio/reel-13-poster.jpg" playsinline preload="none"></video>
+        <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
+        <div class="reel-caption" data-i18n="reel13.caption">دقة في كل لمسة</div>
+      </div>
     </div>
     <div style="text-align:center; margin-top:var(--space-6)">
       <a href="portfolio" class="btn btn-ghost" data-i18n="home.reelsMore">شاهدي المزيد من الريلز</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEAUTY JOURNAL TEASER ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow" data-i18n="journal.eyebrow">مدونة الجمال</span>
+      <h2 class="section-title" data-i18n="journal.title">مدونة الجمال</h2>
+      <p class="section-sub" data-i18n="journal.sub">نصائح وخبرات حقيقية من أميرة لمساعدتكِ على إطلالة مثالية في كل مناسبة</p>
+    </div>
+    <div class="journal-grid" data-reveal>
+      <a href="journal-choosing-artist" class="journal-card">
+        <div class="journal-card-img"><img src="assets/images/portfolio/bridal-01.jpg" alt="كيف تختارين خبيرة المكياج المناسبة" loading="lazy"></div>
+        <div class="journal-card-body">
+          <span class="journal-card-tag" data-i18n="journal.art1.tag">دليل العروس</span>
+          <h3 data-i18n="journal.art1.title">كيف تختارين خبيرة المكياج المناسبة ليومكِ المميز</h3>
+          <span class="journal-read" data-i18n="journal.readMore">اقرئي المزيد ←</span>
+        </div>
+      </a>
+      <a href="journal-bridal-tips" class="journal-card">
+        <div class="journal-card-img"><img src="assets/images/portfolio/bridal-04.jpg" alt="أهم نصائح مكياج العروس" loading="lazy"></div>
+        <div class="journal-card-body">
+          <span class="journal-card-tag" data-i18n="journal.art2.tag">مكياج العروس</span>
+          <h3 data-i18n="journal.art2.title">أهم نصائح مكياج العروس لإطلالة زفاف مثالية</h3>
+          <span class="journal-read" data-i18n="journal.readMore">اقرئي المزيد ←</span>
+        </div>
+      </a>
+      <a href="journal-bridal-mistakes" class="journal-card">
+        <div class="journal-card-img"><img src="assets/images/portfolio/bridal-02.jpg" alt="أخطاء شائعة في مكياج العروس" loading="lazy"></div>
+        <div class="journal-card-body">
+          <span class="journal-card-tag" data-i18n="journal.art5.tag">تجنبي هذا</span>
+          <h3 data-i18n="journal.art5.title">5 أخطاء شائعة في مكياج العروس يجب تجنبها</h3>
+          <span class="journal-read" data-i18n="journal.readMore">اقرئي المزيد ←</span>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center; margin-top:var(--space-6)">
+      <a href="journal" class="btn btn-ghost" data-i18n="journal.viewAll">تصفّحي كل المقالات</a>
     </div>
   </div>
 </section>
@@ -261,9 +311,9 @@
 </section>
 </main>
 
-<script src="assets/footer.js?v=20260707-3"></script>
+<script src="assets/footer.js?v=20260708-1"></script>
 </div>
 
-<script src="assets/app.js?v=20260707-3"></script>
+<script src="assets/app.js?v=20260708-1"></script>
 </body>
 </html>
