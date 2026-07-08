@@ -461,7 +461,6 @@
         var heroProgress = Math.min(1, Math.max(0, y / heroH));
         if(heroGrid){
           heroGrid.style.transform = 'translateY(' + (heroProgress * 60) + 'px)';
-          heroGrid.style.opacity = String(Math.max(0, 1 - heroProgress * 1.1));
         }
         if(heroFrameEl){
           heroFrameEl.style.transform = 'translateY(' + (heroProgress * -30) + 'px)';
