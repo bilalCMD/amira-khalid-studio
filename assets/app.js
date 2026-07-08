@@ -442,9 +442,6 @@
   var header = document.getElementById('siteHeader');
   var fabTop = document.getElementById('fabTop');
   var progressBar = document.getElementById('scrollProgressBar');
-  var heroSection = document.getElementById('home');
-  var heroGrid = heroSection ? heroSection.querySelector('.hero-grid') : null;
-  var heroFrameEl = document.getElementById('heroFrame');
   var blobEls = document.querySelectorAll('.blob');
   var scrollTicking = false;
 
@@ -458,16 +455,6 @@
     if(progressBar) progressBar.style.setProperty('--progress', pct + '%');
 
     if(!reduceMotion){
-      if(heroSection){
-        var heroH = heroSection.offsetHeight || 1;
-        var heroProgress = Math.min(1, Math.max(0, y / heroH));
-        if(heroGrid){
-          heroGrid.style.transform = 'translateY(' + (heroProgress * 60) + 'px)';
-        }
-        if(heroFrameEl){
-          heroFrameEl.style.transform = 'translateY(' + (heroProgress * -30) + 'px)';
-        }
-      }
       blobEls.forEach(function(b, i){
         var depth = 0.08 + (i * 0.05);
         b.style.setProperty('--py', (y * depth * -1) + 'px');
