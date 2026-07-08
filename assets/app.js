@@ -31,7 +31,6 @@
       "cta.panelBadge":"تأكيد فوري","cta.panelTitle":"جاهزة تحجزين؟","cta.panelBody":"اختاري الخدمة والتاريخ المناسب، وسنؤكد كل التفاصيل معكِ مباشرة.",
       "cta.panelBtn1":"احجزي موعدك","cta.panelBtn2":"تواصلي واتساب",
       "portfolio.videosEyebrow":"لقطات من الاستوديو","portfolio.videosTitle":"شاهدي أعمالي مباشرة","portfolio.videosSub":"مقاطع حقيقية من جلسات المكياج ونصائح سريعة",
-      "ba.eyebrow":"قبل وبعد","ba.title":"شاهدي الفرق","ba.sub":"تحوّلات حقيقية من جلسات مكياج فعلية","ba.before":"قبل","ba.after":"بعد",
       "home.reelsEyebrow":"فيديوهات","home.reelsTitle":"لقطات حية من الاستوديو","home.reelsSub":"شاهدي جلسات مكياج حقيقية ونصائح سريعة","home.reelsMore":"شاهدي المزيد من الريلز",
       "home.journalEyebrow":"مدونة الجمال","home.journalTitle":"نصائح وخبرات من أميرة","home.journalSub":"مقالات تساعدكِ على التحضير ليومكِ المثالي","home.journalMore":"تصفحي كل المقالات",
       "portfolio.instaFollow":"تابعي أحدث الريلز على إنستغرام",
@@ -66,7 +65,7 @@
       "about.feat1":"منتجات عالمية احترافية","about.feat2":"تعقيم كامل وأدوات فردية لكل عميلة","about.feat3":"خدمة في الاستوديو أو لدى العميلة","about.feat4":"تجربة راقية من الحجز إلى التنفيذ",
       "about.floatYears":"سنوات خبرة","about.floatRating":"تقييم العميلات",
       "about.stat1":"سنوات خبرة","about.stat2":"عروس وعميلة","about.stat3":"التأسيس","about.stat4":"تقييم العميلات ★",
-      "portfolio.filterAll":"الكل","portfolio.filterBridal":"مكياج عرايس","portfolio.filterEvening":"مكياج سهرة","portfolio.filterHair":"تسريحات الشعر","portfolio.filterBA":"قبل وبعد",
+      "portfolio.filterAll":"الكل","portfolio.filterBridal":"مكياج عرايس","portfolio.filterEvening":"مكياج سهرة","portfolio.filterHair":"تسريحات الشعر",
       "portfolio.note":"* صور حقيقية من أعمال أميرة — سيتم إضافة المزيد بعد إطلاق الحساب الرسمي للموقع",
       "pf.item1.title":"إطلالة عروس بالطرحة","pf.item2.title":"مكياج عروس ناعم","pf.item3.title":"سهرة درامية بالمخمل","pf.item4.title":"مكياج سهرة أنيق",
       "pf.item5.title":"تسريحة عروس أنيقة","pf.item6.title":"مكياج نهاري طبيعي","pf.item7.title":"تحضير بشرة احترافي",
@@ -192,7 +191,6 @@
       "cta.panelBadge":"Instant Confirm","cta.panelTitle":"Ready to Book?","cta.panelBody":"Choose your service and preferred date, and we'll confirm every detail with you directly.",
       "cta.panelBtn1":"Book Your Appointment","cta.panelBtn2":"Message on WhatsApp",
       "portfolio.videosEyebrow":"From the Studio","portfolio.videosTitle":"Watch My Work Live","portfolio.videosSub":"Real clips from makeup sessions and quick tips",
-      "ba.eyebrow":"Before & After","ba.title":"See the Difference","ba.sub":"Real transformations from actual makeup sessions","ba.before":"Before","ba.after":"After",
       "home.reelsEyebrow":"Videos","home.reelsTitle":"Live Clips From the Studio","home.reelsSub":"Watch real makeup sessions and quick tips","home.reelsMore":"Watch More Reels",
       "home.journalEyebrow":"Beauty Journal","home.journalTitle":"Tips & Insights From Amira","home.journalSub":"Articles to help you prepare for your perfect day","home.journalMore":"Browse All Articles",
       "portfolio.instaFollow":"Follow the latest reels on Instagram",
@@ -227,7 +225,7 @@
       "about.feat1":"Professional international brands","about.feat2":"Full sterilization & single-use tools per client","about.feat3":"Service at the studio or at your location","about.feat4":"A refined experience from booking to execution",
       "about.floatYears":"Years of Experience","about.floatRating":"Client Rating",
       "about.stat1":"Years of Experience","about.stat2":"Bridal & Evening Clients","about.stat3":"Founded","about.stat4":"Client Rating ★",
-      "portfolio.filterAll":"All","portfolio.filterBridal":"Bridal Makeup","portfolio.filterEvening":"Evening Makeup","portfolio.filterHair":"Hairstyles","portfolio.filterBA":"Before & After",
+      "portfolio.filterAll":"All","portfolio.filterBridal":"Bridal Makeup","portfolio.filterEvening":"Evening Makeup","portfolio.filterHair":"Hairstyles",
       "portfolio.note":"* Real photos from Amira's work — more will be added once the site's official account is live",
       "pf.item1.title":"Veiled Bridal Look","pf.item2.title":"Soft Bridal Makeup","pf.item3.title":"Dramatic Velvet Evening","pf.item4.title":"Elegant Evening Makeup",
       "pf.item5.title":"Elegant Bridal Updo","pf.item6.title":"Natural Day Makeup","pf.item7.title":"Professional Skin Prep",
@@ -564,11 +562,6 @@
   filterBtns.forEach(function(btn){
     btn.addEventListener('click', function(){
       var filter = btn.getAttribute('data-filter');
-      if(filter === 'ba'){
-        var baSection = document.getElementById('beforeAfterSection');
-        if(baSection) baSection.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block:'start'});
-        return;
-      }
       filterBtns.forEach(function(b){ b.classList.remove('active'); });
       btn.classList.add('active');
       portfolioItems.forEach(function(item){
@@ -576,44 +569,6 @@
         item.classList.toggle('hide', !match);
       });
     });
-  });
-
-  /* ---------- BEFORE/AFTER SLIDER ---------- */
-  document.querySelectorAll('.ba-slider').forEach(function(slider){
-    var range = slider.querySelector('.ba-slider-range');
-    var before = slider.querySelector('.ba-img-before');
-    var line = slider.querySelector('.ba-slider-line');
-    var grip = slider.querySelector('.ba-slider-grip');
-    if(!range || !before) return;
-    function update(){
-      var val = Number(range.value);
-      before.style.clipPath = 'inset(0 ' + (100 - val) + '% 0 0)';
-      if(line) line.style.left = val + '%';
-      if(grip) grip.style.left = val + '%';
-    }
-    function setFromClientX(clientX){
-      var rect = slider.getBoundingClientRect();
-      var pct = ((clientX - rect.left) / rect.width) * 100;
-      pct = Math.max(0, Math.min(100, pct));
-      range.value = pct;
-      update();
-    }
-    var baDragging = false;
-    slider.addEventListener('pointerdown', function(e){
-      e.preventDefault();
-      baDragging = true;
-      slider.setPointerCapture(e.pointerId);
-      setFromClientX(e.clientX);
-    });
-    slider.addEventListener('pointermove', function(e){
-      if(!baDragging) return;
-      e.preventDefault();
-      setFromClientX(e.clientX);
-    });
-    slider.addEventListener('pointerup', function(){ baDragging = false; });
-    slider.addEventListener('pointercancel', function(){ baDragging = false; });
-    range.addEventListener('input', update);
-    update();
   });
 
   /* ---------- PORTFOLIO / PRICING -> BOOKING (cross-page) ---------- */

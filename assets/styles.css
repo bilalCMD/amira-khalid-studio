@@ -98,7 +98,7 @@
 html{scroll-behavior:smooth;}
 body{
   margin:0; background:var(--bg); color:var(--text);
-  font-family:var(--font-body); line-height:1.5; overflow-x:hidden;
+  font-family:var(--font-body); line-height:1; overflow-x:hidden;
   transition:background var(--dur-m) var(--ease), color var(--dur-m) var(--ease);
 }
 #app{overflow-x:hidden;}
@@ -423,24 +423,6 @@ nav.main-nav a.current{color:var(--primary);}
 .journal-article ul li{margin-block-end:8px;}
 .journal-related{border-top:1px solid var(--border); margin-block-start:var(--space-8); padding-block-start:var(--space-7);}
 
-/* ===================== BEFORE & AFTER ===================== */
-.ba-grid{display:grid; grid-template-columns:1fr; gap:var(--space-5);}
-@media (min-width:700px){.ba-grid{grid-template-columns:repeat(3,1fr);}}
-.ba-slider{position:relative; aspect-ratio:4/5; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-sm,0 4px 14px hsla(336,45%,20%,.1)); -webkit-user-select:none; user-select:none; direction:ltr;}
-.ba-slider img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; pointer-events:none;}
-.ba-slider .ba-img-before{clip-path:inset(0 50% 0 0);}
-.ba-slider-line{position:absolute; top:0; bottom:0; left:50%; width:3px; background:#fff; transform:translateX(-50%); box-shadow:0 0 8px rgba(0,0,0,.3); pointer-events:none; z-index:2;}
-.ba-slider-grip{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:38px; height:38px; border-radius:50%; background:#fff; box-shadow:0 6px 18px rgba(0,0,0,.3); display:flex; align-items:center; justify-content:center; gap:1px; pointer-events:none; z-index:2;}
-.ba-slider-grip .icon{width:11px; height:11px; color:var(--primary);}
-.ba-slider-range{position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:ew-resize; z-index:3; -webkit-appearance:none; appearance:none; background:transparent;}
-.ba-slider-range::-webkit-slider-thumb{-webkit-appearance:none; width:100%; height:100%; cursor:ew-resize;}
-.ba-slider-range::-moz-range-thumb{width:100%; height:100%; border:none; background:transparent; cursor:ew-resize;}
-.ba-tag{position:absolute; top:var(--space-3); z-index:1; display:inline-flex; align-items:center; justify-content:center; font-size:.72rem; font-weight:800; letter-spacing:.04em; text-transform:uppercase; color:#fff; background:rgba(0,0,0,.45); padding:4px 10px; line-height:1.15; border-radius:var(--radius-full); pointer-events:none;}
-.ba-tag-before{inset-inline-start:var(--space-3);}
-.ba-tag-after{inset-inline-end:var(--space-3);}
-.ba-card-placeholder{position:relative; aspect-ratio:4/5; border-radius:var(--radius-md); overflow:hidden; background:linear-gradient(160deg,var(--surface-2),var(--border));}
-.ba-placeholder{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; color:var(--text-muted); font-size:.85rem; font-weight:700; text-align:center; padding:var(--space-4);}
-
 /* ===================== PRICING ===================== */
 .pricing-group-title{display:flex; align-items:center; gap:var(--space-3); font-size:1.2rem; font-weight:800; margin-block:var(--space-7) var(--space-5); color:var(--primary); font-family:var(--font-display);}
 .pricing-group-title::after{content:""; flex:1; height:1px; background:var(--border);}
@@ -737,7 +719,7 @@ body.cursor-enabled a, body.cursor-enabled button, body.cursor-enabled input, bo
 .reel-item video{width:100%; height:100%; object-fit:cover; display:block;}
 .reel-play{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(20,8,12,.32); transition:opacity .3s var(--ease); cursor:pointer; border:none; padding:0;}
 .reel-play::after{content:"";position:absolute; inset:0; margin:auto; width:56px; height:56px; border-radius:50%; background:rgba(255,255,255,.18); backdrop-filter:blur(4px);}
-.reel-play .icon{position:relative; width:22px; height:22px; color:#fff; fill:#fff; margin-inline-start:3px;}
+.reel-play .icon{position:relative; z-index:1; width:22px; height:22px; color:#fff; fill:#fff; margin-inline-start:3px;}
 .reel-item.playing .reel-play{opacity:0; pointer-events:none;}
 .reel-caption{position:absolute; bottom:0; inset-inline:0; padding:var(--space-3) var(--space-3) var(--space-2); background:linear-gradient(to top,rgba(0,0,0,.7),transparent); color:#fff; font-size:.78rem; font-weight:700; pointer-events:none;}
 @media (max-width:479px){
