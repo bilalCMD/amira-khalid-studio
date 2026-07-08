@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=20260708-6">
+<link rel="stylesheet" href="assets/styles.css?v=20260708-7">
 
 <!-- Google Search Console: uncomment and add the verification code Google gives you
 <meta name="google-site-verification" content="REPLACE_WITH_VERIFICATION_CODE">
@@ -31,7 +31,7 @@
 <body>
 <div id="app" dir="rtl" lang="ar">
 <script>window.CURRENT_PAGE = 'home';</script>
-<script src="assets/header.js?v=20260708-6"></script>
+<script src="assets/header.js?v=20260708-7"></script>
 
 <main>
 <!-- ============ HERO ============ -->
@@ -151,9 +151,9 @@
     </div>
     <div class="reel-grid">
       <div class="reel-item" data-reveal>
-        <video src="assets/videos/reel-01.mp4" poster="assets/images/portfolio/reel-01-poster.jpg" playsinline preload="none"></video>
+        <video src="assets/videos/reel-24.mp4" poster="assets/images/portfolio/reel-24-poster.jpg" playsinline preload="none"></video>
         <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
-        <div class="reel-caption" data-i18n="reel1.caption">لوك يومي ناعم</div>
+        <div class="reel-caption" data-i18n="reel24.caption">لمسة أناقة كلاسيكية</div>
       </div>
       <div class="reel-item" data-reveal>
         <video src="assets/videos/reel-18.mp4" poster="assets/images/portfolio/reel-18-poster.jpg" playsinline preload="none"></video>
@@ -190,9 +190,104 @@
         <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
         <div class="reel-caption" data-i18n="reel13.caption">دقة في كل لمسة</div>
       </div>
+      <div class="reel-item" data-reveal>
+        <video src="assets/videos/reel-15.mp4" poster="assets/images/portfolio/reel-15-poster.jpg" playsinline preload="none"></video>
+        <button class="reel-play" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
+        <div class="reel-caption" data-i18n="reel15.caption">إطلالة سهرة ساحرة</div>
+      </div>
     </div>
     <div style="text-align:center; margin-top:var(--space-6)">
       <a href="portfolio" class="btn btn-ghost" data-i18n="home.reelsMore">شاهدي المزيد من الريلز</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOME JOURNAL CAROUSEL ============ -->
+<section class="section" style="padding-block-end:var(--space-8)">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow" data-i18n="home.journalEyebrow">مدونة الجمال</span>
+      <h2 class="section-title" data-i18n="home.journalTitle">نصائح وخبرات من أميرة</h2>
+      <p class="section-sub" data-i18n="home.journalSub">مقالات تساعدكِ على التحضير ليومكِ المثالي</p>
+    </div>
+  </div>
+  <div class="journal-carousel-track" id="homeJournalTrack" data-reveal>
+    <a href="journal-choosing-artist" class="journal-card">
+      <div class="journal-card-img"><img src="assets/images/portfolio/bridal-01.jpg" alt="كيف تختارين خبيرة المكياج المناسبة" loading="lazy"></div>
+      <div class="journal-card-body">
+        <span class="journal-card-tag" data-i18n="journal.art1.tag">دليل العروس</span>
+        <h3 data-i18n="journal.art1.title">كيف تختارين خبيرة المكياج المناسبة ليومكِ المميز</h3>
+        <p data-i18n="journal.art1.excerpt">من الخبرة إلى نظافة الأدوات — إليكِ أهم النقاط التي تساعدكِ على اختيار خبيرة المكياج المناسبة لعرسكِ أو مناسبتكِ الخاصة.</p>
+        <span class="journal-read" data-i18n="journal.readMore">اقرئي المزيد ←</span>
+      </div>
+    </a>
+    <a href="journal-bridal-tips" class="journal-card">
+      <div class="journal-card-img"><img src="assets/images/portfolio/bridal-04.jpg" alt="أهم نصائح مكياج العروس" loading="lazy"></div>
+      <div class="journal-card-body">
+        <span class="journal-card-tag" data-i18n="journal.art2.tag">مكياج العروس</span>
+        <h3 data-i18n="journal.art2.title">أهم نصائح مكياج العروس لإطلالة زفاف مثالية</h3>
+        <p data-i18n="journal.art2.excerpt">من جلسة التجربة إلى اللمسات الأخيرة — نصائح عملية تضمن لكِ إطلالة عروس تدوم من التصوير حتى آخر رقصة.</p>
+        <span class="journal-read" data-i18n="journal.readMore">اقرئي المزيد ←</span>
+      </div>
+    </a>
+    <a href="journal-skin-prep" class="journal-card">
+      <div class="journal-card-img"><img src="assets/images/portfolio/process-01.jpg" alt="تجهيز البشرة قبل المكياج" loading="lazy"></div>
+      <div class="journal-card-body">
+        <span class="journal-card-tag" data-i18n="journal.art3.tag">العناية بالبشرة</span>
+        <h3 data-i18n="journal.art3.title">كيف تجهزين بشرتكِ قبل جلسة المكياج</h3>
+        <p data-i18n="journal.art3.excerpt">بشرة نظيفة ومرطبة هي سر ثبات المكياج — إليكِ خطوات بسيطة تجهزين بها بشرتكِ قبل موعدكِ.</p>
+        <span class="journal-read" data-i18n="journal.readMore">اقرئي المزيد ←</span>
+      </div>
+    </a>
+    <a href="journal-makeup-last-longer" class="journal-card">
+      <div class="journal-card-img"><img src="assets/images/portfolio/evening-02.jpg" alt="جعل المكياج يدوم طويلًا" loading="lazy"></div>
+      <div class="journal-card-body">
+        <span class="journal-card-tag" data-i18n="journal.art4.tag">نصائح احترافية</span>
+        <h3 data-i18n="journal.art4.title">كيف تجعلين مكياجكِ يدوم طوال اليوم والسهرة</h3>
+        <p data-i18n="journal.art4.excerpt">من التحضير إلى التثبيت — نصائح عملية تضمن مكياجًا يدوم من الصباح حتى آخر الليل.</p>
+        <span class="journal-read" data-i18n="journal.readMore">اقرئي المزيد ←</span>
+      </div>
+    </a>
+    <a href="journal-bridal-mistakes" class="journal-card">
+      <div class="journal-card-img"><img src="assets/images/portfolio/bridal-02.jpg" alt="أخطاء شائعة في مكياج العروس" loading="lazy"></div>
+      <div class="journal-card-body">
+        <span class="journal-card-tag" data-i18n="journal.art5.tag">تجنبي هذا</span>
+        <h3 data-i18n="journal.art5.title">5 أخطاء شائعة في مكياج العروس يجب تجنبها</h3>
+        <p data-i18n="journal.art5.excerpt">من اختيار الشادز الخاطئ إلى تجربة لوك جديد يوم الزفاف — إليكِ أبرز الأخطاء التي ننصح بتجنبها.</p>
+        <span class="journal-read" data-i18n="journal.readMore">اقرئي المزيد ←</span>
+      </div>
+    </a>
+    <a href="journal-philosophy" class="journal-card">
+      <div class="journal-card-img"><img src="assets/images/portfolio/makeup-03.jpg" alt="فلسفتي في المكياج وأسلوبي المميز" loading="lazy"></div>
+      <div class="journal-card-body">
+        <span class="journal-card-tag" data-i18n="journal.art6.tag">فلسفتي</span>
+        <h3 data-i18n="journal.art6.title">فلسفتي في المكياج وأسلوبي المميز</h3>
+        <p data-i18n="journal.art6.excerpt">مكياج طبيعي يبرز جمالكِ الحقيقي بدلًا من إخفائه — إليكِ فلسفتي في كل جلسة.</p>
+        <span class="journal-read" data-i18n="journal.readMore">اقرئي المزيد ←</span>
+      </div>
+    </a>
+    <a href="journal-review-portfolio" class="journal-card">
+      <div class="journal-card-img"><img src="assets/images/portfolio/evening-03.jpg" alt="راجعي معرض الأعمال قبل الحجز" loading="lazy"></div>
+      <div class="journal-card-body">
+        <span class="journal-card-tag" data-i18n="journal.art7.tag">قبل الحجز</span>
+        <h3 data-i18n="journal.art7.title">لماذا أنصح دائمًا بمراجعة معرض أعمالي قبل الحجز</h3>
+        <p data-i18n="journal.art7.excerpt">معرض الأعمال يمنحكِ فكرة حقيقية عن الأسلوب — إليكِ لماذا يستحق وقتكِ قبل الحجز.</p>
+        <span class="journal-read" data-i18n="journal.readMore">اقرئي المزيد ←</span>
+      </div>
+    </a>
+    <a href="journal-right-fit" class="journal-card">
+      <div class="journal-card-img"><img src="assets/images/portfolio/evening-01.jpg" alt="هل أسلوبي مناسب لكِ" loading="lazy"></div>
+      <div class="journal-card-body">
+        <span class="journal-card-tag" data-i18n="journal.art8.tag">دليل الاختيار</span>
+        <h3 data-i18n="journal.art8.title">كيف تعرفين أن أسلوبي في المكياج يناسبكِ</h3>
+        <p data-i18n="journal.art8.excerpt">كل خبيرة مكياج لها بصمة مختلفة — إليكِ كيف تتأكدين أن أسلوبي هو ما تبحثين عنه.</p>
+        <span class="journal-read" data-i18n="journal.readMore">اقرئي المزيد ←</span>
+      </div>
+    </a>
+  </div>
+  <div class="container">
+    <div style="text-align:center; margin-top:var(--space-6)">
+      <a href="journal" class="btn btn-ghost" data-i18n="home.journalMore">تصفحي كل المقالات</a>
     </div>
   </div>
 </section>
@@ -277,9 +372,9 @@
 </section>
 </main>
 
-<script src="assets/footer.js?v=20260708-6"></script>
+<script src="assets/footer.js?v=20260708-7"></script>
 </div>
 
-<script src="assets/app.js?v=20260708-6"></script>
+<script src="assets/app.js?v=20260708-7"></script>
 </body>
 </html>

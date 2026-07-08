@@ -31,15 +31,16 @@
       "cta.panelBadge":"تأكيد فوري","cta.panelTitle":"جاهزة تحجزين؟","cta.panelBody":"اختاري الخدمة والتاريخ المناسب، وسنؤكد كل التفاصيل معكِ مباشرة.",
       "cta.panelBtn1":"احجزي موعدك","cta.panelBtn2":"تواصلي واتساب",
       "portfolio.videosEyebrow":"لقطات من الاستوديو","portfolio.videosTitle":"شاهدي أعمالي مباشرة","portfolio.videosSub":"مقاطع حقيقية من جلسات المكياج ونصائح سريعة",
-      "ba.eyebrow":"قبل وبعد","ba.title":"شاهدي الفرق","ba.sub":"تحوّلات حقيقية من جلسات مكياج فعلية","ba.before":"قبل","ba.after":"بعد","ba.comingSoon":"الصور قريبًا",
+      "ba.eyebrow":"قبل وبعد","ba.title":"شاهدي الفرق","ba.sub":"تحوّلات حقيقية من جلسات مكياج فعلية","ba.before":"قبل","ba.after":"بعد",
       "home.reelsEyebrow":"فيديوهات","home.reelsTitle":"لقطات حية من الاستوديو","home.reelsSub":"شاهدي جلسات مكياج حقيقية ونصائح سريعة","home.reelsMore":"شاهدي المزيد من الريلز",
+      "home.journalEyebrow":"مدونة الجمال","home.journalTitle":"نصائح وخبرات من أميرة","home.journalSub":"مقالات تساعدكِ على التحضير ليومكِ المثالي","home.journalMore":"تصفحي كل المقالات",
       "portfolio.instaFollow":"تابعي أحدث الريلز على إنستغرام",
-      "reel1.caption":"لوك يومي ناعم","reel3.caption":"لحظات من كواليس التصوير",
+      "reel3.caption":"لحظات من كواليس التصوير",
       "reel8.caption":"لمسات مكياج احترافية","reel9.caption":"تفاصيل تصنع الفرق",
       "reel10.caption":"بدون فلاتر... النتيجة الحقيقية","reel11.caption":"خبيرة تجميل في جدة","reel12.caption":"لوك سهرة فاخر",
       "reel13.caption":"دقة في كل لمسة","reel14.caption":"جمال العروس بأدق تفاصيله","reel15.caption":"إطلالة سهرة ساحرة","reel16.caption":"بريق وثقة بلا حدود",
       "reel17.caption":"لمسة غموض وأناقة","reel18.caption":"عروس بتاج اللؤلؤ","reel19.caption":"تفاصيل عروس لا تُنسى",
-      "reel20.caption":"لحظة هدوء وجمال","reel21.caption":"تموجات ناعمة وأناقة","reel22.caption":"ابتسامة عروس صادقة","reel23.caption":"تفاصيل عروس ملكية",
+      "reel20.caption":"لحظة هدوء وجمال","reel21.caption":"تموجات ناعمة وأناقة","reel22.caption":"ابتسامة عروس صادقة","reel23.caption":"تفاصيل عروس ملكية","reel24.caption":"لمسة أناقة كلاسيكية",
       "about.journeyEyebrow":"رحلتي","about.journeyTitle":"كيف بدأت القصة",
       "journey.step1Title":"البداية","journey.step1Desc":"بدأت أميرة شغفها بالمكياج من سن مبكر، وطورت مهاراتها عبر دورات احترافية معتمدة.",
       "journey.step2Title":"الاحتراف","journey.step2Desc":"أكثر من 10 سنوات من الخبرة في مكياج العرائس والمناسبات الخاصة داخل جدة وخارجها، منذ عام 2016.",
@@ -191,14 +192,15 @@
       "cta.panelBadge":"Instant Confirm","cta.panelTitle":"Ready to Book?","cta.panelBody":"Choose your service and preferred date, and we'll confirm every detail with you directly.",
       "cta.panelBtn1":"Book Your Appointment","cta.panelBtn2":"Message on WhatsApp",
       "portfolio.videosEyebrow":"From the Studio","portfolio.videosTitle":"Watch My Work Live","portfolio.videosSub":"Real clips from makeup sessions and quick tips",
-      "ba.eyebrow":"Before & After","ba.title":"See the Difference","ba.sub":"Real transformations from actual makeup sessions","ba.before":"Before","ba.after":"After","ba.comingSoon":"Photos coming soon",
+      "ba.eyebrow":"Before & After","ba.title":"See the Difference","ba.sub":"Real transformations from actual makeup sessions","ba.before":"Before","ba.after":"After",
       "home.reelsEyebrow":"Videos","home.reelsTitle":"Live Clips From the Studio","home.reelsSub":"Watch real makeup sessions and quick tips","home.reelsMore":"Watch More Reels",
+      "home.journalEyebrow":"Beauty Journal","home.journalTitle":"Tips & Insights From Amira","home.journalSub":"Articles to help you prepare for your perfect day","home.journalMore":"Browse All Articles",
       "portfolio.instaFollow":"Follow the latest reels on Instagram",
-      "reel1.caption":"Soft Everyday Look","reel3.caption":"Behind the Scenes",
+      "reel3.caption":"Behind the Scenes",
       "reel8.caption":"Professional Makeup Touches","reel9.caption":"Details That Make the Difference",
       "reel10.caption":"No Filters — the Real Result","reel11.caption":"Beauty Expert in Jeddah","reel12.caption":"Glamorous Evening Look",
       "reel17.caption":"A Touch of Mystery and Elegance","reel18.caption":"Bride in a Pearl Crown","reel19.caption":"Unforgettable Bridal Details",
-      "reel20.caption":"A Moment of Calm Beauty","reel21.caption":"Soft Waves, Timeless Elegance","reel22.caption":"A Bride's Genuine Smile","reel23.caption":"Regal Bridal Details",
+      "reel20.caption":"A Moment of Calm Beauty","reel21.caption":"Soft Waves, Timeless Elegance","reel22.caption":"A Bride's Genuine Smile","reel23.caption":"Regal Bridal Details","reel24.caption":"A Touch of Classic Elegance",
       "reel13.caption":"Precision in Every Touch","reel14.caption":"Bridal Beauty in Every Detail","reel15.caption":"Captivating Evening Glam","reel16.caption":"Glow With Confidence",
       "about.journeyEyebrow":"My Journey","about.journeyTitle":"How the Story Began",
       "journey.step1Title":"The Beginning","journey.step1Desc":"Amira's passion for makeup began early, developing her skills through certified professional courses.",
@@ -642,6 +644,71 @@
       testiWrap.addEventListener('mouseleave', startAuto);
     }
     if(!reduceMotion) startAuto();
+  }
+
+  /* ---------- HOME JOURNAL CAROUSEL (drag + auto-scroll) ---------- */
+  var journalTrack = document.getElementById('homeJournalTrack');
+  if(journalTrack){
+    var jCards = Array.prototype.slice.call(journalTrack.querySelectorAll('.journal-card'));
+    var jIdx = 0, jAutoTimer, jResumeTimer, jIsDown = false, jStartX = 0, jScrollStart = 0, jDragDist = 0;
+
+    function jClosestIndex(){
+      var trackRect = journalTrack.getBoundingClientRect();
+      var best = 0, bestDist = Infinity;
+      jCards.forEach(function(c, i){
+        var dist = Math.abs(c.getBoundingClientRect().left - trackRect.left);
+        if(dist < bestDist){ bestDist = dist; best = i; }
+      });
+      return best;
+    }
+    function jGoTo(i){
+      jIdx = (i + jCards.length) % jCards.length;
+      jCards[jIdx].scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', inline:'start', block:'nearest'});
+    }
+    function jNext(){ jIdx = jClosestIndex(); jGoTo(jIdx + 1); }
+    function jStartAuto(){ jStopAuto(); jAutoTimer = setInterval(jNext, 4200); }
+    function jStopAuto(){ clearInterval(jAutoTimer); }
+    function jPauseAndResume(){ jStopAuto(); clearTimeout(jResumeTimer); jResumeTimer = setTimeout(jStartAuto, 5000); }
+
+    function jDetectScrollSign(){
+      if(getComputedStyle(journalTrack).direction !== 'rtl') return 1;
+      var original = journalTrack.scrollLeft;
+      journalTrack.scrollLeft = 999999;
+      var maxPositive = journalTrack.scrollLeft;
+      journalTrack.scrollLeft = original;
+      return maxPositive > 0 ? 1 : -1;
+    }
+    var jScrollSign = jDetectScrollSign();
+
+    journalTrack.addEventListener('mousedown', function(e){
+      jIsDown = true; jDragDist = 0;
+      journalTrack.classList.add('dragging');
+      jScrollSign = jDetectScrollSign();
+      jStartX = e.pageX; jScrollStart = journalTrack.scrollLeft;
+      jStopAuto(); clearTimeout(jResumeTimer);
+    });
+    window.addEventListener('mousemove', function(e){
+      if(!jIsDown) return;
+      e.preventDefault();
+      var dx = e.pageX - jStartX;
+      jDragDist = Math.abs(dx);
+      journalTrack.scrollLeft = jScrollStart - (jScrollSign * dx);
+    });
+    window.addEventListener('mouseup', function(){
+      if(!jIsDown) return;
+      jIsDown = false;
+      journalTrack.classList.remove('dragging');
+      jResumeTimer = setTimeout(jStartAuto, 5000);
+    });
+    jCards.forEach(function(card){
+      card.addEventListener('click', function(e){ if(jDragDist > 6) e.preventDefault(); });
+    });
+    journalTrack.addEventListener('touchstart', jPauseAndResume, {passive:true});
+    journalTrack.addEventListener('wheel', jPauseAndResume, {passive:true});
+    journalTrack.addEventListener('mouseenter', jStopAuto);
+    journalTrack.addEventListener('mouseleave', function(){ if(!jIsDown) jStartAuto(); });
+
+    if(!reduceMotion) jStartAuto();
   }
 
   /* ---------- WHATSAPP LINKS ---------- */
