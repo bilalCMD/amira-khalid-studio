@@ -639,22 +639,30 @@
     var jCards = Array.prototype.slice.call(journalTrack.querySelectorAll('.journal-card'));
     var jIdx = 0, jAutoTimer, jResumeTimer, jIsDown = false, jStartX = 0, jScrollStart = 0, jDragDist = 0;
 
+    function jIsRtl(){ return getComputedStyle(journalTrack).direction === 'rtl'; }
     function jClosestIndex(){
+      var isRtl = jIsRtl();
       var trackRect = journalTrack.getBoundingClientRect();
+      var refX = isRtl ? trackRect.right : trackRect.left;
       var best = 0, bestDist = Infinity;
       jCards.forEach(function(c, i){
-        var dist = Math.abs(c.getBoundingClientRect().left - trackRect.left);
+        var r = c.getBoundingClientRect();
+        var edgeX = isRtl ? r.right : r.left;
+        var dist = Math.abs(edgeX - refX);
         if(dist < bestDist){ bestDist = dist; best = i; }
       });
       return best;
     }
     function jGoTo(i){
       jIdx = (i + jCards.length) % jCards.length;
+      var isRtl = jIsRtl();
       var card = jCards[jIdx];
       var trackRect = journalTrack.getBoundingClientRect();
       var cardRect = card.getBoundingClientRect();
-      var delta = cardRect.left - trackRect.left;
-      var target = journalTrack.scrollLeft + (jScrollSign * delta);
+      var delta = isRtl ? (cardRect.right - trackRect.right) : (cardRect.left - trackRect.left);
+      var maxScroll = journalTrack.scrollWidth - journalTrack.clientWidth;
+      var target = journalTrack.scrollLeft + delta;
+      target = isRtl ? Math.max(-maxScroll, Math.min(0, target)) : Math.max(0, Math.min(maxScroll, target));
       journalTrack.scrollTo({left: target, behavior: reduceMotion ? 'auto' : 'smooth'});
     }
     function jNext(){ jIdx = jClosestIndex(); jGoTo(jIdx + 1); }
@@ -672,26 +680,35 @@
     }
     var jScrollSign = jDetectScrollSign();
 
-    journalTrack.addEventListener('mousedown', function(e){
-      jIsDown = true; jDragDist = 0;
-      journalTrack.classList.add('dragging');
-      jScrollSign = jDetectScrollSign();
-      jStartX = e.pageX; jScrollStart = journalTrack.scrollLeft;
-      jStopAuto(); clearTimeout(jResumeTimer);
-    });
-    window.addEventListener('mousemove', function(e){
-      if(!jIsDown) return;
-      e.preventDefault();
-      var dx = e.pageX - jStartX;
-      jDragDist = Math.abs(dx);
-      journalTrack.scrollLeft = jScrollStart - (jScrollSign * dx);
-    });
-    window.addEventListener('mouseup', function(){
+    function jEndDrag(){
       if(!jIsDown) return;
       jIsDown = false;
       journalTrack.classList.remove('dragging');
       jResumeTimer = setTimeout(jStartAuto, 5000);
+    }
+    var jPointerId = null, jCaptured = false;
+    journalTrack.addEventListener('pointerdown', function(e){
+      if(e.pointerType !== 'mouse') return;
+      jIsDown = true; jDragDist = 0; jCaptured = false;
+      jPointerId = e.pointerId;
+      journalTrack.classList.add('dragging');
+      jScrollSign = jDetectScrollSign();
+      jStartX = e.clientX; jScrollStart = journalTrack.scrollLeft;
+      jStopAuto(); clearTimeout(jResumeTimer);
     });
+    journalTrack.addEventListener('pointermove', function(e){
+      if(!jIsDown || e.pointerType !== 'mouse') return;
+      var dx = e.clientX - jStartX;
+      jDragDist = Math.abs(dx);
+      if(!jCaptured && jDragDist > 6){
+        jCaptured = true;
+        journalTrack.setPointerCapture(jPointerId);
+      }
+      if(jCaptured) e.preventDefault();
+      journalTrack.scrollLeft = jScrollStart - (jScrollSign * dx);
+    });
+    journalTrack.addEventListener('pointerup', jEndDrag);
+    journalTrack.addEventListener('pointercancel', jEndDrag);
     jCards.forEach(function(card){
       card.addEventListener('click', function(e){ if(jDragDist > 6) e.preventDefault(); });
     });
