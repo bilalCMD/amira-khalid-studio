@@ -663,7 +663,12 @@
     }
     function jGoTo(i){
       jIdx = (i + jCards.length) % jCards.length;
-      jCards[jIdx].scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', inline:'start', block:'nearest'});
+      var card = jCards[jIdx];
+      var trackRect = journalTrack.getBoundingClientRect();
+      var cardRect = card.getBoundingClientRect();
+      var delta = cardRect.left - trackRect.left;
+      var target = journalTrack.scrollLeft + (jScrollSign * delta);
+      journalTrack.scrollTo({left: target, behavior: reduceMotion ? 'auto' : 'smooth'});
     }
     function jNext(){ jIdx = jClosestIndex(); jGoTo(jIdx + 1); }
     function jStartAuto(){ jStopAuto(); jAutoTimer = setInterval(jNext, 4200); }
@@ -708,7 +713,18 @@
     journalTrack.addEventListener('mouseenter', jStopAuto);
     journalTrack.addEventListener('mouseleave', function(){ if(!jIsDown) jStartAuto(); });
 
-    if(!reduceMotion) jStartAuto();
+    if(!reduceMotion){
+      if('IntersectionObserver' in window){
+        var jIo = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){ jStartAuto(); } else { jStopAuto(); }
+          });
+        }, {threshold:0.4});
+        jIo.observe(journalTrack);
+      } else {
+        jStartAuto();
+      }
+    }
   }
 
   /* ---------- WHATSAPP LINKS ---------- */
