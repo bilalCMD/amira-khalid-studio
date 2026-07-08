@@ -32,6 +32,7 @@
     {key:'about', href:'about', i18n:'nav.about', text:'من أنا'},
     {key:'portfolio', href:'portfolio', i18n:'nav.portfolio', text:'أعمالي'},
     {key:'pricing', href:'pricing', i18n:'nav.pricing', text:'الأسعار'},
+    {key:'journal', href:'journal', i18n:'nav.journal', text:'مدونة الجمال'},
     {key:'contact', href:'contact', i18n:'nav.contact', text:'تواصل'}
   ];
 
