@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /preview-booking
+Disallow: /preview-booking-v2
+Disallow: /preview-bg-1
+Disallow: /preview-bg-2
+Disallow: /admin-submissions
+
+Sitemap: https://amirakhalid.com/sitemap.xml
