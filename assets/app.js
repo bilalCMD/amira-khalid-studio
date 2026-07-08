@@ -591,6 +591,27 @@
       if(line) line.style.left = val + '%';
       if(grip) grip.style.left = val + '%';
     }
+    function setFromClientX(clientX){
+      var rect = slider.getBoundingClientRect();
+      var pct = ((clientX - rect.left) / rect.width) * 100;
+      pct = Math.max(0, Math.min(100, pct));
+      range.value = pct;
+      update();
+    }
+    var baDragging = false;
+    slider.addEventListener('pointerdown', function(e){
+      e.preventDefault();
+      baDragging = true;
+      slider.setPointerCapture(e.pointerId);
+      setFromClientX(e.clientX);
+    });
+    slider.addEventListener('pointermove', function(e){
+      if(!baDragging) return;
+      e.preventDefault();
+      setFromClientX(e.clientX);
+    });
+    slider.addEventListener('pointerup', function(){ baDragging = false; });
+    slider.addEventListener('pointercancel', function(){ baDragging = false; });
     range.addEventListener('input', update);
     update();
   });
