@@ -331,6 +331,12 @@ nav.main-nav a.current{color:var(--primary);}
 .stat-float-2{bottom:-18px; inset-inline-end:-24px;}
 .about-copy{flex:1; text-align:center;}
 @media (min-width:900px){.about-copy{text-align:start;}}
+@media (max-width:479px){
+  .stat-float-1{top:-10px; inset-inline-start:2%; padding:10px 14px;}
+  .stat-float-2{bottom:-10px; inset-inline-end:2%; padding:10px 14px;}
+  .about-stat-float b{font-size:1.15rem;}
+  .about-stat-float span{font-size:.62rem;}
+}
 .about-copy .section-head{margin-inline:0; text-align:inherit; margin-block-end:var(--space-5);}
 .about-body{color:var(--text-muted); font-size:1.05rem; margin-block-end:var(--space-6);}
 .feature-list{display:grid; grid-template-columns:1fr; gap:var(--space-4); margin-block-end:var(--space-7); text-align:start;}

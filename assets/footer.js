@@ -17,8 +17,7 @@
               '<a class="icon-btn" href="#" id="footerWaBtn" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon icon-solid" style="width:18px;height:18px"><use href="#i-whatsapp"/></svg></a>' +
             '</div>' +
             '<div style="display:flex; flex-wrap:wrap; gap:8px; margin-block-start:var(--space-4)">' +
-              '<a class="maroof-badge" style="margin-block-start:0" href="https://maroof.sa" target="_blank" rel="noopener" id="maroofBadge"><svg class="icon" style="width:16px;height:16px"><use href="#i-badge-check"/></svg><span data-i18n="footer.maroof">موثّقة عبر معروف — 522836</span></a>' +
-              '<a class="maroof-badge" style="margin-block-start:0" href="https://freelance.sa" target="_blank" rel="noopener" id="freelanceBadge"><svg class="icon" style="width:16px;height:16px"><use href="#i-badge-check"/></svg><span data-i18n="footer.freelance">شهادة العمل الحر</span></a>' +
+              '<a class="maroof-badge" style="margin-block-start:0" href="https://elaam.gmedia.gov.sa/gcam-licenses/gcam-celebrity-check/522836" target="_blank" rel="noopener" id="maroofBadge"><svg class="icon" style="width:16px;height:16px"><use href="#i-badge-check"/></svg><span data-i18n="footer.maroof">ترخيص إعلامي معتمد — 522836</span></a>' +
             '</div>' +
           '</div>' +
           '<div class="footer-col">' +
