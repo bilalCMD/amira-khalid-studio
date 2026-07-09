@@ -405,6 +405,13 @@ nav.main-nav a.current{color:var(--primary);}
 .journal-card-img{aspect-ratio:16/10; overflow:hidden;}
 .journal-card-img img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s var(--ease);}
 .journal-card:hover .journal-card-img img{transform:scale(1.06);}
+.journal-card-img img[src*="evening-03.jpg"]{object-position:center 80%;}
+.journal-card-img img[src*="evening-01.jpg"]{object-position:center 15%;}
+.journal-card-img img[src*="bridal-04.jpg"]{object-position:center 35%;}
+.journal-card-img img[src*="process-01.jpg"]{object-position:center 38%;}
+.journal-card-img img[src*="evening-02.jpg"]{object-position:center 55%;}
+.journal-card-img img[src*="bridal-02.jpg"]{object-position:center 55%;}
+.journal-card-img img[src*="makeup-03.jpg"]{object-position:center 55%;}
 .journal-card-body{padding:var(--space-5); display:flex; flex-direction:column; gap:8px; flex:1;}
 .journal-card-tag{color:var(--gold); font-weight:700; font-size:.72rem; text-transform:uppercase; letter-spacing:.04em;}
 .journal-card h3{font-size:1.08rem; font-weight:800; font-family:var(--font-display); line-height:1.4;}
@@ -429,6 +436,8 @@ nav.main-nav a.current{color:var(--primary);}
 .journal-article{max-width:720px; margin-inline:auto;}
 .journal-article-cover{border-radius:var(--radius-lg); overflow:hidden; aspect-ratio:16/8; margin-block-end:var(--space-7);}
 .journal-article-cover img{width:100%; height:100%; object-fit:cover; display:block;}
+.journal-article-cover img[src*="evening-03.jpg"]{object-position:center 76%;}
+.journal-article-cover img[src*="evening-01.jpg"]{object-position:center 18%;}
 .journal-meta{display:flex; gap:var(--space-4); flex-wrap:wrap; color:var(--text-muted); font-size:.85rem; margin-block-end:var(--space-2);}
 .journal-article h2{font-size:1.35rem; font-weight:800; font-family:var(--font-display); margin-block:var(--space-6) var(--space-3);}
 .journal-article p{margin-block-end:var(--space-4); line-height:1.6; color:var(--text);}
