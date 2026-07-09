@@ -48,6 +48,7 @@
               '<li><span data-i18n="contact.infoHours">يوميًا: 10 صباحًا – 10 مساءً *</span></li>' +
               '<li><a href="contact" data-i18n="nav.bookNow">احجزي الآن</a></li>' +
             '</ul>' +
+            '<p class="footer-areas" data-i18n="footer.areasServed" style="font-size:.8rem; color:var(--text-muted); margin-block-start:10px;">نغطي معظم أحياء جدة: الشاطئ، الروضة، النعيم، السلامة، الحمراء، الأندلس وغيرها.</p>' +
           '</div>' +
         '</div>' +
         '<div class="footer-bottom">' +

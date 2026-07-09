@@ -53,10 +53,21 @@
   "priceRange": "SAR 350-2500",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Al-Rehab District",
     "addressLocality": "Jeddah",
-    "addressRegion": "Al-Rehab",
+    "addressRegion": "Makkah Region",
     "addressCountry": "SA"
   },
+  "areaServed": [
+    {"@type": "City", "name": "Jeddah"},
+    {"@type": "Place", "name": "Al-Rehab"},
+    {"@type": "Place", "name": "Al-Shatie"},
+    {"@type": "Place", "name": "Al-Rawdah"},
+    {"@type": "Place", "name": "Al-Naeem"},
+    {"@type": "Place", "name": "Al-Salamah"},
+    {"@type": "Place", "name": "Al-Hamra"},
+    {"@type": "Place", "name": "Al-Andalus"}
+  ],
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
@@ -67,6 +78,17 @@
     "@type": "AggregateRating",
     "ratingValue": "4.9",
     "reviewCount": "500"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Makeup & Styling Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Professional Makeup"}, "price": "350", "priceCurrency": "SAR"},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Makeup + Blowdry & Soft Curls"}, "price": "550", "priceCurrency": "SAR"},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Makeup + Full Hairstyling"}, "price": "650", "priceCurrency": "SAR"},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bridal Package"}, "price": "2500", "priceCurrency": "SAR"},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Private 1:1 Makeup Training"}}
+    ]
   },
   "sameAs": [
     "https://www.instagram.com/amira_khalid89",
@@ -431,9 +453,9 @@
 </section>
 </main>
 
-<script src="assets/footer.js?v=20260709-3"></script>
+<script src="assets/footer.js?v=20260709-5"></script>
 </div>
 
-<script src="assets/app.js?v=20260709-3"></script>
+<script src="assets/app.js?v=20260709-5"></script>
 </body>
 </html>
