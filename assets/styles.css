@@ -488,7 +488,7 @@ nav.main-nav a.current{color:var(--primary);}
 
 /* ===================== TESTIMONIALS ===================== */
 .testi-wrap{max-width:920px; margin-inline:auto; position:relative; display:flex; align-items:center; justify-content:center; gap:var(--space-5);}
-.testi-body{flex:1 1 600px; max-width:600px; min-width:0; display:flex; flex-direction:column; align-items:center;}
+.testi-body{flex:1 1 600px; max-width:600px; min-width:0; display:flex; flex-direction:column; align-items:center; touch-action:pan-y;}
 .testi-card{width:100%; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:var(--space-8) var(--space-6) var(--space-6); text-align:center; box-shadow:0 24px 60px -24px hsla(var(--shadow-color),.3); position:relative; overflow:hidden;}
 .testi-card::before{content:"";position:absolute; top:-50px; inset-inline-end:-30px; width:180px; height:180px; border-radius:50%; background:radial-gradient(circle,var(--gold-soft),transparent 70%); pointer-events:none;}
 .testi-slide{display:none; animation:fadeIn .6s var(--ease); position:relative;}

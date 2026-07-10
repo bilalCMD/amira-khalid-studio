@@ -618,6 +618,30 @@
       testiWrap.addEventListener('mouseenter', stopAuto);
       testiWrap.addEventListener('mouseleave', startAuto);
     }
+    /* touch/thumb swipe support (mobile arrows are hidden, so swipe is the primary nav there) */
+    var testiBody = document.querySelector('.testi-body');
+    if(testiBody){
+      var tIsDown = false, tStartX = 0, tDragDist = 0;
+      testiBody.addEventListener('pointerdown', function(e){
+        if(e.pointerType === 'mouse') return;
+        tIsDown = true; tDragDist = 0; tStartX = e.clientX;
+        stopAuto();
+      });
+      testiBody.addEventListener('pointermove', function(e){
+        if(!tIsDown || e.pointerType === 'mouse') return;
+        tDragDist = e.clientX - tStartX;
+      });
+      var testiSwipeEnd = function(){
+        if(!tIsDown) return;
+        tIsDown = false;
+        if(Math.abs(tDragDist) > 40){
+          if(tDragDist < 0) showSlide(current+1); else showSlide(current-1);
+        }
+        startAuto();
+      };
+      testiBody.addEventListener('pointerup', testiSwipeEnd);
+      testiBody.addEventListener('pointercancel', testiSwipeEnd);
+    }
     if(!reduceMotion) startAuto();
   }
 
