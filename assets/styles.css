@@ -173,7 +173,7 @@ p{margin:0;}
 .btn-sm{padding:10px 20px; font-size:.88rem;}
 .btn[disabled]{opacity:.5; cursor:not-allowed;}
 
-.pill-badge{display:inline-flex; align-items:center; gap:var(--space-2); background:transparent; border:1px solid var(--border); padding:7px 14px; border-radius:var(--radius-full); font-size:.8rem; font-weight:500; line-height:1.15; color:var(--text-muted);}
+.pill-badge{display:inline-flex; align-items:center; gap:var(--space-2); background:transparent; border:1px solid var(--border); padding:6px 14px; border-radius:var(--radius-full); font-size:.8rem; font-weight:500; line-height:1; color:var(--text-muted);}
 .pill-badge .icon{width:1.1em; height:1.1em; color:var(--gold);}
 
 .section{padding-block:var(--space-9);}
