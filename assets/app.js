@@ -1310,6 +1310,18 @@
     if(wizardWaBtn) wizardWaBtn.addEventListener('click', function(){ handleBookingComplete('quote-requested'); });
   }
 
+  /* ---------- HERO SOUND TOGGLE ---------- */
+  var heroVideo = document.getElementById('heroVideo');
+  var heroSoundToggle = document.getElementById('heroSoundToggle');
+  if(heroVideo && heroSoundToggle){
+    heroSoundToggle.addEventListener('click', function(e){
+      e.stopPropagation();
+      heroVideo.muted = !heroVideo.muted;
+      heroSoundToggle.textContent = heroVideo.muted ? '🔇' : '🔊';
+      heroSoundToggle.title = heroVideo.muted ? 'Click to unmute' : 'Click to mute';
+    });
+  }
+
   /* ---------- INIT ---------- */
   heroTitle = document.getElementById('heroTitle');
   initLang();
