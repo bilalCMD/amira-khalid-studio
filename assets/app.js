@@ -381,7 +381,7 @@
   var htmlKeys = {"pricing.durationRegular":1,"pricing.durationBride":1,"footer.rights":1,"bookingPreview.step1":1,"bookingPreview.step2":1,"bookingPreview.step3":1,"bookingPreview.step4":1,"contact.policyNote":1,
     "journal.art1.body":1,"journal.art2.body":1,"journal.art3.body":1,"journal.art4.body":1,"journal.art5.body":1,
     "journal.art6.body":1,"journal.art7.body":1,"journal.art8.body":1,"journal.art9.body":1,"journal.art10.body":1,"journal.art11.body":1,"journal.art12.body":1,
-    "policy.skinDesc":1,"policy.faqDesc":1};
+    "policy.skinDesc":1,"policy.faqDesc":1,"faq.a10":1};
 
   var heroTitle = null; // assigned lazily below, since header/content order varies by page
 
