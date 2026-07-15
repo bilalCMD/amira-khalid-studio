@@ -126,6 +126,7 @@ p{margin:0;}
 [data-reveal].in-view{opacity:1; transform:translateY(0);}
 [data-reveal="scale"]{transform:translateY(0) scale(.92);}
 [data-reveal="scale"].in-view{transform:scale(1);}
+@media (max-width:768px){[data-reveal]{opacity:1; transform:translateY(0);}}
 
 /* ===================== BUTTONS ===================== */
 .btn{
@@ -338,6 +339,7 @@ nav.main-nav a.current{color:var(--primary);}
 
 /* ===================== PAGE HERO (inner pages) ===================== */
 .page-hero{position:relative; padding-block:160px var(--space-8); overflow:hidden; text-align:center;}
+@media (max-width:768px){.page-hero{padding-block:100px var(--space-5);}}
 .page-hero .container{position:relative; z-index:1;}
 .page-hero-bg{position:absolute; inset:0; background:var(--bg-alt); z-index:0; -webkit-mask-image:linear-gradient(to bottom, #000 0%, #000 calc(100% - 100px), transparent 100%); mask-image:linear-gradient(to bottom, #000 0%, #000 calc(100% - 100px), transparent 100%);}
 .page-hero-title{font-size:clamp(2.2rem,4.6vw,3.2rem); margin-block:var(--space-3);}
