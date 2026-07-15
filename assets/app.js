@@ -1314,11 +1314,27 @@
   var heroVideo = document.getElementById('heroVideo');
   var heroSoundToggle = document.getElementById('heroSoundToggle');
   if(heroVideo && heroSoundToggle){
+    var updateSpeakerIcon = function(){
+      var mutedPath = heroSoundToggle.querySelector('.speaker-muted');
+      var wave1 = heroSoundToggle.querySelector('.speaker-wave-1');
+      var wave2 = heroSoundToggle.querySelector('.speaker-wave-2');
+      if(heroVideo.muted){
+        if(mutedPath) mutedPath.style.display = 'block';
+        if(wave1) wave1.style.display = 'none';
+        if(wave2) wave2.style.display = 'none';
+        heroSoundToggle.title = 'Click to unmute';
+      }else{
+        if(mutedPath) mutedPath.style.display = 'none';
+        if(wave1) wave1.style.display = 'block';
+        if(wave2) wave2.style.display = 'block';
+        heroSoundToggle.title = 'Click to mute';
+      }
+    };
+    updateSpeakerIcon();
     heroSoundToggle.addEventListener('click', function(e){
       e.stopPropagation();
       heroVideo.muted = !heroVideo.muted;
-      heroSoundToggle.textContent = heroVideo.muted ? '🔇' : '🔊';
-      heroSoundToggle.title = heroVideo.muted ? 'Click to unmute' : 'Click to mute';
+      updateSpeakerIcon();
     });
   }
 
