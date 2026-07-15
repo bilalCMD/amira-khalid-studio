@@ -771,6 +771,9 @@ body.cursor-enabled a, body.cursor-enabled button, body.cursor-enabled input, bo
 .faq-answer{max-height:0; overflow:hidden; transition:max-height var(--dur-m) var(--ease);}
 .faq-answer p{padding:0 var(--space-5) var(--space-5); color:var(--text-muted); font-size:.92rem; line-height:1.55;}
 .faq-item.open .faq-answer{max-height:220px;}
+.faq-whatsapp-btn{display:inline-flex; align-items:center; gap:8px; padding:14px 24px; background:linear-gradient(135deg, #25D366 0%, #20BA5C 100%); color:#fff; text-decoration:none; border-radius:var(--radius-md); font-weight:700; font-size:.96rem; transition:all var(--dur-f) var(--ease); box-shadow:0 4px 12px rgba(37,211,102,.3);}
+.faq-whatsapp-btn:hover{transform:translateY(-2px); box-shadow:0 6px 16px rgba(37,211,102,.4);}
+.faq-whatsapp-btn:active{transform:scale(.98);}
 
 /* ===================== JOURNEY / TIMELINE ===================== */
 .journey{display:flex; flex-direction:column; gap:var(--space-6); max-width:640px; margin-inline:auto; position:relative;}
