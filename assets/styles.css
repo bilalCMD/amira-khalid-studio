@@ -336,17 +336,6 @@ nav.main-nav a.current{color:var(--primary);}
 .scroll-cue .mouse::after{content:"";position:absolute; top:6px; left:50%; transform:translateX(-50%); width:4px; height:8px; background:var(--gold); border-radius:2px; animation:scrollDot 1.6s ease-in-out infinite;}
 @keyframes scrollDot{0%{opacity:1; top:6px;}100%{opacity:0; top:18px;}}
 
-.hero-sound-toggle{
-  position:absolute; bottom:16px; inset-inline-start:16px; z-index:10;
-  width:36px; height:36px; border-radius:50%; border:none;
-  background:rgba(255,255,255,.2); color:#fff; font-size:1rem;
-  cursor:pointer; display:flex; align-items:center; justify-content:center;
-  transition:background .3s ease; backdrop-filter:blur(8px); padding:0;
-}
-.hero-sound-toggle:hover{background:rgba(255,255,255,.3);}
-.hero-sound-toggle:active{transform:scale(.95);}
-.hero-sound-toggle svg{width:20px; height:20px; stroke:currentColor; stroke-width:1.5; fill:none; stroke-linecap:round; stroke-linejoin:round;}
-
 /* ===================== PAGE HERO (inner pages) ===================== */
 .page-hero{position:relative; padding-block:160px var(--space-8); overflow:hidden; text-align:center;}
 .page-hero .container{position:relative; z-index:1;}
