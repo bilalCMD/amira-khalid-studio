@@ -32,9 +32,9 @@
 .hero-badge-item:nth-child(3){flex:0 1 calc(50% - 4px);}
 .hero-badge-item svg{width:1em;height:1em;color:#DCC094;}
 .scroll-cue{display:none;}
-.floating-wa{position:fixed;bottom:24px;right:24px;z-index:100;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#25D366 0%,#20BA5C 100%);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(37,211,102,0.4);opacity:0;transform:scale(0);transition:all 0.3s ease;cursor:pointer;}
-.floating-wa.show{opacity:1;transform:scale(1);}
-.floating-wa:hover{transform:scale(1.1);box-shadow:0 6px 16px rgba(37,211,102,0.5);}
+.floating-wa{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) scale(0);z-index:100;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#25D366 0%,#20BA5C 100%);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(37,211,102,0.4);opacity:0;transition:all 0.3s ease;cursor:pointer;}
+.floating-wa.show{opacity:1;transform:translateX(-50%) scale(1);}
+.floating-wa:hover{transform:translateX(-50%) scale(1.1);box-shadow:0 6px 16px rgba(37,211,102,0.5);}
 .floating-wa svg{width:28px;height:28px;}
 @media (max-width:768px){.hero-content{padding:var(--space-6) var(--space-5) var(--space-5);}.hero-content h1{font-size:clamp(1.5rem,4vw,2.2rem);}.hero-cta{flex-direction:column;gap:var(--space-3);}.hero-cta .btn{width:100%;}.scroll-cue{bottom:100px;}}
 </style>
