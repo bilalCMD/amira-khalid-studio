@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amira Khalid - Full Viewport Hero v2</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="assets/styles.css?v=20260709-13">
+<style>
+/* Full Viewport Cinematic Hero v2 */
+#home-v2{
+  position:relative;
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.hero-video-bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+}
+.hero-video-bg video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 35%;
+  display:block;
+}
+.hero-video-scrim{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(20,10,12,0.6) 0%, rgba(20,10,12,0.3) 40%, rgba(20,10,12,0.1) 75%);
+  pointer-events:none;
+  z-index:1;
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:640px;
+  padding:var(--space-6);
+  text-align:center;
+}
+.hero-content .eyebrow{
+  color:#E9DAD2;
+  font-size:0.85rem;
+  letter-spacing:0.08em;
+}
+.hero-content h1{
+  font-size:clamp(2rem,6vw,3.5rem);
+  font-weight:800;
+  font-family:var(--font-display);
+  color:#FBF3EC;
+  margin:var(--space-4) 0 var(--space-3);
+  line-height:1.2;
+}
+.hero-content .accent{
+  color:#E8D3A0;
+}
+.hero-content p{
+  font-size:1.05rem;
+  color:#E9DAD2;
+  margin-block:var(--space-4);
+  line-height:1.6;
+}
+.hero-cta{
+  display:flex;
+  gap:var(--space-4);
+  justify-content:center;
+  margin-block:var(--space-6);
+  flex-wrap:wrap;
+}
+.hero-badges{
+  display:flex;
+  flex-direction:column;
+  gap:var(--space-3);
+  align-items:center;
+}
+.hero-badge-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 16px;
+  background:rgba(255,255,255,0.1);
+  border:1px solid rgba(233,218,210,0.35);
+  border-radius:var(--radius-md);
+  color:#E9DAD2;
+  font-size:0.9rem;
+  font-weight:500;
+  backdrop-filter:blur(8px);
+}
+.hero-badge-item svg{
+  width:1.2em;
+  height:1.2em;
+  color:#DCC094;
+}
+
+.hero-stats{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+}
+.floating-chip{
+  position:absolute;
+  display:flex;
+  align-items:center;
+  gap:var(--space-3);
+  padding:var(--space-3) var(--space-4);
+  background:rgba(255,255,255,0.15);
+  border:1px solid rgba(233,218,210,0.25);
+  border-radius:var(--radius-md);
+  backdrop-filter:blur(12px);
+  pointer-events:auto;
+}
+.floating-chip strong{
+  color:#FBF3EC;
+  font-weight:700;
+  font-size:1rem;
+}
+.floating-chip span{
+  color:#E9DAD2;
+  font-size:0.8rem;
+  display:block;
+  line-height:1.3;
+}
+.chip-icon{
+  width:2rem;
+  height:2rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#DCC094;
+}
+.chip-1{
+  top:5%;
+  inset-inline-end:6%;
+}
+.chip-2{
+  bottom:8%;
+  inset-inline-end:6%;
+}
+
+.scroll-cue{
+  position:absolute;
+  bottom:28px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  color:#E9DAD2;
+  font-size:.75rem;
+  z-index:3;
+}
+
+@media (max-width:768px){
+  .hero-content{max-width:100%;}
+  .hero-stats{display:none;}
+  .hero-cta{flex-direction:column; gap:var(--space-3);}
+  .hero-cta .btn{width:100%;}
+}
+</style>
+</head>
+<body>
+<div id="app" dir="rtl" lang="ar">
+<script>window.CURRENT_PAGE = 'preview-v2';</script>
+<script src="assets/header.js?v=20260709-4"></script>
+
+<main>
+<!-- FULL VIEWPORT CINEMATIC HERO v2 -->
+<section id="home-v2">
+  <div class="hero-video-bg">
+    <video src="assets/videos/hero-red-veil.mp4" autoplay muted loop playsinline preload="auto" id="heroVideo" style="cursor:pointer;"></video>
+    <div class="hero-video-scrim"></div>
+  </div>
+
+  <div class="hero-content">
+    <span class="eyebrow" data-i18n="hero.eyebrow">خبيرة مكياج معتمدة</span>
+    <h1><span data-i18n="hero.title">إطلالتكِ الأجمل </span><span class="accent" data-i18n="hero.titleAccent">تبدأ من هنا</span></h1>
+    <p data-i18n="hero.subtitle">مكياج احترافي وتسريحات راقية في استوديو أميرة خالد بجدة.</p>
+
+    <div class="hero-cta">
+      <a href="contact" class="btn btn-primary" data-i18n="hero.ctaBook">احجزي موعدك</a>
+      <a href="portfolio" class="btn btn-ghost" data-i18n="hero.ctaPortfolio">استعرضي أعمالي</a>
+    </div>
+
+    <div class="hero-badges">
+      <div class="hero-badge-item">
+        <svg class="icon"><use href="#i-heart"/></svg>
+        <span data-i18n="hero.badge1">+500 عروس وعميلة</span>
+      </div>
+      <div class="hero-badge-item">
+        <svg class="icon"><use href="#i-shield"/></svg>
+        <span data-i18n="hero.badge2">تعقيم 100% للأدوات</span>
+      </div>
+      <div class="hero-badge-item">
+        <svg class="icon"><use href="#i-pin"/></svg>
+        <span data-i18n="hero.badge3">حي الرحاب، جدة</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="floating-chip chip-1">
+      <span class="chip-icon"><svg class="icon"><use href="#i-crown"/></svg></span>
+      <span><strong data-i18n="hero.chip1Num">2500 ريال</strong><span data-i18n="hero.chip1Label">باقة العروس الكاملة</span></span>
+    </div>
+    <div class="floating-chip chip-2">
+      <span class="chip-icon"><svg class="icon"><use href="#i-sparkle"/></svg></span>
+      <span><strong data-i18n="hero.chip2Num">4.9 ★</strong><span data-i18n="hero.chip2Label">تقييم العميلات</span></span>
+    </div>
+  </div>
+
+  <div class="scroll-cue">
+    <span class="mouse"></span>
+    <span data-i18n="hero.scroll">مرري للأسفل</span>
+  </div>
+</section>
+
+<!-- Simple About Section -->
+<section class="section">
+  <div class="container" style="max-width:720px; text-align:center;">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="about.eyebrow">من نحن</span>
+      <h2 class="section-title" data-i18n="about.title">تعرّفي على أميرة</h2>
+      <p class="about-body" data-i18n="about.body">أميرة خالد خبيرة مكياج محترفة في جدة، شغوفة بإبراز جمالكِ الطبيعي بلمسة فنية أنيقة تليق بمناسباتكِ الخاصة — من يوم زفافك إلى أجمل سهراتكِ.</p>
+    </div>
+    <a href="about" class="btn btn-primary" data-i18n="nav.about">من أنا</a>
+  </div>
+</section>
+</main>
+
+<script src="assets/footer.js?v=20260709-6"></script>
+</div>
+
+<script src="assets/app.js?v=20260709-14"></script>
+<script>
+// Hero sound toggle for v2
+var heroVideo = document.getElementById('heroVideo');
+if(heroVideo){
+  heroVideo.addEventListener('click', function(e){
+    e.preventDefault();
+    heroVideo.muted = !heroVideo.muted;
+  });
+}
+</script>
+</body>
+</html>
