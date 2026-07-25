@@ -177,7 +177,7 @@ p{margin:0;}
 .pill-badge{display:inline-flex; align-items:center; gap:var(--space-2); background:transparent; border:1px solid var(--border); padding:6px 14px; border-radius:var(--radius-full); font-size:.8rem; font-weight:500; line-height:1; color:var(--text-muted);}
 .pill-badge .icon{width:1.1em; height:1.1em; color:var(--gold);}
 
-.section{padding-block:var(--space-9);}
+.section{padding-block:var(--space-7);}
 .section-head{max-width:640px; margin-inline:auto; text-align:center; margin-block-end:var(--space-7); position:relative;}
 .eyebrow{display:inline-flex; align-items:center; gap:var(--space-2); color:var(--gold); font-weight:700; letter-spacing:.04em; font-size:.85rem; text-transform:uppercase; margin-block-end:var(--space-3); font-family:var(--font-body);}
 .eyebrow::before,.eyebrow::after{content:"";width:22px; height:1px; background:var(--gold);}
