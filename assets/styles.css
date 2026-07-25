@@ -698,6 +698,11 @@ body.cursor-enabled a, body.cursor-enabled button, body.cursor-enabled input, bo
 .review-name{display:block; color:var(--text); font-size:0.95rem; font-weight:700; margin-block-end:var(--space-1);}
 .review-date{font-size:0.8rem; color:var(--text-muted);}
 .review-badge{display:inline-block; font-size:0.75rem; font-weight:700; padding:4px 10px; border-radius:var(--radius-full); background:var(--gold-soft); color:var(--primary); text-transform:uppercase; letter-spacing:0.5px;}
+.review-arrow{position:absolute; top:50%; transform:translateY(-50%); background:var(--surface); border:1px solid var(--border); width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; z-index:2; box-shadow:0 10px 22px -10px hsla(var(--shadow-color),.35); cursor:pointer; transition:all var(--dur-f) var(--ease);}
+.review-arrow:hover{background:var(--primary); color:#fff; border-color:var(--primary);}
+.review-prev{inset-inline-start:-60px;}
+.review-next{inset-inline-end:-60px;}
+@media (max-width:760px){.review-arrow{display:none;}}
 
 /* ===================== DARK PREMIUM CTA ===================== */
 .dark-cta{
