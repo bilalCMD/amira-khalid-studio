@@ -40,7 +40,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=20260709-20">
+<link rel="stylesheet" href="assets/styles.css?v=20260709-21">
 <style>
 /* ===== HERO: DESKTOP GRID + MOBILE CINEMATIC ===== */
 #home-v2{
@@ -79,11 +79,11 @@
 
 /* MOBILE: Full viewport cinematic */
 @media (max-width:960px){
-  #home-v2{position:fixed;top:0;left:0;width:100%;height:100vh;overflow:hidden;padding:0;display:block;}
+  #home-v2{position:relative;width:100%;height:100vh;overflow:hidden;padding:0;display:block;margin-bottom:var(--space-8);}
   .hero-video-bg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;overflow:hidden;}
   .hero-video-bg video{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;}
   .hero-video-scrim{display:block;position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to top,rgba(20,10,12,0.75) 0%,rgba(20,10,12,0.5) 30%,rgba(20,10,12,0.15) 70%,transparent 100%);pointer-events:none;z-index:2;}
-  .hero-content{position:absolute;bottom:0;left:0;right:0;z-index:3;width:100%;padding:var(--space-8) var(--space-6) var(--space-6);text-align:center;display:flex;flex-direction:column;align-items:center;}
+  .hero-content{position:absolute;bottom:0;left:0;right:0;z-index:3;width:100%;padding:var(--space-8) var(--space-6) var(--space-6);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;}
   .hero-content h1{font-size:clamp(1.5rem,5vw,2.2rem);font-weight:900;color:#FBF3EC;margin:0 0 var(--space-4);line-height:1.25;text-shadow:0 2px 8px rgba(0,0,0,0.4);}
   .hero-content .accent{color:#E8D3A0;}
   .hero-cta{justify-content:center;flex-direction:column;gap:var(--space-3);width:100%;}
@@ -97,7 +97,7 @@
 <body>
 <div id="app" dir="rtl" lang="ar">
 <script>window.CURRENT_PAGE = 'home';</script>
-<script src="assets/header.js?v=20260709-10"></script>
+<script src="assets/header.js?v=20260709-11"></script>
 
 <main>
 <!-- HERO: DESKTOP GRID + MOBILE CINEMATIC -->
@@ -330,10 +330,10 @@
 </section>
 </main>
 
-<script src="assets/footer.js?v=20260709-12"></script>
+<script src="assets/footer.js?v=20260709-13"></script>
 </div>
 
-<script src="assets/app.js?v=20260709-20"></script>
+<script src="assets/app.js?v=20260709-21"></script>
 <script>
 var heroVideo=document.getElementById('heroVideo');
 if(heroVideo){heroVideo.addEventListener('click',function(e){e.preventDefault();heroVideo.muted=!heroVideo.muted;});}
