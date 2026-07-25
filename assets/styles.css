@@ -454,18 +454,19 @@ nav.main-nav a.current{color:var(--primary);}
 .journal-related{border-top:1px solid var(--border); margin-block-start:var(--space-8); padding-block-start:var(--space-7);}
 
 /* ===================== PRICING ===================== */
-.pricing-group-title{display:flex; align-items:center; gap:var(--space-3); font-size:1.2rem; font-weight:800; margin-block:var(--space-7) var(--space-5); color:var(--primary); font-family:var(--font-display);}
-.pricing-group-title::after{content:""; flex:1; height:1px; background:var(--border);}
+.pricing-group-title{display:flex; align-items:center; gap:var(--space-3); font-size:1.3rem; font-weight:900; margin-block:var(--space-8) var(--space-6); color:var(--primary); font-family:var(--font-display); letter-spacing:.02em;}
+.pricing-group-title::after{content:""; flex:1; height:2px; background:linear-gradient(90deg,var(--border),transparent);}
 .pricing-grid{display:grid; grid-template-columns:1fr; gap:var(--space-5);}
 @media (min-width:640px){.pricing-grid{grid-template-columns:repeat(2,1fr);}}
 @media (min-width:1000px){.pricing-grid{grid-template-columns:repeat(3,1fr);}}
-.price-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:var(--space-6); position:relative; display:flex; flex-direction:column; transition:transform var(--dur-m) var(--ease), box-shadow var(--dur-m) var(--ease); overflow:hidden;}
-.price-card:hover{transform:translateY(-6px); box-shadow:var(--shadow-lg,0 20px 44px hsla(336,45%,20%,.2));}
-.price-card.featured{border-color:var(--gold); background:linear-gradient(160deg,var(--surface),var(--gold-soft)); overflow:visible;}
+.price-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:var(--space-6); position:relative; display:flex; flex-direction:column; transition:transform var(--dur-m) var(--ease), box-shadow var(--dur-m) var(--ease), border-color var(--dur-m) var(--ease); overflow:hidden; box-shadow:0 8px 24px hsla(var(--shadow-color),.12);}
+.price-card:hover{transform:translateY(-8px); box-shadow:0 24px 48px hsla(var(--shadow-color),.18); border-color:var(--gold);}
+.price-card.featured{border-color:var(--gold); background:linear-gradient(160deg,var(--surface),var(--gold-soft)); overflow:visible; box-shadow:0 24px 56px hsla(var(--shadow-color),.22), 0 0 0 1px var(--gold-light) inset;}
+.price-card.featured:hover{box-shadow:0 32px 72px hsla(var(--shadow-color),.28), 0 0 0 1px var(--gold-light) inset; transform:translateY(-10px);}
 .featured-badge{position:absolute; top:-14px; inset-inline-end:20px; display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg,var(--gold-light),var(--gold)); color:#241519; font-size:.72rem; font-weight:800; letter-spacing:.02em; line-height:1.15; padding:7px 16px; border-radius:var(--radius-full); box-shadow:0 4px 10px rgba(0,0,0,.18); white-space:nowrap;}
-.price-card-title{font-size:1.15rem; font-weight:800; margin-block-end:6px; font-family:var(--font-display);}
+.price-card-title{font-size:1.2rem; font-weight:900; margin-block-end:8px; font-family:var(--font-display); letter-spacing:.01em;}
 .price-card-desc{color:var(--text-muted); font-size:.86rem; min-height:2.6em; margin-block-end:var(--space-4);}
-.price-amount{font-size:2.1rem; font-weight:800; color:var(--primary); margin-block-end:var(--space-5); font-family:var(--font-display);}
+.price-amount{font-size:2.4rem; font-weight:900; color:var(--primary); margin-block-end:var(--space-5); font-family:var(--font-display); letter-spacing:-.02em;}
 .price-amount small{font-size:.85rem; font-weight:700; color:var(--text-muted); font-family:var(--font-body);}
 .price-amount-onrequest{font-size:1.2rem; font-family:var(--font-body);}
 .price-card .btn{margin-block-start:auto;}

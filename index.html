@@ -40,51 +40,72 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=20260709-13">
+<link rel="stylesheet" href="assets/styles.css?v=20260709-17">
 <style>
-/* Full Viewport Cinematic Hero v2 */
+/* ===== HERO: DESKTOP GRID + MOBILE CINEMATIC ===== */
 #home-v2{
   position:relative;
-  min-height:100svh;
+  min-height:auto;
   display:flex;
-  align-items:center;
-  justify-content:center;
   overflow:hidden;
+  width:100%;
+  padding:0;
 }
-.hero-video-bg{position:absolute;inset:0;z-index:0;}
-.hero-video-bg video{width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block;}
-.hero-video-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,10,12,0.75) 0%,rgba(20,10,12,0.5) 30%,rgba(20,10,12,0.15) 70%,transparent 100%);pointer-events:none;z-index:1;}
-.hero-content{position:absolute;bottom:0;inset-inline:0;z-index:2;padding:var(--space-8) var(--space-6) var(--space-6);max-width:100%;text-align:center;}
-.hero-content h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;font-family:var(--font-display);color:#FBF3EC;margin:0 0 var(--space-4);line-height:1.3;}
-.hero-content .accent{color:#E8D3A0;}
-.hero-cta{display:flex;gap:var(--space-3);justify-content:center;margin-block:var(--space-4);flex-wrap:wrap;}
-.hero-badges{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;max-width:400px;margin-inline:auto;}
-.hero-badge-item{display:flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(255,255,255,0.08);border:1px solid rgba(233,218,210,0.25);border-radius:var(--radius-sm);color:#E9DAD2;font-size:0.8rem;font-weight:500;backdrop-filter:blur(8px);flex:0 1 calc(50% - 4px);}
-.hero-badge-item:nth-child(3){flex:0 1 calc(50% - 4px);}
-.hero-badge-item svg{width:1em;height:1em;color:#DCC094;}
+.hero-video-bg{position:relative;width:100%;aspect-ratio:1;}
+.hero-video-bg video{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;}
+.hero-video-scrim{display:none;}
+.hero-content{position:relative;z-index:2;padding:var(--space-8);display:flex;flex-direction:column;justify-content:center;width:100%;background:var(--bg);}
+.hero-content h1{font-size:2rem;font-weight:900;font-family:var(--font-display);color:var(--text);margin:0 0 var(--space-4);line-height:1.2;}
+.hero-content .accent{color:var(--primary);}
+.hero-cta{display:flex;gap:var(--space-3);margin-block:var(--space-4);flex-wrap:wrap;}
+.hero-badges{display:flex;flex-wrap:wrap;gap:12px;align-items:center;max-width:100%;}
+.hero-badge-item{display:flex;align-items:center;gap:8px;padding:10px 16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);color:var(--text-muted);font-size:.85rem;font-weight:600;flex:0 1 auto;}
+.hero-badge-item svg{width:18px;height:18px;color:var(--primary);}
+.hero-title{margin:0 0 var(--space-4) 0;}
 .scroll-cue{display:none;}
-.floating-wa{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) scale(0);z-index:100;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#25D366 0%,#20BA5C 100%);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(37,211,102,0.4);opacity:0;transition:all 0.3s ease;cursor:pointer;}
-.floating-wa.show{opacity:1;transform:translateX(-50%) scale(1);}
-.floating-wa:hover{transform:translateX(-50%) scale(1.1);box-shadow:0 6px 16px rgba(37,211,102,0.5);}
-.floating-wa svg{width:28px;height:28px;}
-@media (max-width:768px){.hero-content{padding:var(--space-6) var(--space-5) var(--space-5);}.hero-content h1{font-size:clamp(1.5rem,4vw,2.2rem);}.hero-cta{flex-direction:column;gap:var(--space-3);}.hero-cta .btn{width:100%;}.scroll-cue{bottom:100px;}}
+.floating-wa{display:none!important;}
+
+/* DESKTOP: Grid layout */
+@media (min-width:961px){
+  #home-v2{display:grid;grid-template-columns:1fr 1.15fr;gap:var(--space-8);align-items:center;min-height:650px;padding:var(--space-9) var(--space-8);max-width:1380px;margin:0 auto;}
+  .hero-content{order:-1;align-items:flex-start;padding:0;background:transparent;justify-content:center;}
+  .hero-content h1{font-size:3rem;font-weight:900;line-height:1.15;margin-block-end:var(--space-5);}
+  .hero-cta{gap:var(--space-4);flex-wrap:nowrap;}
+  .hero-cta .btn{white-space:nowrap;}
+  .hero-badges{gap:16px;flex-direction:column;align-items:flex-start;margin-block-start:var(--space-5);}
+  .hero-badge-item{padding:12px 20px;gap:10px;}
+  .hero-video-bg{border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 32px 64px hsla(var(--shadow-color),.24);min-height:550px;}
+}
+
+/* MOBILE: Full viewport cinematic */
+@media (max-width:960px){
+  #home-v2{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding-block:0;}
+  .hero-video-bg{position:absolute;inset:0;z-index:0;width:100%;height:100%;aspect-ratio:auto;}
+  .hero-video-scrim{display:block;position:absolute;inset:0;background:linear-gradient(to top,rgba(20,10,12,0.75) 0%,rgba(20,10,12,0.5) 30%,rgba(20,10,12,0.15) 70%,transparent 100%);pointer-events:none;z-index:1;}
+  .hero-content{position:absolute;bottom:0;inset-inline:0;z-index:2;width:100%;padding:var(--space-8) var(--space-6) var(--space-6);text-align:center;justify-content:flex-end;}
+  .hero-content h1{font-size:clamp(1.5rem,4vw,2.2rem);color:#FBF3EC;}
+  .hero-content .accent{color:#E8D3A0;}
+  .hero-cta{justify-content:center;flex-direction:column;gap:var(--space-3);}
+  .hero-cta .btn{width:100%;}
+  .hero-badges{justify-content:center;gap:8px;max-width:400px;margin-inline:auto;}
+  .hero-badge-item{background:rgba(255,255,255,0.08);border:1px solid rgba(233,218,210,0.25);color:#E9DAD2;font-size:0.8rem;flex:0 1 calc(50% - 4px);}
+  .hero-badge-item svg{color:#DCC094;}
+}
 </style>
 </head>
 <body>
 <div id="app" dir="rtl" lang="ar">
 <script>window.CURRENT_PAGE = 'home';</script>
-<script src="assets/header.js?v=20260709-4"></script>
+<script src="assets/header.js?v=20260709-7"></script>
 
 <main>
-<!-- FULL VIEWPORT CINEMATIC HERO v2 -->
+<!-- HERO: DESKTOP GRID + MOBILE CINEMATIC -->
 <section id="home-v2">
-  <div class="hero-video-bg">
-    <video src="assets/videos/hero-red-veil.mp4" autoplay muted loop playsinline preload="auto" id="heroVideo" style="cursor:pointer;"></video>
-    <div class="hero-video-scrim"></div>
-  </div>
   <div class="hero-content">
+    <h1 class="hero-title"><span data-i18n="hero.title">إطلالتكِ الأجمل </span><span class="accent" data-i18n="hero.titleAccent">تبدأ من هنا</span></h1>
     <div class="hero-cta">
       <a href="contact" class="btn btn-primary" data-i18n="hero.ctaBook">احجزي موعدك</a>
+      <a href="portfolio" class="btn btn-ghost" data-i18n="hero.ctaPortfolio">استعرضي أعمالي</a>
     </div>
     <div class="hero-badges">
       <div class="hero-badge-item">
@@ -101,13 +122,11 @@
       </div>
     </div>
   </div>
+  <div class="hero-video-bg">
+    <video src="assets/videos/hero-red-veil.mp4" autoplay muted loop playsinline preload="auto" id="heroVideo" style="cursor:pointer;"></video>
+    <div class="hero-video-scrim"></div>
+  </div>
 </section>
-
-<div class="floating-wa" id="floatingWa" title="Message on WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
-  </svg>
-</div>
 
 <!-- ============ ABOUT TEASER ============ -->
 <section class="section">
@@ -237,6 +256,33 @@
         <span class="journal-read" data-i18n="journal.readMore">اقرئي المزيد ←</span>
       </div>
     </a>
+    <a href="journal-skin-prep" class="journal-card">
+      <div class="journal-card-img"><img src="assets/images/portfolio/bridal-07.jpg" alt="تحضير البشرة قبل المكياج" loading="lazy"></div>
+      <div class="journal-card-body">
+        <span class="journal-card-tag" data-i18n="journal.art3.tag">تحضيرات</span>
+        <h3 data-i18n="journal.art3.title">تحضير البشرة: الخطوة الأساسية لمكياج مثالي</h3>
+        <p data-i18n="journal.art3.excerpt">بشرة مُحضّرة بشكل صحيح = مكياج يدوم طوال اليوم. تعرّفي على الخطوات الأساسية</p>
+        <span class="journal-read" data-i18n="journal.readMore">اقرئي المزيد ←</span>
+      </div>
+    </a>
+    <a href="journal-makeup-last-longer" class="journal-card">
+      <div class="journal-card-img"><img src="assets/images/portfolio/bridal-09.jpg" alt="جعل المكياج يدوم أطول" loading="lazy"></div>
+      <div class="journal-card-body">
+        <span class="journal-card-tag" data-i18n="journal.art4.tag">نصائح</span>
+        <h3 data-i18n="journal.art4.title">كيف تجعلين مكياجك يدوم 12 ساعة أو أكثر</h3>
+        <p data-i18n="journal.art4.excerpt">أسرار احترافية لتثبيت المكياج مدة طويلة دون تشقّق أو تغيير لون</p>
+        <span class="journal-read" data-i18n="journal.readMore">اقرئي المزيد ←</span>
+      </div>
+    </a>
+    <a href="journal-eid-makeup" class="journal-card">
+      <div class="journal-card-img"><img src="assets/images/portfolio/bridal-03.jpg" alt="مكياج العيد المثالي" loading="lazy"></div>
+      <div class="journal-card-body">
+        <span class="journal-card-tag" data-i18n="journal.art5.tag">مناسبات</span>
+        <h3 data-i18n="journal.art5.title">مكياج العيد: إطلالة نضرة وراقية</h3>
+        <p data-i18n="journal.art5.excerpt">لوك عيدي أنيق يعكس براعتك ويناسب كل المناسبات — من الصباح إلى المساء</p>
+        <span class="journal-read" data-i18n="journal.readMore">اقرئي المزيد ←</span>
+      </div>
+    </a>
   </div>
   <div class="container">
     <div style="text-align:center;margin-top:var(--space-6)">
@@ -283,10 +329,10 @@
 </section>
 </main>
 
-<script src="assets/footer.js?v=20260709-6"></script>
+<script src="assets/footer.js?v=20260709-9"></script>
 </div>
 
-<script src="assets/app.js?v=20260709-14"></script>
+<script src="assets/app.js?v=20260709-17"></script>
 <script>
 var heroVideo=document.getElementById('heroVideo');
 if(heroVideo){heroVideo.addEventListener('click',function(e){e.preventDefault();heroVideo.muted=!heroVideo.muted;});}
