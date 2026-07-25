@@ -465,7 +465,7 @@
       var text = currentLang === 'ar' ? review.ar : review.en;
       var card = document.createElement('div');
       card.className = 'review-card';
-      card.innerHTML = '<div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3)"><div class="review-stars">★★★★★</div><span class="review-badge">' + (currentLang === 'ar' ? 'عربي' : 'English') + '</span></div><p class="review-text">"' + text + '"</p><strong class="review-name">' + review.author + '</strong><span class="review-date">' + review.date + '</span>';
+      card.innerHTML = '<div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3)"><div class="review-stars">★★★★★</div></div><p class="review-text">"' + text + '"</p><strong class="review-name">' + review.author + '</strong><span class="review-date">' + review.date + '</span>';
       container.appendChild(card);
     });
   }
@@ -486,19 +486,6 @@
   if(langArBtnInit) langArBtnInit.addEventListener('click', function(){ applyLanguage('ar'); refreshLocationHintLanguage(); runLangChangeListeners(); });
   if(langEnBtnInit) langEnBtnInit.addEventListener('click', function(){ applyLanguage('en'); refreshLocationHintLanguage(); runLangChangeListeners(); });
 
-  var reviewScroll = document.getElementById('reviewsScroll');
-  var reviewPrevBtn = document.getElementById('reviewPrev');
-  var reviewNextBtn = document.getElementById('reviewNext');
-  if(reviewPrevBtn && reviewScroll){
-    reviewPrevBtn.addEventListener('click', function(){
-      reviewScroll.scrollBy({left: document.documentElement.dir === 'rtl' ? 340 : -340, behavior: 'smooth'});
-    });
-  }
-  if(reviewNextBtn && reviewScroll){
-    reviewNextBtn.addEventListener('click', function(){
-      reviewScroll.scrollBy({left: document.documentElement.dir === 'rtl' ? -340 : 340, behavior: 'smooth'});
-    });
-  }
 
   /* ---------- DARK / LIGHT THEME TOGGLE ---------- */
   function systemPrefersDark(){
