@@ -40,7 +40,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=20260709-33">
+<link rel="stylesheet" href="assets/styles.css?v=20260709-34">
 <style>
 /* ===== HERO: CINEMATIC FULL VIEWPORT ===== */
 #home-v2{
@@ -285,9 +285,11 @@
       <p class="section-sub">آراء حقيقية من عميلات في جوجل — ماذا قالوا عن أميرة</p>
     </div>
     <div class="google-reviews-carousel" data-reveal>
+      <button class="review-arrow review-prev" id="reviewPrev" aria-label="Previous review"><svg class="icon" style="width:20px;height:20px"><use href="#i-chevron"/></svg></button>
       <div class="reviews-scroll" id="reviewsScroll">
         <!-- Reviews populated by JavaScript -->
       </div>
+      <button class="review-arrow review-next" id="reviewNext" aria-label="Next review"><svg class="icon" style="width:20px;height:20px;transform:scaleX(-1)"><use href="#i-chevron"/></svg></button>
     </div>
     <div style="text-align:center;margin-top:var(--space-6)">
       <a href="https://www.google.com/maps/place/Amira+Khalid+Studio" target="_blank" rel="noopener" class="btn btn-primary">اقرئي كل التقييمات على جوجل</a>
@@ -311,7 +313,7 @@
 <script src="assets/footer.js?v=20260709-16"></script>
 </div>
 
-<script src="assets/app.js?v=20260709-33"></script>
+<script src="assets/app.js?v=20260709-34"></script>
 <script>
 var heroVideo=document.getElementById('heroVideo');
 if(heroVideo){heroVideo.addEventListener('click',function(e){e.preventDefault();heroVideo.muted=!heroVideo.muted;});}

@@ -13,18 +13,18 @@
   function onLangChange(fn){ langChangeListeners.push(fn); }
 
   var REVIEWS = [
-    {ar: "She's such a classy person, her manner is amazing, and she asks you what you like and what you want—light or heavy makeup. You entrust your face to her, and she creates a masterpiece.", en: "She's such a classy person, her manner is amazing, and she asks you what you like and what you want—light or heavy makeup. You entrust your face to her, and she creates a masterpiece.", author: "روان / Rowan", date: "2 weeks ago"},
-    {ar: "Oh my goodness, what can I say? Amira is so sweet, and her work is absolutely amazing, mashallah! The style is impeccable, and the cleanliness is superb.", en: "Oh my goodness, what can I say? Amira is so sweet, and her work is absolutely amazing, mashallah! The style is impeccable, and the cleanliness is superb.", author: "شهد / Lady Shahd", date: "1 month ago"},
-    {ar: "Masha'Allah, makeup artist Amira Khaled's work is more than wonderful! Her makeup is clean and neat, and she understands each person very well.", en: "Masha'Allah, makeup artist Amira Khaled's work is more than wonderful! Her makeup is clean and neat, and she understands each person very well.", author: "أحلام / Ahlam", date: "6 months ago"},
-    {ar: "A very beautiful experience with the lovely Amira. It's not the first time, and I won't get anyone but Amira to do my makeup... Highly recommended!", en: "A very beautiful experience with the lovely Amira. It's not the first time, and I won't get anyone but Amira to do my makeup... Highly recommended!", author: "عزة / Azzah", date: "2 months ago"},
-    {ar: "Absolutely amazing! Precision, beauty, and stability. You'll leave feeling so special. The makeup lasts until the end of the event!", en: "Absolutely amazing! Precision, beauty, and stability. You'll leave feeling so special. The makeup lasts until the end of the event!", author: "لينا / Lena", date: "2 months ago"},
-    {ar: "If I had to give her more than five stars, I'd give her that. Her service and workmanship were amazing, may God bless her. 100% satisfied!", en: "If I had to give her more than five stars, I'd give her that. Her service and workmanship were amazing, may God bless her. 100% satisfied!", author: "سمية / Sumayyah", date: "1 year ago"},
-    {ar: "A truly wonderful experience! We all left satisfied. The place is lovely, tidy, comfortable, and offers excellent privacy. Outstanding!", en: "A truly wonderful experience! We all left satisfied. The place is lovely, tidy, comfortable, and offers excellent privacy. Outstanding!", author: "نوال / Nawal", date: "2 months ago"},
-    {ar: "Mashallah, may God bless you! I absolutely adore your makeup! Each time the look is more beautiful than the last. I trust you completely!", en: "Mashallah, may God bless you! I absolutely adore your makeup! Each time the look is more beautiful than the last. I trust you completely!", author: "ع الزهراني / Az Zahra", date: "3 months ago"},
-    {ar: "Her work is absolutely amazing! Her makeup and hair are fantastic, and her style and manner are so beautiful and classy. ❤️", en: "Her work is absolutely amazing! Her makeup and hair are fantastic, and her style and manner are so beautiful and classy. ❤️", author: "أفنان / Afnan", date: "2 months ago"},
-    {ar: "She's excellent, very dedicated to her work, and works with love, may God bless her. Quick, knowledgeable, and highly recommended!", en: "She's excellent, very dedicated to her work, and works with love, may God bless her. Quick, knowledgeable, and highly recommended!", author: "إلهام / Elham", date: "6 months ago"},
-    {ar: "You know when you don't worry about details? Amira is just like that. Truly the best artist in Jeddah. Amazing, clean, long-lasting makeup!", en: "You know when you don't worry about details? Amira is just like that. Truly the best artist in Jeddah. Amazing, clean, long-lasting makeup!", author: "ريهام / Reham", date: "8 months ago"},
-    {ar: "The amazing Amira, even 100 stars wouldn't be enough to rate her. She's incredibly helpful, understands facial features perfectly. Truly the best!", en: "The amazing Amira, even 100 stars wouldn't be enough to rate her. She's incredibly helpful, understands facial features perfectly. Truly the best!", author: "أم زين / Om Zain", date: "1 year ago"}
+    {ar: "صراحة أميرة شخصية كلاسيكية جداً، طريقتها روعة وتسأل إيش تحبين اللوك قفيف أم ثقيل، تحطين وجهك بإيدها وتطلع لوك هندسة معمارية.", en: "She's such a classy person, her manner is amazing, and she asks you what you like and what you want—light or heavy makeup. You entrust your face to her, and she creates a masterpiece.", author: "روان / Rowan", date: "2 weeks ago"},
+    {ar: "يا إلهي، كيف أقول؟ أميرة حلوة جداً وشغلها روعة مشاء الله! الستايل خيالي والنظافة فوق الخيال.", en: "Oh my goodness, what can I say? Amira is so sweet, and her work is absolutely amazing, mashallah! The style is impeccable, and the cleanliness is superb.", author: "شهد / Lady Shahd", date: "1 month ago"},
+    {ar: "مشاء الله، فنانة المكياج أميرة خالد شغلها أكثر من رائع! مكياجها نظيف وحنين والفهم كل عميلة زين.", en: "Masha'Allah, makeup artist Amira Khaled's work is more than wonderful! Her makeup is clean and neat, and she understands each person very well.", author: "أحلام / Ahlam", date: "6 months ago"},
+    {ar: "تجربة جميلة جداً مع أميرة الحلوة، وليس آخر مرة، ولن أقدر أحد غير أميرة يسوي مكياجي... موصي فيها.", en: "A very beautiful experience with the lovely Amira. It's not the first time, and I won't get anyone but Amira to do my makeup... Highly recommended!", author: "عزة / Azzah", date: "2 months ago"},
+    {ar: "روووعة! دقة وجمال واستقرار! تطلعين من عندها وكأنك ملكة، والمكياج يدوم لآخر اليوم.", en: "Absolutely amazing! Precision, beauty, and stability. You'll leave feeling so special. The makeup lasts until the end of the event!", author: "لينا / Lena", date: "2 months ago"},
+    {ar: "لو أقدر أعطيها أكثر من خمس نجوم أعطيتها، خدمتها واحترافيتها رائعة جداً، الله يباركلها. 100% راضية!", en: "If I had to give her more than five stars, I'd give her that. Her service and workmanship were amazing, may God bless her. 100% satisfied!", author: "سمية / Sumayyah", date: "1 year ago"},
+    {ar: "تجربة رائعة جداً! كلنا طلعنا راضيين. المكان حلو ومرتب ومريح وفيه خصوصية ممتازة. ممتاز جداً!", en: "A truly wonderful experience! We all left satisfied. The place is lovely, tidy, comfortable, and offers excellent privacy. Outstanding!", author: "نوال / Nawal", date: "2 months ago"},
+    {ar: "مشاء الله تبارك الله! أنا مجنونة في مكياجك! كل مرة أجمل من اللي قبلها. أنا واثقة فيك تماماً!", en: "Mashallah, may God bless you! I absolutely adore your makeup! Each time the look is more beautiful than the last. I trust you completely!", author: "ع الزهراني / Az Zahra", date: "3 months ago"},
+    {ar: "شغلها روووعة! مكياجها وتسريحتها خيالية، وستايلها وطريقتها جميلة وكلاسيكية جداً. ❤️", en: "Her work is absolutely amazing! Her makeup and hair are fantastic, and her style and manner are so beautiful and classy. ❤️", author: "أفنان / Afnan", date: "2 months ago"},
+    {ar: "احترافية جداً، ملتزمة بشغلها وتشتغل بحب، الله يباركلها. سريعة وخبيرة وموصي فيها!", en: "She's excellent, very dedicated to her work, and works with love, may God bless her. Quick, knowledgeable, and highly recommended!", author: "إلهام / Elham", date: "6 months ago"},
+    {ar: "تعرفين الحالة اللي ما تقلقين على التفاصيل؟ أميرة هي كذلك. أفضل فنانة في جدة. مكياج روعة ونظيف وثابت!", en: "You know when you don't worry about details? Amira is just like that. Truly the best artist in Jeddah. Amazing, clean, long-lasting makeup!", author: "ريهام / Reham", date: "8 months ago"},
+    {ar: "أميرة الرائعة، حتى 100 نجمة ما توفيها حقها. متعاونة جداً وتفهم الملامح صح. حقاً الأفضل!", en: "The amazing Amira, even 100 stars wouldn't be enough to rate her. She's incredibly helpful, understands facial features perfectly. Truly the best!", author: "أم زين / Om Zain", date: "1 year ago"}
   ];
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -467,6 +467,20 @@
       card.className = 'review-card';
       card.innerHTML = '<div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3)"><div class="review-stars">★★★★★</div></div><p class="review-text">"' + text + '"</p><strong class="review-name">' + review.author + '</strong><span class="review-date">' + review.date + '</span>';
       container.appendChild(card);
+    });
+  }
+
+  var reviewScroll = document.getElementById('reviewsScroll');
+  var reviewPrevBtn = document.getElementById('reviewPrev');
+  var reviewNextBtn = document.getElementById('reviewNext');
+  if(reviewPrevBtn && reviewScroll){
+    reviewPrevBtn.addEventListener('click', function(){
+      reviewScroll.scrollBy({left: document.documentElement.dir === 'rtl' ? 340 : -340, behavior: 'smooth'});
+    });
+  }
+  if(reviewNextBtn && reviewScroll){
+    reviewNextBtn.addEventListener('click', function(){
+      reviewScroll.scrollBy({left: document.documentElement.dir === 'rtl' ? -340 : 340, behavior: 'smooth'});
     });
   }
 
