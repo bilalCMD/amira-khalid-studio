@@ -40,27 +40,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=20260709-29">
+<link rel="stylesheet" href="assets/styles.css?v=20260709-30">
 <style>
-/* Mobile: Old cinematic full-viewport hero */
+/* Hide desktop hero on mobile, show mobile hero */
 @media (max-width:959px){
-  #home{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-  .hero-bg{display:none;}
-  .hero-grid{display:none;}
-  .hero-video-bg{position:absolute;inset:0;z-index:0;}
-  .hero-video-bg video{width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block;}
-  .hero-video-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,10,12,0.75) 0%,rgba(20,10,12,0.5) 30%,rgba(20,10,12,0.15) 70%,transparent 100%);pointer-events:none;z-index:1;}
-  .hero-copy{position:absolute;bottom:0;inset-inline:0;z-index:2;padding:var(--space-8) var(--space-6) var(--space-6);max-width:100%;text-align:center;}
-  .hero-copy .hero-title{font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;font-family:var(--font-display);color:#FBF3EC;margin:0 0 var(--space-4);line-height:1.3;}
-  .hero-copy .accent{color:#E8D3A0;}
-  .hero-copy .hero-sub{color:#E9DAD2;margin-bottom:var(--space-4);}
-  .hero-copy .hero-cta{display:flex;flex-direction:column;gap:var(--space-3);justify-content:center;margin-block:var(--space-4);flex-wrap:wrap;}
-  .hero-copy .hero-cta .btn{width:100%;}
-  .hero-copy .hero-badges{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;max-width:400px;margin-inline:auto;}
-  .hero-copy .pill-badge{color:#E9DAD2;border-color:rgba(233,218,210,.35);}
-  .hero-copy .pill-badge .icon{color:var(--gold-light);}
-  .hero-visual{display:none;}
-  .scroll-cue{bottom:100px;}
+  #home-desktop{display:none;}
+  #home-mobile{display:block;}
+}
+/* Hide mobile hero on desktop, show desktop hero */
+@media (min-width:960px){
+  #home-mobile{display:none;}
+  #home-desktop{display:block;}
 }
 </style>
 </head>
@@ -70,23 +60,43 @@
 <script src="assets/header.js?v=20260709-14"></script>
 
 <main>
-<!-- ============ HERO ============ -->
-<section id="home">
-  <!-- Mobile: Cinematic video background -->
+<!-- ============ MOBILE HERO ============ -->
+<section id="home-mobile">
+  <div class="hero-content">
+    <h1 class="hero-title"><span data-i18n="hero.title">إطلالتكِ الأجمل </span><span class="accent" data-i18n="hero.titleAccent">تبدأ من هنا</span></h1>
+    <div class="hero-cta">
+      <a href="contact" class="btn btn-primary" data-i18n="hero.ctaBook">احجزي موعدك</a>
+      <a href="portfolio" class="btn btn-ghost" data-i18n="hero.ctaPortfolio">استعرضي أعمالي</a>
+    </div>
+    <div class="hero-badges">
+      <div class="hero-badge-item">
+        <svg class="icon"><use href="#i-heart"/></svg>
+        <span data-i18n="hero.badge1">+500 عروس وعميلة</span>
+      </div>
+      <div class="hero-badge-item">
+        <svg class="icon"><use href="#i-shield"/></svg>
+        <span data-i18n="hero.badge2">تعقيم 100% للأدوات</span>
+      </div>
+      <div class="hero-badge-item">
+        <svg class="icon"><use href="#i-pin"/></svg>
+        <span data-i18n="hero.badge3">حي الرحاب، جدة</span>
+      </div>
+    </div>
+  </div>
   <div class="hero-video-bg">
     <video src="assets/videos/hero-red-veil.mp4" autoplay muted loop playsinline preload="auto" id="heroVideo" style="cursor:pointer;"></video>
     <div class="hero-video-scrim"></div>
   </div>
+</section>
 
-  <!-- Desktop: Grid layout with blob background -->
+<!-- ============ DESKTOP HERO ============ -->
+<section id="home-desktop">
   <div class="hero-bg">
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
     <div class="blob blob-3"></div>
     <div class="particles" id="particles"></div>
   </div>
-
-  <!-- Content: Works on both mobile and desktop -->
   <div class="container hero-grid">
     <div class="hero-copy" data-reveal>
       <span class="eyebrow" data-i18n="hero.eyebrow">خبيرة مكياج معتمدة</span>
@@ -118,7 +128,7 @@
       </div>
     </div>
   </div>
-  <div class="scroll-cue"><span class="mouse"></span><span data-i18n="hero.scroll">مرری للأسفل</span></div>
+  <div class="scroll-cue"><span class="mouse"></span><span data-i18n="hero.scroll">مرري للأسفل</span></div>
 </section>
 
 <!-- ============ ABOUT TEASER ============ -->
@@ -332,7 +342,7 @@
 <script src="assets/footer.js?v=20260709-16"></script>
 </div>
 
-<script src="assets/app.js?v=20260709-29"></script>
+<script src="assets/app.js?v=20260709-30"></script>
 <script>
 var heroVideo=document.getElementById('heroVideo');
 if(heroVideo){heroVideo.addEventListener('click',function(e){e.preventDefault();heroVideo.muted=!heroVideo.muted;});}
