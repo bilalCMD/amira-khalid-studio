@@ -26,6 +26,25 @@
   --font-signature:'Rockybilly',cursive;
   color-scheme: light;
 }
+
+/* ===================== SCROLLBAR STYLING ===================== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-light);
+}
+html {
+  scrollbar-color: var(--gold) var(--bg);
+  scrollbar-width: thin;
+}
 @media (prefers-color-scheme: dark){
   :root{
     --bg:linear-gradient(180deg,#1B140E 0%,#19120D 100%); --bg-alt:linear-gradient(180deg,#241A12 0%,#221810 100%); --surface:#2B2015; --surface-2:#332619;
