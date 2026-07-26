@@ -33,6 +33,7 @@
   var translations = {
     ar: {
       "brand.name":"أميرة خالد","brand.tag":"استوديو مكياج · جدة",
+      "common.viewOnMaps":"عرض على خرائط جوجل","common.sar":"ريال",
       "nav.home":"الرئيسية","nav.about":"من أنا","nav.portfolio":"أعمالي","nav.pricing":"الأسعار","nav.contact":"تواصل","nav.bookNow":"احجزي الآن",
       "hero.eyebrow":"خبيرة مكياج معتمدة","hero.title":"إطلالتكِ الأجمل ","hero.titleAccent":"تبدأ من هنا",
       "hero.subtitle":"مكياج احترافي وتسريحات راقية في استوديو أميرة خالد بجدة.",
@@ -147,6 +148,7 @@
       "contact.successMsg":"تم تجهيز طلبكِ! اضغطي لإتمام الإرسال عبر واتساب",
       "contact.trustBadge":"موثوقة — استوديو أميرة خالد","contact.infoLocationTitle":"الموقع","contact.infoLocation":"عبدالمغيث الحربي، جدة — عرض على خرائط جوجل",
       "contact.infoLocation2":"عبدالمغيث الحربي، جدة، المملكة العربية السعودية",
+      "contact.fullAddress":"شارع عبدالمغيث الحربي، مبنى رقم 8778، حي الرحمانية، جدة 23765، المملكة العربية السعودية",
       "contact.areasServed":"لباقة العروس، نصل إليكِ في أي حي بجدة — الشاطئ، الروضة، النعيم، السلامة، الحمراء، الأندلس وغيرها.",
       "contact.infoHoursTitle":"ساعات العمل","contact.infoHours":"الأحد–الأربعاء: 11:00 ص – 10:00 م، الخميس–السبت: 9:00 ص – 11:00 م","contact.infoInstagramTitle":"إنستغرام","contact.infoTiktokTitle":"تيك توك",
       "contact.infoEmailTitle":"البريد الإلكتروني",
@@ -214,6 +216,7 @@
     },
     en: {
       "brand.name":"Amira Khalid","brand.tag":"Makeup Studio · Jeddah",
+      "common.viewOnMaps":"View on Google Maps","common.sar":"SAR",
       "nav.home":"Home","nav.about":"About","nav.portfolio":"Portfolio","nav.pricing":"Pricing","nav.contact":"Contact","nav.bookNow":"Book Now",
       "hero.eyebrow":"Certified Makeup Artist","hero.title":"Your Most Beautiful Look ","hero.titleAccent":"Starts Here",
       "hero.subtitle":"Professional makeup & elegant hairstyling at Amira Khalid Studio in Jeddah.",
@@ -328,6 +331,7 @@
       "contact.successMsg":"Your request is ready! Click to complete sending via WhatsApp",
       "contact.trustBadge":"Trusted — Amira Khalid Studio","contact.infoLocationTitle":"Location","contact.infoLocation":"Abdul Mughith Al Harbi, Jeddah — View on Google Maps",
       "contact.infoLocation2":"Abdul Mughith Al Harbi, Jeddah, Saudi Arabia",
+      "contact.fullAddress":"Abdul Mughith Al Harbi Street, Building No. 8778, Ar Rohmaniyah District, Jeddah 23765, Kingdom of Saudi Arabia",
       "contact.areasServed":"For the Bridal Package, we come to you anywhere in Jeddah — Al-Shatie, Al-Rawdah, Al-Naeem, Al-Salamah, Al-Hamra, Al-Andalus, and more.",
       "contact.infoHoursTitle":"Working Hours","contact.infoHours":"Sun–Wed: 11:00 AM – 10:00 PM, Thu–Sat: 9:00 AM – 11:00 PM","contact.infoInstagramTitle":"Instagram","contact.infoTiktokTitle":"TikTok",
       "contact.infoEmailTitle":"Email",

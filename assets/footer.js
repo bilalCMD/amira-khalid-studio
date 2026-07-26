@@ -44,7 +44,7 @@
           '<div class="footer-col">' +
             '<h4 data-i18n="footer.getInTouch">تواصلي معنا</h4>' +
             '<ul>' +
-              '<li style="font-size:.85rem; line-height:1.5;"><span>شارع عبدالمغيث الحربي، مبنى 8778، الرحمانية، جدة 23765</span></li>' +
+              '<li style="font-size:.85rem; line-height:1.5;"><span data-i18n="contact.fullAddress">شارع عبدالمغيث الحربي، مبنى رقم 8778، حي الرحمانية، جدة 23765، المملكة العربية السعودية</span></li>' +
               '<li><span data-i18n="contact.infoHours">يوميًا: 10 صباحًا – 10 مساءً *</span></li>' +
               '<li><a href="contact" data-i18n="nav.bookNow">احجزي الآن</a></li>' +
             '</ul>' +
