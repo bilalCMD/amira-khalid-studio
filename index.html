@@ -40,7 +40,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=20260726-35">
+<link rel="stylesheet" href="assets/styles.css?v=20260726-36">
 <style>
 /* ===== HERO: CINEMATIC FULL VIEWPORT ===== */
 #home-v2{
@@ -58,9 +58,9 @@
 .hero-content h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;font-family:var(--font-display);color:#FBF3EC;margin:0 0 var(--space-4);line-height:1.3;}
 .hero-content .accent{color:#E8D3A0;}
 .hero-cta{display:flex;gap:var(--space-3);justify-content:center;margin-block:var(--space-4);flex-wrap:wrap;}
-.hero-badges{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;max-width:400px;margin-inline:auto;}
-.hero-badge-item{display:flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(255,255,255,0.08);border:1px solid rgba(233,218,210,0.25);border-radius:var(--radius-sm);color:#E9DAD2;font-size:0.8rem;font-weight:500;backdrop-filter:blur(8px);flex:0 1 calc(50% - 4px);}
-.hero-badge-item:nth-child(3){flex:0 1 calc(50% - 4px);}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;max-width:100%;margin-inline:auto;}
+.hero-badge-item{display:flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(255,255,255,0.08);border:1px solid rgba(233,218,210,0.25);border-radius:var(--radius-sm);color:#E9DAD2;font-size:0.8rem;font-weight:500;backdrop-filter:blur(8px);flex:0 1 auto;white-space:nowrap;}
+.hero-badge-item:nth-child(3){flex:0 1 auto;}
 .hero-badge-item svg{width:1em;height:1em;color:#DCC094;}
 .scroll-cue{display:none;}
 .floating-wa{display:none!important;}
@@ -70,7 +70,7 @@
 <body>
 <div id="app" dir="rtl" lang="ar">
 <script>window.CURRENT_PAGE = 'home';</script>
-<script src="assets/header.js?v=20260726-15"></script>
+<script src="assets/header.js?v=20260726-16"></script>
 
 <main>
 <!-- HERO: CINEMATIC FULL VIEWPORT -->
@@ -324,10 +324,10 @@
 </section>
 </main>
 
-<script src="assets/footer.js?v=20260726-17"></script>
+<script src="assets/footer.js?v=20260726-18"></script>
 </div>
 
-<script src="assets/app.js?v=20260726-35"></script>
+<script src="assets/app.js?v=20260726-36"></script>
 <script>
 var heroVideo=document.getElementById('heroVideo');
 if(heroVideo){heroVideo.addEventListener('click',function(e){e.preventDefault();heroVideo.muted=!heroVideo.muted;});}
