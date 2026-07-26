@@ -44,6 +44,7 @@
           '<div class="footer-col">' +
             '<h4 data-i18n="footer.getInTouch">تواصلي معنا</h4>' +
             '<ul>' +
+              '<li><span data-i18n="contact.infoDistrictAddr">الرحمانية، جدة 23765</span></li>' +
               '<li><span data-i18n="contact.infoLocation2">جدة، المملكة العربية السعودية</span></li>' +
               '<li><span data-i18n="contact.infoHours">يوميًا: 10 صباحًا – 10 مساءً *</span></li>' +
               '<li><a href="contact" data-i18n="nav.bookNow">احجزي الآن</a></li>' +
