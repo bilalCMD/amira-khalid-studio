@@ -13,18 +13,18 @@
   function onLangChange(fn){ langChangeListeners.push(fn); }
 
   var REVIEWS = [
-    {ar: "صراحة أميرة شخصية كلاسيكية جداً، طريقتها روعة وتسأل إيش تحبين اللوك قفيف أم ثقيل، تحطين وجهك بإيدها وتطلع لوك هندسة معمارية.", en: "She's such a classy person, her manner is amazing, and she asks you what you like and what you want—light or heavy makeup. You entrust your face to her, and she creates a masterpiece.", author: "روان / Rowan", date: "2 weeks ago"},
-    {ar: "يا إلهي، كيف أقول؟ أميرة حلوة جداً وشغلها روعة مشاء الله! الستايل خيالي والنظافة فوق الخيال.", en: "Oh my goodness, what can I say? Amira is so sweet, and her work is absolutely amazing, mashallah! The style is impeccable, and the cleanliness is superb.", author: "شهد / Lady Shahd", date: "1 month ago"},
-    {ar: "مشاء الله، فنانة المكياج أميرة خالد شغلها أكثر من رائع! مكياجها نظيف وحنين والفهم كل عميلة زين.", en: "Masha'Allah, makeup artist Amira Khaled's work is more than wonderful! Her makeup is clean and neat, and she understands each person very well.", author: "أحلام / Ahlam", date: "6 months ago"},
-    {ar: "تجربة جميلة جداً مع أميرة الحلوة، وليس آخر مرة، ولن أقدر أحد غير أميرة يسوي مكياجي... موصي فيها.", en: "A very beautiful experience with the lovely Amira. It's not the first time, and I won't get anyone but Amira to do my makeup... Highly recommended!", author: "عزة / Azzah", date: "2 months ago"},
-    {ar: "روووعة! دقة وجمال واستقرار! تطلعين من عندها وكأنك ملكة، والمكياج يدوم لآخر اليوم.", en: "Absolutely amazing! Precision, beauty, and stability. You'll leave feeling so special. The makeup lasts until the end of the event!", author: "لينا / Lena", date: "2 months ago"},
-    {ar: "لو أقدر أعطيها أكثر من خمس نجوم أعطيتها، خدمتها واحترافيتها رائعة جداً، الله يباركلها. 100% راضية!", en: "If I had to give her more than five stars, I'd give her that. Her service and workmanship were amazing, may God bless her. 100% satisfied!", author: "سمية / Sumayyah", date: "1 year ago"},
-    {ar: "تجربة رائعة جداً! كلنا طلعنا راضيين. المكان حلو ومرتب ومريح وفيه خصوصية ممتازة. ممتاز جداً!", en: "A truly wonderful experience! We all left satisfied. The place is lovely, tidy, comfortable, and offers excellent privacy. Outstanding!", author: "نوال / Nawal", date: "2 months ago"},
-    {ar: "مشاء الله تبارك الله! أنا مجنونة في مكياجك! كل مرة أجمل من اللي قبلها. أنا واثقة فيك تماماً!", en: "Mashallah, may God bless you! I absolutely adore your makeup! Each time the look is more beautiful than the last. I trust you completely!", author: "ع الزهراني / Az Zahra", date: "3 months ago"},
-    {ar: "شغلها روووعة! مكياجها وتسريحتها خيالية، وستايلها وطريقتها جميلة وكلاسيكية جداً. ❤️", en: "Her work is absolutely amazing! Her makeup and hair are fantastic, and her style and manner are so beautiful and classy. ❤️", author: "أفنان / Afnan", date: "2 months ago"},
-    {ar: "احترافية جداً، ملتزمة بشغلها وتشتغل بحب، الله يباركلها. سريعة وخبيرة وموصي فيها!", en: "She's excellent, very dedicated to her work, and works with love, may God bless her. Quick, knowledgeable, and highly recommended!", author: "إلهام / Elham", date: "6 months ago"},
-    {ar: "تعرفين الحالة اللي ما تقلقين على التفاصيل؟ أميرة هي كذلك. أفضل فنانة في جدة. مكياج روعة ونظيف وثابت!", en: "You know when you don't worry about details? Amira is just like that. Truly the best artist in Jeddah. Amazing, clean, long-lasting makeup!", author: "ريهام / Reham", date: "8 months ago"},
-    {ar: "أميرة الرائعة، حتى 100 نجمة ما توفيها حقها. متعاونة جداً وتفهم الملامح صح. حقاً الأفضل!", en: "The amazing Amira, even 100 stars wouldn't be enough to rate her. She's incredibly helpful, understands facial features perfectly. Truly the best!", author: "أم زين / Om Zain", date: "1 year ago"}
+    {ar: "صراحة أميرة شخصية كلاسيكية جداً، طريقتها روعة وتسأل إيش تحبين اللوك قفيف أم ثقيل، تحطين وجهك بإيدها وتطلع لوك هندسة معمارية.", en: "She's such a classy person, her manner is amazing, and she asks you what you like and what you want—light or heavy makeup. You entrust your face to her, and she creates a masterpiece.", author: "روان / Rowan", date: "2 weeks ago", dateAr: "قبل أسبوعين"},
+    {ar: "يا إلهي، كيف أقول؟ أميرة حلوة جداً وشغلها روعة مشاء الله! الستايل خيالي والنظافة فوق الخيال.", en: "Oh my goodness, what can I say? Amira is so sweet, and her work is absolutely amazing, mashallah! The style is impeccable, and the cleanliness is superb.", author: "شهد / Lady Shahd", date: "1 month ago", dateAr: "قبل شهر"},
+    {ar: "مشاء الله، فنانة المكياج أميرة خالد شغلها أكثر من رائع! مكياجها نظيف وحنين والفهم كل عميلة زين.", en: "Masha'Allah, makeup artist Amira Khaled's work is more than wonderful! Her makeup is clean and neat, and she understands each person very well.", author: "أحلام / Ahlam", date: "6 months ago", dateAr: "قبل 6 أشهر"},
+    {ar: "تجربة جميلة جداً مع أميرة الحلوة، وليس آخر مرة، ولن أقدر أحد غير أميرة يسوي مكياجي... موصي فيها.", en: "A very beautiful experience with the lovely Amira. It's not the first time, and I won't get anyone but Amira to do my makeup... Highly recommended!", author: "عزة / Azzah", date: "2 months ago", dateAr: "قبل شهرين"},
+    {ar: "روووعة! دقة وجمال واستقرار! تطلعين من عندها وكأنك ملكة، والمكياج يدوم لآخر اليوم.", en: "Absolutely amazing! Precision, beauty, and stability. You'll leave feeling so special. The makeup lasts until the end of the event!", author: "لينا / Lena", date: "2 months ago", dateAr: "قبل شهرين"},
+    {ar: "لو أقدر أعطيها أكثر من خمس نجوم أعطيتها، خدمتها واحترافيتها رائعة جداً، الله يباركلها. 100% راضية!", en: "If I had to give her more than five stars, I'd give her that. Her service and workmanship were amazing, may God bless her. 100% satisfied!", author: "سمية / Sumayyah", date: "1 year ago", dateAr: "قبل سنة"},
+    {ar: "تجربة رائعة جداً! كلنا طلعنا راضيين. المكان حلو ومرتب ومريح وفيه خصوصية ممتازة. ممتاز جداً!", en: "A truly wonderful experience! We all left satisfied. The place is lovely, tidy, comfortable, and offers excellent privacy. Outstanding!", author: "نوال / Nawal", date: "2 months ago", dateAr: "قبل شهرين"},
+    {ar: "مشاء الله تبارك الله! أنا مجنونة في مكياجك! كل مرة أجمل من اللي قبلها. أنا واثقة فيك تماماً!", en: "Mashallah, may God bless you! I absolutely adore your makeup! Each time the look is more beautiful than the last. I trust you completely!", author: "ع الزهراني / Az Zahra", date: "3 months ago", dateAr: "قبل 3 أشهر"},
+    {ar: "شغلها روووعة! مكياجها وتسريحتها خيالية، وستايلها وطريقتها جميلة وكلاسيكية جداً. ❤️", en: "Her work is absolutely amazing! Her makeup and hair are fantastic, and her style and manner are so beautiful and classy. ❤️", author: "أفنان / Afnan", date: "2 months ago", dateAr: "قبل شهرين"},
+    {ar: "احترافية جداً، ملتزمة بشغلها وتشتغل بحب، الله يباركلها. سريعة وخبيرة وموصي فيها!", en: "She's excellent, very dedicated to her work, and works with love, may God bless her. Quick, knowledgeable, and highly recommended!", author: "إلهام / Elham", date: "6 months ago", dateAr: "قبل 6 أشهر"},
+    {ar: "تعرفين الحالة اللي ما تقلقين على التفاصيل؟ أميرة هي كذلك. أفضل فنانة في جدة. مكياج روعة ونظيف وثابت!", en: "You know when you don't worry about details? Amira is just like that. Truly the best artist in Jeddah. Amazing, clean, long-lasting makeup!", author: "ريهام / Reham", date: "8 months ago", dateAr: "قبل 8 أشهر"},
+    {ar: "أميرة الرائعة، حتى 100 نجمة ما توفيها حقها. متعاونة جداً وتفهم الملامح صح. حقاً الأفضل!", en: "The amazing Amira, even 100 stars wouldn't be enough to rate her. She's incredibly helpful, understands facial features perfectly. Truly the best!", author: "أم زين / Om Zain", date: "1 year ago", dateAr: "قبل سنة"}
   ];
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -50,6 +50,7 @@
       "home.reelsEyebrow":"فيديوهات","home.reelsTitle":"لقطات حية من الاستوديو","home.reelsSub":"شاهدي جلسات مكياج حقيقية ونصائح سريعة","home.reelsMore":"شاهدي المزيد من الريلز",
       "home.journalEyebrow":"مدونة الجمال","home.journalTitle":"نصائح وخبرات من أميرة","home.journalSub":"مقالات تساعدكِ على التحضير ليومكِ المثالي","home.journalMore":"تصفحي كل المقالات",
       "reviews.title":"عميلاتنا يتحدثن","reviews.sub":"آراء حقيقية من عميلات في جوجل — ماذا قالوا عن أميرة","reviews.readAll":"اقرئي كل التقييمات على جوجل",
+      "reviews.countLabel":"تقييم على جوجل","reviews.hint":"اسحبي أو استخدمي الأسهم للتنقل",
       "portfolio.instaFollow":"تابعي أحدث الريلز على إنستغرام",
       "reel3.caption":"لحظات من كواليس التصوير",
       "reel8.caption":"لمسات مكياج احترافية","reel9.caption":"تفاصيل تصنع الفرق",
@@ -234,6 +235,7 @@
       "home.reelsEyebrow":"Videos","home.reelsTitle":"Live Clips From the Studio","home.reelsSub":"Watch real makeup sessions and quick tips","home.reelsMore":"Watch More Reels",
       "home.journalEyebrow":"Beauty Journal","home.journalTitle":"Tips & Insights From Amira","home.journalSub":"Articles to help you prepare for your perfect day","home.journalMore":"Browse All Articles",
       "reviews.title":"What Our Clients Say","reviews.sub":"Real reviews from clients on Google — what they said about Amira","reviews.readAll":"Read All Reviews on Google",
+      "reviews.countLabel":"Google Reviews","reviews.hint":"Swipe or use the arrow keys",
       "portfolio.instaFollow":"Follow the latest reels on Instagram",
       "reel3.caption":"Behind the Scenes",
       "reel8.caption":"Professional Makeup Touches","reel9.caption":"Details That Make the Difference",
@@ -462,6 +464,26 @@
     renderReviews();
   }
 
+  var reviewIndex = 0;
+
+  function escapeHtml(str){
+    return String(str).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  // Authors are stored as "روان / Rowan" — pick the side matching the active language.
+  function authorForLang(author, lang){
+    var parts = String(author).split('/');
+    if(parts.length < 2) return author.trim();
+    return (lang === 'ar' ? parts[0] : parts[1]).trim();
+  }
+
+  function initialsOf(name){
+    var words = name.trim().split(/\s+/).slice(0, 2);
+    return words.map(function(w){ return w.charAt(0); }).join('').toUpperCase();
+  }
+
   function renderReviews(){
     var container = document.getElementById('reviewsScroll');
     if(!container) return;
@@ -469,25 +491,119 @@
     container.innerHTML = '';
     REVIEWS.forEach(function(review){
       var text = currentLang === 'ar' ? review.ar : review.en;
+      var name = authorForLang(review.author, currentLang);
+      var date = currentLang === 'ar' ? (review.dateAr || review.date) : review.date;
       var card = document.createElement('div');
       card.className = 'review-card';
-      card.innerHTML = '<div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3)"><div class="review-stars">★★★★★</div></div><p class="review-text">"' + text + '"</p><strong class="review-name">' + review.author + '</strong><span class="review-date">' + review.date + '</span>';
+      card.innerHTML =
+        '<div class="review-head">' +
+          '<span class="review-avatar">' + escapeHtml(initialsOf(name)) + '</span>' +
+          '<span class="review-meta">' +
+            '<strong class="review-name">' + escapeHtml(name) + '</strong>' +
+            '<span class="review-date">' + escapeHtml(date) + '</span>' +
+          '</span>' +
+          '<span class="review-quote-mark" aria-hidden="true">”</span>' +
+        '</div>' +
+        '<div class="review-stars" aria-label="5 / 5">★★★★★</div>' +
+        '<p class="review-text">' + escapeHtml(text) + '</p>';
       container.appendChild(card);
     });
+    buildReviewDots();
+    if(reviewIndex >= REVIEWS.length) reviewIndex = 0;
+    updateReviewCarousel();
   }
 
-  var reviewScroll = document.getElementById('reviewsScroll');
-  var reviewPrevBtn = document.getElementById('reviewPrev');
-  var reviewNextBtn = document.getElementById('reviewNext');
-  if(reviewPrevBtn && reviewScroll){
-    reviewPrevBtn.addEventListener('click', function(){
-      reviewScroll.scrollBy({left: document.documentElement.dir === 'rtl' ? 340 : -340, behavior: 'smooth'});
+  function buildReviewDots(){
+    var dotsWrap = document.getElementById('reviewDots');
+    if(!dotsWrap || dotsWrap.children.length === REVIEWS.length) return;
+    dotsWrap.innerHTML = '';
+    REVIEWS.forEach(function(_, i){
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'review-dot';
+      dot.setAttribute('aria-label', 'Review ' + (i + 1));
+      dot.addEventListener('click', function(){ goToReview(i); });
+      dotsWrap.appendChild(dot);
     });
+    var total = document.getElementById('reviewTotal');
+    if(total) total.textContent = String(REVIEWS.length);
   }
-  if(reviewNextBtn && reviewScroll){
-    reviewNextBtn.addEventListener('click', function(){
-      reviewScroll.scrollBy({left: document.documentElement.dir === 'rtl' ? -340 : 340, behavior: 'smooth'});
+
+  function updateReviewCarousel(){
+    var container = document.getElementById('reviewsScroll');
+    if(!container) return;
+    var cards = container.children;
+    var last = cards.length - 1;
+    if(last < 0) return;
+    var prev = reviewIndex === 0 ? last : reviewIndex - 1;
+    var next = reviewIndex === last ? 0 : reviewIndex + 1;
+    for(var i = 0; i < cards.length; i++){
+      var cls = 'review-card';
+      if(i === reviewIndex) cls += ' is-active';
+      else if(i === prev) cls += ' is-prev';
+      else if(i === next) cls += ' is-next';
+      cards[i].className = cls;
+      cards[i].setAttribute('aria-hidden', i === reviewIndex ? 'false' : 'true');
+    }
+    var dots = document.getElementById('reviewDots');
+    if(dots){
+      for(var d = 0; d < dots.children.length; d++){
+        dots.children[d].classList.toggle('is-active', d === reviewIndex);
+      }
+    }
+    var current = document.getElementById('reviewCurrent');
+    if(current) current.textContent = String(reviewIndex + 1);
+  }
+
+  function goToReview(i){
+    var total = REVIEWS.length;
+    if(!total) return;
+    reviewIndex = ((i % total) + total) % total;
+    updateReviewCarousel();
+  }
+
+  var reviewStage = document.getElementById('reviewsScroll');
+  var reviewLeftBtn = document.getElementById('reviewLeftBtn');
+  var reviewRightBtn = document.getElementById('reviewRightBtn');
+
+  // Language switching sets dir on #app, not on <html> (which stays rtl), so
+  // read the direction from #app.
+  function isRtl(){
+    var app = document.getElementById('app');
+    return !!app && app.getAttribute('dir') === 'rtl';
+  }
+
+  // Buttons are pinned physically (left/right). In RTL the left button must
+  // advance forward, so resolve the step from the active direction.
+  function stepFor(physicalSide){
+    var forward = isRtl() ? physicalSide === 'left' : physicalSide === 'right';
+    return forward ? 1 : -1;
+  }
+  if(reviewLeftBtn) reviewLeftBtn.addEventListener('click', function(){ goToReview(reviewIndex + stepFor('left')); });
+  if(reviewRightBtn) reviewRightBtn.addEventListener('click', function(){ goToReview(reviewIndex + stepFor('right')); });
+
+  if(reviewStage){
+    // Arrow keys move the carousel while it is on screen.
+    document.addEventListener('keydown', function(e){
+      if(e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      var box = reviewStage.getBoundingClientRect();
+      if(box.bottom < 0 || box.top > window.innerHeight) return;
+      var tag = (document.activeElement && document.activeElement.tagName) || '';
+      if(tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+      goToReview(reviewIndex + stepFor(e.key === 'ArrowLeft' ? 'left' : 'right'));
     });
+
+    var swipeX = 0, swipeActive = false;
+    reviewStage.addEventListener('touchstart', function(e){
+      swipeX = e.touches[0].clientX; swipeActive = true;
+    }, {passive:true});
+    reviewStage.addEventListener('touchend', function(e){
+      if(!swipeActive) return;
+      swipeActive = false;
+      var dx = e.changedTouches[0].clientX - swipeX;
+      if(Math.abs(dx) < 45) return;
+      goToReview(reviewIndex + stepFor(dx < 0 ? 'right' : 'left'));
+    }, {passive:true});
   }
 
   function initLang(){
