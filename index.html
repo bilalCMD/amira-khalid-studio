@@ -40,7 +40,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=20260726-41">
+<link rel="stylesheet" href="assets/styles.css?v=20260726-42">
 <style>
 /* ===== HERO: CINEMATIC FULL VIEWPORT ===== */
 #home-v2{
@@ -281,8 +281,8 @@
           <span style="font-size:0.85rem;color:var(--text-muted)">(32)</span>
         </div>
       </div>
-      <h2 class="section-title">عميلاتنا يتحدثن</h2>
-      <p class="section-sub">آراء حقيقية من عميلات في جوجل — ماذا قالوا عن أميرة</p>
+      <h2 class="section-title" data-i18n="reviews.title">عميلاتنا يتحدثن</h2>
+      <p class="section-sub" data-i18n="reviews.sub">آراء حقيقية من عميلات في جوجل — ماذا قالوا عن أميرة</p>
     </div>
     <div class="google-reviews-carousel" data-reveal>
       <button class="review-arrow review-prev" id="reviewPrev" aria-label="Previous review"><svg class="icon" style="width:20px;height:20px"><use href="#i-chevron"/></svg></button>
@@ -292,7 +292,7 @@
       <button class="review-arrow review-next" id="reviewNext" aria-label="Next review"><svg class="icon" style="width:20px;height:20px;transform:scaleX(-1)"><use href="#i-chevron"/></svg></button>
     </div>
     <div style="text-align:center;margin-top:var(--space-6)">
-      <a href="https://www.google.com/maps/place/Amira+Khalid+Studio" target="_blank" rel="noopener" class="btn btn-primary">اقرئي كل التقييمات على جوجل</a>
+      <a href="https://www.google.com/maps/place/Amira+Khalid+Studio" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="reviews.readAll">اقرئي كل التقييمات على جوجل</a>
     </div>
   </div>
 </section>
@@ -324,10 +324,10 @@
 </section>
 </main>
 
-<script src="assets/footer.js?v=20260726-23"></script>
+<script src="assets/footer.js?v=20260726-24"></script>
 </div>
 
-<script src="assets/app.js?v=20260726-41"></script>
+<script src="assets/app.js?v=20260726-42"></script>
 <script>
 var heroVideo=document.getElementById('heroVideo');
 if(heroVideo){heroVideo.addEventListener('click',function(e){e.preventDefault();heroVideo.muted=!heroVideo.muted;});}
