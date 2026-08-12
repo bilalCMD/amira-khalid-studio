@@ -914,6 +914,92 @@ body.cursor-enabled a, body.cursor-enabled button, body.cursor-enabled input, bo
   .review-card{transition:opacity var(--dur-f) linear;}
 }
 
+/* ===================== ABOUT: STORY LAYOUT ===================== */
+/* The About page reads as a story, so it is broken into chapters with
+   full-width bands between them rather than one long column of text. */
+.story-narrow{max-width:720px; margin-inline:auto;}
+
+.story-chapter{
+  display:inline-flex; align-items:center; gap:10px;
+  margin-block-end:var(--space-5);
+  font-size:.78rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--primary);
+}
+.story-chapter-num{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:32px; height:32px; border-radius:50%;
+  background:var(--gold-soft); color:var(--primary);
+  font-family:var(--font-display); font-size:.85rem; letter-spacing:0;
+}
+.story-lead{
+  font-family:var(--font-display); font-size:1.5rem; line-height:1.5;
+  color:var(--text); margin-block-end:var(--space-4)!important;
+}
+@media (min-width:760px){.story-lead{font-size:1.75rem;}}
+
+/* Pull-quote band — her core belief, lifted out of the prose */
+.belief-band{
+  position:relative; overflow:hidden;
+  padding-block:var(--space-8);
+  background:linear-gradient(135deg, var(--bg-alt) 0%, var(--gold-soft) 100%);
+  border-block:1px solid var(--border);
+}
+.belief-inner{position:relative; max-width:760px; margin-inline:auto; text-align:center;}
+.belief-mark{
+  display:block; font-family:var(--font-display); font-size:5rem; line-height:.6;
+  color:var(--gold); opacity:.35; margin-block-end:var(--space-3);
+}
+.belief-text{
+  font-family:var(--font-display); font-size:clamp(1.6rem,4.2vw,2.4rem);
+  line-height:1.5; color:var(--text); margin:0 0 var(--space-4);
+}
+.belief-sub{
+  color:var(--text-muted); font-size:1rem; line-height:1.85; margin:0;
+  max-width:620px; margin-inline:auto;
+}
+
+/* The client's line, given its own weight */
+.client-quote{
+  position:relative; margin-block:var(--space-6);
+  padding:var(--space-6) var(--space-6) var(--space-6) var(--space-7);
+  background:var(--surface); border:1px solid var(--border);
+  border-inline-start:3px solid var(--gold);
+  border-radius:var(--radius-lg);
+  box-shadow:
+    0 2px 5px hsla(var(--shadow-color),.05),
+    0 12px 26px hsla(var(--shadow-color),.09);
+}
+.client-quote p{
+  margin:0; font-family:var(--font-display);
+  font-size:clamp(1.15rem,2.6vw,1.45rem); line-height:1.6; color:var(--text);
+}
+
+.stats-band{background:var(--bg-alt); border-block:1px solid var(--border);}
+.feature-list-wide{margin-block-end:var(--space-4);}
+.about-areas{
+  font-size:.85rem; color:var(--text-muted); text-align:center;
+  margin:0; padding-block-start:var(--space-2);
+}
+
+/* Chapter bodies get a touch more air than body copy elsewhere */
+.story-open .about-story,
+.story-narrow .about-story{font-size:1.05rem; line-height:1.95;}
+
+.philosophy-cta{
+  margin-block-start:var(--space-7); padding-block-start:var(--space-6);
+  border-block-start:1px solid var(--border); text-align:center;
+}
+.philosophy-cta p{
+  font-family:var(--font-display); font-size:1.15rem;
+  color:var(--text); margin:0 0 var(--space-4);
+}
+
+@media (max-width:600px){
+  .belief-band{padding-block:var(--space-7);}
+  .belief-mark{font-size:3.5rem;}
+  .client-quote{padding:var(--space-5); padding-inline-start:var(--space-5);}
+}
+
 /* ===================== DARK PREMIUM CTA ===================== */
 .dark-cta{
   position:relative; border-radius:var(--radius-lg); overflow:hidden;
