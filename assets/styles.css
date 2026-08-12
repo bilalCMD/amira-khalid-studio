@@ -387,6 +387,31 @@ nav.main-nav a.current{color:var(--primary);}
 }
 .about-copy .section-head{margin-inline:0; text-align:inherit; margin-block-end:var(--space-5);}
 .about-body{color:var(--text-muted); font-size:1.05rem; margin-block-end:var(--space-6);}
+
+/* Amira's first-person story on the About page */
+.about-story{text-align:start; color:var(--text-muted); font-size:1.02rem; line-height:1.85;}
+.about-story p{margin:0 0 var(--space-4);}
+.about-story p:last-child{margin-block-end:0;}
+.about-story strong{color:var(--text); font-weight:700;}
+.about-quote{
+  font-family:var(--font-display); font-size:1.2rem; line-height:1.6;
+  color:var(--text); border-inline-start:3px solid var(--gold);
+  padding-inline-start:var(--space-4); margin-block:var(--space-5) var(--space-4);
+}
+
+/* Philosophy statement */
+.philosophy-section{background:var(--bg-alt);}
+.philosophy-inner{max-width:760px; margin-inline:auto; text-align:center;}
+.philosophy-body{
+  margin-block-start:var(--space-6); text-align:start;
+  color:var(--text-muted); font-size:1.02rem; line-height:1.9;
+}
+.philosophy-body p{margin:0 0 var(--space-4);}
+.philosophy-closing{
+  margin-block-start:var(--space-6); text-align:center;
+  font-family:var(--font-display); font-size:1.25rem; line-height:1.7;
+  color:var(--text);
+}
 .feature-list{display:grid; grid-template-columns:1fr; gap:var(--space-4); margin-block-end:var(--space-7); text-align:start;}
 @media (min-width:560px){.feature-list{grid-template-columns:1fr 1fr;}}
 .feature-item{display:flex; gap:12px; align-items:center;}

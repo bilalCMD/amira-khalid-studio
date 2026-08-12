@@ -1,5 +1,20 @@
 RewriteEngine On
 
+# The old journal articles were replaced by three first-person pieces.
+# These 301s keep any indexed or shared links working.
+RewriteRule ^journal-choosing-artist/?$      /journal-how-i-work      [R=301,L]
+RewriteRule ^journal-right-fit/?$            /journal-how-i-work      [R=301,L]
+RewriteRule ^journal-review-portfolio/?$     /journal-how-i-work      [R=301,L]
+RewriteRule ^journal-philosophy/?$           /journal-how-i-work      [R=301,L]
+RewriteRule ^journal-skin-prep/?$            /journal-skin-not-filter [R=301,L]
+RewriteRule ^journal-makeup-last-longer/?$   /journal-skin-not-filter [R=301,L]
+RewriteRule ^journal-jeddah-climate-makeup/?$ /journal-skin-not-filter [R=301,L]
+RewriteRule ^journal-bridal-tips/?$          /journal-photo-match     [R=301,L]
+RewriteRule ^journal-bridal-mistakes/?$      /journal-photo-match     [R=301,L]
+RewriteRule ^journal-engagement-makeup/?$    /journal-photo-match     [R=301,L]
+RewriteRule ^journal-eid-makeup/?$           /journal                 [R=301,L]
+RewriteRule ^journal-bridal-pricing-guide/?$ /pricing                 [R=301,L]
+
 # If someone requests /page.html directly, redirect to the clean /page URL
 # (except Google's site-verification file, which must be served at its exact URL)
 RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]
