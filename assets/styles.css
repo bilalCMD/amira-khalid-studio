@@ -446,8 +446,57 @@ nav.main-nav a.current{color:var(--primary);}
 .journal-grid{display:grid; grid-template-columns:1fr; gap:var(--space-6);}
 @media (min-width:700px){.journal-grid{grid-template-columns:repeat(2,1fr);}}
 @media (min-width:1100px){.journal-grid{grid-template-columns:repeat(3,1fr);}}
-.journal-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; display:flex; flex-direction:column; transition:transform var(--dur-m) var(--ease), box-shadow var(--dur-m) var(--ease);}
-.journal-card:hover{transform:translateY(-6px); box-shadow:var(--shadow-lg,0 24px 50px hsla(336,45%,20%,.2));}
+.journal-card{
+  position:relative;
+  background:linear-gradient(158deg, var(--surface) 0%, var(--surface-2) 100%);
+  border:1px solid var(--border); border-radius:var(--radius-lg);
+  overflow:hidden; display:flex; flex-direction:column;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.6) inset,
+    0 2px 5px hsla(var(--shadow-color),.06),
+    0 10px 20px hsla(var(--shadow-color),.09),
+    0 22px 40px hsla(var(--shadow-color),.10);
+  transition:transform var(--dur-m) var(--ease), box-shadow var(--dur-m) var(--ease), border-color var(--dur-m) var(--ease);
+}
+.journal-card::before{
+  content:""; position:absolute; inset-block-start:0; inset-inline:0; height:3px; z-index:2;
+  background:linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+  opacity:0; transition:opacity var(--dur-m) var(--ease);
+}
+.journal-card:hover{
+  transform:translateY(-8px) scale(1.015);
+  border-color:var(--gold);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.85) inset,
+    0 6px 12px hsla(var(--shadow-color),.10),
+    0 22px 40px hsla(var(--shadow-color),.16),
+    0 42px 74px hsla(var(--shadow-color),.20);
+}
+.journal-card:hover::before{opacity:.9;}
+
+/* Phones: swipe the cards sideways instead of stacking them into a long column. */
+@media (max-width:699px){
+  .journal-grid{
+    display:flex; grid-template-columns:none;
+    gap:var(--space-4);
+    overflow-x:auto; scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    /* room for the lifted card's shadow, and bleed to the screen edges */
+    padding-block:var(--space-3) var(--space-5);
+    padding-inline:var(--space-5);
+    margin-inline:calc(var(--space-5) * -1);
+    scrollbar-width:none;
+  }
+  .journal-grid::-webkit-scrollbar{display:none;}
+  .journal-card{
+    flex:0 0 78%; max-width:300px;
+    scroll-snap-align:center;
+  }
+  .journal-card::before{opacity:.9;}
+}
+@media (prefers-reduced-motion:reduce){
+  .journal-card:hover{transform:none;}
+}
 .journal-card-img{aspect-ratio:16/10; overflow:hidden;}
 .journal-card-img img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s var(--ease);}
 .journal-card:hover .journal-card-img img{transform:scale(1.06);}
@@ -752,6 +801,9 @@ body.cursor-enabled a, body.cursor-enabled button, body.cursor-enabled input, bo
 .reviews-track{
   position:relative; width:100%; max-width:420px;
   min-height:380px; margin-inline:auto;
+  /* gives the neighbouring cards real depth when they rotate away */
+  perspective:1200px; perspective-origin:50% 45%;
+  transform-style:preserve-3d;
 }
 .review-card{
   position:absolute; inset-block-start:0; inset-inline:0;
@@ -767,20 +819,27 @@ body.cursor-enabled a, body.cursor-enabled button, body.cursor-enabled input, bo
 }
 .review-card.is-active{
   opacity:1; visibility:visible; pointer-events:auto;
-  transform:scale(1) translateX(0); z-index:3;
+  transform:translateZ(0) scale(1) translateX(0); z-index:3;
   box-shadow:0 28px 64px -22px hsla(var(--shadow-color),.42);
 }
-/* Neighbours sit behind and to the side, dimmed. Logical translate flips
-   automatically with dir, so prev always trails and next always leads. */
+/* Neighbours sit behind, pushed back on Z and rotated so they angle away from
+   the viewer — the active card reads as the one closest to you. */
 .review-card.is-prev,
 .review-card.is-next{
-  opacity:.28; visibility:visible; z-index:1;
+  opacity:.30; visibility:visible; z-index:1;
+  box-shadow:0 12px 28px -14px hsla(var(--shadow-color),.24);
 }
 /* LTR: prev sits left, next right. #app carries the live dir (html stays rtl). */
-.review-card.is-prev{transform:scale(.9) translateX(-62%);}
-.review-card.is-next{transform:scale(.9) translateX(62%);}
-#app[dir="rtl"] .review-card.is-prev{transform:scale(.9) translateX(62%);}
-#app[dir="rtl"] .review-card.is-next{transform:scale(.9) translateX(-62%);}
+.review-card.is-prev{transform:translateX(-62%) translateZ(-140px) rotateY(26deg) scale(.96);}
+.review-card.is-next{transform:translateX(62%) translateZ(-140px) rotateY(-26deg) scale(.96);}
+#app[dir="rtl"] .review-card.is-prev{transform:translateX(62%) translateZ(-140px) rotateY(-26deg) scale(.96);}
+#app[dir="rtl"] .review-card.is-next{transform:translateX(-62%) translateZ(-140px) rotateY(26deg) scale(.96);}
+@media (prefers-reduced-motion:reduce){
+  .review-card.is-prev{transform:translateX(-62%) scale(.9);}
+  .review-card.is-next{transform:translateX(62%) scale(.9);}
+  #app[dir="rtl"] .review-card.is-prev{transform:translateX(62%) scale(.9);}
+  #app[dir="rtl"] .review-card.is-next{transform:translateX(-62%) scale(.9);}
+}
 
 /* card internals */
 .review-head{display:flex; align-items:flex-start; gap:var(--space-3); margin-block-end:var(--space-4);}
