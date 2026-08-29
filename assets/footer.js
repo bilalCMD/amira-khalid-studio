@@ -7,7 +7,7 @@
         '<div class="footer-grid">' +
           '<div class="footer-brand">' +
             '<div class="brand">' +
-              '<span class="brand-mark"><img src="assets/images/logo-mark-bw.png" alt="Amira Khalid"></span>' +
+              '<span class="brand-mark"><img src="assets/images/logo-mark-bw.png" alt="Amira Khalid" width="589" height="625"></span>' +
               '<span class="brand-text"><span class="brand-name" data-i18n="brand.name">أميرة خالد</span><span class="brand-tag" data-i18n="brand.tag">Makeup Studio · Jeddah</span></span>' +
             '</div>' +
             '<p data-i18n="footer.tagline">إبراز جمالكِ الطبيعي بلمسة فنية احترافية، في كل مناسبة تستحق التميز.</p>' +

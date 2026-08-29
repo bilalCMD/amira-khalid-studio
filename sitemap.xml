@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://amirakhalid.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://amirakhalid.com/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://amirakhalid.com/portfolio</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://amirakhalid.com/pricing</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://amirakhalid.com/contact</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://amirakhalid.com/booking-policy</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://amirakhalid.com/journal</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://amirakhalid.com/journal-photo-match</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://amirakhalid.com/journal-skin-not-filter</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://amirakhalid.com/journal-how-i-work</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://amirakhalid.com/</loc><lastmod>2026-08-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://amirakhalid.com/about</loc><lastmod>2026-08-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://amirakhalid.com/portfolio</loc><lastmod>2026-08-29</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://amirakhalid.com/pricing</loc><lastmod>2026-08-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://amirakhalid.com/contact</loc><lastmod>2026-08-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://amirakhalid.com/booking-policy</loc><lastmod>2026-08-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://amirakhalid.com/journal</loc><lastmod>2026-08-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://amirakhalid.com/journal-photo-match</loc><lastmod>2026-08-29</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://amirakhalid.com/journal-skin-not-filter</loc><lastmod>2026-08-29</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://amirakhalid.com/journal-how-i-work</loc><lastmod>2026-08-29</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
 </urlset>

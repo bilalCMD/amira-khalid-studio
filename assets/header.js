@@ -48,7 +48,7 @@
     '<header class="site-header" id="siteHeader">' +
       '<div class="container">' +
         '<a href="index" class="brand">' +
-          '<span class="brand-mark"><img src="assets/images/logo-mark-bw.png" alt="Amira Khalid"></span>' +
+          '<span class="brand-mark"><img src="assets/images/logo-mark-bw.png" alt="Amira Khalid" width="589" height="625"></span>' +
           '<span class="brand-text">' +
             '<span class="brand-name" data-i18n="brand.name">أميرة خالد</span>' +
             '<span class="brand-tag" data-i18n="brand.tag">Makeup Studio · Jeddah</span>' +
@@ -68,7 +68,7 @@
     '<div class="scrim" id="scrim"></div>' +
     '<aside class="mobile-nav" id="mobileNav">' +
       '<div class="mobile-nav-top">' +
-        '<span class="brand-mark"><img src="assets/images/logo-mark-bw.png" alt="Amira Khalid"></span>' +
+        '<span class="brand-mark"><img src="assets/images/logo-mark-bw.png" alt="Amira Khalid" width="589" height="625"></span>' +
         '<button class="icon-btn" id="closeMobileNav" aria-label="Close"><svg class="icon" style="width:18px;height:18px"><use href="#i-close"/></svg></button>' +
       '</div>' +
       '<ul>' + navLinks('mnav-link') + '</ul>' +
