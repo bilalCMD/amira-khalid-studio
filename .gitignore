@@ -1,0 +1,4 @@
+# Raw camera footage Amira sends over WhatsApp. These are 4K .MOV files of
+# 120-300 MB each; the web-ready versions live in assets/videos/ instead.
+assets/newvideo/
+*.MOV

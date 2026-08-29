@@ -8,15 +8,18 @@
 
 /* ===================== THEME TOKENS ===================== */
 :root{
-  --bg:linear-gradient(180deg,#FBF8F4 0%,#F8F2EA 100%); --bg-alt:linear-gradient(180deg,#F2E7D7 0%,#EFE2CE 100%); --surface:#FFFFFF; --surface-2:#FDF9F4;
-  --text:#2E2016; --text-muted:#8B7361;
-  --primary:#6F4A2E; --primary-dark:#4C2F1B; --primary-light:#A47A54;
-  --gold:#AD7F3E; --gold-light:#DCC094; --gold-soft:#F3E6D2;
-  --border:rgba(111,74,46,0.16);
-  --shadow-color:28,40%,22%;
-  --overlay:rgba(46,32,22,0.55);
+  /* Editorial palette: flat, quiet grounds instead of beige gradients, a
+     muted gold rather than an orange one, and near-black text. Warm enough
+     to stay Amira's brand, restrained enough to let the work carry the page. */
+  --bg:#FCFBF9; --bg-alt:#F4F1EC; --surface:#FFFFFF; --surface-2:#FAF8F5;
+  --text:#1F1B18; --text-muted:#7A716A;
+  --primary:#5A4636; --primary-dark:#3A2C21; --primary-light:#8A7461;
+  --gold:#A98B5B; --gold-light:#D6C29B; --gold-soft:#F1EBE0;
+  --border:rgba(31,27,24,0.10);
+  --shadow-color:30,12%,18%;
+  --overlay:rgba(31,27,24,0.55);
   --radius-sm:6px; --radius-md:10px; --radius-lg:16px; --radius-full:999px;
-  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px; --space-6:32px; --space-7:48px; --space-8:72px; --space-9:128px;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px; --space-6:36px; --space-7:56px; --space-8:88px; --space-9:140px;
   --container:1180px;
   --ease:cubic-bezier(.22,.61,.36,1);
   --dur-f:.25s; --dur-m:.5s; --dur-s:.9s;
@@ -47,31 +50,31 @@ html {
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:linear-gradient(180deg,#1B140E 0%,#19120D 100%); --bg-alt:linear-gradient(180deg,#241A12 0%,#221810 100%); --surface:#2B2015; --surface-2:#332619;
-    --text:#F3E8DC; --text-muted:#CBAD95;
-    --primary:#C79165; --primary-dark:#A8734A; --primary-light:#DDB088;
-    --gold:#D9B571; --gold-light:#E9D6A6; --gold-soft:rgba(217,181,113,0.14);
-    --border:rgba(199,145,101,0.22);
-    --overlay:rgba(10,7,5,0.6);
+    --bg:#14110F; --bg-alt:#1B1815; --surface:#221E1A; --surface-2:#2A2521;
+    --text:#F2EEE9; --text-muted:#A79E95;
+    --primary:#C0A480; --primary-dark:#9C8365; --primary-light:#D6C0A2;
+    --gold:#C9AC7C; --gold-light:#E2D2B4; --gold-soft:rgba(201,172,124,0.12);
+    --border:rgba(242,238,233,0.12);
+    --overlay:rgba(8,7,6,0.62);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:linear-gradient(180deg,#1B140E 0%,#19120D 100%); --bg-alt:linear-gradient(180deg,#241A12 0%,#221810 100%); --surface:#2B2015; --surface-2:#332619;
-  --text:#F3E8DC; --text-muted:#CBAD95;
-  --primary:#C79165; --primary-dark:#A8734A; --primary-light:#DDB088;
-  --gold:#D9B571; --gold-light:#E9D6A6; --gold-soft:rgba(217,181,113,0.14);
-  --border:rgba(199,145,101,0.22);
-  --overlay:rgba(10,7,5,0.6);
+  --bg:#14110F; --bg-alt:#1B1815; --surface:#221E1A; --surface-2:#2A2521;
+  --text:#F2EEE9; --text-muted:#A79E95;
+  --primary:#C0A480; --primary-dark:#9C8365; --primary-light:#D6C0A2;
+  --gold:#C9AC7C; --gold-light:#E2D2B4; --gold-soft:rgba(201,172,124,0.12);
+  --border:rgba(242,238,233,0.12);
+  --overlay:rgba(8,7,6,0.62);
   color-scheme: dark;
 }
 :root[data-theme="light"]{
-  --bg:linear-gradient(180deg,#FBF8F4 0%,#F8F2EA 100%); --bg-alt:linear-gradient(180deg,#F2E7D7 0%,#EFE2CE 100%); --surface:#FFFFFF; --surface-2:#FDF9F4;
-  --text:#2E2016; --text-muted:#8B7361;
-  --primary:#6F4A2E; --primary-dark:#4C2F1B; --primary-light:#A47A54;
-  --gold:#AD7F3E; --gold-light:#DCC094; --gold-soft:#F3E6D2;
-  --border:rgba(111,74,46,0.16);
-  --overlay:rgba(46,32,22,0.55);
+  --bg:#FCFBF9; --bg-alt:#F4F1EC; --surface:#FFFFFF; --surface-2:#FAF8F5;
+  --text:#1F1B18; --text-muted:#7A716A;
+  --primary:#5A4636; --primary-dark:#3A2C21; --primary-light:#8A7461;
+  --gold:#A98B5B; --gold-light:#D6C29B; --gold-soft:#F1EBE0;
+  --border:rgba(31,27,24,0.10);
+  --overlay:rgba(31,27,24,0.55);
   color-scheme: light;
 }
 
@@ -198,10 +201,10 @@ p{margin:0;}
 
 .section{padding-block:var(--space-7);}
 .section-head{max-width:640px; margin-inline:auto; text-align:center; margin-block-end:var(--space-7); position:relative;}
-.eyebrow{display:inline-flex; align-items:center; gap:var(--space-2); color:var(--gold); font-weight:700; letter-spacing:.04em; font-size:.85rem; text-transform:uppercase; margin-block-end:var(--space-3); font-family:var(--font-body);}
+.eyebrow{display:inline-flex; align-items:center; gap:var(--space-2); color:var(--gold); font-weight:600; letter-spacing:.18em; font-size:.72rem; text-transform:uppercase; margin-block-end:var(--space-4); font-family:var(--font-body);}
 .eyebrow::before,.eyebrow::after{content:"";width:22px; height:1px; background:var(--gold);}
-.section-title{font-size:clamp(2rem,4vw,2.9rem); margin-block-end:var(--space-4); color:var(--text); position:relative; z-index:1;}
-.section-sub{color:var(--text-muted); font-size:1.05rem;}
+.section-title{font-size:clamp(1.9rem,3.6vw,2.7rem); line-height:1.25; letter-spacing:-.01em; margin-block-end:var(--space-4); color:var(--text); position:relative; z-index:1;}
+.section-sub{color:var(--text-muted); font-size:1rem; line-height:1.75; max-width:56ch; margin-inline:auto;}
 .section-num{position:absolute; top:-.5em; left:50%; transform:translateX(-50%); font-family:var(--font-display); font-size:6rem; color:var(--gold); opacity:.08; z-index:0; pointer-events:none; line-height:1;}
 
 /* ===================== HEADER ===================== */
@@ -361,7 +364,7 @@ nav.main-nav a.current{color:var(--primary);}
 @media (max-width:768px){.page-hero{padding-block:100px var(--space-5);}}
 .page-hero .container{position:relative; z-index:1;}
 .page-hero-bg{position:absolute; inset:0; background:var(--bg-alt); z-index:0; -webkit-mask-image:linear-gradient(to bottom, #000 0%, #000 calc(100% - 100px), transparent 100%); mask-image:linear-gradient(to bottom, #000 0%, #000 calc(100% - 100px), transparent 100%);}
-.page-hero-title{font-size:clamp(2.2rem,4.6vw,3.2rem); margin-block:var(--space-3);}
+.page-hero-title{font-size:clamp(2.1rem,4.2vw,3rem); line-height:1.2; letter-spacing:-.015em; margin-block:var(--space-3);}
 .page-hero-sub{color:var(--text-muted); font-size:1.05rem; max-width:560px; margin-inline:auto;}
 .breadcrumb{display:flex; align-items:center; justify-content:center; gap:8px; font-size:.85rem; color:var(--text-muted); margin-block-end:var(--space-4);}
 .breadcrumb a:hover{color:var(--primary);}
