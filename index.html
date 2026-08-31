@@ -179,7 +179,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=20260831-58">
+<link rel="stylesheet" href="assets/styles.css?v=20260831-59">
 <style>
 /* ===== HERO: CINEMATIC FULL VIEWPORT ===== */
 #home-v2{
@@ -191,10 +191,11 @@
   overflow:hidden;
 }
 .hero-video-bg{position:absolute;inset:0;z-index:0;}
-/* The clip is 9:16, so a wide desktop viewport only shows a ~40% tall slice
-   of it. 12% lands that slice on the whole head rather than cropping into
-   the brows and eyes, which is what Amira asked us to avoid. */
-.hero-video-bg video{width:100%;height:100%;object-fit:cover;object-position:center 12%;display:block;}
+/* The clip is 9:16, so a wide desktop viewport only shows a ~35% tall slice.
+   The full tutorial cuts between wide shots and tight close-ups, so this is a
+   compromise: 22% keeps eyes, nose and lips in frame during the close-ups
+   without cropping the top of the head during the wider ones. */
+.hero-video-bg video{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block;}
 .hero-video-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,10,12,0.75) 0%,rgba(20,10,12,0.5) 30%,rgba(20,10,12,0.15) 70%,transparent 100%);pointer-events:none;z-index:1;}
 .hero-content{position:absolute;bottom:0;inset-inline:0;z-index:2;padding:var(--space-8) var(--space-6) var(--space-6);max-width:100%;text-align:center;}
 .hero-content h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;font-family:var(--font-display);color:#FBF3EC;margin:0 0 var(--space-4);line-height:1.3;}
@@ -241,7 +242,10 @@
     </div>
   </div>
   <div class="hero-video-bg">
-    <video src="assets/videos/hero-studio.mp4" poster="assets/images/portfolio/hero-studio-poster.jpg" autoplay muted loop playsinline preload="auto" id="heroVideo"></video>
+    <!-- The full 42s tutorial. preload="metadata" rather than "auto" so the
+         poster paints first and the clip streams in behind it, instead of the
+         whole 8.7 MB being pulled before anything shows. -->
+    <video src="assets/videos/hero-studio.mp4" poster="assets/images/portfolio/hero-studio-poster.jpg" autoplay muted loop playsinline preload="metadata" id="heroVideo"></video>
     <div class="hero-video-scrim"></div>
   </div>
 </section>
@@ -475,7 +479,7 @@
 <script src="assets/footer.js?v=20260830-29"></script>
 </div>
 
-<script src="assets/app.js?v=20260831-58"></script>
+<script src="assets/app.js?v=20260831-59"></script>
 <script>
 /* The hero clip is encoded without an audio track, so there is nothing to
    unmute — the old click-to-unmute handler was removed with it. */
