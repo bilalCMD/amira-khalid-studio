@@ -1,0 +1,40 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/journal-choosing-artist", "destination": "/journal-how-i-work", "permanent": true },
+    { "source": "/journal-right-fit", "destination": "/journal-how-i-work", "permanent": true },
+    { "source": "/journal-review-portfolio", "destination": "/journal-how-i-work", "permanent": true },
+    { "source": "/journal-philosophy", "destination": "/journal-how-i-work", "permanent": true },
+    { "source": "/journal-skin-prep", "destination": "/journal-skin-not-filter", "permanent": true },
+    { "source": "/journal-makeup-last-longer", "destination": "/journal-skin-not-filter", "permanent": true },
+    { "source": "/journal-jeddah-climate-makeup", "destination": "/journal-skin-not-filter", "permanent": true },
+    { "source": "/journal-bridal-tips", "destination": "/journal-photo-match", "permanent": true },
+    { "source": "/journal-bridal-mistakes", "destination": "/journal-photo-match", "permanent": true },
+    { "source": "/journal-engagement-makeup", "destination": "/journal-photo-match", "permanent": true },
+    { "source": "/journal-eid-makeup", "destination": "/journal", "permanent": true },
+    { "source": "/journal-bridal-pricing-guide", "destination": "/pricing", "permanent": true },
+
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/about.html", "destination": "/about", "permanent": true },
+    { "source": "/pricing.html", "destination": "/pricing", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/portfolio.html", "destination": "/portfolio", "permanent": true },
+    { "source": "/journal.html", "destination": "/journal", "permanent": true },
+    { "source": "/booking-policy.html", "destination": "/booking-policy", "permanent": true },
+    { "source": "/journal-photo-match.html", "destination": "/journal-photo-match", "permanent": true },
+    { "source": "/journal-skin-not-filter.html", "destination": "/journal-skin-not-filter", "permanent": true },
+    { "source": "/journal-how-i-work.html", "destination": "/journal-how-i-work", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/:path((?!.*[.]).+)", "destination": "/:path.html" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000" }
+      ]
+    }
+  ]
+}
