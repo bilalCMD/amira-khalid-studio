@@ -39,7 +39,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=20260923-60">
+<link rel="stylesheet" href="assets/styles.css?v=20260923-61">
 
 <script type="application/ld+json">
 {
@@ -93,6 +93,71 @@
       "@type": "ListItem",
       "position": 2,
       "name": "تواصل"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://amirakhalid.com/contact#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "أين يقع استوديو أميرة خالد في جدة؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "الاستوديو في حي الرحمانية بجدة — فيلا رقم 8778، الرمز البريدي 23765. جميع الخدمات تُقدَّم داخل الاستوديو بموعد مسبق."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف أحجز موعدًا في الاستوديو؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "تتم جميع الحجوزات عبر واتساب مباشرة، حيث نؤكد معكِ الخدمة والتاريخ والوقت قبل تثبيت الموعد."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل تقدمون خدمة المكياج في المنزل؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "لا، جميع الخدمات تُقدَّم داخل الاستوديو فقط في حي الرحمانية بجدة، بموعد مسبق."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يتطلب الحجز دفع عربون؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "نعم، يتطلب تأكيد كل حجز دفع عربون. في حال عدم استلام العربون خلال 24 ساعة من وقت الحجز، يُلغى الحجز تلقائيًا، والعربون غير قابل للاسترداد في حال الإلغاء."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ما هي ساعات عمل الاستوديو؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "من الأحد إلى الأربعاء: 11:00 صباحًا حتى 10:00 مساءً. ومن الخميس إلى السبت: 9:00 صباحًا حتى 11:00 مساءً."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ماذا يحدث إذا تأخرتُ عن موعدي؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "يُرجى الحضور في الموعد المحدد تمامًا. التأخير لأكثر من 15 دقيقة دون إشعار مسبق قد يؤدي لتقليص وقت الجلسة أو إلغائها، حفاظًا على مواعيد بقية العميلات."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يمكنني تأجيل موعدي؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "نعم، تواصلي معنا عبر واتساب بأقرب وقت ممكن وسنعمل معكِ لإيجاد موعد بديل مناسب."
+      }
     }
   ]
 }
@@ -210,7 +275,7 @@
         </div>
         <div class="info-tile">
           <span class="chip-icon"><svg class="icon"><use href="#i-clock"/></svg></span>
-          <div><strong data-i18n="contact.infoHoursTitle">ساعات العمل</strong><br><span data-i18n="contact.infoHours">يوميًا: 10 صباحًا – 10 مساءً *</span></div>
+          <div><strong data-i18n="contact.infoHoursTitle">ساعات العمل</strong><br><span data-i18n="contact.infoHours">الأحد–الأربعاء: 11:00 ص – 10:00 م، الخميس–السبت: 9:00 ص – 11:00 م</span></div>
         </div>
         <div class="info-tile">
           <span class="chip-icon"><svg class="icon"><use href="#i-instagram"/></svg></span>
@@ -245,11 +310,54 @@
     </div>
   </div>
 </section>
+
+<!-- Booking and location questions, answered in full on the page the
+     visitor is already on. Each answer stands alone so it can be quoted
+     by a search result or an assistant without the surrounding page. -->
+<section class="section" id="contact-faq" style="background:var(--bg-alt)">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow" data-i18n="cfaq.eyebrow">قبل ما تحجزي</span>
+      <h2 class="section-title" data-i18n="cfaq.title">أسئلة عن الحجز والموقع</h2>
+    </div>
+    <div class="faq-list" data-reveal>
+      <div class="faq-item open">
+        <button class="faq-question"><span data-i18n="cfaq.q1">أين يقع استوديو أميرة خالد في جدة؟</span><svg class="icon"><use href="#i-chevron"/></svg></button>
+        <div class="faq-answer"><p data-i18n="cfaq.a1">الاستوديو في حي الرحمانية بجدة — فيلا رقم 8778، الرمز البريدي 23765. جميع الخدمات تُقدَّم داخل الاستوديو بموعد مسبق.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question"><span data-i18n="cfaq.q2">كيف أحجز موعدًا في الاستوديو؟</span><svg class="icon"><use href="#i-chevron"/></svg></button>
+        <div class="faq-answer"><p data-i18n="cfaq.a2">تتم جميع الحجوزات عبر واتساب مباشرة، حيث نؤكد معكِ الخدمة والتاريخ والوقت قبل تثبيت الموعد.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question"><span data-i18n="cfaq.q3">هل تقدمون خدمة المكياج في المنزل؟</span><svg class="icon"><use href="#i-chevron"/></svg></button>
+        <div class="faq-answer"><p data-i18n="cfaq.a3">لا، جميع الخدمات تُقدَّم داخل الاستوديو فقط في حي الرحمانية بجدة، بموعد مسبق.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question"><span data-i18n="cfaq.q4">هل يتطلب الحجز دفع عربون؟</span><svg class="icon"><use href="#i-chevron"/></svg></button>
+        <div class="faq-answer"><p data-i18n="cfaq.a4">نعم، يتطلب تأكيد كل حجز دفع عربون. في حال عدم استلام العربون خلال 24 ساعة من وقت الحجز، يُلغى الحجز تلقائيًا، والعربون غير قابل للاسترداد في حال الإلغاء.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question"><span data-i18n="cfaq.q5">ما هي ساعات عمل الاستوديو؟</span><svg class="icon"><use href="#i-chevron"/></svg></button>
+        <div class="faq-answer"><p data-i18n="cfaq.a5">من الأحد إلى الأربعاء: 11:00 صباحًا حتى 10:00 مساءً. ومن الخميس إلى السبت: 9:00 صباحًا حتى 11:00 مساءً.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question"><span data-i18n="cfaq.q6">ماذا يحدث إذا تأخرتُ عن موعدي؟</span><svg class="icon"><use href="#i-chevron"/></svg></button>
+        <div class="faq-answer"><p data-i18n="cfaq.a6">يُرجى الحضور في الموعد المحدد تمامًا. التأخير لأكثر من 15 دقيقة دون إشعار مسبق قد يؤدي لتقليص وقت الجلسة أو إلغائها، حفاظًا على مواعيد بقية العميلات.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question"><span data-i18n="cfaq.q7">هل يمكنني تأجيل موعدي؟</span><svg class="icon"><use href="#i-chevron"/></svg></button>
+        <div class="faq-answer"><p data-i18n="cfaq.a7">نعم، تواصلي معنا عبر واتساب بأقرب وقت ممكن وسنعمل معكِ لإيجاد موعد بديل مناسب.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <script src="assets/footer.js?v=20260830-29"></script>
 </div>
 
-<script src="assets/app.js?v=20260923-60"></script>
+<script src="assets/app.js?v=20260923-61"></script>
 </body>
 </html>
