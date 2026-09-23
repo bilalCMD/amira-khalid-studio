@@ -1336,6 +1336,10 @@
       btn.addEventListener('click', function(){ showWizardStep(btn.getAttribute('data-goto')); });
     });
     function submitBookingToSheet(data){
+      // the booking is real at this point, not merely attempted
+      if(window.aklTrack) window.aklTrack('booking_submit', {
+        method: 'booking wizard', service: data && data.service
+      });
       if(!GOOGLE_SHEET_WEBAPP_URL || GOOGLE_SHEET_WEBAPP_URL.indexOf('REPLACE_WITH') === 0) return;
       try{
         fetch(GOOGLE_SHEET_WEBAPP_URL, {
@@ -1462,4 +1466,98 @@
   heroTitle = document.getElementById('heroTitle');
   initLang();
   onScroll();
+})();
+
+
+/* =====================================================================
+   Analytics events.
+
+   GA4 was recording page views and nothing else, which tells us how many
+   people arrived but not whether any of them tried to book. These events
+   name the moments that actually matter to the studio: someone heading to
+   the booking page, opening WhatsApp, finishing the booking form, or
+   switching the site to English.
+
+   Everything below is delegated from document, so it attaches to no
+   existing handler and cannot interfere with one.
+   ===================================================================== */
+(function(){
+  'use strict';
+
+  function track(name, params){
+    try{
+      if(typeof window.gtag !== 'function') return;
+      var p = params || {};
+      p.page_path = location.pathname;
+      window.gtag('event', name, p);
+    }catch(e){}
+  }
+  window.aklTrack = track;
+
+  // where on the page the click came from, so we can tell which button works
+  function placeOf(el){
+    var s = el.closest('[data-track-area]');
+    if(s) return s.getAttribute('data-track-area');
+    if(el.closest('header, .site-header, .mnav')) return 'navigation';
+    if(el.closest('footer, .site-footer')) return 'footer';
+    if(el.closest('#home-v2, .hero, .page-hero')) return 'hero';
+    if(el.closest('.cta-panel, .cta-section, .philosophy-cta')) return 'closing cta';
+    if(el.closest('.price-card, .pricing-grid')) return 'pricing card';
+    return 'in page';
+  }
+
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href]');
+    if(!a) return;
+    var href = a.getAttribute('href') || '';
+    var label = (a.innerText || a.getAttribute('aria-label') || '').trim().slice(0, 60);
+    var where = placeOf(a);
+
+    if(/^https?:\/\/wa\.me\//.test(href) || /whatsapp/i.test(href)){
+      track('whatsapp_click', { link_location: where, link_text: label });
+    } else if(/^tel:/.test(href)){
+      track('phone_click', { link_location: where });
+    } else if(/^mailto:/.test(href)){
+      track('email_click', { link_location: where });
+    } else if(/maps\.google|google\.[a-z.]+\/maps/.test(href)){
+      track('map_click', { link_location: where });
+    } else if(/instagram\.com/.test(href)){
+      track('social_click', { network: 'instagram', link_location: where });
+    } else if(/tiktok\.com/.test(href)){
+      track('social_click', { network: 'tiktok', link_location: where });
+    } else if(/^\/?contact(\.html)?$/.test(href.split('#')[0])){
+      // heading for the booking page: the top of the booking funnel
+      track('booking_start', { link_location: where, link_text: label });
+    } else if(/^\/?pricing(\.html)?$/.test(href.split('#')[0])){
+      track('pricing_view_click', { link_location: where });
+    }
+  }, true);
+
+  // which looks people actually watch
+  document.addEventListener('play', function(e){
+    var v = e.target;
+    if(!v || v.tagName !== 'VIDEO') return;
+    if(v.id === 'heroVideo') return;            // autoplays, would fire on every visit
+    if(v.dataset.aklPlayed) return;             // once per clip per page view
+    v.dataset.aklPlayed = '1';
+    track('portfolio_video_play', {
+      clip: (v.getAttribute('src') || '').split('/').pop()
+    });
+  }, true);
+
+  // Arabic vs English demand -- this is the number that settles whether
+  // building separate English pages is worth it
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('#langArBtn, #langEnBtn');
+    if(!b) return;
+    track('language_switch', { language: b.id === 'langEnBtn' ? 'en' : 'ar' });
+  }, true);
+
+  // the simple contact form on /contact
+  var form = document.getElementById('bookingForm');
+  if(form){
+    form.addEventListener('submit', function(){
+      track('booking_submit', { method: 'contact form' });
+    });
+  }
 })();
